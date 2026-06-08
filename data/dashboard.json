@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "updated_at": "2026-06-09",
+    "source": "K-문샷 신약 AI 미션 PD실 · 보건산업진흥원 · Citeline · 한국바이오협회 (2025–2026)",
+    "version": "1.0"
+  },
+  "kpi": {
+    "domestic_pipelines": { "value": 3386, "label": "국내 신약 파이프라인", "unit": "개", "year": 2025, "note": "세계 3위 (Citeline 2025)" },
+    "global_share": { "value": 14.2, "label": "글로벌 파이프라인 점유율", "unit": "%", "note": "미국 51.2%, 중국 31.1%" },
+    "approved_drugs": { "value": 41, "label": "국산 신약 누적 허가", "unit": "호", "year": 2025 },
+    "tech_transfer": { "value": 18, "label": "K-바이오 기술수출 규모", "unit": "조원+", "year": 2025 },
+    "ai_market_cagr": { "value": 24, "label": "AI 신약 시장 CAGR", "unit": "%", "note": "2025→2033 약 6배 성장 전망" },
+    "ai_vc_investment": { "value": 110, "label": "AI 신약 VC 투자 (2025)", "unit": "억달러", "note": "전년比 +23%" }
+  },
+  "pipeline_stages": {
+    "domestic": {
+      "label": "국내 신약 파이프라인 단계별 분포 (추정, 2025)",
+      "data": [
+        { "stage": "전임상", "count": 2030, "pct": 60 },
+        { "stage": "임상 1상", "count": 507, "pct": 15 },
+        { "stage": "임상 2상", "count": 406, "pct": 12 },
+        { "stage": "임상 3상", "count": 237, "pct": 7 },
+        { "stage": "허가/승인", "count": 206, "pct": 6 }
+      ]
+    },
+    "ai_domestic": {
+      "label": "국내 AI 연계 파이프라인 단계별 분포 (추정)",
+      "data": [
+        { "stage": "전임상", "count": 180, "pct": 72 },
+        { "stage": "임상 1상", "count": 42, "pct": 17 },
+        { "stage": "임상 2상", "count": 20, "pct": 8 },
+        { "stage": "임상 3상", "count": 8, "pct": 3 },
+        { "stage": "허가/승인", "count": 0, "pct": 0 }
+      ],
+      "note": "전 세계적으로 AI 설계 신약의 Phase 3 완료·승인 사례 아직 없음 (2026–27 검증 분수령)"
+    },
+    "global_ai": {
+      "label": "글로벌 AI 신약 파이프라인 추정 (2025)",
+      "total": 700,
+      "note": "Nature Reviews Drug Discovery, IQVIA 추정치"
+    }
+  },
+  "ai_pipelines": [
+    {
+      "company": "한미약품",
+      "drug": "HM17321",
+      "indication": "비만/대사질환",
+      "stage": "임상 1상 (IND 승인)",
+      "ai_tech": "자체 AI + 아이젠사이언스",
+      "highlight": "개발기간 절반 단축, FDA IND 승인",
+      "modality": "소분자"
+    },
+    {
+      "company": "JW중외제약",
+      "drug": "JW0061",
+      "indication": "탈모 치료제",
+      "stage": "전임상 완료 (임상 1상 준비)",
+      "ai_tech": "JWELRY + 온코크로스",
+      "highlight": "적응증 확장 추진 중",
+      "modality": "소분자"
+    },
+    {
+      "company": "파로스아이바이오",
+      "drug": "PHI-101",
+      "indication": "AML(급성골수성백혈병)",
+      "stage": "임상 1상",
+      "ai_tech": "Chemiverse 플랫폼",
+      "highlight": "美 FDA 희귀의약품 지정, 국내 치료목적 사용 승인",
+      "modality": "소분자"
+    },
+    {
+      "company": "온코크로스",
+      "drug": "미공개",
+      "indication": "근감소증",
+      "stage": "임상 1상 (호주, 2번째 코호트)",
+      "ai_tech": "RAPTOR AI (전사체 기반)",
+      "highlight": "약물 재창출 AI 플랫폼 적용",
+      "modality": "소분자"
+    },
+    {
+      "company": "갤럭스",
+      "drug": "파이프라인 복수",
+      "indication": "GPCR·이온채널 등 난공불락 타깃",
+      "stage": "전임상",
+      "ai_tech": "GalaxDesign (de novo 단백질 설계)",
+      "highlight": "시리즈B 420억 (누적 680억), 이수앱지스 협력",
+      "modality": "바이오로직스"
+    },
+    {
+      "company": "스탠다임",
+      "drug": "내성결핵 치료제 후보",
+      "indication": "내성결핵",
+      "stage": "전임상 (후보 도출)",
+      "ai_tech": "Standigm BEST (생성형 AI)",
+      "highlight": "한국파스퇴르硏 협력",
+      "modality": "소분자"
+    },
+    {
+      "company": "아이젠사이언스",
+      "drug": "14개 파이프라인",
+      "indication": "난치성·항암",
+      "stage": "전임상~임상 1상",
+      "ai_tech": "미어캣·아이젠인사이트 (LLM 기반)",
+      "highlight": "한미약품 공동연구, 의생명 특화 LLM",
+      "modality": "소분자/바이오로직스"
+    },
+    {
+      "company": "대웅제약",
+      "drug": "비만·당뇨 선도물질",
+      "indication": "비만/당뇨",
+      "stage": "전임상",
+      "ai_tech": "DAISY 플랫폼",
+      "highlight": "국내 파이프라인 1위(58개), 도킹·가상탐색·단백질 결합분석",
+      "modality": "소분자"
+    }
+  ],
+  "tech_transfers": [
+    {
+      "year": "2025",
+      "licensor": "유한양행",
+      "licensee": "J&J (Janssen)",
+      "drug": "렉라자 (레이저티닙)",
+      "indication": "EGFR 변이 비소세포폐암",
+      "deal_value": "1.4조원+ (연 매출, 블록버스터 달성)",
+      "stage": "시판 (글로벌)",
+      "highlight": "국산 최초 글로벌 블록버스터. NCCN 1차 최선호 요법 등재"
+    },
+    {
+      "year": "2024",
+      "licensor": "셀트리온",
+      "licensee": "글로벌 유통",
+      "drug": "짐펜트라 (SC형 인플릭시맙)",
+      "indication": "자가면역질환",
+      "deal_value": "연 1.2조원",
+      "stage": "시판 (글로벌)",
+      "highlight": "국내 첫 블록버스터. SC 피하주사 제형으로 추가 성장"
+    },
+    {
+      "year": "2023",
+      "licensor": "한미약품",
+      "licensee": "복수 글로벌사",
+      "drug": "비만 GLP-1 계열 (다중작용)",
+      "indication": "비만/대사질환",
+      "deal_value": "협의 중",
+      "stage": "임상 중",
+      "highlight": "오젬픽 특허절벽 수혜, 글로벌 공동개발 논의 진행"
+    },
+    {
+      "year": "2025",
+      "licensor": "SK바이오팜",
+      "licensee": "Arvelle (미국)",
+      "drug": "세노바메이트 (엑스코프리)",
+      "indication": "뇌전증",
+      "deal_value": "공개 미정",
+      "stage": "시판 (미국 고성장)",
+      "highlight": "블록버스터 근접 성장세, 희귀질환 지정"
+    },
+    {
+      "year": "2025",
+      "licensor": "갤럭스",
+      "licensee": "이수앱지스",
+      "drug": "AI 설계 항체신약",
+      "indication": "미공개",
+      "deal_value": "미공개",
+      "stage": "전임상",
+      "highlight": "GalaxDesign de novo 항체 설계 AI 기술 기반 공동개발"
+    },
+    {
+      "year": "2025",
+      "licensor": "아론티어",
+      "licensee": "셀트리온",
+      "drug": "mRNA 발현 최적화 기술",
+      "indication": "mRNA 치료제",
+      "deal_value": "미공개",
+      "stage": "기술이전",
+      "highlight": "mRNA 발현 10배 향상 기술 이전"
+    }
+  ],
+  "ecosystem": {
+    "top_pipeline_companies": [
+      { "name": "대웅제약", "pipelines": 58, "ai_platform": "DAISY" },
+      { "name": "한미약품", "pipelines": 42, "ai_platform": "자체 AI + 아이젠" },
+      { "name": "유한양행", "pipelines": 35, "ai_platform": "부분 활용" },
+      { "name": "종근당", "pipelines": 28, "ai_platform": "-" },
+      { "name": "JW중외제약", "pipelines": 22, "ai_platform": "JWELRY" }
+    ],
+    "avg_pipelines_per_company": { "korea": 8.2, "usa": 4.3, "china": 5.95 }
+  },
+  "kmoonshot_roadmap": {
+    "mission": "AI 융합으로 신약 개발속도 10배 가속 (10–15년 → 2년 이내)",
+    "milestones": [
+      { "year": 2029, "step": "STEP 1", "goal": "AI 기반 신약 제안·설계·최적화", "detail": "조직 수준 파운데이션 모델, 모달리티별 후보물질 설계기술, 디지털 전임상 기술" },
+      { "year": 2032, "step": "STEP 2", "goal": "전단계 Lab-in-the-Loop 구현", "detail": "조직-장기 수준 FM, AI 자율실험 혁신신약 개발체계, 국내 인허가용 디지털 전임상 플랫폼" },
+      { "year": 2035, "step": "STEP 3", "goal": "신약개발 속도 10배 이상 향상", "detail": "인체 Whole-body FM, AI-driven 신약개발 체계 확산, 국제 인증 디지털 전임상 플랫폼" }
+    ],
+    "kpi": { "target_2030": "블록버스터급 신약 3건", "target_2040": "블록버스터급 신약 10건" },
+    "core_tech": [
+      "다양한 표적·질환용 파운데이션 모델",
+      "AI 기반 모달리티별 신약 설계기술",
+      "동물실험 대체 효과·독성 예측 플랫폼",
+      "임상·유전체·의료 표준 레퍼런스 데이터 (K-BDS)",
+      "Agentic AI + 로봇 자동화 융합 바이오실험",
+      "AI 바이오 혁신 연구거점 (산업현장 수요 대응)"
+    ]
+  },
+  "swot": {
+    "strength": ["세계 3위 파이프라인 (3,386개)", "교수창업형 AI 벤처 생태계", "RNA 설계 학계 역량 (남진우·허준호 교수팀 등)", "18조+ 기술수출로 글로벌 협력 통로"],
+    "weakness": ["임상 단계 AI 공백 (최대 약점)", "기업당 과잉 분산 (평균 8.2개)", "글로벌 시장 점유율 2%·점유율 격차 확대", "AI 설계 신약 후기임상 검증 부재"],
+    "opportunity": ["특허절벽發 외부 기술 도입 수요 급증", "바이오텍 모달리티 역전 (RNA·세포·유전자)", "AI 신약 표준화 원년(2026) — 메가딜 기회", "K-문샷 국책과제 집중 투자 (2026~2035)"],
+    "threat": ["미국·중국과 파이프라인 점유율 격차 확대", "AI 설계 신약 3상 검증 미완 (2026–27 시험대)", "글로벌 대형제약사 AI 내재화 가속", "임상 데이터 인프라 부족"]
+  }
+}

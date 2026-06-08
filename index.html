@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 신약개발 동향 대시보드 | K-Moonshot</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0f1117; --surface: #1a1d2e; --surface2: #252840;
+    --accent: #6366f1; --accent2: #22d3ee; --accent3: #f59e0b;
+    --green: #10b981; --red: #ef4444; --purple: #a855f7;
+    --text: #e2e8f0; --muted: #94a3b8; --border: #2d3148;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', 'Apple SD Gothic Neo', sans-serif; font-size: 14px; line-height: 1.6; }
+  a { color: var(--accent2); text-decoration: none; }
+
+  /* Layout */
+  .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .grid-6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+  @media (max-width: 1100px) { .grid-6 { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 700px) { .grid-2, .grid-3, .grid-6 { grid-template-columns: 1fr; } }
+
+  /* Header */
+  header { background: linear-gradient(135deg, #1a1d2e 0%, #252840 100%); border-bottom: 1px solid var(--border); padding: 20px 0; }
+  .header-inner { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; }
+  .header-title h1 { font-size: 22px; font-weight: 700; }
+  .header-title h1 span { color: var(--accent); }
+  .header-title p { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .badge { display: inline-block; background: var(--accent); color: #fff; font-size: 11px; padding: 2px 8px; border-radius: 20px; }
+  .updated { font-size: 11px; color: var(--muted); }
+
+  /* Nav tabs */
+  .tabs { border-bottom: 1px solid var(--border); background: var(--surface); }
+  .tabs ul { display: flex; list-style: none; padding: 0 20px; max-width: 1400px; margin: 0 auto; overflow-x: auto; }
+  .tabs li { white-space: nowrap; }
+  .tabs a { display: block; padding: 12px 18px; color: var(--muted); font-size: 13px; border-bottom: 2px solid transparent; transition: all .2s; }
+  .tabs a:hover, .tabs a.active { color: var(--text); border-bottom-color: var(--accent); }
+
+  /* Section */
+  .section { padding: 24px 0; }
+  .section-title { font-size: 15px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section-title::before { content: ''; display: block; width: 3px; height: 16px; background: var(--accent); border-radius: 2px; }
+
+  /* Card */
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .card-sm { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+
+  /* KPI cards */
+  .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; transition: border-color .2s; }
+  .kpi-card:hover { border-color: var(--accent); }
+  .kpi-label { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+  .kpi-value { font-size: 28px; font-weight: 700; line-height: 1; }
+  .kpi-unit { font-size: 13px; color: var(--muted); margin-left: 3px; }
+  .kpi-note { font-size: 10px; color: var(--muted); margin-top: 6px; }
+  .kpi-card.accent .kpi-value { color: var(--accent); }
+  .kpi-card.cyan .kpi-value { color: var(--accent2); }
+  .kpi-card.amber .kpi-value { color: var(--accent3); }
+  .kpi-card.green .kpi-value { color: var(--green); }
+  .kpi-card.purple .kpi-value { color: var(--purple); }
+  .kpi-card.red .kpi-value { color: var(--red); }
+
+  /* Chart containers */
+  .chart-wrap { position: relative; height: 280px; }
+
+  /* Table */
+  .tbl-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th { background: var(--surface2); color: var(--muted); font-weight: 600; padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(99,102,241,0.05); }
+
+  /* Stage badge */
+  .badge-stage { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 500; }
+  .s-pre { background: rgba(148,163,184,.15); color: var(--muted); }
+  .s-1 { background: rgba(99,102,241,.2); color: #818cf8; }
+  .s-2 { background: rgba(34,211,238,.2); color: var(--accent2); }
+  .s-3 { background: rgba(245,158,11,.2); color: var(--accent3); }
+  .s-approved { background: rgba(16,185,129,.2); color: var(--green); }
+
+  /* Deal value */
+  .deal-val { color: var(--green); font-weight: 600; }
+
+  /* Highlight text */
+  .highlight { color: var(--accent3); font-size: 11px; }
+
+  /* SWOT */
+  .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .swot-card { border-radius: 10px; padding: 14px; }
+  .swot-card h4 { font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+  .swot-card ul { list-style: none; }
+  .swot-card li { font-size: 12px; color: var(--muted); padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+  .swot-card li:last-child { border: none; }
+  .swot-card li::before { margin-right: 6px; }
+  .swot-s { background: rgba(16,185,129,.1); border: 1px solid rgba(16,185,129,.2); }
+  .swot-s h4 { color: var(--green); }
+  .swot-s li::before { content: '✓'; color: var(--green); }
+  .swot-w { background: rgba(239,68,68,.1); border: 1px solid rgba(239,68,68,.2); }
+  .swot-w h4 { color: var(--red); }
+  .swot-w li::before { content: '△'; color: var(--red); }
+  .swot-o { background: rgba(99,102,241,.1); border: 1px solid rgba(99,102,241,.2); }
+  .swot-o h4 { color: #818cf8; }
+  .swot-o li::before { content: '→'; color: #818cf8; }
+  .swot-t { background: rgba(245,158,11,.1); border: 1px solid rgba(245,158,11,.2); }
+  .swot-t h4 { color: var(--accent3); }
+  .swot-t li::before { content: '!'; color: var(--accent3); }
+
+  /* Roadmap */
+  .roadmap { display: flex; gap: 0; overflow-x: auto; }
+  .rm-step { flex: 1; min-width: 200px; border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin: 0 4px; position: relative; }
+  .rm-step::before { content: ''; position: absolute; top: 50%; right: -12px; width: 24px; height: 2px; background: var(--border); z-index: 1; }
+  .rm-step:last-child::before { display: none; }
+  .rm-year { font-size: 22px; font-weight: 700; color: var(--accent); }
+  .rm-title { font-size: 13px; font-weight: 600; margin: 6px 0 4px; }
+  .rm-detail { font-size: 11px; color: var(--muted); }
+
+  /* Top companies bar */
+  .company-bar { margin: 6px 0; }
+  .company-bar-label { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 3px; }
+  .company-bar-track { background: var(--surface2); border-radius: 4px; height: 6px; }
+  .company-bar-fill { background: var(--accent); height: 6px; border-radius: 4px; transition: width .6s; }
+
+  /* Tab panels */
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--border); padding: 16px 0; text-align: center; color: var(--muted); font-size: 11px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="header-title">
+      <h1>🧬 AI 신약개발 동향 <span>대시보드</span></h1>
+      <p>K-Moonshot Project · 신약 AI 미션 PD실 | 보건산업진흥원 · Citeline · 한국바이오협회 (2025–2026)</p>
+    </div>
+    <div style="text-align:right;">
+      <span class="badge">K-Moonshot</span>
+      <div class="updated" style="margin-top:4px;">마지막 업데이트: <span id="updated-date">—</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <ul>
+    <li><a href="#" class="active" onclick="showTab('overview',this)">📊 개요</a></li>
+    <li><a href="#" onclick="showTab('pipelines',this)">💊 파이프라인</a></li>
+    <li><a href="#" onclick="showTab('ai-pipeline',this)">🤖 AI 파이프라인</a></li>
+    <li><a href="#" onclick="showTab('transfer',this)">🤝 기술이전</a></li>
+    <li><a href="#" onclick="showTab('kmoonshot',this)">🚀 K-문샷 로드맵</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+
+<!-- ══ TAB: OVERVIEW ══════════════════════════════════════════════════ -->
+<div id="tab-overview" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">핵심 지표 (2025–2026)</div>
+    <div class="grid-6" id="kpi-cards"></div>
+  </div>
+
+  <div class="grid-2 section" style="padding-top:0;">
+    <div class="card">
+      <div class="section-title">국내 파이프라인 단계별 분포</div>
+      <div class="chart-wrap"><canvas id="chart-stage-domestic"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="section-title">AI 연계 vs 전통 파이프라인 비교</div>
+      <div class="chart-wrap"><canvas id="chart-ai-vs-trad"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid-2 section" style="padding-top:0;">
+    <div class="card">
+      <div class="section-title">국내 AI 신약 생태계 — 파이프라인 상위 기업</div>
+      <div id="company-bars"></div>
+    </div>
+    <div class="card">
+      <div class="section-title">SWOT 분석 — 국내 AI 신약개발</div>
+      <div class="swot-grid" id="swot-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TAB: PIPELINES ════════════════════════════════════════════════ -->
+<div id="tab-pipelines" class="tab-panel">
+  <div class="section">
+    <div class="section-title">국내 신약 파이프라인 단계별 현황 (2025)</div>
+    <div class="grid-3" id="stage-cards"></div>
+  </div>
+  <div class="section card" style="padding:20px;">
+    <div class="section-title">국내 vs 글로벌 파이프라인 비교</div>
+    <div class="chart-wrap"><canvas id="chart-global-compare"></canvas></div>
+  </div>
+</div>
+
+<!-- ══ TAB: AI PIPELINES ═════════════════════════════════════════════ -->
+<div id="tab-ai-pipeline" class="tab-panel">
+  <div class="section">
+    <div class="section-title">AI 연계 신약 대표 파이프라인 현황 (2025–2026)</div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px;">※ AI를 발굴·설계 또는 데이터 분석에 부분 활용한 사례 포함. 전 세계적으로 AI 설계 신약의 Phase 3 완료·승인 사례는 아직 없음 (2026–27 검증 분수령)</p>
+    <div class="card tbl-wrap">
+      <table id="ai-pipeline-table">
+        <thead>
+          <tr>
+            <th>기업</th><th>약물</th><th>적응증</th><th>임상 단계</th><th>AI 플랫폼</th><th>모달리티</th><th>주요 내용</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="section">
+    <div class="grid-2">
+      <div class="card">
+        <div class="section-title">AI 신약 개발 가치사슬별 국내 적용 현황</div>
+        <div class="chart-wrap"><canvas id="chart-value-chain"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="section-title">글로벌 AI 신약 시장 성장 전망</div>
+        <div class="chart-wrap"><canvas id="chart-market-growth"></canvas></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TAB: TECH TRANSFER ════════════════════════════════════════════ -->
+<div id="tab-transfer" class="tab-panel">
+  <div class="section">
+    <div class="section-title">주요 기술이전 동향 (최근)</div>
+    <div class="card tbl-wrap">
+      <table id="transfer-table">
+        <thead>
+          <tr>
+            <th>연도</th><th>기술 제공사</th><th>도입사</th><th>약물/기술</th><th>적응증</th><th>규모</th><th>단계</th><th>주요 내용</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="section">
+    <div class="card-sm" style="background:rgba(245,158,11,.07); border-color:rgba(245,158,11,.2);">
+      <h4 style="color:var(--accent3); font-size:13px; margin-bottom:8px;">📌 2026 기술이전 기회 요인</h4>
+      <ul style="list-style:none; font-size:12px; color:var(--muted);">
+        <li>• <strong style="color:var(--text);">특허절벽 수혜</strong> — 린파자·키트루다·오젬픽 등 블록버스터 2025–2030년 순차 특허 만료 → 글로벌 제약사 외부 도입 수요 급증</li>
+        <li>• <strong style="color:var(--text);">비만 시장 급성장</strong> — GLP-1 시장 2030년 1,000억달러 전망, 국내 비만 파이프라인(한미·대웅 등) 기술수출 기회</li>
+        <li>• <strong style="color:var(--text);">RNA·신규 모달리티</strong> — 바이오텍 비중 50% 돌파(2026), RNA 구조설계 AI 국내 학계 경쟁력 → 라이선스 기회</li>
+        <li>• <strong style="color:var(--text);">AI 표준화 원년</strong> — 2026년 AI 신약개발 프로세스 표준화 → AI 플랫폼 기술이전 활성화 예상</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TAB: K-MOONSHOT ═══════════════════════════════════════════════ -->
+<div id="tab-kmoonshot" class="tab-panel">
+  <div class="section">
+    <div class="card" style="background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(34,211,238,.05)); border-color:rgba(99,102,241,.3); margin-bottom:16px;">
+      <div style="font-size:18px; font-weight:700; margin-bottom:6px;">🎯 K-문샷 신약 AI 미션</div>
+      <div style="font-size:15px; color:var(--accent2);" id="rm-mission"></div>
+    </div>
+    <div class="section-title">3대 마일스톤 로드맵</div>
+    <div class="roadmap" id="roadmap"></div>
+  </div>
+
+  <div class="section grid-2">
+    <div class="card">
+      <div class="section-title">핵심 요소기술 6대 과제</div>
+      <ul id="core-tech" style="list-style:none; font-size:13px;"></ul>
+    </div>
+    <div class="card">
+      <div class="section-title">KPI 목표</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;" id="rm-kpi"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">신약개발 가속화 지수 (V_AI) 달성 경로</div>
+    <div class="card">
+      <div class="chart-wrap"><canvas id="chart-vai"></canvas></div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="container">
+    K-Moonshot Wiki Dashboard · 데이터: K-문샷 신약 AI 미션 PD실 · 보건산업진흥원 · Citeline · 한국바이오협회 (2025–2026) ·
+    <a href="https://github.com/jwnam/k-moonshot-wiki" target="_blank">GitHub</a>
+  </div>
+</footer>
+
+<script>
+// ── Tab navigation ────────────────────────────────────────────────────
+function showTab(name, el) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tabs a').forEach(a => a.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  el.classList.add('active');
+  return false;
+}
+
+// ── Chart defaults ────────────────────────────────────────────────────
+Chart.defaults.color = '#94a3b8';
+Chart.defaults.borderColor = '#2d3148';
+Chart.defaults.font.family = "'Segoe UI', 'Apple SD Gothic Neo', sans-serif";
+
+const PALETTE = ['#6366f1','#22d3ee','#f59e0b','#10b981','#a855f7','#ef4444'];
+
+// ── Load data and render ──────────────────────────────────────────────
+fetch('data/dashboard.json')
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('updated-date').textContent = data.meta.updated_at;
+    renderKPI(data.kpi);
+    renderStageChart(data.pipeline_stages);
+    renderAIvsChart(data.pipeline_stages);
+    renderCompanyBars(data.ecosystem);
+    renderSWOT(data.swot);
+    renderStageCards(data.pipeline_stages);
+    renderGlobalCompare(data.pipeline_stages);
+    renderAIPipelineTable(data.ai_pipelines);
+    renderValueChain();
+    renderMarketGrowth();
+    renderTransferTable(data.tech_transfers);
+    renderRoadmap(data.kmoonshot_roadmap);
+    renderVAI();
+  });
+
+// ── KPI Cards ─────────────────────────────────────────────────────────
+function renderKPI(kpi) {
+  const colors = ['accent','cyan','amber','green','purple','red'];
+  const keys = Object.keys(kpi);
+  const el = document.getElementById('kpi-cards');
+  el.innerHTML = keys.map((k, i) => {
+    const d = kpi[k];
+    return `<div class="kpi-card ${colors[i]}">
+      <div class="kpi-label">${d.label}</div>
+      <div class="kpi-value">${typeof d.value === 'number' && d.value >= 1000 ? d.value.toLocaleString() : d.value}<span class="kpi-unit">${d.unit}</span></div>
+      ${d.note ? `<div class="kpi-note">${d.note}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// ── Stage donut chart ─────────────────────────────────────────────────
+function renderStageChart(stages) {
+  const d = stages.domestic.data;
+  new Chart(document.getElementById('chart-stage-domestic'), {
+    type: 'doughnut',
+    data: {
+      labels: d.map(s => s.stage),
+      datasets: [{ data: d.map(s => s.count), backgroundColor: PALETTE, borderWidth: 2, borderColor: '#1a1d2e' }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'right', labels: { font: { size: 11 }, padding: 12 } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw.toLocaleString()}개 (${d[ctx.dataIndex].pct}%)` } }
+      }
+    }
+  });
+}
+
+// ── AI vs Traditional bar chart ───────────────────────────────────────
+function renderAIvsChart(stages) {
+  const labels = stages.domestic.data.map(s => s.stage);
+  const domestic = stages.domestic.data.map(s => s.count);
+  const ai = stages.ai_domestic.data.map(s => s.count);
+  new Chart(document.getElementById('chart-ai-vs-trad'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: '전체 파이프라인', data: domestic, backgroundColor: 'rgba(99,102,241,0.6)' },
+        { label: 'AI 연계 파이프라인', data: ai, backgroundColor: 'rgba(34,211,238,0.7)' }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: { y: { beginAtZero: true, grid: { color: '#2d3148' } }, x: { grid: { display: false } } },
+      plugins: { legend: { position: 'top', labels: { font: { size: 11 } } } }
+    }
+  });
+}
+
+// ── Company bars ──────────────────────────────────────────────────────
+function renderCompanyBars(eco) {
+  const max = eco.top_pipeline_companies[0].pipelines;
+  const el = document.getElementById('company-bars');
+  el.innerHTML = `
+    <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:10px;">
+      <span>※ 국내 평균 8.2개 / 사 (미국 4.3개, 중국 5.95개)</span>
+    </div>` +
+    eco.top_pipeline_companies.map(c => `
+    <div class="company-bar">
+      <div class="company-bar-label">
+        <span>${c.name} <span style="color:var(--muted);font-size:10px;">${c.ai_platform !== '-' ? '· ' + c.ai_platform : ''}</span></span>
+        <span style="color:var(--accent3);font-weight:600;">${c.pipelines}개</span>
+      </div>
+      <div class="company-bar-track">
+        <div class="company-bar-fill" style="width:${(c.pipelines/max*100).toFixed(0)}%"></div>
+      </div>
+    </div>`).join('');
+}
+
+// ── SWOT ──────────────────────────────────────────────────────────────
+function renderSWOT(swot) {
+  const defs = [
+    ['S 강점', 'swot-s', swot.strength],
+    ['W 약점', 'swot-w', swot.weakness],
+    ['O 기회', 'swot-o', swot.opportunity],
+    ['T 위협', 'swot-t', swot.threat],
+  ];
+  document.getElementById('swot-grid').innerHTML = defs.map(([title, cls, items]) =>
+    `<div class="swot-card ${cls}">
+      <h4>${title}</h4>
+      <ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>
+    </div>`).join('');
+}
+
+// ── Stage cards (pipelines tab) ───────────────────────────────────────
+function renderStageCards(stages) {
+  const el = document.getElementById('stage-cards');
+  el.innerHTML = stages.domestic.data.map((s, i) => `
+    <div class="kpi-card" style="border-left:3px solid ${PALETTE[i]};">
+      <div class="kpi-label">${s.stage}</div>
+      <div class="kpi-value" style="color:${PALETTE[i]};">${s.count.toLocaleString()}<span class="kpi-unit">개</span></div>
+      <div class="kpi-note">전체의 ${s.pct}%</div>
+    </div>`).join('');
+}
+
+// ── Global compare bar chart ──────────────────────────────────────────
+function renderGlobalCompare(stages) {
+  new Chart(document.getElementById('chart-global-compare'), {
+    type: 'bar',
+    data: {
+      labels: ['미국', '중국', '한국', '일본', '기타'],
+      datasets: [{
+        label: '글로벌 파이프라인 점유율 (%)',
+        data: [51.2, 31.1, 14.2, 10.0, 50.5],
+        backgroundColor: ['rgba(99,102,241,0.7)','rgba(239,68,68,0.7)','rgba(34,211,238,0.8)','rgba(245,158,11,0.7)','rgba(100,116,139,0.5)']
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: { y: { beginAtZero: true, grid: { color: '#2d3148' }, ticks: { callback: v => v+'%' } }, x: { grid: { display: false } } },
+      plugins: { legend: { display: false } }
+    }
+  });
+}
+
+// ── AI pipeline table ─────────────────────────────────────────────────
+function renderAIPipelineTable(pipelines) {
+  const stageClass = s => {
+    if (s.includes('전임상')) return 's-pre';
+    if (s.includes('1상')) return 's-1';
+    if (s.includes('2상')) return 's-2';
+    if (s.includes('3상')) return 's-3';
+    return 's-approved';
+  };
+  document.querySelector('#ai-pipeline-table tbody').innerHTML = pipelines.map(p => `
+    <tr>
+      <td><strong>${p.company}</strong></td>
+      <td>${p.drug}</td>
+      <td>${p.indication}</td>
+      <td><span class="badge-stage ${stageClass(p.stage)}">${p.stage}</span></td>
+      <td style="color:var(--accent2);">${p.ai_tech}</td>
+      <td><span style="font-size:11px;color:var(--muted);">${p.modality}</span></td>
+      <td class="highlight">${p.highlight}</td>
+    </tr>`).join('');
+}
+
+// ── Value chain radar chart ───────────────────────────────────────────
+function renderValueChain() {
+  new Chart(document.getElementById('chart-value-chain'), {
+    type: 'radar',
+    data: {
+      labels: ['정보탐색·후보발굴', '전임상', '임상', '제조·인허가', '시판후 분석'],
+      datasets: [
+        { label: '국내 AI 활용 수준', data: [85, 60, 20, 15, 10], backgroundColor: 'rgba(99,102,241,0.2)', borderColor: '#6366f1', pointBackgroundColor: '#6366f1' },
+        { label: '글로벌 대비 목표', data: [90, 80, 60, 50, 40], backgroundColor: 'rgba(34,211,238,0.1)', borderColor: '#22d3ee', pointBackgroundColor: '#22d3ee', borderDash: [5,5] }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: { r: { min: 0, max: 100, ticks: { stepSize: 25, font: { size: 9 } }, grid: { color: '#2d3148' }, pointLabels: { font: { size: 11 } } } },
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } } }
+    }
+  });
+}
+
+// ── Market growth line chart ──────────────────────────────────────────
+function renderMarketGrowth() {
+  const years = [2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033];
+  const base = 45;
+  const values = years.map((y, i) => +(base * Math.pow(1.24, i)).toFixed(0));
+  new Chart(document.getElementById('chart-market-growth'), {
+    type: 'line',
+    data: {
+      labels: years,
+      datasets: [{
+        label: 'AI 신약 시장 규모 (억달러)',
+        data: values,
+        borderColor: '#22d3ee',
+        backgroundColor: 'rgba(34,211,238,0.1)',
+        fill: true, tension: 0.4, pointRadius: 3
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: { y: { beginAtZero: true, grid: { color: '#2d3148' } }, x: { grid: { display: false } } },
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.raw}억달러` } } }
+    }
+  });
+}
+
+// ── Tech transfer table ───────────────────────────────────────────────
+function renderTransferTable(transfers) {
+  document.querySelector('#transfer-table tbody').innerHTML = transfers.map(t => `
+    <tr>
+      <td>${t.year}</td>
+      <td><strong>${t.licensor}</strong></td>
+      <td>${t.licensee}</td>
+      <td style="color:var(--accent2);">${t.drug}</td>
+      <td>${t.indication}</td>
+      <td class="deal-val">${t.deal_value}</td>
+      <td><span class="badge-stage ${t.stage.includes('시판') ? 's-approved' : t.stage.includes('임상') ? 's-1' : 's-pre'}">${t.stage}</span></td>
+      <td class="highlight">${t.highlight}</td>
+    </tr>`).join('');
+}
+
+// ── Roadmap ───────────────────────────────────────────────────────────
+function renderRoadmap(rm) {
+  document.getElementById('rm-mission').textContent = rm.mission;
+  document.getElementById('roadmap').innerHTML = rm.milestones.map((m, i) => `
+    <div class="rm-step" style="border-top:3px solid ${PALETTE[i]};">
+      <div class="rm-year">${m.year}</div>
+      <div class="rm-title">${m.step} · ${m.goal}</div>
+      <div class="rm-detail">${m.detail}</div>
+    </div>`).join('');
+  document.getElementById('core-tech').innerHTML = rm.core_tech.map((t, i) =>
+    `<li style="padding:6px 0;border-bottom:1px solid var(--border);"><span style="color:${PALETTE[i%PALETTE.length]};margin-right:8px;">⬡</span>${t}</li>`).join('');
+  document.getElementById('rm-kpi').innerHTML = `
+    <div class="kpi-card accent" style="flex:1;min-width:140px;">
+      <div class="kpi-label">2030 목표</div>
+      <div class="kpi-value" style="font-size:20px;">3건</div>
+      <div class="kpi-note">${rm.kpi.target_2030}</div>
+    </div>
+    <div class="kpi-card cyan" style="flex:1;min-width:140px;">
+      <div class="kpi-label">2040 목표</div>
+      <div class="kpi-value" style="font-size:20px;">10건</div>
+      <div class="kpi-note">${rm.kpi.target_2040}</div>
+    </div>
+    <div class="kpi-card amber" style="flex:1;min-width:140px;">
+      <div class="kpi-label">개발기간 목표</div>
+      <div class="kpi-value" style="font-size:20px;">2년</div>
+      <div class="kpi-note">현재 10–15년 → 2035년 2년 이내</div>
+    </div>`;
+}
+
+// ── V_AI progress chart ───────────────────────────────────────────────
+function renderVAI() {
+  new Chart(document.getElementById('chart-vai'), {
+    type: 'line',
+    data: {
+      labels: [2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035],
+      datasets: [
+        { label: 'V_AI 목표 (10배 달성 경로)', data: [0.5, 0.9, 1.5, 2.2, 3.5, 5.0, 6.5, 7.8, 9.0, 10.0], borderColor: '#6366f1', backgroundColor: 'rgba(99,102,241,0.15)', fill: true, tension: 0.4 },
+        { label: '블록버스터 마일스톤', data: [null,null,null,null,3,null,null,null,null,10], borderColor: '#f59e0b', pointBackgroundColor: '#f59e0b', pointRadius: 8, showLine: false, type: 'scatter' }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        y: { min: 0, max: 11, grid: { color: '#2d3148' }, title: { display: true, text: 'V_AI (신약개발 가속 지수)', color: '#94a3b8' } },
+        x: { grid: { display: false } }
+      },
+      plugins: { legend: { position: 'top', labels: { font: { size: 11 } } } }
+    }
+  });
+}
+</script>
+</body>
+</html>
