@@ -128,6 +128,32 @@
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
 
+  /* News board */
+  .news-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 900px) { .news-cols { grid-template-columns: 1fr; } }
+  .news-col-title { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); display: flex; align-items: center; gap: 8px; }
+  .news-item { border: 1px solid var(--border); border-radius: 10px; padding: 14px; margin-bottom: 10px; background: var(--surface); transition: border-color .2s; }
+  .news-item:hover { border-color: var(--accent); }
+  .news-title { font-size: 13px; font-weight: 600; line-height: 1.5; margin-bottom: 6px; }
+  .news-title a { color: var(--text); }
+  .news-title a:hover { color: var(--accent2); }
+  .news-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+  .news-source { font-size: 11px; color: var(--accent3); font-weight: 600; }
+  .news-date { font-size: 11px; color: var(--muted); }
+  .news-summary { font-size: 11px; color: var(--muted); line-height: 1.5; }
+  .news-cats { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+  .cat-badge { font-size: 10px; padding: 1px 7px; border-radius: 20px; font-weight: 500; }
+  .cat-기술이전 { background: rgba(16,185,129,.15); color: var(--green); }
+  .cat-임상 { background: rgba(34,211,238,.15); color: var(--accent2); }
+  .cat-AI플랫폼 { background: rgba(99,102,241,.15); color: #818cf8; }
+  .cat-투자 { background: rgba(245,158,11,.15); color: var(--accent3); }
+  .cat-규제허가 { background: rgba(239,68,68,.15); color: var(--red); }
+  .cat-일반 { background: rgba(148,163,184,.1); color: var(--muted); }
+  .news-filter { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .news-filter button { font-size: 11px; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface2); color: var(--muted); cursor: pointer; transition: all .15s; }
+  .news-filter button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .news-updated { font-size: 11px; color: var(--muted); margin-bottom: 16px; }
+
   /* Footer */
   footer { border-top: 1px solid var(--border); padding: 16px 0; text-align: center; color: var(--muted); font-size: 11px; }
 </style>
@@ -154,6 +180,7 @@
     <li><a href="#" onclick="showTab('ai-pipeline',this)">🤖 AI 파이프라인</a></li>
     <li><a href="#" onclick="showTab('transfer',this)">🤝 기술이전</a></li>
     <li><a href="#" onclick="showTab('kmoonshot',this)">🚀 K-문샷 로드맵</a></li>
+    <li><a href="#" onclick="showTab('news',this)">📰 뉴스</a></li>
   </ul>
 </nav>
 
@@ -289,6 +316,32 @@
   </div>
 </div>
 
+<!-- ══ TAB: NEWS ══════════════════════════════════════════════════════ -->
+<div id="tab-news" class="tab-panel">
+  <div class="section">
+    <div class="section-title">AI 신약개발 뉴스 (최근 7일)</div>
+    <div class="news-updated">뉴스 업데이트: <span id="news-updated-date">—</span> · 매주 일요일 자동 갱신</div>
+    <div class="news-filter" id="news-filter">
+      <button class="on" onclick="filterNews('all',this)">전체</button>
+      <button onclick="filterNews('기술이전',this)">기술이전</button>
+      <button onclick="filterNews('임상',this)">임상</button>
+      <button onclick="filterNews('AI플랫폼',this)">AI플랫폼</button>
+      <button onclick="filterNews('투자',this)">투자</button>
+      <button onclick="filterNews('규제/허가',this)">규제/허가</button>
+    </div>
+    <div class="news-cols">
+      <div>
+        <div class="news-col-title">🇰🇷 국내 뉴스</div>
+        <div id="news-domestic"></div>
+      </div>
+      <div>
+        <div class="news-col-title" style="border-color:var(--accent2);">🌏 해외 뉴스</div>
+        <div id="news-international"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </main>
 
 <footer>
@@ -333,6 +386,20 @@ fetch('data/dashboard.json')
     renderTransferTable(data.tech_transfers);
     renderRoadmap(data.kmoonshot_roadmap);
     renderVAI();
+  });
+
+let _newsData = { domestic: [], international: [] };
+
+fetch('data/news.json')
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('news-updated-date').textContent = data.updated_at || '—';
+    _newsData = data.news || { domestic: [], international: [] };
+    renderNews('all');
+  })
+  .catch(() => {
+    document.getElementById('news-domestic').innerHTML = '<p style="color:var(--muted);font-size:12px;">뉴스를 불러올 수 없습니다.</p>';
+    document.getElementById('news-international').innerHTML = '<p style="color:var(--muted);font-size:12px;">뉴스를 불러올 수 없습니다.</p>';
   });
 
 // ── KPI Cards ─────────────────────────────────────────────────────────
@@ -564,6 +631,39 @@ function renderRoadmap(rm) {
       <div class="kpi-value" style="font-size:20px;">2년</div>
       <div class="kpi-note">현재 10–15년 → 2035년 2년 이내</div>
     </div>`;
+}
+
+// ── News board ────────────────────────────────────────────────────────
+function catClass(cat) {
+  const map = { '기술이전': 'cat-기술이전', '임상': 'cat-임상', 'AI플랫폼': 'cat-AI플랫폼', '투자': 'cat-투자', '규제/허가': 'cat-규제허가', '일반': 'cat-일반' };
+  return map[cat] || 'cat-일반';
+}
+
+function renderNewsItems(articles, containerId) {
+  const el = document.getElementById(containerId);
+  if (!articles.length) { el.innerHTML = '<p style="color:var(--muted);font-size:12px;">해당 카테고리의 뉴스가 없습니다.</p>'; return; }
+  el.innerHTML = articles.map(a => `
+    <div class="news-item" data-cats="${(a.categories||[]).join(',')}">
+      <div class="news-title"><a href="${a.link}" target="_blank" rel="noopener">${a.title}</a></div>
+      <div class="news-meta">
+        <span class="news-source">${a.source || '미확인'}</span>
+        <span class="news-date">${a.pub_date || ''}</span>
+      </div>
+      ${a.summary ? `<div class="news-summary">${a.summary}</div>` : ''}
+      <div class="news-cats">${(a.categories||['일반']).map(c => `<span class="cat-badge ${catClass(c)}">${c}</span>`).join('')}</div>
+    </div>`).join('');
+}
+
+function renderNews(filterCat) {
+  const filter = items => filterCat === 'all' ? items : items.filter(a => (a.categories||[]).includes(filterCat));
+  renderNewsItems(filter(_newsData.domestic || []), 'news-domestic');
+  renderNewsItems(filter(_newsData.international || []), 'news-international');
+}
+
+function filterNews(cat, btn) {
+  document.querySelectorAll('.news-filter button').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  renderNews(cat);
 }
 
 // ── V_AI progress chart ───────────────────────────────────────────────
