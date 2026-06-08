@@ -128,6 +128,27 @@
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
 
+  /* Drug dev flow */
+  .dev-flow-wrap { overflow-x: auto; padding-bottom: 8px; }
+  .dev-flow { display: flex; align-items: stretch; min-width: max-content; gap: 0; }
+  .dev-stage { display: flex; align-items: center; }
+  .dev-stage-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 10px; width: 120px; text-align: center; transition: border-color .2s; cursor: default; }
+  .dev-stage-box:hover { border-color: var(--accent); }
+  .dev-stage-box.group-발굴 { border-top: 3px solid var(--accent3); }
+  .dev-stage-box.group-임상전 { border-top: 3px solid var(--accent2); }
+  .dev-stage-box.group-임상 { border-top: 3px solid var(--accent); }
+  .dev-stage-box.group-허가 { border-top: 3px solid var(--green); }
+  .dev-stage-num { font-size: 10px; color: var(--muted); margin-bottom: 3px; }
+  .dev-stage-name { font-size: 11px; font-weight: 700; line-height: 1.3; margin-bottom: 4px; }
+  .dev-stage-label { font-size: 9px; color: var(--muted); margin-bottom: 6px; }
+  .dev-stage-count { font-size: 18px; font-weight: 700; color: var(--accent); }
+  .dev-stage-count.no-data { font-size: 11px; color: var(--muted); font-weight: 400; }
+  .dev-stage-ai { font-size: 9px; color: var(--muted); line-height: 1.4; margin-top: 4px; text-align: left; }
+  .dev-arrow { color: var(--border); font-size: 16px; padding: 0 2px; flex-shrink: 0; }
+  .dev-flow-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+  .dev-legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+  .dev-legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+
   /* News board */
   .news-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   @media (max-width: 900px) { .news-cols { grid-template-columns: 1fr; } }
@@ -219,7 +240,24 @@
 <!-- ══ TAB: PIPELINES ════════════════════════════════════════════════ -->
 <div id="tab-pipelines" class="tab-panel">
   <div class="section">
+    <div class="section-title">신약개발 10단계 프로세스 & AI 적용 현황</div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px;">※ 파이프라인 수(Citeline 기준)는 비임상(전임상) 단계부터 집계. 발굴 단계(①~④)는 내부 R&D로 공개 DB 미집계.</p>
+    <div class="card" style="padding:16px;">
+      <div class="dev-flow-wrap">
+        <div class="dev-flow" id="dev-flow"></div>
+      </div>
+      <div class="dev-flow-legend">
+        <div class="dev-legend-item"><div class="dev-legend-dot" style="background:var(--accent3);"></div> 발굴 단계 (표적~후보물질)</div>
+        <div class="dev-legend-item"><div class="dev-legend-dot" style="background:var(--accent2);"></div> 비임상(전임상)</div>
+        <div class="dev-legend-item"><div class="dev-legend-dot" style="background:var(--accent);"></div> 임상 단계</div>
+        <div class="dev-legend-item"><div class="dev-legend-dot" style="background:var(--green);"></div> 허가/판매</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
     <div class="section-title">국내 신약 파이프라인 단계별 현황 (2025)</div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px;">※ Citeline 기준 비임상(전임상) 이후 단계 집계 (3,386개 총합)</p>
     <div class="grid-3" id="stage-cards"></div>
   </div>
   <div class="section card" style="padding:20px;">
@@ -378,6 +416,7 @@ fetch('data/dashboard.json')
     renderAIvsChart(data.pipeline_stages);
     renderCompanyBars(data.ecosystem);
     renderSWOT(data.swot);
+    renderDrugDevFlow(data.drug_dev_stages);
     renderStageCards(data.pipeline_stages);
     renderGlobalCompare(data.pipeline_stages);
     renderAIPipelineTable(data.ai_pipelines);
@@ -413,6 +452,29 @@ function renderKPI(kpi) {
       <div class="kpi-label">${d.label}</div>
       <div class="kpi-value">${typeof d.value === 'number' && d.value >= 1000 ? d.value.toLocaleString() : d.value}<span class="kpi-unit">${d.unit}</span></div>
       ${d.note ? `<div class="kpi-note">${d.note}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// ── Drug development 10-stage flow ───────────────────────────────────
+function renderDrugDevFlow(stages) {
+  if (!stages) return;
+  const el = document.getElementById('dev-flow');
+  el.innerHTML = stages.map((s, i) => {
+    const countHtml = s.tracked && s.count != null
+      ? `<div class="dev-stage-count">${s.count.toLocaleString()}<span style="font-size:10px;color:var(--muted);">개</span></div>`
+      : `<div class="dev-stage-count no-data">${s.tracked ? '—' : '내부 R&D'}</div>`;
+    const arrow = i < stages.length - 1 ? `<div class="dev-arrow">›</div>` : '';
+    return `
+    <div class="dev-stage">
+      <div class="dev-stage-box group-${s.group}">
+        <div class="dev-stage-num">STEP ${i + 1}</div>
+        <div class="dev-stage-name">${s.stage}</div>
+        <div class="dev-stage-label">${s.label}</div>
+        ${countHtml}
+        <div class="dev-stage-ai">${s.ai_role}</div>
+      </div>
+      ${arrow}
     </div>`;
   }).join('');
 }
@@ -527,7 +589,7 @@ function renderGlobalCompare(stages) {
 // ── AI pipeline table ─────────────────────────────────────────────────
 function renderAIPipelineTable(pipelines) {
   const stageClass = s => {
-    if (s.includes('전임상')) return 's-pre';
+    if (s.includes('비임상') || s.includes('전임상')) return 's-pre';
     if (s.includes('1상')) return 's-1';
     if (s.includes('2상')) return 's-2';
     if (s.includes('3상')) return 's-3';
@@ -599,7 +661,7 @@ function renderTransferTable(transfers) {
       <td style="color:var(--accent2);">${t.drug}</td>
       <td>${t.indication}</td>
       <td class="deal-val">${t.deal_value}</td>
-      <td><span class="badge-stage ${t.stage.includes('시판') ? 's-approved' : t.stage.includes('임상') ? 's-1' : 's-pre'}">${t.stage}</span></td>
+      <td><span class="badge-stage ${t.stage.includes('시판') ? 's-approved' : t.stage.includes('임상') ? 's-1' : t.stage.includes('비임상') || t.stage.includes('전임상') ? 's-pre' : 's-pre'}">${t.stage}</span></td>
       <td class="highlight">${t.highlight}</td>
     </tr>`).join('');
 }

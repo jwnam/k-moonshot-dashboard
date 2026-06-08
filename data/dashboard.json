@@ -2,7 +2,7 @@
   "meta": {
     "updated_at": "2026-06-09",
     "source": "K-문샷 신약 AI 미션 PD실 · 보건산업진흥원 · Citeline · 한국바이오협회 (2025–2026)",
-    "version": "1.0"
+    "version": "1.1"
   },
   "kpi": {
     "domestic_pipelines": { "value": 3386, "label": "국내 신약 파이프라인", "unit": "개", "year": 2025, "note": "세계 3위 (Citeline 2025)" },
@@ -12,11 +12,99 @@
     "ai_market_cagr": { "value": 24, "label": "AI 신약 시장 CAGR", "unit": "%", "note": "2025→2033 약 6배 성장 전망" },
     "ai_vc_investment": { "value": 110, "label": "AI 신약 VC 투자 (2025)", "unit": "억달러", "note": "전년比 +23%" }
   },
+  "drug_dev_stages": [
+    {
+      "stage": "표적발굴",
+      "label": "Target ID",
+      "group": "발굴",
+      "ai_role": "유전체·단백질 구조 AI 분석, 질환 타깃 예측 및 검증",
+      "tracked": false,
+      "note": "내부 R&D 단계 — 파이프라인 DB 미집계"
+    },
+    {
+      "stage": "유효물질발굴",
+      "label": "Hit Discovery",
+      "group": "발굴",
+      "ai_role": "초거대 화합물 라이브러리 가상스크리닝, AI 기반 Hit 발굴",
+      "tracked": false,
+      "note": "내부 R&D 단계 — 파이프라인 DB 미집계"
+    },
+    {
+      "stage": "선도물질발굴",
+      "label": "Lead Discovery",
+      "group": "발굴",
+      "ai_role": "ADMET 예측, de novo 분자 설계, 구조-활성 관계 최적화",
+      "tracked": false,
+      "note": "내부 R&D 단계 — 파이프라인 DB 미집계"
+    },
+    {
+      "stage": "후보물질발굴",
+      "label": "Candidate Selection",
+      "group": "발굴",
+      "ai_role": "다중목적 최적화 (활성·독성·선택성·합성용이성 동시 최적화)",
+      "tracked": false,
+      "note": "내부 R&D 단계 — 파이프라인 DB 미집계"
+    },
+    {
+      "stage": "비임상(전임상)",
+      "label": "Non-clinical",
+      "group": "임상전",
+      "ai_role": "디지털 비임상(전임상), 독성·효능 AI 예측, 동물실험 대체 기술",
+      "tracked": true,
+      "count": 2030,
+      "pct": 60
+    },
+    {
+      "stage": "임상 1상",
+      "label": "Phase I",
+      "group": "임상",
+      "ai_role": "용량 최적화, 안전성 바이오마커 예측, 임상 프로토콜 설계",
+      "tracked": true,
+      "count": 507,
+      "pct": 15
+    },
+    {
+      "stage": "임상 2상",
+      "label": "Phase II",
+      "group": "임상",
+      "ai_role": "환자 선별·층화, 바이오마커 기반 반응 예측, 중간 분석 AI",
+      "tracked": true,
+      "count": 406,
+      "pct": 12
+    },
+    {
+      "stage": "임상 3상",
+      "label": "Phase III",
+      "group": "임상",
+      "ai_role": "대규모 임상 최적화, 실패 예측·리스크 관리, 적응적 설계",
+      "tracked": true,
+      "count": 237,
+      "pct": 7
+    },
+    {
+      "stage": "허가/제조",
+      "label": "Approval",
+      "group": "허가",
+      "ai_role": "규제 문서 자동화, 제조 공정 최적화, 품질 관리 AI",
+      "tracked": true,
+      "count": 206,
+      "pct": 6
+    },
+    {
+      "stage": "판매",
+      "label": "Market",
+      "group": "허가",
+      "ai_role": "리얼월드증거(RWE), 약물감시(Pharmacovigilance), 처방 최적화",
+      "tracked": false,
+      "note": "허가 후 단계 — 파이프라인 DB 별도 집계"
+    }
+  ],
   "pipeline_stages": {
     "domestic": {
       "label": "국내 신약 파이프라인 단계별 분포 (추정, 2025)",
+      "note": "※ Citeline 기준 비임상(전임상) 이후 단계 집계",
       "data": [
-        { "stage": "전임상", "count": 2030, "pct": 60 },
+        { "stage": "비임상(전임상)", "count": 2030, "pct": 60 },
         { "stage": "임상 1상", "count": 507, "pct": 15 },
         { "stage": "임상 2상", "count": 406, "pct": 12 },
         { "stage": "임상 3상", "count": 237, "pct": 7 },
@@ -26,7 +114,7 @@
     "ai_domestic": {
       "label": "국내 AI 연계 파이프라인 단계별 분포 (추정)",
       "data": [
-        { "stage": "전임상", "count": 180, "pct": 72 },
+        { "stage": "비임상(전임상)", "count": 180, "pct": 72 },
         { "stage": "임상 1상", "count": 42, "pct": 17 },
         { "stage": "임상 2상", "count": 20, "pct": 8 },
         { "stage": "임상 3상", "count": 8, "pct": 3 },
@@ -54,7 +142,7 @@
       "company": "JW중외제약",
       "drug": "JW0061",
       "indication": "탈모 치료제",
-      "stage": "전임상 완료 (임상 1상 준비)",
+      "stage": "비임상(전임상) 완료 (임상 1상 준비)",
       "ai_tech": "JWELRY + 온코크로스",
       "highlight": "적응증 확장 추진 중",
       "modality": "소분자"
@@ -81,7 +169,7 @@
       "company": "갤럭스",
       "drug": "파이프라인 복수",
       "indication": "GPCR·이온채널 등 난공불락 타깃",
-      "stage": "전임상",
+      "stage": "비임상(전임상)",
       "ai_tech": "GalaxDesign (de novo 단백질 설계)",
       "highlight": "시리즈B 420억 (누적 680억), 이수앱지스 협력",
       "modality": "바이오로직스"
@@ -90,7 +178,7 @@
       "company": "스탠다임",
       "drug": "내성결핵 치료제 후보",
       "indication": "내성결핵",
-      "stage": "전임상 (후보 도출)",
+      "stage": "비임상(전임상) — 후보물질 도출",
       "ai_tech": "Standigm BEST (생성형 AI)",
       "highlight": "한국파스퇴르硏 협력",
       "modality": "소분자"
@@ -99,7 +187,7 @@
       "company": "아이젠사이언스",
       "drug": "14개 파이프라인",
       "indication": "난치성·항암",
-      "stage": "전임상~임상 1상",
+      "stage": "비임상(전임상)~임상 1상",
       "ai_tech": "미어캣·아이젠인사이트 (LLM 기반)",
       "highlight": "한미약품 공동연구, 의생명 특화 LLM",
       "modality": "소분자/바이오로직스"
@@ -108,7 +196,7 @@
       "company": "대웅제약",
       "drug": "비만·당뇨 선도물질",
       "indication": "비만/당뇨",
-      "stage": "전임상",
+      "stage": "비임상(전임상)",
       "ai_tech": "DAISY 플랫폼",
       "highlight": "국내 파이프라인 1위(58개), 도킹·가상탐색·단백질 결합분석",
       "modality": "소분자"
@@ -162,7 +250,7 @@
       "drug": "AI 설계 항체신약",
       "indication": "미공개",
       "deal_value": "미공개",
-      "stage": "전임상",
+      "stage": "비임상(전임상)",
       "highlight": "GalaxDesign de novo 항체 설계 AI 기술 기반 공동개발"
     },
     {
@@ -189,9 +277,9 @@
   "kmoonshot_roadmap": {
     "mission": "AI 융합으로 신약 개발속도 10배 가속 (10–15년 → 2년 이내)",
     "milestones": [
-      { "year": 2029, "step": "STEP 1", "goal": "AI 기반 신약 제안·설계·최적화", "detail": "조직 수준 파운데이션 모델, 모달리티별 후보물질 설계기술, 디지털 전임상 기술" },
-      { "year": 2032, "step": "STEP 2", "goal": "전단계 Lab-in-the-Loop 구현", "detail": "조직-장기 수준 FM, AI 자율실험 혁신신약 개발체계, 국내 인허가용 디지털 전임상 플랫폼" },
-      { "year": 2035, "step": "STEP 3", "goal": "신약개발 속도 10배 이상 향상", "detail": "인체 Whole-body FM, AI-driven 신약개발 체계 확산, 국제 인증 디지털 전임상 플랫폼" }
+      { "year": 2029, "step": "STEP 1", "goal": "AI 기반 신약 제안·설계·최적화", "detail": "조직 수준 파운데이션 모델, 모달리티별 후보물질 설계기술, 디지털 비임상(전임상) 기술" },
+      { "year": 2032, "step": "STEP 2", "goal": "전단계 Lab-in-the-Loop 구현", "detail": "조직-장기 수준 FM, AI 자율실험 혁신신약 개발체계, 국내 인허가용 디지털 비임상(전임상) 플랫폼" },
+      { "year": 2035, "step": "STEP 3", "goal": "신약개발 속도 10배 이상 향상", "detail": "인체 Whole-body FM, AI-driven 신약개발 체계 확산, 국제 인증 디지털 비임상(전임상) 플랫폼" }
     ],
     "kpi": { "target_2030": "블록버스터급 신약 3건", "target_2040": "블록버스터급 신약 10건" },
     "core_tech": [
