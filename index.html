@@ -388,7 +388,7 @@
     <div class="card tbl-wrap">
       <table id="proj-core-table">
         <thead>
-          <tr><th>사업명</th><th>기간</th><th>'27 예산(억)</th><th>내역</th><th>총사업비(억)</th></tr>
+          <tr><th>사업명</th><th>기간</th><th>'27 예산(억)</th><th>총사업비(억)</th></tr>
         </thead>
         <tbody></tbody>
       </table>
@@ -415,7 +415,7 @@
     <div class="card tbl-wrap">
       <table id="proj-govt-table">
         <thead>
-          <tr><th>기관</th><th>사업명</th><th>기간</th><th>'27 예산(억)</th><th>내역</th><th>총사업비(억)</th></tr>
+          <tr><th>기관</th><th>사업명</th><th>기간</th><th>'27 예산(억)</th><th>총사업비(억)</th></tr>
         </thead>
         <tbody></tbody>
       </table>
@@ -812,7 +812,6 @@ function renderProjects(proj) {
           <div class="budget-bar-track"><div class="budget-bar-fill" style="width:${(p.budget_27/maxCore*100).toFixed(0)}%;background:var(--accent);"></div></div>
         </div>
       </td>
-      <td style="font-size:10px;color:var(--muted);">${p.budget_27_note || '—'}</td>
       <td style="color:var(--accent3);font-weight:600;">${p.budget_total.toLocaleString()}</td>
     </tr>`).join('');
 
@@ -849,7 +848,6 @@ function renderProjects(proj) {
           <div class="budget-bar-track"><div class="budget-bar-fill" style="width:${(p.budget_27/maxGovt*100).toFixed(0)}%;background:var(--accent3);"></div></div>
         </div>
       </td>
-      <td style="font-size:10px;color:var(--muted);">${p.budget_27_note || '—'}</td>
       <td style="color:var(--accent3);font-weight:600;">${p.budget_total}</td>
     </tr>`).join('');
 
