@@ -300,16 +300,16 @@
   "projects": {
     "summary": {
       "core_count": 2,
-      "linked_count": 21,
+      "linked_count": 20,
       "govt_lab_count": 9,
       "core_budget_27": 322,
-      "linked_budget_27": 1623,
+      "linked_budget_27": 1533,
       "govt_lab_budget_27": 847,
-      "total_budget_27": 2792,
+      "total_budget_27": 2702,
       "core_total": 1845,
-      "linked_total": 7452,
+      "linked_total": 7012,
       "govt_lab_total": 2405,
-      "grand_total": 11702
+      "grand_total": 11262
     },
     "core": [
       {
@@ -335,7 +335,6 @@
       { "name": "AIxBio 혁신 연구거점 조성 시범사업", "relevance": "***", "period": "'26~'30", "budget_27": 132, "budget_total": 494 },
       { "name": "AI-Medicine: 신약개발 전주기 멀티에이전트 AI 플랫폼 구축 및 실증", "relevance": "***", "period": "'26~'30", "budget_27": 37, "budget_total": 138 },
       { "name": "구조기반 AI 신약개발 지원", "relevance": "***", "period": "'26~'30", "budget_27": 32, "budget_total": 152 },
-      { "name": "AI바이오디자인 기반 소화기계 난치면역질환 멀티모달 마이크로바이옴 치료제 개발 (생명연 전략연구)", "relevance": "***", "period": "'27~", "budget_27": 90, "budget_total": 440, "note": "'27 신규" },
       { "name": "바이오 멀티모달 파운데이션 모델 구축 사업", "relevance": "**", "period": "'26~'30", "budget_27": 68, "budget_total": 324 },
       { "name": "AI 신약 플랫폼 신뢰성 검증 및 실용화 가속 사업", "relevance": "**", "period": "'27~'30", "budget_27": 85, "budget_total": 437 },
       { "name": "인공지능 기반 신규 모달리티를 활용한 희귀·난치질환 치료제 개발", "relevance": "**", "period": "'25~'29", "budget_27": 20, "budget_total": 95 },
