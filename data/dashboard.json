@@ -300,16 +300,16 @@
   "projects": {
     "summary": {
       "core_count": 2,
-      "linked_count": 20,
-      "govt_lab_count": 8,
+      "linked_count": 21,
+      "govt_lab_count": 9,
       "core_budget_27": 322,
-      "linked_budget_27": 1533,
-      "govt_lab_budget_27": 383,
-      "total_budget_27": 2238,
+      "linked_budget_27": 1623,
+      "govt_lab_budget_27": 847,
+      "total_budget_27": 2792,
       "core_total": 1845,
-      "linked_total": 7012,
-      "govt_lab_total": 1941,
-      "grand_total": 10798
+      "linked_total": 7452,
+      "govt_lab_total": 2405,
+      "grand_total": 11702
     },
     "core": [
       {
@@ -335,6 +335,7 @@
       { "name": "AIxBio 혁신 연구거점 조성 시범사업", "relevance": "***", "period": "'26~'30", "budget_27": 132, "budget_total": 494 },
       { "name": "AI-Medicine: 신약개발 전주기 멀티에이전트 AI 플랫폼 구축 및 실증", "relevance": "***", "period": "'26~'30", "budget_27": 37, "budget_total": 138 },
       { "name": "구조기반 AI 신약개발 지원", "relevance": "***", "period": "'26~'30", "budget_27": 32, "budget_total": 152 },
+      { "name": "AI바이오디자인 기반 소화기계 난치면역질환 멀티모달 마이크로바이옴 치료제 개발 (생명연 전략연구)", "relevance": "***", "period": "'27~", "budget_27": 90, "budget_total": 440, "note": "'27 신규" },
       { "name": "바이오 멀티모달 파운데이션 모델 구축 사업", "relevance": "**", "period": "'26~'30", "budget_27": 68, "budget_total": 324 },
       { "name": "AI 신약 플랫폼 신뢰성 검증 및 실용화 가속 사업", "relevance": "**", "period": "'27~'30", "budget_27": 85, "budget_total": 437 },
       { "name": "인공지능 기반 신규 모달리티를 활용한 희귀·난치질환 치료제 개발", "relevance": "**", "period": "'25~'29", "budget_27": 20, "budget_total": 95 },
@@ -359,7 +360,8 @@
       { "org": "화학연", "name": "대용량 유전자 암호화 라이브러리 플랫폼 기반 코어뱅크 구축", "period": "'23~'27", "budget_27": 30.0, "budget_total": 150 },
       { "org": "독성연", "name": "가상대조군(VCG) 활용 독성평가 플랫폼 개발", "period": "'27~'31", "budget_27": 73.5, "budget_27_note": "한도내 33.1 + 한도외 40.4", "budget_total": 300 },
       { "org": "독성연", "name": "첨단 NAMs 통합 반복투여독성 예측기술 개발", "period": "'27~'31", "budget_27": 72.0, "budget_27_note": "한도외 72", "budget_total": 360 },
-      { "org": "독성연", "name": "AI 기반 정밀독성 예측기술 개발", "period": "'23~'29", "budget_27": 43.0, "budget_27_note": "한도내 23 + 한도외 20", "budget_total": 163 }
+      { "org": "독성연", "name": "AI 기반 정밀독성 예측기술 개발", "period": "'23~'29", "budget_27": 43.0, "budget_27_note": "한도내 23 + 한도외 20", "budget_total": 163 },
+      { "org": "KISTI", "name": "다부처 AI기반 바이오데이터소재 통합활용지원사업", "period": "'27~", "budget_27": 464, "budget_total": 0, "note": "'27 신규, 다부처 구축형 R&D" }
     ]
   }
 }

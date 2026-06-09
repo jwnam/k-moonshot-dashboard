@@ -161,6 +161,7 @@
   .org-생명연 { background: rgba(34,211,238,.15); color: var(--accent2); }
   .org-화학연 { background: rgba(245,158,11,.15); color: var(--accent3); }
   .org-독성연 { background: rgba(239,68,68,.15); color: var(--red); }
+  .org-KISTI { background: rgba(168,85,247,.15); color: var(--purple); }
   .budget-bar-wrap { display: flex; align-items: center; gap: 6px; }
   .budget-bar-track { flex: 1; background: var(--surface2); border-radius: 3px; height: 4px; }
   .budget-bar-fill { height: 4px; border-radius: 3px; }
@@ -831,7 +832,7 @@ function renderProjects(proj) {
           <div class="budget-bar-track"><div class="budget-bar-fill" style="width:${(p.budget_27/maxLinked*100).toFixed(0)}%;background:${relColor(p.relevance)};"></div></div>
         </div>` : '<span style="color:var(--muted);font-size:11px;">—</span>'}
       </td>
-      <td style="color:var(--accent3);font-weight:600;">${p.budget_total.toLocaleString()}</td>
+      <td style="color:var(--accent3);font-weight:600;">${p.budget_total > 0 ? p.budget_total.toLocaleString() : '<span style="color:var(--muted);font-size:11px;">미정</span>'}</td>
     </tr>`).join('');
 
   // Govt lab table
@@ -848,7 +849,7 @@ function renderProjects(proj) {
           <div class="budget-bar-track"><div class="budget-bar-fill" style="width:${(p.budget_27/maxGovt*100).toFixed(0)}%;background:var(--accent3);"></div></div>
         </div>
       </td>
-      <td style="color:var(--accent3);font-weight:600;">${p.budget_total}</td>
+      <td style="color:var(--accent3);font-weight:600;">${p.budget_total > 0 ? p.budget_total : '<span style="color:var(--muted);font-size:11px;">미정</span>'}</td>
     </tr>`).join('');
 
   // Budget chart
