@@ -296,5 +296,70 @@
     "weakness": ["임상 단계 AI 공백 (최대 약점)", "기업당 과잉 분산 (평균 8.2개)", "글로벌 시장 점유율 2%·점유율 격차 확대", "AI 설계 신약 후기임상 검증 부재"],
     "opportunity": ["특허절벽發 외부 기술 도입 수요 급증", "바이오텍 모달리티 역전 (RNA·세포·유전자)", "AI 신약 표준화 원년(2026) — 메가딜 기회", "K-문샷 국책과제 집중 투자 (2026~2035)"],
     "threat": ["미국·중국과 파이프라인 점유율 격차 확대", "AI 설계 신약 3상 검증 미완 (2026–27 시험대)", "글로벌 대형제약사 AI 내재화 가속", "임상 데이터 인프라 부족"]
+  },
+  "projects": {
+    "summary": {
+      "core_count": 2,
+      "linked_count": 20,
+      "govt_lab_count": 8,
+      "core_budget_27": 322,
+      "linked_budget_27": 1533,
+      "govt_lab_budget_27": 383,
+      "total_budget_27": 2238,
+      "core_total": 1845,
+      "linked_total": 7012,
+      "govt_lab_total": 1941,
+      "grand_total": 10798
+    },
+    "core": [
+      {
+        "name": "AI-자율실험 기반 차세대신약 연구거점 구축",
+        "period": "'27~'30",
+        "budget_27": 192,
+        "budget_27_note": "한도내 100 + 한도외 92",
+        "budget_total": 855,
+        "note": "'27 신규사업"
+      },
+      {
+        "name": "암면역미세환경 파운데이션 모델(TIME-FM) 구축",
+        "period": "'27~'30",
+        "budget_27": 130,
+        "budget_27_note": "한도내 90 + 한도외 40",
+        "budget_total": 990,
+        "note": "'27 신규사업"
+      }
+    ],
+    "linked": [
+      { "name": "디지털AI세포 구축사업", "relevance": "***", "period": "'26~'30", "budget_27": 38, "budget_total": 188 },
+      { "name": "AI-네이티브 첨단바이오 자율실험실 구축", "relevance": "***", "period": "'26~'28", "budget_27": 180, "budget_total": 495 },
+      { "name": "AIxBio 혁신 연구거점 조성 시범사업", "relevance": "***", "period": "'26~'30", "budget_27": 132, "budget_total": 494 },
+      { "name": "AI-Medicine: 신약개발 전주기 멀티에이전트 AI 플랫폼 구축 및 실증", "relevance": "***", "period": "'26~'30", "budget_27": 37, "budget_total": 138 },
+      { "name": "구조기반 AI 신약개발 지원", "relevance": "***", "period": "'26~'30", "budget_27": 32, "budget_total": 152 },
+      { "name": "바이오 멀티모달 파운데이션 모델 구축 사업", "relevance": "**", "period": "'26~'30", "budget_27": 68, "budget_total": 324 },
+      { "name": "AI 신약 플랫폼 신뢰성 검증 및 실용화 가속 사업", "relevance": "**", "period": "'27~'30", "budget_27": 85, "budget_total": 437 },
+      { "name": "인공지능 기반 신규 모달리티를 활용한 희귀·난치질환 치료제 개발", "relevance": "**", "period": "'25~'29", "budget_27": 20, "budget_total": 95 },
+      { "name": "AI 활용 나노포어 기반 Undruggable target 신약 스크리닝 기술개발", "relevance": "**", "period": "'26~'30", "budget_27": 24, "budget_total": 114 },
+      { "name": "국가통합바이오빅데이터구축사업", "relevance": "*", "period": "'24~'28", "budget_27": 366, "budget_total": 1656 },
+      { "name": "AI기반 한국인 암흑유전체지도 구축 및 병인제어 기술개발", "relevance": "*", "period": "'27~'31", "budget_27": 75, "budget_total": 475 },
+      { "name": "마이크로바이옴 기반 차세대치료 원천기술개발 브릿지 사업", "relevance": "*", "period": "'23~'27", "budget_27": 50, "budget_total": 328 },
+      { "name": "임상·인체유래물 연계 AI 정밀의료 연구거점 구축", "relevance": "*", "period": "'27~'30", "budget_27": 192, "budget_total": 855 },
+      { "name": "인공지능 항체은행", "relevance": "*", "period": "'24~'26", "budget_27": 0, "budget_total": 150, "note": "'26년 종료" },
+      { "name": "한국인디지털분자지도프로젝트", "relevance": "*", "period": "'25~'30", "budget_27": 43, "budget_total": 233 },
+      { "name": "초고속-고정밀 RNA 화학적 변형(RM) 스크리닝 플랫폼 개발", "relevance": "*", "period": "'26~'30", "budget_27": 20, "budget_total": 95 },
+      { "name": "AI기반 합성 mRNA 구조체 설계 기술 개발 및 실증", "relevance": "*", "period": "'26~'30", "budget_27": 20, "budget_total": 90 },
+      { "name": "신종 감염병 대응 스마트 디지털전임상 플랫폼 구축", "relevance": "*", "period": "'26~'30", "budget_27": 24, "budget_total": 108 },
+      { "name": "차세대 RNA 편집·표적·제어 원천기술개발사업", "relevance": "*", "period": "'25~'29", "budget_27": 53, "budget_total": 245 },
+      { "name": "차세대 후성유전체 편집 원천기술개발사업", "relevance": "*", "period": "'25~'29", "budget_27": 74, "budget_total": 340 }
+    ],
+    "govt_labs": [
+      { "org": "생명연", "name": "AI 활용 하이브리드 치료제 전략연구사업", "period": "'26~'30", "budget_27": 85.5, "budget_27_note": "한도내 68 + 한도외 17.5", "budget_total": 397 },
+      { "org": "생명연", "name": "AI 플랫폼 활용 기전 기반 난치면역질환 정밀 설계형 차세대 마이크로바이옴 치료제 개발", "period": "'27~'34", "budget_27": 49.0, "budget_27_note": "한도내 23 + 한도외 26", "budget_total": 392 },
+      { "org": "화학연", "name": "AI기반 치료용 중분자 설계 플랫폼 기술 연구", "period": "'26~'31", "budget_27": 14.9, "budget_total": 89.4 },
+      { "org": "화학연", "name": "신약소재화합물 지원 플랫폼 개발", "period": "'26~'31", "budget_27": 15.0, "budget_total": 90 },
+      { "org": "화학연", "name": "대용량 유전자 암호화 라이브러리 플랫폼 기반 코어뱅크 구축", "period": "'23~'27", "budget_27": 30.0, "budget_total": 150 },
+      { "org": "독성연", "name": "가상대조군(VCG) 활용 독성평가 플랫폼 개발", "period": "'27~'31", "budget_27": 73.5, "budget_27_note": "한도내 33.1 + 한도외 40.4", "budget_total": 300 },
+      { "org": "독성연", "name": "첨단 NAMs 통합 반복투여독성 예측기술 개발", "period": "'27~'31", "budget_27": 72.0, "budget_27_note": "한도외 72", "budget_total": 360 },
+      { "org": "독성연", "name": "AI 기반 정밀독성 예측기술 개발", "period": "'23~'29", "budget_27": 43.0, "budget_27_note": "한도내 23 + 한도외 20", "budget_total": 163 }
+    ]
   }
 }
