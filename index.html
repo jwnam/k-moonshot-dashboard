@@ -690,10 +690,10 @@ function renderValueChain() {
   new Chart(document.getElementById('chart-value-chain'), {
     type: 'radar',
     data: {
-      labels: ['정보탐색·후보발굴', '전임상', '임상', '제조·인허가', '시판후 분석'],
+      labels: ['정보탐색·후보발굴', '비임상(전임상)', '임상', '제조·인허가', '시판후 분석'],
       datasets: [
-        { label: '국내 AI 활용 수준', data: [85, 60, 20, 15, 10], backgroundColor: 'rgba(99,102,241,0.2)', borderColor: '#6366f1', pointBackgroundColor: '#6366f1' },
-        { label: '글로벌 대비 목표', data: [90, 80, 60, 50, 40], backgroundColor: 'rgba(34,211,238,0.1)', borderColor: '#22d3ee', pointBackgroundColor: '#22d3ee', borderDash: [5,5] }
+        { label: '국내 AI 활용 수준', data: [70, 35, 20, 10, 5], backgroundColor: 'rgba(99,102,241,0.2)', borderColor: '#6366f1', pointBackgroundColor: '#6366f1' },
+        { label: '글로벌 수준', data: [80, 60, 55, 40, 30], backgroundColor: 'rgba(34,211,238,0.1)', borderColor: '#22d3ee', pointBackgroundColor: '#22d3ee', borderDash: [5,5] }
       ]
     },
     options: {
