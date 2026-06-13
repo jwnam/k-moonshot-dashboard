@@ -510,11 +510,18 @@
 
 <script>
 // ── Tab navigation ────────────────────────────────────────────────────
+let _biodata = null;
+let _biodataChartsDone = false;
+
 function showTab(name, el) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tabs a').forEach(a => a.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
   el.classList.add('active');
+  if (name === 'biodata' && _biodata && !_biodataChartsDone) {
+    renderBiodataCharts(_biodata);
+    _biodataChartsDone = true;
+  }
   return false;
 }
 
@@ -526,7 +533,7 @@ Chart.defaults.font.family = "'Segoe UI', 'Apple SD Gothic Neo', sans-serif";
 const PALETTE = ['#6366f1','#22d3ee','#f59e0b','#10b981','#a855f7','#ef4444'];
 
 // ── Load data and render ──────────────────────────────────────────────
-fetch('data/dashboard.json')
+fetch('data/dashboard.json?v=1.2')
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-date').textContent = data.meta.updated_at;
@@ -545,7 +552,8 @@ fetch('data/dashboard.json')
     renderRoadmap(data.kmoonshot_roadmap);
     renderVAI();
     renderProjects(data.projects);
-    renderBiodata(data.biodata);
+    _biodata = data.biodata;
+    renderBiodataStatic(data.biodata);
   });
 
 let _newsData = { domestic: [], international: [] };
@@ -965,14 +973,15 @@ function filterNews(cat, btn) {
 }
 
 // ── Biodata tab ───────────────────────────────────────────────────────
-function renderBiodata(bd) {
-  if (!bd) return;
-  const maturityColor = score =>
-    score >= 5 ? 'rgba(16,185,129,0.85)' :
+function _maturityColor(score) {
+  return score >= 5 ? 'rgba(16,185,129,0.85)' :
     score === 4 ? 'rgba(34,211,238,0.85)' :
     score === 3 ? 'rgba(245,158,11,0.85)' :
     score === 2 ? 'rgba(249,115,22,0.85)' : 'rgba(239,68,68,0.85)';
+}
 
+function renderBiodataStatic(bd) {
+  if (!bd) return;
   const totalDatasets = bd.stages.reduce((a, s) => a + s.datasets, 0);
   const highCount = bd.stages.filter(s => s.maturity_score >= 4).length;
   const midCount  = bd.stages.filter(s => s.maturity_score === 3).length;
@@ -999,43 +1008,9 @@ function renderBiodata(bd) {
       <div class="kpi-note">임상2·3상, 허가/제조</div>
     </div>`;
 
-  const labels = bd.stages.map(s => s.stage);
-  const counts = bd.stages.map(s => s.datasets);
-  const barColors = bd.stages.map(s => maturityColor(s.maturity_score));
-
-  new Chart(document.getElementById('chart-biodata-count'), {
-    type: 'bar',
-    data: { labels, datasets: [{ label: '데이터셋 수', data: counts, backgroundColor: barColors, borderRadius: 4 }] },
-    options: {
-      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-      scales: {
-        x: { beginAtZero: true, grid: { color: '#2d3148' }, ticks: { stepSize: 2, callback: v => v + '개' } },
-        y: { grid: { display: false }, ticks: { font: { size: 11 } } }
-      },
-      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ' ' + ctx.raw + '개' } } }
-    }
-  });
-
-  const mScores = [5, 4, 3, 2, 1];
-  const mLabels = ['높음', '중상', '중', '중하', '낮음'];
-  const mCounts = mScores.map(sc => bd.stages.filter(s => s.maturity_score === sc).length);
-  const mColors = mScores.map(sc => maturityColor(sc));
-  new Chart(document.getElementById('chart-biodata-maturity'), {
-    type: 'bar',
-    data: { labels: mLabels, datasets: [{ label: '단계 수', data: mCounts, backgroundColor: mColors, borderRadius: 4 }] },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      scales: {
-        y: { beginAtZero: true, max: 4, grid: { color: '#2d3148' }, ticks: { stepSize: 1, callback: v => v + '단계' } },
-        x: { grid: { display: false } }
-      },
-      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.raw + '단계' } } }
-    }
-  });
-
   const badge = (m, sc) => {
-    const bg = maturityColor(sc).replace('0.85', '0.2');
-    const fg = maturityColor(sc).replace('0.85', '1');
+    const bg = _maturityColor(sc).replace('0.85', '0.2');
+    const fg = _maturityColor(sc).replace('0.85', '1');
     return `<span style="background:${bg};color:${fg};padding:2px 8px;border-radius:4px;font-size:11px;white-space:nowrap;">${m}</span>`;
   };
   document.querySelector('#biodata-gap-table tbody').innerHTML = bd.stages.map(s => `
@@ -1061,6 +1036,43 @@ function renderBiodata(bd) {
       <td style="font-size:11px;color:var(--muted);">${p.data_type}</td>
       <td style="font-size:11px;">${p.stages}</td>
     </tr>`).join('');
+}
+
+function renderBiodataCharts(bd) {
+  if (!bd) return;
+  const labels = bd.stages.map(s => s.stage);
+  const counts = bd.stages.map(s => s.datasets);
+  const barColors = bd.stages.map(s => _maturityColor(s.maturity_score));
+
+  new Chart(document.getElementById('chart-biodata-count'), {
+    type: 'bar',
+    data: { labels, datasets: [{ label: '데이터셋 수', data: counts, backgroundColor: barColors, borderRadius: 4 }] },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: { beginAtZero: true, grid: { color: '#2d3148' }, ticks: { stepSize: 2, callback: v => v + '개' } },
+        y: { grid: { display: false }, ticks: { font: { size: 11 } } }
+      },
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ' ' + ctx.raw + '개' } } }
+    }
+  });
+
+  const mScores = [5, 4, 3, 2, 1];
+  const mLabels = ['높음', '중상', '중', '중하', '낮음'];
+  const mCounts = mScores.map(sc => bd.stages.filter(s => s.maturity_score === sc).length);
+  const mColors = mScores.map(sc => _maturityColor(sc));
+  new Chart(document.getElementById('chart-biodata-maturity'), {
+    type: 'bar',
+    data: { labels: mLabels, datasets: [{ label: '단계 수', data: mCounts, backgroundColor: mColors, borderRadius: 4 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        y: { beginAtZero: true, max: 4, grid: { color: '#2d3148' }, ticks: { stepSize: 1, callback: v => v + '단계' } },
+        x: { grid: { display: false } }
+      },
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.raw + '단계' } } }
+    }
+  });
 }
 
 // ── V_AI progress chart ───────────────────────────────────────────────
