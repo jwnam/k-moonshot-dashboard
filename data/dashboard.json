@@ -654,16 +654,16 @@
     "source": "AI신약개발_단계별_데이터셋_현황.xlsx",
     "note": "단계별 공개 데이터셋 수 및 성숙도 현황 (검증: 2026-06)",
     "stages": [
-      {"stage": "표적발굴", "datasets": 18, "maturity": "높음", "maturity_score": 5, "openness": "대부분 공개", "gap": "정상세포·멀티오믹스 레퍼런스 보강(디지털세포AI·분자지도)"},
-      {"stage": "유효물질발굴", "datasets": 9, "maturity": "높음", "maturity_score": 5, "openness": "공개+상업", "gap": "초거대 화학공간 상업 의존, 국내 자체 활성·천연물 활용 여지"},
-      {"stage": "선도물질발굴", "datasets": 9, "maturity": "높음", "maturity_score": 5, "openness": "공개", "gap": "RNA·신모달리티 구조 데이터 부족"},
-      {"stage": "후보물질발굴", "datasets": 6, "maturity": "중상", "maturity_score": 4, "openness": "공개 중심", "gap": "ADMET 공개셋 편향·누수, 한국인 약물대사 데이터 부족"},
-      {"stage": "비임상", "datasets": 8, "maturity": "중", "maturity_score": 3, "openness": "공개+컨소시엄", "gap": "산업 독성·실패 데이터 비공개 → 공유체계 필요"},
-      {"stage": "임상 1상", "datasets": 4, "maturity": "중", "maturity_score": 3, "openness": "승인기반 다수", "gap": "국내 EHR·PK·유전체(dbGaP형) 표준화·연계 미흡"},
-      {"stage": "임상 2상", "datasets": 4, "maturity": "중하", "maturity_score": 2, "openness": "상업·기관 의존", "gap": "유효성·바이오마커·의료영상 연계 부족, PoS 상업 DB 종속"},
-      {"stage": "임상 3상", "datasets": 4, "maturity": "낮음", "maturity_score": 1, "openness": "비공개·분산", "gap": "★ 실패·다기관 임상데이터 공유 부재 = 최대 병목"},
-      {"stage": "허가/제조", "datasets": 5, "maturity": "낮음", "maturity_score": 1, "openness": "공개(PV)+비공개(제조)", "gap": "제조·CMC 공개셋 부재, 약가·심사 데이터 미연계"},
-      {"stage": "약물재창출", "datasets": 2, "maturity": "중", "maturity_score": 3, "openness": "공개", "gap": "지식그래프(Hetionet/PrimeKG)·STITCH 기반 재창출 트랙 활용"}
+      {"stage": "표적발굴", "datasets": 18, "maturity": "높음", "maturity_score": 5, "openness": "대부분 공개", "gap": "정상세포·멀티오믹스 레퍼런스 보강(디지털세포AI·분자지도)", "key_datasets": ["Open Targets", "GWAS Catalog", "STRING", "TCGA", "CZ CELLxGENE", "PrimeKG", "UK Biobank"]},
+      {"stage": "유효물질발굴", "datasets": 9, "maturity": "높음", "maturity_score": 5, "openness": "공개+상업", "gap": "초거대 화학공간 상업 의존, 국내 자체 활성·천연물 활용 여지", "key_datasets": ["ChEMBL", "PubChem", "ZINC22", "Enamine REAL Space", "NPASS", "BindingDB"]},
+      {"stage": "선도물질발굴", "datasets": 9, "maturity": "높음", "maturity_score": 5, "openness": "공개", "gap": "RNA·신모달리티 구조 데이터 부족", "key_datasets": ["PDB", "AlphaFold DB", "PDBbind", "UniProt", "PLINDER", "MOSES/GEOM-Drugs"]},
+      {"stage": "후보물질발굴", "datasets": 6, "maturity": "중상", "maturity_score": 4, "openness": "공개 중심", "gap": "ADMET 공개셋 편향·누수, 한국인 약물대사 데이터 부족", "key_datasets": ["TDC (Therapeutics Data Commons)", "ADMETlab 3.0", "DrugBank", "SIDER", "hERG DB"]},
+      {"stage": "비임상", "datasets": 8, "maturity": "중", "maturity_score": 3, "openness": "공개+컨소시엄", "gap": "산업 독성·실패 데이터 비공개 → 공유체계 필요", "key_datasets": ["Tox21", "ToxCast (EPA)", "Open TG-GATEs", "DILIrank", "eTRANSAFE", "CTD"]},
+      {"stage": "임상 1상", "datasets": 4, "maturity": "중", "maturity_score": 3, "openness": "승인기반 다수", "gap": "국내 EHR·PK·유전체(dbGaP형) 표준화·연계 미흡", "key_datasets": ["ClinicalTrials.gov / AACT", "MIMIC-IV", "dbGaP", "PK/PD 파라미터"]},
+      {"stage": "임상 2상", "datasets": 4, "maturity": "중하", "maturity_score": 2, "openness": "상업·기관 의존", "gap": "유효성·바이오마커·의료영상 연계 부족, PoS 상업 DB 종속", "key_datasets": ["AACT + 바이오마커", "의료영상 DB", "Pharmaprojects", "n2c2 NLP 코퍼스"]},
+      {"stage": "임상 3상", "datasets": 4, "maturity": "낮음", "maturity_score": 1, "openness": "비공개·분산", "gap": "★ 실패·다기관 임상데이터 공유 부재 = 최대 병목", "key_datasets": ["OMOP CDM / OHDSI", "All of Us (NIH)", "ClinVar", "임상 성과/실패 데이터 (비공개)"]},
+      {"stage": "허가/제조", "datasets": 5, "maturity": "낮음", "maturity_score": 1, "openness": "공개(PV)+비공개(제조)", "gap": "제조·CMC 공개셋 부재, 약가·심사 데이터 미연계", "key_datasets": ["FAERS / openFDA", "DailyMed", "FDA Orange Book", "WHO VigiBase", "제조·CMC (비공개)"]},
+      {"stage": "약물재창출", "datasets": 2, "maturity": "중", "maturity_score": 3, "openness": "공개", "gap": "지식그래프(Hetionet/PrimeKG)·STITCH 기반 재창출 트랙 활용", "key_datasets": ["STITCH", "Hetionet"]}
     ],
     "kmoonshot_data_projects": [
       {"name": "디지털 세포 AI 구축사업", "budget_total": 375, "period": "'26~'30", "data_type": "정상세포 1,100만+ 세포", "stages": "표적발굴·전주기"},

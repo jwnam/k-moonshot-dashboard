@@ -222,9 +222,9 @@
     <li><a href="#" onclick="showTab('ai-pipeline',this)">🤖 AI 파이프라인</a></li>
     <li><a href="#" onclick="showTab('transfer',this)">🤝 기술이전</a></li>
     <li><a href="#" onclick="showTab('kmoonshot',this)">🚀 K-문샷 로드맵</a></li>
-    <li><a href="#" onclick="showTab('news',this)">📰 뉴스</a></li>
     <li><a href="#" onclick="showTab('projects',this)">📋 사업현황</a></li>
     <li><a href="#" onclick="showTab('biodata',this)">🔬 데이터셋</a></li>
+    <li><a href="#" onclick="showTab('news',this)">📰 뉴스</a></li>
   </ul>
 </nav>
 
@@ -439,22 +439,18 @@
     <p style="font-size:11px;color:var(--muted);margin-bottom:14px;">출처: AI신약개발_단계별_데이터셋_현황.xlsx · 종류: 공개 🟢 / 기관·승인기반 🔵 / 상업 🟡 · 성숙도: 높음→낮음 5단계</p>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;" id="biodata-kpi"></div>
   </div>
-  <div class="grid-2 section" style="padding-top:0;">
+  <div class="section" style="padding-top:0;">
     <div class="card">
       <div class="section-title">단계별 데이터셋 수</div>
       <div class="chart-wrap" style="height:300px;"><canvas id="chart-biodata-count"></canvas></div>
     </div>
-    <div class="card">
-      <div class="section-title">단계별 성숙도 분포</div>
-      <div class="chart-wrap" style="height:300px;"><canvas id="chart-biodata-maturity"></canvas></div>
-    </div>
   </div>
   <div class="section">
-    <div class="section-title">단계별 요약 및 핵심 갭</div>
+    <div class="section-title">단계별 데이터 현황</div>
     <div class="card tbl-wrap">
-      <table id="biodata-gap-table">
+      <table id="biodata-stage-table">
         <thead>
-          <tr><th>단계</th><th>데이터셋</th><th>성숙도</th><th>공개성</th><th>핵심 갭 · 착안점</th></tr>
+          <tr><th>단계</th><th>데이터셋</th><th>성숙도</th><th>공개성</th><th>주요 데이터셋</th><th>핵심 갭 · 착안점</th></tr>
         </thead>
         <tbody></tbody>
       </table>
@@ -1013,12 +1009,13 @@ function renderBiodataStatic(bd) {
     const fg = _maturityColor(sc).replace('0.85', '1');
     return `<span style="background:${bg};color:${fg};padding:2px 8px;border-radius:4px;font-size:11px;white-space:nowrap;">${m}</span>`;
   };
-  document.querySelector('#biodata-gap-table tbody').innerHTML = bd.stages.map(s => `
+  document.querySelector('#biodata-stage-table tbody').innerHTML = bd.stages.map(s => `
     <tr>
       <td><strong>${s.stage}</strong></td>
       <td style="text-align:center;font-weight:700;color:var(--accent);">${s.datasets}</td>
       <td>${badge(s.maturity, s.maturity_score)}</td>
-      <td style="font-size:11px;color:var(--muted);">${s.openness}</td>
+      <td style="font-size:11px;color:var(--muted);white-space:nowrap;">${s.openness}</td>
+      <td style="font-size:11px;">${(s.key_datasets||[]).join(', ')}</td>
       <td style="font-size:11px;">${s.gap}</td>
     </tr>`).join('');
 
@@ -1043,7 +1040,6 @@ function renderBiodataCharts(bd) {
   const labels = bd.stages.map(s => s.stage);
   const counts = bd.stages.map(s => s.datasets);
   const barColors = bd.stages.map(s => _maturityColor(s.maturity_score));
-
   new Chart(document.getElementById('chart-biodata-count'), {
     type: 'bar',
     data: { labels, datasets: [{ label: '데이터셋 수', data: counts, backgroundColor: barColors, borderRadius: 4 }] },
@@ -1053,24 +1049,10 @@ function renderBiodataCharts(bd) {
         x: { beginAtZero: true, grid: { color: '#2d3148' }, ticks: { stepSize: 2, callback: v => v + '개' } },
         y: { grid: { display: false }, ticks: { font: { size: 11 } } }
       },
-      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ' ' + ctx.raw + '개' } } }
-    }
-  });
-
-  const mScores = [5, 4, 3, 2, 1];
-  const mLabels = ['높음', '중상', '중', '중하', '낮음'];
-  const mCounts = mScores.map(sc => bd.stages.filter(s => s.maturity_score === sc).length);
-  const mColors = mScores.map(sc => _maturityColor(sc));
-  new Chart(document.getElementById('chart-biodata-maturity'), {
-    type: 'bar',
-    data: { labels: mLabels, datasets: [{ label: '단계 수', data: mCounts, backgroundColor: mColors, borderRadius: 4 }] },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      scales: {
-        y: { beginAtZero: true, max: 4, grid: { color: '#2d3148' }, ticks: { stepSize: 1, callback: v => v + '단계' } },
-        x: { grid: { display: false } }
-      },
-      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.raw + '단계' } } }
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ' ' + ctx.raw + '개' } }
+      }
     }
   });
 }
