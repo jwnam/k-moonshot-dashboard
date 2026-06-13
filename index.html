@@ -446,11 +446,11 @@
     </div>
   </div>
   <div class="section">
-    <div class="section-title">단계별 데이터 현황</div>
+    <div class="section-title">전체 데이터셋 목록</div>
     <div class="card tbl-wrap">
       <table id="biodata-stage-table">
         <thead>
-          <tr><th>단계</th><th>데이터셋</th><th>성숙도</th><th>공개성</th><th>주요 데이터셋</th><th>핵심 갭 · 착안점</th></tr>
+          <tr><th>데이터셋</th><th>유형</th><th>데이터 유형</th><th>규모</th><th>대표 AI</th></tr>
         </thead>
         <tbody></tbody>
       </table>
@@ -978,7 +978,7 @@ function _maturityColor(score) {
 
 function renderBiodataStatic(bd) {
   if (!bd) return;
-  const totalDatasets = bd.stages.reduce((a, s) => a + s.datasets, 0);
+  const totalDatasets = bd.datasets ? bd.datasets.length : bd.stages.reduce((a, s) => a + s.datasets, 0);
   const highCount = bd.stages.filter(s => s.maturity_score >= 4).length;
   const midCount  = bd.stages.filter(s => s.maturity_score === 3).length;
   const lowCount  = bd.stages.filter(s => s.maturity_score <= 2).length;
@@ -1009,15 +1009,48 @@ function renderBiodataStatic(bd) {
     const fg = _maturityColor(sc).replace('0.85', '1');
     return `<span style="background:${bg};color:${fg};padding:2px 8px;border-radius:4px;font-size:11px;white-space:nowrap;">${m}</span>`;
   };
-  document.querySelector('#biodata-stage-table tbody').innerHTML = bd.stages.map(s => `
-    <tr>
-      <td><strong>${s.stage}</strong></td>
-      <td style="text-align:center;font-weight:700;color:var(--accent);">${s.datasets}</td>
-      <td>${badge(s.maturity, s.maturity_score)}</td>
-      <td style="font-size:11px;color:var(--muted);white-space:nowrap;">${s.openness}</td>
-      <td style="font-size:11px;">${(s.key_datasets||[]).join(', ')}</td>
-      <td style="font-size:11px;">${s.gap}</td>
-    </tr>`).join('');
+  const accessBadge = access => {
+    const map = {
+      open:       ['🟢', '공개',      'rgba(16,185,129,0.85)',  'rgba(16,185,129,0.15)'],
+      restricted: ['🔵', '기관·승인', 'rgba(34,211,238,0.85)',  'rgba(34,211,238,0.15)'],
+      commercial: ['🟡', '상업',      'rgba(245,158,11,0.85)',  'rgba(245,158,11,0.15)'],
+      closed:     ['🔴', '비공개',    'rgba(239,68,68,0.85)',   'rgba(239,68,68,0.15)'],
+      mixed:      ['🟢/🟡','공개/상업','rgba(245,158,11,0.85)', 'rgba(245,158,11,0.15)'],
+    };
+    const [icon, label, fg, bg] = map[access] || ['⚪','기타','#94a3b8','rgba(148,163,184,0.15)'];
+    return `<span style="background:${bg};color:${fg};padding:2px 6px;border-radius:4px;font-size:10px;white-space:nowrap;">${icon} ${label}</span>`;
+  };
+
+  const grouped = {};
+  (bd.datasets || []).forEach(d => {
+    if (!grouped[d.stage]) grouped[d.stage] = [];
+    grouped[d.stage].push(d);
+  });
+
+  let rows = '';
+  bd.stages.forEach(stageInfo => {
+    const datasets = grouped[stageInfo.stage] || [];
+    if (!datasets.length) return;
+    const color = _maturityColor(stageInfo.maturity_score);
+    const bgColor = color.replace('0.85', '0.08');
+    const borderColor = color.replace('0.85', '0.4');
+    rows += `<tr style="background:${bgColor};border-top:2px solid ${borderColor};">
+      <td colspan="5" style="padding:7px 12px;font-weight:700;font-size:12px;">
+        ${stageInfo.stage} ${badge(stageInfo.maturity, stageInfo.maturity_score)}
+        <span style="color:var(--muted);font-weight:400;margin-left:8px;font-size:11px;">${datasets.length}개</span>
+      </td>
+    </tr>`;
+    datasets.forEach(d => {
+      rows += `<tr>
+        <td style="padding-left:20px;font-size:12px;">${d.name}</td>
+        <td>${accessBadge(d.access)}</td>
+        <td style="font-size:11px;color:var(--muted);">${d.data_type}</td>
+        <td style="font-size:11px;color:var(--muted);">${d.scale}</td>
+        <td style="font-size:11px;">${d.ai}</td>
+      </tr>`;
+    });
+  });
+  document.querySelector('#biodata-stage-table tbody').innerHTML = rows;
 
   const maxBudget = Math.max(...bd.kmoonshot_data_projects.map(p => p.budget_total));
   document.querySelector('#biodata-projects-table tbody').innerHTML = bd.kmoonshot_data_projects.map(p => `
