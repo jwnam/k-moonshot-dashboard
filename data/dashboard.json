@@ -1117,7 +1117,7 @@
         "ai": "AlphaFold3, RFAA"
       },
       {
-        "stage": "선도물질발굴",
+        "stage": "유효물질발굴",
         "name": "AlphaFold DB",
         "access": "open",
         "data_type": "예측 단백질 구조",
