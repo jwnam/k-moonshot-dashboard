@@ -433,16 +433,16 @@
   "projects": {
     "summary": {
       "core_count": 2,
-      "linked_count": 21,
+      "linked_count": 19,
       "govt_lab_count": 6,
       "core_budget_27": 322,
-      "linked_budget_27": 1563.0,
+      "linked_budget_27": 1468.0,
       "govt_lab_budget_27": 759.0,
-      "total_budget_27": 2644.0,
+      "total_budget_27": 2549.0,
       "core_total": 1845,
-      "linked_total": 7162,
+      "linked_total": 6597,
       "govt_lab_total": 1539,
-      "grand_total": 10546
+      "grand_total": 9981
     },
     "core": [
       {
@@ -534,13 +534,6 @@
         "budget_total": 1656
       },
       {
-        "name": "AI기반 한국인 암흑유전체지도 구축 및 병인제어 기술개발",
-        "relevance": "*",
-        "period": "'27~'31",
-        "budget_27": 75,
-        "budget_total": 475
-      },
-      {
         "name": "마이크로바이옴 기반 차세대치료 원천기술개발 브릿지 사업",
         "relevance": "*",
         "period": "'23~'27",
@@ -575,13 +568,6 @@
         "period": "'26~'30",
         "budget_27": 20,
         "budget_total": 95
-      },
-      {
-        "name": "AI기반 합성 mRNA 구조체 설계 기술 개발 및 실증",
-        "relevance": "*",
-        "period": "'26~'30",
-        "budget_27": 20,
-        "budget_total": 90
       },
       {
         "name": "신종 감염병 대응 스마트 디지털전임상 플랫폼 구축",
