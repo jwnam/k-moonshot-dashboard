@@ -224,6 +224,7 @@
     <li><a href="#" onclick="showTab('kmoonshot',this)">🚀 K-문샷 로드맵</a></li>
     <li><a href="#" onclick="showTab('news',this)">📰 뉴스</a></li>
     <li><a href="#" onclick="showTab('projects',this)">📋 사업현황</a></li>
+    <li><a href="#" onclick="showTab('biodata',this)">🔬 데이터셋</a></li>
   </ul>
 </nav>
 
@@ -431,6 +432,47 @@
   </div>
 </div>
 
+<!-- ══ TAB: BIODATA ═══════════════════════════════════════════════════ -->
+<div id="tab-biodata" class="tab-panel">
+  <div class="section">
+    <div class="section-title">AI 신약개발 전주기 데이터셋 현황 (2026-06)</div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:14px;">출처: AI신약개발_단계별_데이터셋_현황.xlsx · 종류: 공개 🟢 / 기관·승인기반 🔵 / 상업 🟡 · 성숙도: 높음→낮음 5단계</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;" id="biodata-kpi"></div>
+  </div>
+  <div class="grid-2 section" style="padding-top:0;">
+    <div class="card">
+      <div class="section-title">단계별 데이터셋 수</div>
+      <div class="chart-wrap" style="height:300px;"><canvas id="chart-biodata-count"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="section-title">단계별 성숙도 분포</div>
+      <div class="chart-wrap" style="height:300px;"><canvas id="chart-biodata-maturity"></canvas></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">단계별 요약 및 핵심 갭</div>
+    <div class="card tbl-wrap">
+      <table id="biodata-gap-table">
+        <thead>
+          <tr><th>단계</th><th>데이터셋</th><th>성숙도</th><th>공개성</th><th>핵심 갭 · 착안점</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">K-문샷 AI신약 데이터·플랫폼 사업 (11개)</div>
+    <div class="card tbl-wrap">
+      <table id="biodata-projects-table">
+        <thead>
+          <tr><th>사업명</th><th>기간</th><th>총사업비(억)</th><th>구축 데이터</th><th>적용 단계</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 <!-- ══ TAB: NEWS ══════════════════════════════════════════════════════ -->
 <div id="tab-news" class="tab-panel">
   <div class="section">
@@ -503,6 +545,7 @@ fetch('data/dashboard.json')
     renderRoadmap(data.kmoonshot_roadmap);
     renderVAI();
     renderProjects(data.projects);
+    renderBiodata(data.biodata);
   });
 
 let _newsData = { domestic: [], international: [] };
@@ -919,6 +962,105 @@ function filterNews(cat, btn) {
   document.querySelectorAll('.news-filter button').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
   renderNews(cat);
+}
+
+// ── Biodata tab ───────────────────────────────────────────────────────
+function renderBiodata(bd) {
+  if (!bd) return;
+  const maturityColor = score =>
+    score >= 5 ? 'rgba(16,185,129,0.85)' :
+    score === 4 ? 'rgba(34,211,238,0.85)' :
+    score === 3 ? 'rgba(245,158,11,0.85)' :
+    score === 2 ? 'rgba(249,115,22,0.85)' : 'rgba(239,68,68,0.85)';
+
+  const totalDatasets = bd.stages.reduce((a, s) => a + s.datasets, 0);
+  const highCount = bd.stages.filter(s => s.maturity_score >= 4).length;
+  const midCount  = bd.stages.filter(s => s.maturity_score === 3).length;
+  const lowCount  = bd.stages.filter(s => s.maturity_score <= 2).length;
+  document.getElementById('biodata-kpi').innerHTML = `
+    <div class="kpi-card accent">
+      <div class="kpi-label">총 데이터셋</div>
+      <div class="kpi-value">${totalDatasets}<span class="kpi-unit">개</span></div>
+      <div class="kpi-note">10단계 전주기</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">고성숙도 단계</div>
+      <div class="kpi-value">${highCount}<span class="kpi-unit">개</span></div>
+      <div class="kpi-note">표적·유효·선도·후보 발굴</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="kpi-label">중간 성숙도 단계</div>
+      <div class="kpi-value">${midCount}<span class="kpi-unit">개</span></div>
+      <div class="kpi-note">비임상·임상1상·약물재창출</div>
+    </div>
+    <div class="kpi-card red">
+      <div class="kpi-label">저성숙도(병목)</div>
+      <div class="kpi-value">${lowCount}<span class="kpi-unit">개</span></div>
+      <div class="kpi-note">임상2·3상, 허가/제조</div>
+    </div>`;
+
+  const labels = bd.stages.map(s => s.stage);
+  const counts = bd.stages.map(s => s.datasets);
+  const barColors = bd.stages.map(s => maturityColor(s.maturity_score));
+
+  new Chart(document.getElementById('chart-biodata-count'), {
+    type: 'bar',
+    data: { labels, datasets: [{ label: '데이터셋 수', data: counts, backgroundColor: barColors, borderRadius: 4 }] },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: { beginAtZero: true, grid: { color: '#2d3148' }, ticks: { stepSize: 2, callback: v => v + '개' } },
+        y: { grid: { display: false }, ticks: { font: { size: 11 } } }
+      },
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ' ' + ctx.raw + '개' } } }
+    }
+  });
+
+  const mScores = [5, 4, 3, 2, 1];
+  const mLabels = ['높음', '중상', '중', '중하', '낮음'];
+  const mCounts = mScores.map(sc => bd.stages.filter(s => s.maturity_score === sc).length);
+  const mColors = mScores.map(sc => maturityColor(sc));
+  new Chart(document.getElementById('chart-biodata-maturity'), {
+    type: 'bar',
+    data: { labels: mLabels, datasets: [{ label: '단계 수', data: mCounts, backgroundColor: mColors, borderRadius: 4 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        y: { beginAtZero: true, max: 4, grid: { color: '#2d3148' }, ticks: { stepSize: 1, callback: v => v + '단계' } },
+        x: { grid: { display: false } }
+      },
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.raw + '단계' } } }
+    }
+  });
+
+  const badge = (m, sc) => {
+    const bg = maturityColor(sc).replace('0.85', '0.2');
+    const fg = maturityColor(sc).replace('0.85', '1');
+    return `<span style="background:${bg};color:${fg};padding:2px 8px;border-radius:4px;font-size:11px;white-space:nowrap;">${m}</span>`;
+  };
+  document.querySelector('#biodata-gap-table tbody').innerHTML = bd.stages.map(s => `
+    <tr>
+      <td><strong>${s.stage}</strong></td>
+      <td style="text-align:center;font-weight:700;color:var(--accent);">${s.datasets}</td>
+      <td>${badge(s.maturity, s.maturity_score)}</td>
+      <td style="font-size:11px;color:var(--muted);">${s.openness}</td>
+      <td style="font-size:11px;">${s.gap}</td>
+    </tr>`).join('');
+
+  const maxBudget = Math.max(...bd.kmoonshot_data_projects.map(p => p.budget_total));
+  document.querySelector('#biodata-projects-table tbody').innerHTML = bd.kmoonshot_data_projects.map(p => `
+    <tr>
+      <td><strong>${p.name}</strong></td>
+      <td style="white-space:nowrap;">${p.period}</td>
+      <td>
+        <div class="budget-bar-wrap">
+          <span style="font-weight:600;color:var(--accent);">${p.budget_total.toLocaleString()}</span>
+          <div class="budget-bar-track"><div class="budget-bar-fill" style="width:${(p.budget_total/maxBudget*100).toFixed(0)}%;background:var(--accent);"></div></div>
+        </div>
+      </td>
+      <td style="font-size:11px;color:var(--muted);">${p.data_type}</td>
+      <td style="font-size:11px;">${p.stages}</td>
+    </tr>`).join('');
 }
 
 // ── V_AI progress chart ───────────────────────────────────────────────
