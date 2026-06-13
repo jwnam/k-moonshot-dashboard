@@ -654,100 +654,788 @@
     "source": "AI신약개발_단계별_데이터셋_현황.xlsx",
     "note": "단계별 공개 데이터셋 수 및 성숙도 현황 (검증: 2026-06)",
     "stages": [
-      {"stage": "표적발굴", "datasets": 18, "maturity": "높음", "maturity_score": 5, "openness": "대부분 공개", "gap": "정상세포·멀티오믹스 레퍼런스 보강(디지털세포AI·분자지도)", "key_datasets": ["Open Targets", "GWAS Catalog", "STRING", "TCGA", "CZ CELLxGENE", "PrimeKG", "UK Biobank"]},
-      {"stage": "유효물질발굴", "datasets": 9, "maturity": "높음", "maturity_score": 5, "openness": "공개+상업", "gap": "초거대 화학공간 상업 의존, 국내 자체 활성·천연물 활용 여지", "key_datasets": ["ChEMBL", "PubChem", "ZINC22", "Enamine REAL Space", "NPASS", "BindingDB"]},
-      {"stage": "선도물질발굴", "datasets": 9, "maturity": "높음", "maturity_score": 5, "openness": "공개", "gap": "RNA·신모달리티 구조 데이터 부족", "key_datasets": ["PDB", "AlphaFold DB", "PDBbind", "UniProt", "PLINDER", "MOSES/GEOM-Drugs"]},
-      {"stage": "후보물질발굴", "datasets": 6, "maturity": "중상", "maturity_score": 4, "openness": "공개 중심", "gap": "ADMET 공개셋 편향·누수, 한국인 약물대사 데이터 부족", "key_datasets": ["TDC (Therapeutics Data Commons)", "ADMETlab 3.0", "DrugBank", "SIDER", "hERG DB"]},
-      {"stage": "비임상", "datasets": 8, "maturity": "중", "maturity_score": 3, "openness": "공개+컨소시엄", "gap": "산업 독성·실패 데이터 비공개 → 공유체계 필요", "key_datasets": ["Tox21", "ToxCast (EPA)", "Open TG-GATEs", "DILIrank", "eTRANSAFE", "CTD"]},
-      {"stage": "임상 1상", "datasets": 4, "maturity": "중", "maturity_score": 3, "openness": "승인기반 다수", "gap": "국내 EHR·PK·유전체(dbGaP형) 표준화·연계 미흡", "key_datasets": ["ClinicalTrials.gov / AACT", "MIMIC-IV", "dbGaP", "PK/PD 파라미터"]},
-      {"stage": "임상 2상", "datasets": 4, "maturity": "중하", "maturity_score": 2, "openness": "상업·기관 의존", "gap": "유효성·바이오마커·의료영상 연계 부족, PoS 상업 DB 종속", "key_datasets": ["AACT + 바이오마커", "의료영상 DB", "Pharmaprojects", "n2c2 NLP 코퍼스"]},
-      {"stage": "임상 3상", "datasets": 4, "maturity": "낮음", "maturity_score": 1, "openness": "비공개·분산", "gap": "★ 실패·다기관 임상데이터 공유 부재 = 최대 병목", "key_datasets": ["OMOP CDM / OHDSI", "All of Us (NIH)", "ClinVar", "임상 성과/실패 데이터 (비공개)"]},
-      {"stage": "허가/제조", "datasets": 5, "maturity": "낮음", "maturity_score": 1, "openness": "공개(PV)+비공개(제조)", "gap": "제조·CMC 공개셋 부재, 약가·심사 데이터 미연계", "key_datasets": ["FAERS / openFDA", "DailyMed", "FDA Orange Book", "WHO VigiBase", "제조·CMC (비공개)"]},
-      {"stage": "약물재창출", "datasets": 2, "maturity": "중", "maturity_score": 3, "openness": "공개", "gap": "지식그래프(Hetionet/PrimeKG)·STITCH 기반 재창출 트랙 활용", "key_datasets": ["STITCH", "Hetionet"]}
+      {
+        "stage": "표적발굴",
+        "datasets": 18,
+        "maturity": "높음",
+        "maturity_score": 5,
+        "openness": "대부분 공개",
+        "gap": "정상세포·멀티오믹스 레퍼런스 보강(디지털세포AI·분자지도)",
+        "key_datasets": [
+          "Open Targets",
+          "GWAS Catalog",
+          "STRING",
+          "TCGA",
+          "CZ CELLxGENE",
+          "PrimeKG",
+          "UK Biobank"
+        ]
+      },
+      {
+        "stage": "유효물질발굴",
+        "datasets": 9,
+        "maturity": "높음",
+        "maturity_score": 5,
+        "openness": "공개+상업",
+        "gap": "초거대 화학공간 상업 의존, 국내 자체 활성·천연물 활용 여지",
+        "key_datasets": [
+          "ChEMBL",
+          "PubChem",
+          "ZINC22",
+          "Enamine REAL Space",
+          "NPASS",
+          "BindingDB"
+        ]
+      },
+      {
+        "stage": "선도물질발굴",
+        "datasets": 9,
+        "maturity": "높음",
+        "maturity_score": 5,
+        "openness": "공개",
+        "gap": "RNA·신모달리티 구조 데이터 부족",
+        "key_datasets": [
+          "PDB",
+          "AlphaFold DB",
+          "PDBbind",
+          "UniProt",
+          "PLINDER",
+          "MOSES/GEOM-Drugs"
+        ]
+      },
+      {
+        "stage": "후보물질발굴",
+        "datasets": 6,
+        "maturity": "중상",
+        "maturity_score": 4,
+        "openness": "공개 중심",
+        "gap": "ADMET 공개셋 편향·누수, 한국인 약물대사 데이터 부족",
+        "key_datasets": [
+          "TDC (Therapeutics Data Commons)",
+          "ADMETlab 3.0",
+          "DrugBank",
+          "SIDER",
+          "hERG DB"
+        ]
+      },
+      {
+        "stage": "비임상",
+        "datasets": 8,
+        "maturity": "중",
+        "maturity_score": 3,
+        "openness": "공개+컨소시엄",
+        "gap": "산업 독성·실패 데이터 비공개 → 공유체계 필요",
+        "key_datasets": [
+          "Tox21",
+          "ToxCast (EPA)",
+          "Open TG-GATEs",
+          "DILIrank",
+          "eTRANSAFE",
+          "CTD"
+        ]
+      },
+      {
+        "stage": "임상 1상",
+        "datasets": 4,
+        "maturity": "중",
+        "maturity_score": 3,
+        "openness": "승인기반 다수",
+        "gap": "국내 EHR·PK·유전체(dbGaP형) 표준화·연계 미흡",
+        "key_datasets": [
+          "ClinicalTrials.gov / AACT",
+          "MIMIC-IV",
+          "dbGaP",
+          "PK/PD 파라미터"
+        ]
+      },
+      {
+        "stage": "임상 2상",
+        "datasets": 4,
+        "maturity": "중하",
+        "maturity_score": 2,
+        "openness": "상업·기관 의존",
+        "gap": "유효성·바이오마커·의료영상 연계 부족, PoS 상업 DB 종속",
+        "key_datasets": [
+          "AACT + 바이오마커",
+          "의료영상 DB",
+          "Pharmaprojects",
+          "n2c2 NLP 코퍼스"
+        ]
+      },
+      {
+        "stage": "임상 3상",
+        "datasets": 4,
+        "maturity": "낮음",
+        "maturity_score": 1,
+        "openness": "비공개·분산",
+        "gap": "★ 실패·다기관 임상데이터 공유 부재 = 최대 병목",
+        "key_datasets": [
+          "OMOP CDM / OHDSI",
+          "All of Us (NIH)",
+          "ClinVar",
+          "임상 성과/실패 데이터 (비공개)"
+        ]
+      },
+      {
+        "stage": "허가/제조",
+        "datasets": 5,
+        "maturity": "낮음",
+        "maturity_score": 1,
+        "openness": "공개(PV)+비공개(제조)",
+        "gap": "제조·CMC 공개셋 부재, 약가·심사 데이터 미연계",
+        "key_datasets": [
+          "FAERS / openFDA",
+          "DailyMed",
+          "FDA Orange Book",
+          "WHO VigiBase",
+          "제조·CMC (비공개)"
+        ]
+      },
+      {
+        "stage": "약물재창출",
+        "datasets": 2,
+        "maturity": "중",
+        "maturity_score": 3,
+        "openness": "공개",
+        "gap": "지식그래프(Hetionet/PrimeKG)·STITCH 기반 재창출 트랙 활용",
+        "key_datasets": [
+          "STITCH",
+          "Hetionet"
+        ]
+      }
     ],
     "kmoonshot_data_projects": [
-      {"name": "디지털 세포 AI 구축사업", "budget_total": 375, "period": "'26~'30", "data_type": "정상세포 1,100만+ 세포", "stages": "표적발굴·전주기"},
-      {"name": "바이오 멀티모달 파운데이션 모델", "budget_total": 324, "period": "'26~'30", "data_type": "멀티모달 고밀도 학습셋", "stages": "전주기"},
-      {"name": "한국인 디지털분자지도 프로젝트", "budget_total": 235, "period": "'25~'30", "data_type": "정상 장기/조직 레퍼런스", "stages": "표적발굴"},
-      {"name": "국가통합바이오빅데이터 구축", "budget_total": 6581, "period": "'24~'28", "data_type": "희귀·중증 임상유전체 100만명", "stages": "표적·임상"},
-      {"name": "AI기반 한국인 암흑유전체 지도", "budget_total": 475, "period": "'27~'31", "data_type": "비코딩 변이 지도", "stages": "표적발굴"},
-      {"name": "인공지능 항체은행", "budget_total": 150, "period": "'24~'26", "data_type": "항체 서열·구조·물성", "stages": "유효·선도(항체)"},
-      {"name": "구조기반 RNA 신약개발 지원", "budget_total": 152, "period": "'26~'30", "data_type": "RNA 2차구조 1,000종", "stages": "유효·선도(RNA)"},
-      {"name": "K-MELLODDY (연합학습)", "budget_total": 348, "period": "'24~'28", "data_type": "제약사 분산 ADMET(연합학습)", "stages": "후보·비임상"},
-      {"name": "신종감염병 디지털전임상 플랫폼", "budget_total": 108, "period": "'26~'30", "data_type": "약동/유효/안전성 DB", "stages": "비임상"},
-      {"name": "AI-Medicine 멀티에이전트 플랫폼", "budget_total": 177, "period": "'26~'30", "data_type": "전주기 에이전트 워크플로", "stages": "전주기"},
-      {"name": "AI-네이티브 자율실험실", "budget_total": 495, "period": "'26~'28", "data_type": "자동화 실험 생성 데이터", "stages": "유효~비임상(실험)"}
+      {
+        "name": "디지털 세포 AI 구축사업",
+        "budget_total": 375,
+        "period": "'26~'30",
+        "data_type": "정상세포 1,100만+ 세포",
+        "stages": "표적발굴·전주기"
+      },
+      {
+        "name": "바이오 멀티모달 파운데이션 모델",
+        "budget_total": 324,
+        "period": "'26~'30",
+        "data_type": "멀티모달 고밀도 학습셋",
+        "stages": "전주기"
+      },
+      {
+        "name": "한국인 디지털분자지도 프로젝트",
+        "budget_total": 235,
+        "period": "'25~'30",
+        "data_type": "정상 장기/조직 레퍼런스",
+        "stages": "표적발굴"
+      },
+      {
+        "name": "국가통합바이오빅데이터 구축",
+        "budget_total": 6581,
+        "period": "'24~'28",
+        "data_type": "희귀·중증 임상유전체 100만명",
+        "stages": "표적·임상"
+      },
+      {
+        "name": "AI기반 한국인 암흑유전체 지도",
+        "budget_total": 475,
+        "period": "'27~'31",
+        "data_type": "비코딩 변이 지도",
+        "stages": "표적발굴"
+      },
+      {
+        "name": "인공지능 항체은행",
+        "budget_total": 150,
+        "period": "'24~'26",
+        "data_type": "항체 서열·구조·물성",
+        "stages": "유효·선도(항체)"
+      },
+      {
+        "name": "구조기반 RNA 신약개발 지원",
+        "budget_total": 152,
+        "period": "'26~'30",
+        "data_type": "RNA 2차구조 1,000종",
+        "stages": "유효·선도(RNA)"
+      },
+      {
+        "name": "K-MELLODDY (연합학습)",
+        "budget_total": 348,
+        "period": "'24~'28",
+        "data_type": "제약사 분산 ADMET(연합학습)",
+        "stages": "후보·비임상"
+      },
+      {
+        "name": "신종감염병 디지털전임상 플랫폼",
+        "budget_total": 108,
+        "period": "'26~'30",
+        "data_type": "약동/유효/안전성 DB",
+        "stages": "비임상"
+      },
+      {
+        "name": "AI-Medicine 멀티에이전트 플랫폼",
+        "budget_total": 177,
+        "period": "'26~'30",
+        "data_type": "전주기 에이전트 워크플로",
+        "stages": "전주기"
+      },
+      {
+        "name": "AI-네이티브 자율실험실",
+        "budget_total": 495,
+        "period": "'26~'28",
+        "data_type": "자동화 실험 생성 데이터",
+        "stages": "유효~비임상(실험)"
+      }
     ],
     "datasets": [
-      {"stage": "표적발굴", "name": "Open Targets Platform", "access": "open", "data_type": "표적-질환 연관(통합)", "scale": "근거 20+종·연관 수백만", "ai": "Locus2Gene(L2G) ML"},
-      {"stage": "표적발굴", "name": "GWAS Catalog (NHGRI-EBI)", "access": "open", "data_type": "GWAS 형질-변이 연관", "scale": "연구 6,800+·연관 50만+", "ai": "Fine-mapping, PoPS"},
-      {"stage": "표적발굴", "name": "DisGeNET", "access": "mixed", "data_type": "유전자-질환 연관", "scale": "연관 110만+", "ai": "네트워크 임베딩"},
-      {"stage": "표적발굴", "name": "STRING", "access": "open", "data_type": "단백질 상호작용(PPI)", "scale": "단백질 5,900만+", "ai": "GNN, 네트워크 전파"},
-      {"stage": "표적발굴", "name": "BioGRID", "access": "open", "data_type": "단백질·유전 상호작용", "scale": "상호작용 250만+", "ai": "GNN, 네트워크 추론"},
-      {"stage": "표적발굴", "name": "OMIM", "access": "open", "data_type": "멘델성 질병-유전자", "scale": "질병-유전자 항목 다수", "ai": "변이-질병 추론"},
-      {"stage": "표적발굴", "name": "NCBI / Ensembl", "access": "open", "data_type": "유전체·전사체 레퍼런스", "scale": "유전체·전사체 다수", "ai": "발현 정량·주석 모델"},
-      {"stage": "표적발굴", "name": "GEO (Gene Expression Omnibus)", "access": "open", "data_type": "발현·오믹스 프로파일", "scale": "시리즈 20만+", "ai": "발현 기반 표적·바이오마커"},
-      {"stage": "표적발굴", "name": "PubMed", "access": "open", "data_type": "문헌 데이터(NLP)", "scale": "논문 3,700만+", "ai": "BioBERT/PubMedBERT"},
-      {"stage": "표적발굴", "name": "TCGA (암유전체지도)", "access": "open", "data_type": "암 멀티오믹스", "scale": "환자 ~11,000·33개 암종", "ai": "멀티오믹스 DL"},
-      {"stage": "표적발굴", "name": "GTEx", "access": "open", "data_type": "조직별 발현·eQTL", "scale": "조직 54종", "ai": "eQTL 예측"},
-      {"stage": "표적발굴", "name": "Human Protein Atlas", "access": "open", "data_type": "단백질 발현·위치", "scale": "단백질 ~26,900", "ai": "발현 분류"},
-      {"stage": "표적발굴", "name": "DepMap", "access": "open", "data_type": "CRISPR/RNAi 필수성", "scale": "세포주 ~1,100", "ai": "의존성·합성치사 예측"},
-      {"stage": "표적발굴", "name": "CZ CELLxGENE Discover", "access": "open", "data_type": "단일세포 전사체 아틀라스", "scale": "세포 1억+", "ai": "scGPT, UCE 사전학습"},
-      {"stage": "표적발굴", "name": "Human Cell Atlas", "access": "open", "data_type": "단일세포 레퍼런스", "scale": "세포 수천만+", "ai": "UCE, Nicheformer"},
-      {"stage": "표적발굴", "name": "LINCS L1000 / CMap", "access": "open", "data_type": "섭동 발현 시그니처", "scale": "프로파일 140만+", "ai": "Connectivity Map"},
-      {"stage": "표적발굴", "name": "PrimeKG", "access": "open", "data_type": "정밀의료 지식그래프", "scale": "노드 13만·관계 410만", "ai": "TxGNN"},
-      {"stage": "표적발굴", "name": "UK Biobank", "access": "restricted", "data_type": "유전체+표현형 코호트", "scale": "참여자 50만", "ai": "PheWAS, 위험예측"},
-      {"stage": "유효물질발굴", "name": "ChEMBL", "access": "open", "data_type": "화합물 생물활성", "scale": "화합물 230만↑·활성 2,000만↑", "ai": "DeepDTA, Chemprop"},
-      {"stage": "유효물질발굴", "name": "PubChem", "access": "open", "data_type": "화합물·바이오어세이", "scale": "화합물 1.1억↑", "ai": "가상스크리닝, QSAR"},
-      {"stage": "유효물질발굴", "name": "BindingDB", "access": "open", "data_type": "결합 친화도", "scale": "측정값 ~290만", "ai": "DeepDTA, GraphDTA"},
-      {"stage": "유효물질발굴", "name": "ZINC22", "access": "open", "data_type": "구매가능 화합물", "scale": "~230억 화합물", "ai": "초대규모 도킹"},
-      {"stage": "유효물질발굴", "name": "Enamine REAL Space", "access": "commercial", "data_type": "make-on-demand 라이브러리", "scale": "~480억 화합물", "ai": "초대규모 도킹"},
-      {"stage": "유효물질발굴", "name": "NPASS", "access": "open", "data_type": "천연물 활성·종 출처", "scale": "천연물·활성 다수", "ai": "천연물 활성 예측(NPI finder)"},
-      {"stage": "유효물질발굴", "name": "LOTUS / COCONUT", "access": "open", "data_type": "천연물 구조", "scale": "천연물 ~50만+", "ai": "천연물 생성·스크리닝"},
-      {"stage": "유효물질발굴", "name": "DUD-E", "access": "open", "data_type": "스크리닝 벤치마크", "scale": "표적 102", "ai": "가상스크리닝 벤치마크"},
-      {"stage": "유효물질발굴", "name": "LIT-PCBA", "access": "open", "data_type": "비편향 VS 벤치마크", "scale": "표적 15", "ai": "ML 가상스크리닝 평가"},
-      {"stage": "유효물질발굴", "name": "MoleculeNet", "access": "open", "data_type": "분자 물성 ML 벤치마크", "scale": "데이터셋 17", "ai": "Chemprop, GNN"},
-      {"stage": "선도물질발굴", "name": "Protein Data Bank (PDB)", "access": "open", "data_type": "생체분자 3D 구조", "scale": "구조 22만+", "ai": "AlphaFold3, RFAA"},
-      {"stage": "선도물질발굴", "name": "AlphaFold DB", "access": "open", "data_type": "예측 단백질 구조", "scale": "구조 2억+", "ai": "AlphaFold2"},
-      {"stage": "선도물질발굴", "name": "PDBbind", "access": "open", "data_type": "단백질-리간드 복합체+친화도", "scale": "복합체 ~2만", "ai": "결합친화도 DL"},
-      {"stage": "선도물질발굴", "name": "CASF-2016", "access": "open", "data_type": "스코어링 벤치마크", "scale": "코어셋 285", "ai": "스코어링/도킹 파워 평가"},
-      {"stage": "선도물질발굴", "name": "PoseBusters", "access": "open", "data_type": "도킹 포즈 타당성 벤치마크", "scale": "복합체 308/428", "ai": "DiffDock·AF3 평가"},
-      {"stage": "선도물질발굴", "name": "PLINDER", "access": "open", "data_type": "단백질-리간드 평가 리소스", "scale": "복합체 수십만", "ai": "코폴딩 평가"},
-      {"stage": "선도물질발굴", "name": "UniProt", "access": "open", "data_type": "단백질 서열·기능", "scale": "서열 2.5억+", "ai": "ESM-2/ESMFold"},
-      {"stage": "선도물질발굴", "name": "QM9 / QMugs", "access": "open", "data_type": "양자화학 물성(DFT)", "scale": "13.4만 / 66.5만", "ai": "Uni-Mol, 등변 NN"},
-      {"stage": "선도물질발굴", "name": "MOSES / GEOM-Drugs", "access": "open", "data_type": "생성 벤치마크 / 3D 형태", "scale": "190만 / 3,700만", "ai": "REINVENT, 확산모델"},
-      {"stage": "후보물질발굴", "name": "Therapeutics Data Commons (TDC)", "access": "open", "data_type": "ADMET·DTI·생성 벤치마크", "scale": "데이터셋 66+·ADMET 22", "ai": "ADMET-AI, MapLight"},
-      {"stage": "후보물질발굴", "name": "ADMETlab 3.0", "access": "open", "data_type": "ADMET 다중물성 예측", "scale": "물성 ~100", "ai": "멀티태스크 DL"},
-      {"stage": "후보물질발굴", "name": "DrugBank", "access": "mixed", "data_type": "약물·표적·상호작용", "scale": "약물 ~16,000", "ai": "DTI, 리포지셔닝"},
-      {"stage": "후보물질발굴", "name": "SIDER", "access": "open", "data_type": "약물 부작용 라벨", "scale": "약물 1,430·부작용 5,800+", "ai": "멀티라벨 부작용 예측"},
-      {"stage": "후보물질발굴", "name": "hERG 데이터셋", "access": "open", "data_type": "심장독성(hERG)", "scale": "화합물 수만(스크리닝)", "ai": "DeepHIT"},
-      {"stage": "후보물질발굴", "name": "ESOL / FreeSolv", "access": "open", "data_type": "용해도·수화 자유에너지", "scale": "각 수천 건", "ai": "용해도 회귀(GNN)"},
-      {"stage": "비임상", "name": "Tox21", "access": "open", "data_type": "HTS 독성 어세이", "scale": "화합물 ~12,000·어세이 12", "ai": "DeepTox"},
-      {"stage": "비임상", "name": "ToxCast (US EPA)", "access": "open", "data_type": "고속 독성/기전 어세이", "scale": "화합물 ~9,000·어세이 1,000+", "ai": "ML 독성예측"},
-      {"stage": "비임상", "name": "Open TG-GATEs", "access": "open", "data_type": "독성유전체", "scale": "화합물 ~170", "ai": "독성 시그니처 분류"},
-      {"stage": "비임상", "name": "DILIrank", "access": "open", "data_type": "약물유발 간손상 등급", "scale": "약물 ~1,000", "ai": "DILI 예측"},
-      {"stage": "비임상", "name": "Ames test DB", "access": "open", "data_type": "돌연변이원성(변이유발)", "scale": "수천~1만 건", "ai": "돌연변이원성 분류"},
-      {"stage": "비임상", "name": "Comparative Toxicogenomics DB (CTD)", "access": "open", "data_type": "화학-유전자-질환", "scale": "상호작용 수천만", "ai": "네트워크 추론"},
-      {"stage": "비임상", "name": "eTRANSAFE / eTOX", "access": "restricted", "data_type": "제약사 전임상 안전성", "scale": "연구 수천", "ai": "번역 안전성 예측"},
-      {"stage": "임상 1상", "name": "ClinicalTrials.gov / AACT", "access": "open", "data_type": "임상시험 등록·설계", "scale": "시험 50만+", "ai": "임상결과 예측, TrialGPT"},
-      {"stage": "임상 1상", "name": "MIMIC-IV", "access": "restricted", "data_type": "ICU EHR", "scale": "환자 ~30만", "ai": "임상 LLM 파인튜닝"},
-      {"stage": "임상 1상", "name": "dbGaP", "access": "restricted", "data_type": "유전형-표현형 아카이브", "scale": "연구·참여자 다수", "ai": "GWAS/PRS 모델"},
-      {"stage": "임상 1상", "name": "PK/PD·생리 데이터", "access": "mixed", "data_type": "약동·약력학 파라미터", "scale": "화합물 다수", "ai": "PBPK·PK 모델링"},
-      {"stage": "임상 2상", "name": "AACT(결과)+바이오마커", "access": "open", "data_type": "유효성·용량·바이오마커", "scale": "시험 결과 다수", "ai": "HINT"},
-      {"stage": "임상 2상", "name": "의료영상 데이터셋(병원 DB)", "access": "restricted", "data_type": "의료영상", "scale": "수십만~수백만 건", "ai": "영상 진단·환자선별 CNN"},
-      {"stage": "임상 2상", "name": "Citeline Pharmaprojects / Trialtrove", "access": "commercial", "data_type": "파이프라인·시험 성과", "scale": "약물·시험 수십만", "ai": "임상단계 전이확률(PoS)"},
-      {"stage": "임상 2상", "name": "n2c2 / 임상 NLP 코퍼스", "access": "restricted", "data_type": "임상기록 NLP", "scale": "문서 수천+", "ai": "임상 NER·적격성 매칭"},
-      {"stage": "임상 3상", "name": "OMOP CDM / OHDSI", "access": "open", "data_type": "리얼월드데이터 표준", "scale": "수억 환자(분산)", "ai": "환자수준 예측·합성대조군"},
-      {"stage": "임상 3상", "name": "All of Us (NIH)", "access": "restricted", "data_type": "다양성 코호트 EHR+유전체", "scale": "참여자 80만+", "ai": "위험·형평성 모델"},
-      {"stage": "임상 3상", "name": "ClinVar", "access": "open", "data_type": "변이-임상적 의미", "scale": "변이 150만+", "ai": "변이효과 예측"},
-      {"stage": "임상 3상", "name": "임상 성과/실패 데이터(분산)", "access": "closed", "data_type": "성공/실패 결과", "scale": "기관별 상이", "ai": "실패·중도탈락 예측"},
-      {"stage": "허가/제조", "name": "FAERS / openFDA", "access": "open", "data_type": "시판후 이상사례", "scale": "보고 1,500만+", "ai": "이상신호 탐지 NLP"},
-      {"stage": "허가/제조", "name": "DailyMed", "access": "open", "data_type": "의약품 라벨(SPL)", "scale": "라벨 14만+", "ai": "라벨 NLP"},
-      {"stage": "허가/제조", "name": "FDA Orange Book", "access": "open", "data_type": "승인약·특허·독점", "scale": "승인 다수", "ai": "승인전략 분석"},
-      {"stage": "허가/제조", "name": "WHO VigiBase", "access": "commercial", "data_type": "글로벌 시판후 안전성", "scale": "보고 3,700만+", "ai": "불균형분석(PV)"},
-      {"stage": "허가/제조", "name": "제조·CMC(공정) 데이터", "access": "closed", "data_type": "공정/품질(PAT)", "scale": "기업별 상이", "ai": "공정최적화·품질예측"},
-      {"stage": "약물재창출", "name": "STITCH", "access": "open", "data_type": "화학물-단백질 상호작용", "scale": "상호작용 수십만쌍", "ai": "DTI, 리포지셔닝"},
-      {"stage": "약물재창출", "name": "Hetionet", "access": "open", "data_type": "생의학 지식그래프", "scale": "노드·엣지 수백만", "ai": "Rephetio(메타패스)"}
+      {
+        "stage": "표적발굴",
+        "name": "Open Targets Platform",
+        "access": "open",
+        "data_type": "표적-질환 연관(통합)",
+        "scale": "근거 20+종·연관 수백만",
+        "ai": "Locus2Gene(L2G) ML"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "GWAS Catalog (NHGRI-EBI)",
+        "access": "open",
+        "data_type": "GWAS 형질-변이 연관",
+        "scale": "연구 6,800+·연관 50만+",
+        "ai": "Fine-mapping, PoPS"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "DisGeNET",
+        "access": "mixed",
+        "data_type": "유전자-질환 연관",
+        "scale": "연관 110만+",
+        "ai": "네트워크 임베딩"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "STRING",
+        "access": "open",
+        "data_type": "단백질 상호작용(PPI)",
+        "scale": "단백질 5,900만+",
+        "ai": "GNN, 네트워크 전파"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "BioGRID",
+        "access": "open",
+        "data_type": "단백질·유전 상호작용",
+        "scale": "상호작용 250만+",
+        "ai": "GNN, 네트워크 추론"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "OMIM",
+        "access": "open",
+        "data_type": "멘델성 질병-유전자",
+        "scale": "질병-유전자 항목 다수",
+        "ai": "변이-질병 추론"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "NCBI / Ensembl",
+        "access": "open",
+        "data_type": "유전체·전사체 레퍼런스",
+        "scale": "유전체·전사체 다수",
+        "ai": "발현 정량·주석 모델"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "GEO (Gene Expression Omnibus)",
+        "access": "open",
+        "data_type": "발현·오믹스 프로파일",
+        "scale": "시리즈 20만+",
+        "ai": "발현 기반 표적·바이오마커"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "PubMed",
+        "access": "open",
+        "data_type": "문헌 데이터(NLP)",
+        "scale": "논문 3,700만+",
+        "ai": "BioBERT/PubMedBERT"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "TCGA (암유전체지도)",
+        "access": "open",
+        "data_type": "암 멀티오믹스",
+        "scale": "환자 ~11,000·33개 암종",
+        "ai": "멀티오믹스 DL"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "GTEx",
+        "access": "open",
+        "data_type": "조직별 발현·eQTL",
+        "scale": "조직 54종",
+        "ai": "eQTL 예측"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "Human Protein Atlas",
+        "access": "open",
+        "data_type": "단백질 발현·위치",
+        "scale": "단백질 ~26,900",
+        "ai": "발현 분류"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "DepMap",
+        "access": "open",
+        "data_type": "CRISPR/RNAi 필수성",
+        "scale": "세포주 ~1,100",
+        "ai": "의존성·합성치사 예측"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "CZ CELLxGENE Discover",
+        "access": "open",
+        "data_type": "단일세포 전사체 아틀라스",
+        "scale": "세포 1억+",
+        "ai": "scGPT, UCE 사전학습"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "Human Cell Atlas",
+        "access": "open",
+        "data_type": "단일세포 레퍼런스",
+        "scale": "세포 수천만+",
+        "ai": "UCE, Nicheformer"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "LINCS L1000 / CMap",
+        "access": "open",
+        "data_type": "섭동 발현 시그니처",
+        "scale": "프로파일 140만+",
+        "ai": "Connectivity Map"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "PrimeKG",
+        "access": "open",
+        "data_type": "정밀의료 지식그래프",
+        "scale": "노드 13만·관계 410만",
+        "ai": "TxGNN"
+      },
+      {
+        "stage": "표적발굴",
+        "name": "UK Biobank",
+        "access": "restricted",
+        "data_type": "유전체+표현형 코호트",
+        "scale": "참여자 50만",
+        "ai": "PheWAS, 위험예측"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "ChEMBL",
+        "access": "open",
+        "data_type": "화합물 생물활성",
+        "scale": "화합물 230만↑·활성 2,000만↑",
+        "ai": "DeepDTA, Chemprop"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "PubChem",
+        "access": "open",
+        "data_type": "화합물·바이오어세이",
+        "scale": "화합물 1.1억↑",
+        "ai": "가상스크리닝, QSAR"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "BindingDB",
+        "access": "open",
+        "data_type": "결합 친화도",
+        "scale": "측정값 ~290만",
+        "ai": "DeepDTA, GraphDTA"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "ZINC22",
+        "access": "open",
+        "data_type": "구매가능 화합물",
+        "scale": "~230억 화합물",
+        "ai": "초대규모 도킹"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "Enamine REAL Space",
+        "access": "commercial",
+        "data_type": "make-on-demand 라이브러리",
+        "scale": "~480억 화합물",
+        "ai": "초대규모 도킹"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "NPASS",
+        "access": "open",
+        "data_type": "천연물 활성·종 출처",
+        "scale": "천연물·활성 다수",
+        "ai": "천연물 활성 예측(NPI finder)"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "LOTUS / COCONUT",
+        "access": "open",
+        "data_type": "천연물 구조",
+        "scale": "천연물 ~50만+",
+        "ai": "천연물 생성·스크리닝"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "DUD-E",
+        "access": "open",
+        "data_type": "스크리닝 벤치마크",
+        "scale": "표적 102",
+        "ai": "가상스크리닝 벤치마크"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "LIT-PCBA",
+        "access": "open",
+        "data_type": "비편향 VS 벤치마크",
+        "scale": "표적 15",
+        "ai": "ML 가상스크리닝 평가"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "MoleculeNet",
+        "access": "open",
+        "data_type": "분자 물성 ML 벤치마크",
+        "scale": "데이터셋 17",
+        "ai": "Chemprop, GNN"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "Protein Data Bank (PDB)",
+        "access": "open",
+        "data_type": "생체분자 3D 구조",
+        "scale": "구조 22만+",
+        "ai": "AlphaFold3, RFAA"
+      },
+      {
+        "stage": "선도물질발굴",
+        "name": "AlphaFold DB",
+        "access": "open",
+        "data_type": "예측 단백질 구조",
+        "scale": "구조 2억+",
+        "ai": "AlphaFold2"
+      },
+      {
+        "stage": "선도물질발굴",
+        "name": "PDBbind",
+        "access": "open",
+        "data_type": "단백질-리간드 복합체+친화도",
+        "scale": "복합체 ~2만",
+        "ai": "결합친화도 DL"
+      },
+      {
+        "stage": "선도물질발굴",
+        "name": "CASF-2016",
+        "access": "open",
+        "data_type": "스코어링 벤치마크",
+        "scale": "코어셋 285",
+        "ai": "스코어링/도킹 파워 평가"
+      },
+      {
+        "stage": "선도물질발굴",
+        "name": "PoseBusters",
+        "access": "open",
+        "data_type": "도킹 포즈 타당성 벤치마크",
+        "scale": "복합체 308/428",
+        "ai": "DiffDock·AF3 평가"
+      },
+      {
+        "stage": "선도물질발굴",
+        "name": "PLINDER",
+        "access": "open",
+        "data_type": "단백질-리간드 평가 리소스",
+        "scale": "복합체 수십만",
+        "ai": "코폴딩 평가"
+      },
+      {
+        "stage": "유효물질발굴",
+        "name": "UniProt",
+        "access": "open",
+        "data_type": "단백질 서열·기능",
+        "scale": "서열 2.5억+",
+        "ai": "ESM-2/ESMFold"
+      },
+      {
+        "stage": "선도물질발굴",
+        "name": "QM9 / QMugs",
+        "access": "open",
+        "data_type": "양자화학 물성(DFT)",
+        "scale": "13.4만 / 66.5만",
+        "ai": "Uni-Mol, 등변 NN"
+      },
+      {
+        "stage": "선도물질발굴",
+        "name": "MOSES / GEOM-Drugs",
+        "access": "open",
+        "data_type": "생성 벤치마크 / 3D 형태",
+        "scale": "190만 / 3,700만",
+        "ai": "REINVENT, 확산모델"
+      },
+      {
+        "stage": "후보물질발굴",
+        "name": "Therapeutics Data Commons (TDC)",
+        "access": "open",
+        "data_type": "ADMET·DTI·생성 벤치마크",
+        "scale": "데이터셋 66+·ADMET 22",
+        "ai": "ADMET-AI, MapLight"
+      },
+      {
+        "stage": "후보물질발굴",
+        "name": "ADMETlab 3.0",
+        "access": "open",
+        "data_type": "ADMET 다중물성 예측",
+        "scale": "물성 ~100",
+        "ai": "멀티태스크 DL"
+      },
+      {
+        "stage": "후보물질발굴",
+        "name": "DrugBank",
+        "access": "mixed",
+        "data_type": "약물·표적·상호작용",
+        "scale": "약물 ~16,000",
+        "ai": "DTI, 리포지셔닝"
+      },
+      {
+        "stage": "후보물질발굴",
+        "name": "SIDER",
+        "access": "open",
+        "data_type": "약물 부작용 라벨",
+        "scale": "약물 1,430·부작용 5,800+",
+        "ai": "멀티라벨 부작용 예측"
+      },
+      {
+        "stage": "후보물질발굴",
+        "name": "hERG 데이터셋",
+        "access": "open",
+        "data_type": "심장독성(hERG)",
+        "scale": "화합물 수만(스크리닝)",
+        "ai": "DeepHIT"
+      },
+      {
+        "stage": "후보물질발굴",
+        "name": "ESOL / FreeSolv",
+        "access": "open",
+        "data_type": "용해도·수화 자유에너지",
+        "scale": "각 수천 건",
+        "ai": "용해도 회귀(GNN)"
+      },
+      {
+        "stage": "비임상",
+        "name": "Tox21",
+        "access": "open",
+        "data_type": "HTS 독성 어세이",
+        "scale": "화합물 ~12,000·어세이 12",
+        "ai": "DeepTox"
+      },
+      {
+        "stage": "비임상",
+        "name": "ToxCast (US EPA)",
+        "access": "open",
+        "data_type": "고속 독성/기전 어세이",
+        "scale": "화합물 ~9,000·어세이 1,000+",
+        "ai": "ML 독성예측"
+      },
+      {
+        "stage": "비임상",
+        "name": "Open TG-GATEs",
+        "access": "open",
+        "data_type": "독성유전체",
+        "scale": "화합물 ~170",
+        "ai": "독성 시그니처 분류"
+      },
+      {
+        "stage": "비임상",
+        "name": "DILIrank",
+        "access": "open",
+        "data_type": "약물유발 간손상 등급",
+        "scale": "약물 ~1,000",
+        "ai": "DILI 예측"
+      },
+      {
+        "stage": "비임상",
+        "name": "Ames test DB",
+        "access": "open",
+        "data_type": "돌연변이원성(변이유발)",
+        "scale": "수천~1만 건",
+        "ai": "돌연변이원성 분류"
+      },
+      {
+        "stage": "비임상",
+        "name": "Comparative Toxicogenomics DB (CTD)",
+        "access": "open",
+        "data_type": "화학-유전자-질환",
+        "scale": "상호작용 수천만",
+        "ai": "네트워크 추론"
+      },
+      {
+        "stage": "비임상",
+        "name": "eTRANSAFE / eTOX",
+        "access": "restricted",
+        "data_type": "제약사 전임상 안전성",
+        "scale": "연구 수천",
+        "ai": "번역 안전성 예측"
+      },
+      {
+        "stage": "임상 1상",
+        "name": "ClinicalTrials.gov / AACT",
+        "access": "open",
+        "data_type": "임상시험 등록·설계",
+        "scale": "시험 50만+",
+        "ai": "임상결과 예측, TrialGPT"
+      },
+      {
+        "stage": "임상 1상",
+        "name": "MIMIC-IV",
+        "access": "restricted",
+        "data_type": "ICU EHR",
+        "scale": "환자 ~30만",
+        "ai": "임상 LLM 파인튜닝"
+      },
+      {
+        "stage": "임상 1상",
+        "name": "dbGaP",
+        "access": "restricted",
+        "data_type": "유전형-표현형 아카이브",
+        "scale": "연구·참여자 다수",
+        "ai": "GWAS/PRS 모델"
+      },
+      {
+        "stage": "임상 1상",
+        "name": "PK/PD·생리 데이터",
+        "access": "mixed",
+        "data_type": "약동·약력학 파라미터",
+        "scale": "화합물 다수",
+        "ai": "PBPK·PK 모델링"
+      },
+      {
+        "stage": "임상 2상",
+        "name": "AACT(결과)+바이오마커",
+        "access": "open",
+        "data_type": "유효성·용량·바이오마커",
+        "scale": "시험 결과 다수",
+        "ai": "HINT"
+      },
+      {
+        "stage": "임상 2상",
+        "name": "의료영상 데이터셋(병원 DB)",
+        "access": "restricted",
+        "data_type": "의료영상",
+        "scale": "수십만~수백만 건",
+        "ai": "영상 진단·환자선별 CNN"
+      },
+      {
+        "stage": "임상 2상",
+        "name": "Citeline Pharmaprojects / Trialtrove",
+        "access": "commercial",
+        "data_type": "파이프라인·시험 성과",
+        "scale": "약물·시험 수십만",
+        "ai": "임상단계 전이확률(PoS)"
+      },
+      {
+        "stage": "임상 2상",
+        "name": "n2c2 / 임상 NLP 코퍼스",
+        "access": "restricted",
+        "data_type": "임상기록 NLP",
+        "scale": "문서 수천+",
+        "ai": "임상 NER·적격성 매칭"
+      },
+      {
+        "stage": "임상 3상",
+        "name": "OMOP CDM / OHDSI",
+        "access": "open",
+        "data_type": "리얼월드데이터 표준",
+        "scale": "수억 환자(분산)",
+        "ai": "환자수준 예측·합성대조군"
+      },
+      {
+        "stage": "임상 3상",
+        "name": "All of Us (NIH)",
+        "access": "restricted",
+        "data_type": "다양성 코호트 EHR+유전체",
+        "scale": "참여자 80만+",
+        "ai": "위험·형평성 모델"
+      },
+      {
+        "stage": "임상 3상",
+        "name": "ClinVar",
+        "access": "open",
+        "data_type": "변이-임상적 의미",
+        "scale": "변이 150만+",
+        "ai": "변이효과 예측"
+      },
+      {
+        "stage": "임상 3상",
+        "name": "임상 성과/실패 데이터(분산)",
+        "access": "closed",
+        "data_type": "성공/실패 결과",
+        "scale": "기관별 상이",
+        "ai": "실패·중도탈락 예측"
+      },
+      {
+        "stage": "허가/제조",
+        "name": "FAERS / openFDA",
+        "access": "open",
+        "data_type": "시판후 이상사례",
+        "scale": "보고 1,500만+",
+        "ai": "이상신호 탐지 NLP"
+      },
+      {
+        "stage": "허가/제조",
+        "name": "DailyMed",
+        "access": "open",
+        "data_type": "의약품 라벨(SPL)",
+        "scale": "라벨 14만+",
+        "ai": "라벨 NLP"
+      },
+      {
+        "stage": "허가/제조",
+        "name": "FDA Orange Book",
+        "access": "open",
+        "data_type": "승인약·특허·독점",
+        "scale": "승인 다수",
+        "ai": "승인전략 분석"
+      },
+      {
+        "stage": "허가/제조",
+        "name": "WHO VigiBase",
+        "access": "commercial",
+        "data_type": "글로벌 시판후 안전성",
+        "scale": "보고 3,700만+",
+        "ai": "불균형분석(PV)"
+      },
+      {
+        "stage": "허가/제조",
+        "name": "제조·CMC(공정) 데이터",
+        "access": "closed",
+        "data_type": "공정/품질(PAT)",
+        "scale": "기업별 상이",
+        "ai": "공정최적화·품질예측"
+      },
+      {
+        "stage": "약물재창출",
+        "name": "STITCH",
+        "access": "open",
+        "data_type": "화학물-단백질 상호작용",
+        "scale": "상호작용 수십만쌍",
+        "ai": "DTI, 리포지셔닝"
+      },
+      {
+        "stage": "약물재창출",
+        "name": "Hetionet",
+        "access": "open",
+        "data_type": "생의학 지식그래프",
+        "scale": "노드·엣지 수백만",
+        "ai": "Rephetio(메타패스)"
+      }
     ]
   }
 }
