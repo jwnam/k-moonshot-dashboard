@@ -649,14 +649,6 @@
         "budget_27_note": "한도외 72",
         "budget_total": 360
       },
-      {
-        "org": "KISTI",
-        "name": "다부처 AI기반 바이오데이터소재 통합활용지원사업",
-        "period": "'27~",
-        "budget_27": 464,
-        "budget_total": 0,
-        "note": "'27 신규, 다부처 구축형 R&D"
-      }
     ]
   },
   "biodata": {
