@@ -224,6 +224,7 @@
     <li><a href="#" onclick="showTab('kmoonshot',this)">🚀 K-문샷 로드맵</a></li>
     <li><a href="#" onclick="showTab('projects',this)">📋 사업현황</a></li>
     <li><a href="#" onclick="showTab('biodata',this)">🔬 데이터셋</a></li>
+    <li><a href="#" onclick="showTab('kddf',this)">🏛️ 국가신약 파이프라인</a></li>
     <li><a href="#" onclick="showTab('news',this)">📰 뉴스</a></li>
   </ul>
 </nav>
@@ -469,6 +470,40 @@
   </div>
 </div>
 
+<!-- ══ TAB: KDDF 국가신약 파이프라인 ════════════════════════════════════ -->
+<div id="tab-kddf" class="tab-panel">
+  <div class="section">
+    <div class="section-title">국가신약개발사업(KDDF) 파이프라인 현황</div>
+    <div class="news-updated">출처: <a href="https://kddf.org/ko/nationalbiz/pipeline" target="_blank" style="color:var(--accent2)">kddf.org</a> · 추출: <span id="kddf-date">—</span> · 총 <b id="kddf-total">—</b>건</div>
+    <div class="kpi-grid" id="kddf-kpis" style="margin-top:14px"></div>
+  </div>
+  <div class="section">
+    <div class="grid-2">
+      <div><div class="section-title">질환별</div><canvas id="kddfDiseaseChart"></canvas></div>
+      <div><div class="section-title">개발단계별</div><canvas id="kddfStageChart"></canvas></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">물질유형별 (신규 모달리티 포함)</div>
+    <canvas id="kddfMaterialChart" style="max-height:260px"></canvas>
+  </div>
+  <div class="section">
+    <div class="section-title">전체 파이프라인 (553건)</div>
+    <div class="kddf-filter" id="kddf-filter" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <input id="kddf-search" placeholder="검색: 과제명·타겟·기관·적응증" style="flex:1;min-width:180px;background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px;font-size:13px">
+      <select id="kddf-dis" style="background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px;font-size:13px"></select>
+      <select id="kddf-stg" style="background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px;font-size:13px"></select>
+    </div>
+    <div style="max-height:560px;overflow:auto">
+      <table id="kddf-table">
+        <thead><tr><th>질환</th><th>단계</th><th>과제명</th><th>물질</th><th>타겟</th><th>적응증</th><th>수행기관</th></tr></thead>
+        <tbody id="kddf-tbody"></tbody>
+      </table>
+    </div>
+    <div id="kddf-count" style="color:var(--muted);font-size:12px;margin-top:8px"></div>
+  </div>
+</div>
+
 <!-- ══ TAB: NEWS ══════════════════════════════════════════════════════ -->
 <div id="tab-news" class="tab-panel">
   <div class="section">
@@ -518,6 +553,10 @@ function showTab(name, el) {
     renderBiodataCharts(_biodata);
     _biodataChartsDone = true;
   }
+  if (name === 'kddf' && _kddf && !_kddfChartsDone) {
+    renderKddfCharts(_kddf);
+    _kddfChartsDone = true;
+  }
   return false;
 }
 
@@ -529,6 +568,75 @@ Chart.defaults.font.family = "'Segoe UI', 'Apple SD Gothic Neo', sans-serif";
 const PALETTE = ['#6366f1','#22d3ee','#f59e0b','#10b981','#a855f7','#ef4444'];
 
 // ── Load data and render ──────────────────────────────────────────────
+// ── KDDF 국가신약 파이프라인 ──────────────────────────────────────────
+let _kddf = null, _kddfChartsDone = false;
+const KDDF_DIS_KO = {Oncology:'종양',Immunology:'면역',Neurology:'신경',Metabolic:'대사',
+  Ophthalmology:'안과',Respiratory:'호흡기',Cardiovascular:'심혈관',Gastrointestinal:'소화기',Others:'기타'};
+const KDDF_STG_KO = {Discovery:'발굴',Preclinical:'비임상',Phase1:'임상1상',Phase2:'임상2상',Phase3:'임상3상'};
+
+fetch('data/kddf_pipeline.json?v=1')
+  .then(r => r.json())
+  .then(d => {
+    _kddf = d;
+    document.getElementById('kddf-date').textContent = d.extracted;
+    document.getElementById('kddf-total').textContent = d.total;
+    // KPI
+    const topDis = Object.entries(d.by_disease).sort((a,b)=>b[1]-a[1])[0];
+    const clinical = (d.by_stage.Phase1||0)+(d.by_stage.Phase2||0)+(d.by_stage.Phase3||0);
+    const gene = d.by_material['Gene & Nucleic acids']||0;
+    const kpis = [
+      ['전체 파이프라인', d.total, 'accent'],
+      ['최다 질환', `${KDDF_DIS_KO[topDis[0]]} ${topDis[1]}`, 'cyan'],
+      ['임상단계', clinical, 'amber'],
+      ['RNA·유전자치료제', gene, 'green'],
+    ];
+    document.getElementById('kddf-kpis').innerHTML = kpis.map(([l,v,c])=>
+      `<div class="kpi-card ${c}"><div class="kpi-label">${l}</div><div class="kpi-value">${v}</div></div>`).join('');
+    // 필터 옵션
+    const disSel=document.getElementById('kddf-dis'), stgSel=document.getElementById('kddf-stg');
+    disSel.innerHTML='<option value="">전체 질환</option>'+Object.keys(d.by_disease).map(k=>`<option value="${k}">${KDDF_DIS_KO[k]||k}</option>`).join('');
+    stgSel.innerHTML='<option value="">전체 단계</option>'+Object.keys(d.by_stage).map(k=>`<option value="${k}">${KDDF_STG_KO[k]||k}</option>`).join('');
+    ['input','change'].forEach(ev=>{
+      document.getElementById('kddf-search').addEventListener(ev, renderKddfTable);
+      disSel.addEventListener(ev, renderKddfTable); stgSel.addEventListener(ev, renderKddfTable);
+    });
+    renderKddfTable();
+  })
+  .catch(e => console.error('kddf load 실패', e));
+
+function renderKddfTable() {
+  if (!_kddf) return;
+  const q=(document.getElementById('kddf-search').value||'').toLowerCase();
+  const fd=document.getElementById('kddf-dis').value, fs=document.getElementById('kddf-stg').value;
+  const esc=s=>String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  const rows=_kddf.pipelines.filter(p=>
+    (!fd||p.disease===fd)&&(!fs||p.stage===fs)&&
+    (!q||(p.title+p.target+p.org+p.indication+p.material).toLowerCase().includes(q)));
+  document.getElementById('kddf-tbody').innerHTML = rows.map(p=>
+    `<tr><td>${KDDF_DIS_KO[p.disease]||p.disease}</td><td>${KDDF_STG_KO[p.stage]||p.stage}</td>`+
+    `<td>${esc(p.title)}</td><td>${esc(p.material)}</td><td>${esc(p.target)}</td>`+
+    `<td>${esc(p.indication)}</td><td>${esc(p.org)}</td></tr>`).join('');
+  document.getElementById('kddf-count').textContent = `${rows.length} / ${_kddf.total}건 표시`;
+}
+
+function renderKddfCharts(d) {
+  const PAL=['#6366f1','#22d3ee','#f59e0b','#10b981','#a855f7','#ef4444','#ec4899','#14b8a6','#eab308'];
+  const dis=Object.entries(d.by_disease).sort((a,b)=>b[1]-a[1]);
+  new Chart(document.getElementById('kddfDiseaseChart'),{type:'bar',
+    data:{labels:dis.map(x=>KDDF_DIS_KO[x[0]]||x[0]),datasets:[{data:dis.map(x=>x[1]),
+      backgroundColor:dis.map((_,i)=>PAL[i%PAL.length]),borderRadius:5}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}}});
+  const stgOrder=['Discovery','Preclinical','Phase1','Phase2','Phase3'].filter(s=>d.by_stage[s]);
+  new Chart(document.getElementById('kddfStageChart'),{type:'doughnut',
+    data:{labels:stgOrder.map(s=>KDDF_STG_KO[s]),datasets:[{data:stgOrder.map(s=>d.by_stage[s]),
+      backgroundColor:PAL}]},options:{plugins:{legend:{position:'right'}}}});
+  const mat=Object.entries(d.by_material).sort((a,b)=>b[1]-a[1]);
+  new Chart(document.getElementById('kddfMaterialChart'),{type:'bar',
+    data:{labels:mat.map(x=>x[0]),datasets:[{data:mat.map(x=>x[1]),
+      backgroundColor:mat.map((_,i)=>PAL[i%PAL.length]),borderRadius:5}]},
+    options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
+}
+
 fetch('data/dashboard.json?v=1.4')
   .then(r => r.json())
   .then(data => {
