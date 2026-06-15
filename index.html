@@ -219,7 +219,7 @@
   <ul>
     <li><a href="#" class="active" onclick="showTab('overview',this)">📊 개요</a></li>
     <li><a href="#" onclick="showTab('pipelines',this)">💊 파이프라인</a></li>
-    <li><a href="#" onclick="showTab('kddf',this)">🏛️ 국가신약 파이프라인</a></li>
+    <li><a href="#" onclick="showTab('kddf',this)">🏛️ KDDF지원 파이프라인</a></li>
     <li><a href="#" onclick="showTab('ai-pipeline',this)">🤖 AI 파이프라인</a></li>
     <li><a href="#" onclick="showTab('transfer',this)">🤝 기술이전</a></li>
     <li><a href="#" onclick="showTab('kmoonshot',this)">🚀 K-문샷 로드맵</a></li>
@@ -472,19 +472,15 @@
 
 <!-- ══ TAB: KDDF 국가신약 파이프라인 ════════════════════════════════════ -->
 <div id="tab-kddf" class="tab-panel">
-  <div class="section">
-    <div class="section-title">국가신약개발사업(KDDF) 파이프라인 현황</div>
-    <div class="news-updated">출처: <a href="https://kddf.org/ko/nationalbiz/pipeline" target="_blank" style="color:var(--accent2)">kddf.org</a> · 추출: <span id="kddf-date">—</span> · 총 <b id="kddf-total">—</b>건</div>
-    <div class="kpi-grid" id="kddf-kpis" style="margin-top:14px"></div>
-  </div>
 
-  <!-- ① 신약개발 단계별 현황 (우선) -->
+  <!-- ① 신약개발 단계별 현황 -->
   <div class="section">
     <div class="section-title">① 신약개발 단계별 현황</div>
-    <p style="font-size:11px;color:var(--muted);margin-bottom:12px;">※ 발굴(Discovery) → 비임상(Preclinical) → 임상 1·2상 순. 각 카드의 막대는 질환별 분포.</p>
-    <div class="grid-3" id="kddf-stage-cards"></div>
+    <div class="news-updated">출처: <a href="https://kddf.org/ko/nationalbiz/pipeline" target="_blank" style="color:var(--accent2)">kddf.org</a> · 추출: <span id="kddf-date">—</span> · 총 <b id="kddf-total">—</b>건 · 발굴 → 비임상 → 임상 1·2상</div>
+    <div class="grid-3" id="kddf-stage-cards" style="margin-top:12px"></div>
     <div class="card" style="padding:16px;margin-top:14px;">
-      <div class="chart-wrap"><canvas id="kddfStageChart" style="max-height:240px"></canvas></div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:8px">단계별 질환 분포 (누적 막대)</div>
+      <div class="chart-wrap"><canvas id="kddfStageChart" style="max-height:260px"></canvas></div>
     </div>
   </div>
 
@@ -496,10 +492,12 @@
     <div style="overflow:auto"><table id="kddf-cross"><thead></thead><tbody></tbody></table></div>
   </div>
 
-  <!-- ③ 물질유형별 -->
+  <!-- ③ 물질(약물)유형별 현황 -->
   <div class="section">
-    <div class="section-title">③ 물질유형별 (신규 모달리티 포함)</div>
+    <div class="section-title">③ 물질(약물)유형별 현황 (신규 모달리티 포함)</div>
     <canvas id="kddfMaterialChart" style="max-height:260px"></canvas>
+    <div class="section-title" style="margin-top:18px;">약물 × 단계 교차표</div>
+    <div style="overflow:auto"><table id="kddf-matcross"><thead></thead><tbody></tbody></table></div>
   </div>
 
   <div class="section">
@@ -595,20 +593,9 @@ fetch('data/kddf_pipeline.json?v=1')
     _kddf = d;
     document.getElementById('kddf-date').textContent = d.extracted;
     document.getElementById('kddf-total').textContent = d.total;
-    // KPI
-    const topDis = Object.entries(d.by_disease).sort((a,b)=>b[1]-a[1])[0];
-    const clinical = (d.by_stage.Phase1||0)+(d.by_stage.Phase2||0)+(d.by_stage.Phase3||0);
-    const gene = d.by_material['Gene & Nucleic acids']||0;
-    const kpis = [
-      ['전체 파이프라인', d.total, 'accent'],
-      ['최다 질환', `${KDDF_DIS_KO[topDis[0]]} ${topDis[1]}`, 'cyan'],
-      ['임상단계', clinical, 'amber'],
-      ['RNA·유전자치료제', gene, 'green'],
-    ];
-    document.getElementById('kddf-kpis').innerHTML = kpis.map(([l,v,c])=>
-      `<div class="kpi-card ${c}"><div class="kpi-label">${l}</div><div class="kpi-value">${v}</div></div>`).join('');
     renderKddfStageCards(d);
     renderKddfCross(d);
+    renderKddfMatCross(d);
     // 필터 옵션
     const disSel=document.getElementById('kddf-dis'), stgSel=document.getElementById('kddf-stg');
     disSel.innerHTML='<option value="">전체 질환</option>'+Object.keys(d.by_disease).map(k=>`<option value="${k}">${KDDF_DIS_KO[k]||k}</option>`).join('');
@@ -674,6 +661,24 @@ function renderKddfCross(d) {
   }).join('');
 }
 
+function renderKddfMatCross(d) {
+  // 약물(물질) × 단계 교차표 — pipelines에서 직접 집계
+  const order=['Discovery','Preclinical','Phase1','Phase2','Phase3'].filter(s=>d.by_stage[s]);
+  const cross={}, matTot={};
+  d.pipelines.forEach(p=>{
+    const m=p.material||'(미분류)';
+    cross[m]=cross[m]||{}; cross[m][p.stage]=(cross[m][p.stage]||0)+1;
+    matTot[m]=(matTot[m]||0)+1;
+  });
+  const mats=Object.keys(matTot).sort((a,b)=>matTot[b]-matTot[a]);
+  const t=document.getElementById('kddf-matcross');
+  t.querySelector('thead').innerHTML='<tr><th>물질(약물)</th>'+order.map(s=>`<th>${KDDF_STG_KO[s]}</th>`).join('')+'<th>합계</th></tr>';
+  t.querySelector('tbody').innerHTML=mats.map(m=>{
+    const cells=order.map(s=>`<td>${(cross[m]||{})[s]||'-'}</td>`).join('');
+    return `<tr><td>${m}</td>${cells}<td><b>${matTot[m]}</b></td></tr>`;
+  }).join('');
+}
+
 function renderKddfCharts(d) {
   const PAL=['#6366f1','#22d3ee','#f59e0b','#10b981','#a855f7','#ef4444','#ec4899','#14b8a6','#eab308'];
   const dis=Object.entries(d.by_disease).sort((a,b)=>b[1]-a[1]);
@@ -681,10 +686,17 @@ function renderKddfCharts(d) {
     data:{labels:dis.map(x=>KDDF_DIS_KO[x[0]]||x[0]),datasets:[{data:dis.map(x=>x[1]),
       backgroundColor:dis.map((_,i)=>PAL[i%PAL.length]),borderRadius:5}]},
     options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}}});
+  // 단계별: 질환 누적 가로막대 (파이차트 대체)
   const stgOrder=['Discovery','Preclinical','Phase1','Phase2','Phase3'].filter(s=>d.by_stage[s]);
-  new Chart(document.getElementById('kddfStageChart'),{type:'doughnut',
-    data:{labels:stgOrder.map(s=>KDDF_STG_KO[s]),datasets:[{data:stgOrder.map(s=>d.by_stage[s]),
-      backgroundColor:PAL}]},options:{plugins:{legend:{position:'right'}}}});
+  const disKeys=Object.entries(d.by_disease).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
+  const sg=d.by_disease_stage;
+  const ds=disKeys.map((dis,i)=>({label:KDDF_DIS_KO[dis]||dis,
+    data:stgOrder.map(s=>(sg[dis]||{})[s]||0),
+    backgroundColor:PAL[i%PAL.length]}));
+  new Chart(document.getElementById('kddfStageChart'),{type:'bar',
+    data:{labels:stgOrder.map(s=>KDDF_STG_KO[s]+' ('+d.by_stage[s]+')'),datasets:ds},
+    options:{indexAxis:'y',plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:10}}}},
+      scales:{x:{stacked:true,beginAtZero:true},y:{stacked:true}}}});
   const mat=Object.entries(d.by_material).sort((a,b)=>b[1]-a[1]);
   new Chart(document.getElementById('kddfMaterialChart'),{type:'bar',
     data:{labels:mat.map(x=>x[0]),datasets:[{data:mat.map(x=>x[1]),
