@@ -477,16 +477,31 @@
     <div class="news-updated">출처: <a href="https://kddf.org/ko/nationalbiz/pipeline" target="_blank" style="color:var(--accent2)">kddf.org</a> · 추출: <span id="kddf-date">—</span> · 총 <b id="kddf-total">—</b>건</div>
     <div class="kpi-grid" id="kddf-kpis" style="margin-top:14px"></div>
   </div>
+
+  <!-- ① 신약개발 단계별 현황 (우선) -->
   <div class="section">
-    <div class="grid-2">
-      <div><div class="section-title">질환별</div><canvas id="kddfDiseaseChart"></canvas></div>
-      <div><div class="section-title">개발단계별</div><canvas id="kddfStageChart"></canvas></div>
+    <div class="section-title">① 신약개발 단계별 현황</div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px;">※ 발굴(Discovery) → 비임상(Preclinical) → 임상 1·2상 순. 각 카드의 막대는 질환별 분포.</p>
+    <div class="grid-3" id="kddf-stage-cards"></div>
+    <div class="card" style="padding:16px;margin-top:14px;">
+      <div class="chart-wrap"><canvas id="kddfStageChart" style="max-height:240px"></canvas></div>
     </div>
   </div>
+
+  <!-- ② 질환(적응증)별 현황 -->
   <div class="section">
-    <div class="section-title">물질유형별 (신규 모달리티 포함)</div>
+    <div class="section-title">② 질환(적응증)별 현황</div>
+    <div class="card" style="padding:16px;"><div class="chart-wrap"><canvas id="kddfDiseaseChart" style="max-height:300px"></canvas></div></div>
+    <div class="section-title" style="margin-top:18px;">질환 × 단계 교차표</div>
+    <div style="overflow:auto"><table id="kddf-cross"><thead></thead><tbody></tbody></table></div>
+  </div>
+
+  <!-- ③ 물질유형별 -->
+  <div class="section">
+    <div class="section-title">③ 물질유형별 (신규 모달리티 포함)</div>
     <canvas id="kddfMaterialChart" style="max-height:260px"></canvas>
   </div>
+
   <div class="section">
     <div class="section-title">전체 파이프라인 (553건)</div>
     <div class="kddf-filter" id="kddf-filter" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
@@ -592,6 +607,8 @@ fetch('data/kddf_pipeline.json?v=1')
     ];
     document.getElementById('kddf-kpis').innerHTML = kpis.map(([l,v,c])=>
       `<div class="kpi-card ${c}"><div class="kpi-label">${l}</div><div class="kpi-value">${v}</div></div>`).join('');
+    renderKddfStageCards(d);
+    renderKddfCross(d);
     // 필터 옵션
     const disSel=document.getElementById('kddf-dis'), stgSel=document.getElementById('kddf-stg');
     disSel.innerHTML='<option value="">전체 질환</option>'+Object.keys(d.by_disease).map(k=>`<option value="${k}">${KDDF_DIS_KO[k]||k}</option>`).join('');
@@ -617,6 +634,44 @@ function renderKddfTable() {
     `<td>${esc(p.title)}</td><td>${esc(p.material)}</td><td>${esc(p.target)}</td>`+
     `<td>${esc(p.indication)}</td><td>${esc(p.org)}</td></tr>`).join('');
   document.getElementById('kddf-count').textContent = `${rows.length} / ${_kddf.total}건 표시`;
+}
+
+function renderKddfStageCards(d) {
+  const order=['Discovery','Preclinical','Phase1','Phase2','Phase3'].filter(s=>d.by_stage[s]);
+  const sg=d.by_disease_stage;
+  const disList=Object.keys(d.by_disease);
+  const el=document.getElementById('kddf-stage-cards');
+  el.innerHTML = order.map((s,si)=>{
+    // 단계별 질환 분포 (상위 5)
+    const breakdown = disList.map(dis=>[dis, (sg[dis]||{})[s]||0]).filter(x=>x[1]>0)
+      .sort((a,b)=>b[1]-a[1]);
+    const tot=d.by_stage[s];
+    const maxv=breakdown.length?breakdown[0][1]:1;
+    const bars=breakdown.slice(0,5).map(([dis,n])=>
+      `<div style="display:flex;align-items:center;gap:6px;font-size:11px;margin:3px 0">
+         <span style="width:38px;color:var(--muted)">${KDDF_DIS_KO[dis]||dis}</span>
+         <span style="flex:1;background:var(--surface2);border-radius:4px;overflow:hidden"><span style="display:block;height:8px;width:${n/maxv*100}%;background:var(--accent)"></span></span>
+         <span style="width:24px;text-align:right">${n}</span></div>`).join('');
+    return `<div class="card" style="padding:14px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <div style="font-weight:600">${KDDF_STG_KO[s]}</div>
+        <div style="font-size:22px;font-weight:700;color:var(--accent2)">${tot}</div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:8px">${(tot/d.total*100).toFixed(1)}% · ${si+1}단계</div>
+      ${bars}</div>`;
+  }).join('');
+}
+
+function renderKddfCross(d) {
+  const order=['Discovery','Preclinical','Phase1','Phase2','Phase3'].filter(s=>d.by_stage[s]);
+  const sg=d.by_disease_stage;
+  const dis=Object.entries(d.by_disease).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
+  const t=document.getElementById('kddf-cross');
+  t.querySelector('thead').innerHTML='<tr><th>질환</th>'+order.map(s=>`<th>${KDDF_STG_KO[s]}</th>`).join('')+'<th>합계</th></tr>';
+  t.querySelector('tbody').innerHTML=dis.map(dd=>{
+    const cells=order.map(s=>`<td>${(sg[dd]||{})[s]||'-'}</td>`).join('');
+    return `<tr><td>${KDDF_DIS_KO[dd]||dd}</td>${cells}<td><b>${d.by_disease[dd]}</b></td></tr>`;
+  }).join('');
 }
 
 function renderKddfCharts(d) {
