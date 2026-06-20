@@ -220,7 +220,7 @@
     <li><a href="#" class="active" onclick="showTab('overview',this)">📊 개요</a></li>
     <li><a href="#" onclick="showTab('pipelines',this)">💊 파이프라인</a></li>
     <li><a href="#" onclick="showTab('kddf',this)">🏛️ KDDF지원 파이프라인</a></li>
-    <li><a href="#" onclick="showTab('master',this)">🧬 통합 파이프라인 627</a></li>
+    <li><a href="#" onclick="showTab('master',this)">🧬 국내기업 임상 파이프라인</a></li>
     <li><a href="#" onclick="showTab('ai-pipeline',this)">🤖 AI 파이프라인</a></li>
     <li><a href="#" onclick="showTab('transfer',this)">🤝 기술이전</a></li>
     <li><a href="#" onclick="showTab('kmoonshot',this)">🚀 K-문샷 로드맵</a></li>
@@ -518,48 +518,55 @@
   </div>
 </div>
 
-<!-- ══ TAB: 통합 파이프라인 (627) ════════════════════════════════════════ -->
+<!-- ══ TAB: ClinicalTrials.gov 국내기업 임상 파이프라인 ════════════════════ -->
 <div id="tab-master" class="tab-panel">
   <div class="section">
-    <div class="section-title">통합 국내 신약 파이프라인 — <span id="m-total">627</span>건</div>
-    <div class="news-updated">출처: KDDF 국가신약개발과제 <b>553</b> + ClinicalTrials.gov 국내기업 임상2·3상 <b>74</b> · 임상 후기단계는 출처별 구분 표시 · 단계별 산업평균 성공가능성(LoA) 부여</div>
-    <p style="font-size:11px;color:var(--muted);margin-bottom:12px;">※ KDDF=국가과제(발굴~임상2상). ClinicalTrials.gov=국내기업 진행중 임상2·3상(제네릭·생동성 제외). 두 출처 간 소량 중복 가능. Citeline 전체 3,386개의 공개 부분집합.</p>
-    <div class="grid-3" id="m-stage-cards" style="margin-top:12px"></div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">개발단계별 분포 — 출처 구분 (KDDF vs ClinicalTrials.gov)</div>
-    <div class="card" style="padding:16px;"><div class="chart-wrap"><canvas id="mStageChart" style="max-height:300px"></canvas></div></div>
-    <p style="font-size:11px;color:var(--muted);margin-top:8px;">임상2상 +42건, <b>임상3상 +32건</b>이 ClinicalTrials.gov에서 신규 확보됨 (KDDF엔 임상3상 0건).</p>
+    <div class="section-title">국내기업 임상 파이프라인 (ClinicalTrials.gov) — <span id="m-total">74</span>건</div>
+    <div class="news-updated">출처: <a href="https://clinicaltrials.gov" target="_blank" style="color:var(--accent2)">ClinicalTrials.gov</a> API v2 · 국내 제약·바이오 기업 스폰서 · 진행중 임상2·3상 · 단계별 산업평균 성공가능성(LoA) 부여</div>
+    <div class="card" style="padding:16px;margin-top:8px;font-size:12.5px;line-height:1.7;color:var(--text)">
+      <b style="color:var(--accent2)">이 페이지는 무엇인가?</b><br>
+      ClinicalTrials.gov(미국 NIH 운영 글로벌 임상시험 등록 DB)에서 <b>국내 제약·바이오 기업이 스폰서</b>인 <b>진행중 임상 2·3상</b> 신약 과제만 추출한 현황입니다. KDDF 국가과제(별도 탭)와 달리 기업 자체 임상 파이프라인을 보여줍니다.
+      <div style="margin-top:10px;color:var(--muted);font-size:11.5px">
+        <b>추출 기준</b> · funderType=industry · location=Korea · phase 2–3 · 상태=진행중(모집중/개시예정/모집완료/초청) ·
+        <b>국내 기업 스폰서만</b> 선별(다국적사 한국 사이트 임상 제외) · <b>제네릭·생동성 시험 제외</b>(신약성 우선)<br>
+        ※ 표적(target) 정보는 ClinicalTrials.gov에서 제공되지 않아 공란. 모달리티는 약물명 기반 추정. KDDF 국가과제와 일부 중복 가능. Citeline 전체 3,386개 중 공개 확보 가능 부분.
+      </div>
+    </div>
+    <div class="grid-3" id="m-stage-cards" style="margin-top:14px"></div>
   </div>
 
   <div class="grid-2">
     <div class="section">
-      <div class="section-title">질환별 (627건)</div>
+      <div class="section-title">질환별 분포</div>
       <div class="card" style="padding:16px;"><div class="chart-wrap"><canvas id="mDiseaseChart" style="max-height:300px"></canvas></div></div>
     </div>
     <div class="section">
-      <div class="section-title">임상단계 신약구분 (CT.gov 74건)</div>
+      <div class="section-title">신약구분 (74건)</div>
       <div class="card" style="padding:16px;"><div class="chart-wrap"><canvas id="mTypeChart" style="max-height:300px"></canvas></div></div>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-title">🔬 임상 3상 상세검토 — ClinicalTrials.gov 32건</div>
+    <div class="section-title">기관별 과제 수 (상위)</div>
+    <div class="card" style="padding:16px;"><div class="chart-wrap"><canvas id="mOrgChart" style="max-height:320px"></canvas></div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🔬 임상 3상 상세검토 — 32건</div>
     <div class="news-updated">국내기업 스폰서 · 진행중 임상3상 · 1차완료예정일 순 · 신약구분 분류 포함</div>
     <div style="overflow:auto"><table id="m-p3-table"><thead></thead><tbody></tbody></table></div>
   </div>
 
   <div class="section">
-    <div class="section-title">전체 627건 검색</div>
+    <div class="section-title">전체 74건 검색</div>
     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
-      <input id="m-search" placeholder="검색: 과제명·표적·기관·적응증·약물" style="flex:1;min-width:180px;background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px;font-size:13px">
-      <select id="m-src" style="background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px;font-size:13px"></select>
+      <input id="m-search" placeholder="검색: 과제명·약물·기관·적응증" style="flex:1;min-width:180px;background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px;font-size:13px">
+      <select id="m-typ" style="background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px;font-size:13px"></select>
       <select id="m-stg" style="background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px;font-size:13px"></select>
     </div>
     <div style="overflow:auto">
       <table id="m-table">
-        <thead><tr><th>출처</th><th>질환</th><th>단계</th><th>가능성</th><th>과제/약물</th><th>표적</th><th>모달리티</th><th>적응증</th><th>기관</th></tr></thead>
+        <thead><tr><th>단계</th><th>질환</th><th>신약구분</th><th>약물</th><th>적응증</th><th>기관</th><th>상태</th><th>가능성</th><th>NCT</th></tr></thead>
         <tbody id="m-tbody"></tbody>
       </table>
     </div>
@@ -662,49 +669,51 @@ fetch('data/kddf_pipeline.json?v=2')
   })
   .catch(e => console.error('kddf load 실패', e));
 
-// ── 통합 파이프라인 (627: KDDF 553 + ClinicalTrials.gov 74) ──────────────
+// ── ClinicalTrials.gov 국내기업 임상 파이프라인 (74건) ────────────────────
 let _master = null, _masterChartsDone = false;
-const M_STG = ['발굴','비임상','임상1상','임상2상','임상3상'];
+const M_STG = ['임상2상','임상3상'];
 const M_ESC = s => String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-function mBySrcStage(rows){
-  const o={}; rows.forEach(r=>{o[r.source]=o[r.source]||{}; o[r.source][r.개발단계]=(o[r.source][r.개발단계]||0)+1;}); return o;
-}
-fetch('data/pipeline_master.json?v=1')
+fetch('data/pipeline_clinical_ctgov.json?v=1')
   .then(r=>r.json())
   .then(d=>{
     _master=d;
     document.getElementById('m-total').textContent=d.meta.total;
     renderMasterStageCards(d.pipelines);
     renderMasterP3(d.pipelines);
-    const srcSel=document.getElementById('m-src'), stgSel=document.getElementById('m-stg');
-    const srcs=[...new Set(d.pipelines.map(p=>p.source))];
-    srcSel.innerHTML='<option value="">전체 출처</option>'+srcs.map(s=>`<option>${s}</option>`).join('');
+    const typSel=document.getElementById('m-typ'), stgSel=document.getElementById('m-stg');
+    const typs=[...new Set(d.pipelines.map(p=>p.신약구분))];
+    typSel.innerHTML='<option value="">전체 신약구분</option>'+typs.map(s=>`<option>${s}</option>`).join('');
     stgSel.innerHTML='<option value="">전체 단계</option>'+M_STG.map(s=>`<option>${s}</option>`).join('');
     ['input','change'].forEach(ev=>{
       document.getElementById('m-search').addEventListener(ev,renderMasterTable);
-      srcSel.addEventListener(ev,renderMasterTable); stgSel.addEventListener(ev,renderMasterTable);
+      typSel.addEventListener(ev,renderMasterTable); stgSel.addEventListener(ev,renderMasterTable);
     });
     renderMasterTable();
   })
-  .catch(e=>console.error('master load 실패',e));
+  .catch(e=>console.error('ctgov load 실패',e));
 
 function renderMasterStageCards(rows){
-  const bs=mBySrcStage(rows), total=rows.length;
-  document.getElementById('m-stage-cards').innerHTML=M_STG.map((s,i)=>{
-    const k=(bs['KDDF']||{})[s]||0, c=(bs['ClinicalTrials.gov']||{})[s]||0, t=k+c;
+  const cnt={임상2상:0,임상3상:0};
+  rows.forEach(r=>{cnt[r.개발단계]=(cnt[r.개발단계]||0)+1;});
+  const total=rows.length;
+  const cards=M_STG.map(s=>{
+    const n=cnt[s]||0;
     return `<div class="card" style="padding:14px">
       <div style="display:flex;justify-content:space-between;align-items:baseline">
         <div style="font-weight:600">${s}</div>
-        <div style="font-size:22px;font-weight:700;color:var(--accent2)">${t}</div></div>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:8px">${(t/total*100).toFixed(1)}% · ${i+1}단계</div>
-      <div style="font-size:11px;display:flex;gap:12px">
-        <span><span style="color:#6366f1">●</span> KDDF ${k}</span>
-        <span><span style="color:#22d3ee">●</span> CT.gov ${c}</span></div></div>`;
-  }).join('');
+        <div style="font-size:24px;font-weight:700;color:var(--accent2)">${n}</div></div>
+      <div style="font-size:11px;color:var(--muted)">${total?(n/total*100).toFixed(1):0}%</div></div>`;
+  });
+  cards.push(`<div class="card" style="padding:14px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <div style="font-weight:600">합계</div>
+        <div style="font-size:24px;font-weight:700;color:var(--accent)">${total}</div></div>
+      <div style="font-size:11px;color:var(--muted)">국내기업 임상 신약 과제</div></div>`);
+  document.getElementById('m-stage-cards').innerHTML=cards.join('');
 }
 
 function renderMasterP3(rows){
-  const p3=rows.filter(r=>r.source==='ClinicalTrials.gov'&&r.개발단계==='임상3상')
+  const p3=rows.filter(r=>r.개발단계==='임상3상')
     .sort((a,b)=>String(a['1차완료예정']).localeCompare(String(b['1차완료예정'])));
   const t=document.getElementById('m-p3-table');
   t.querySelector('thead').innerHTML='<tr><th>기관</th><th>약물</th><th>신약구분</th><th>적응증</th><th>질환</th><th>상태</th><th>완료예정</th><th>NCT</th></tr>';
@@ -718,40 +727,36 @@ function renderMasterP3(rows){
 function renderMasterTable(){
   if(!_master) return;
   const q=(document.getElementById('m-search').value||'').toLowerCase();
-  const fsrc=document.getElementById('m-src').value, fstg=document.getElementById('m-stg').value;
+  const ftyp=document.getElementById('m-typ').value, fstg=document.getElementById('m-stg').value;
   const rows=_master.pipelines.filter(p=>
-    (!fsrc||p.source===fsrc)&&(!fstg||p.개발단계===fstg)&&
-    (!q||((p.과제명||'')+(p.표적||'')+(p.보유기관||'')+(p.적응증||'')+(p.약물||'')).toLowerCase().includes(q)));
-  const badge=s=>s==='KDDF'?'<span style="color:#6366f1;font-weight:600">KDDF</span>':'<span style="color:#22d3ee;font-weight:600">CT.gov</span>';
-  document.getElementById('m-tbody').innerHTML=rows.slice(0,400).map(p=>
-    `<tr><td>${badge(p.source)}</td><td>${M_ESC(p.질환)}</td><td>${M_ESC(p.개발단계)}</td>`+
-    `<td>${p.성공가능성_pct?p.성공가능성_pct+'%':'-'}</td>`+
-    `<td>${M_ESC(p.과제명||p.약물)}</td><td>${M_ESC(p.표적)||'-'}</td><td>${M_ESC(p.모달리티)}</td>`+
-    `<td>${M_ESC(p.적응증)}</td><td>${M_ESC(p.보유기관)}</td></tr>`).join('');
-  document.getElementById('m-count').textContent=`${rows.length} / ${_master.meta.total}건 표시`+(rows.length>400?' (상위 400건만 렌더)':'');
+    (!ftyp||p.신약구분===ftyp)&&(!fstg||p.개발단계===fstg)&&
+    (!q||((p.과제명||'')+(p.약물||'')+(p.보유기관||'')+(p.적응증||'')).toLowerCase().includes(q)));
+  document.getElementById('m-tbody').innerHTML=rows.map(p=>
+    `<tr><td>${M_ESC(p.개발단계)}</td><td>${M_ESC(p.질환)}</td><td>${M_ESC(p.신약구분)}</td>`+
+    `<td>${M_ESC(p.약물)}</td><td>${M_ESC(p.적응증)}</td><td>${M_ESC(p.보유기관)}</td>`+
+    `<td>${M_ESC(p.현재상태)}</td><td>${p.성공가능성_pct?p.성공가능성_pct+'%':'-'}</td>`+
+    `<td><a href="https://clinicaltrials.gov/study/${M_ESC(p.과제번호)}" target="_blank" style="color:var(--accent2)">${M_ESC(p.과제번호)}</a></td></tr>`).join('');
+  document.getElementById('m-count').textContent=`${rows.length} / ${_master.meta.total}건 표시`;
 }
 
 function renderMasterCharts(d){
-  const rows=d.pipelines, bs=mBySrcStage(rows);
-  const kddf=M_STG.map(s=>(bs['KDDF']||{})[s]||0);
-  const ct=M_STG.map(s=>(bs['ClinicalTrials.gov']||{})[s]||0);
-  new Chart(document.getElementById('mStageChart'),{type:'bar',
-    data:{labels:M_STG,datasets:[
-      {label:'KDDF 국가과제',data:kddf,backgroundColor:'#6366f1'},
-      {label:'ClinicalTrials.gov 국내기업',data:ct,backgroundColor:'#22d3ee'}]},
-    options:{plugins:{legend:{position:'bottom',labels:{boxWidth:12}}},
-      scales:{x:{stacked:true},y:{stacked:true,beginAtZero:true}}}});
+  const rows=d.pipelines;
+  const PAL=['#6366f1','#22d3ee','#f59e0b','#10b981','#a855f7','#ef4444','#ec4899','#14b8a6','#eab308'];
   const dc={}; rows.forEach(r=>dc[r.질환]=(dc[r.질환]||0)+1);
   const de=Object.entries(dc).sort((a,b)=>b[1]-a[1]);
   new Chart(document.getElementById('mDiseaseChart'),{type:'bar',
-    data:{labels:de.map(x=>x[0]),datasets:[{data:de.map(x=>x[1]),backgroundColor:'#6366f1',borderRadius:5}]},
+    data:{labels:de.map(x=>x[0]),datasets:[{data:de.map(x=>x[1]),backgroundColor:'#22d3ee',borderRadius:5}]},
     options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}}});
-  const tc={}; rows.filter(r=>r.source==='ClinicalTrials.gov').forEach(r=>tc[r.신약구분]=(tc[r.신약구분]||0)+1);
+  const tc={}; rows.forEach(r=>tc[r.신약구분]=(tc[r.신약구분]||0)+1);
   const te=Object.entries(tc).sort((a,b)=>b[1]-a[1]);
-  const PAL=['#6366f1','#22d3ee','#f59e0b','#10b981','#a855f7','#ef4444'];
   new Chart(document.getElementById('mTypeChart'),{type:'doughnut',
     data:{labels:te.map(x=>x[0]),datasets:[{data:te.map(x=>x[1]),backgroundColor:te.map((_,i)=>PAL[i%PAL.length])}]},
     options:{plugins:{legend:{position:'right',labels:{boxWidth:10,font:{size:11}}}}}});
+  const oc={}; rows.forEach(r=>oc[r.보유기관]=(oc[r.보유기관]||0)+1);
+  const oe=Object.entries(oc).sort((a,b)=>b[1]-a[1]).slice(0,15);
+  new Chart(document.getElementById('mOrgChart'),{type:'bar',
+    data:{labels:oe.map(x=>x[0]),datasets:[{data:oe.map(x=>x[1]),backgroundColor:'#6366f1',borderRadius:5}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{stepSize:1}}}}});
 }
 
 function renderKddfTable() {
