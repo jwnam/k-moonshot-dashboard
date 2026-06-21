@@ -1,0 +1,18 @@
+{
+  "updated": "2026-06-21",
+  "items": [
+    {
+      "id": 1,
+      "title": "BCG 신약 모달리티(New Drug Modalities) 동향 — 2023·2025 리포트 요약",
+      "category": "동향분석",
+      "date": "2026-06-21",
+      "file": "files/BCG_신약모달리티_동향_2023-2025.docx",
+      "filetype": "DOCX",
+      "desc": "BCG의 'New Drug Modalities' 리포트 2건을 한글로 요약. 6대 신규 모달리티(항체·단백질/펩타이드·세포·유전자·핵산·기타)별 동향, 성숙도 3단계 분류, 4대 개발 플랫폼, 딜 활동($170B), 중국의 부상, K-Moonshot 시사점.",
+      "sources": [
+        {"label": "BCG 2025: Emerging New Drug Modalities", "url": "https://www.bcg.com/publications/2025/emerging-new-drug-modalities"},
+        {"label": "BCG 2023: Benefits and Risks of New Drug Modalities", "url": "https://www.bcg.com/publications/2023/benefits-and-risks-of-new-drug-modalities"}
+      ]
+    }
+  ]
+}

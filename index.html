@@ -221,6 +221,7 @@
     <li><a href="#" onclick="showTab('pipelines',this)">💊 파이프라인</a></li>
     <li><a href="#" onclick="showTab('kddf',this)">🏛️ KDDF지원 파이프라인</a></li>
     <li><a href="#" onclick="showTab('master',this)">🧬 국내기업 임상 파이프라인</a></li>
+    <li><a href="#" onclick="showTab('resources',this)">📚 자료실</a></li>
     <li><a href="#" onclick="showTab('ai-pipeline',this)">🤖 AI 파이프라인</a></li>
     <li><a href="#" onclick="showTab('transfer',this)">🤝 기술이전</a></li>
     <li><a href="#" onclick="showTab('kmoonshot',this)">🚀 K-문샷 로드맵</a></li>
@@ -574,6 +575,25 @@
   </div>
 </div>
 
+<!-- ══ TAB: 자료실 ════════════════════════════════════════════════════ -->
+<div id="tab-resources" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📚 자료실 — <span id="res-total">0</span>건</div>
+    <div class="news-updated">K-Moonshot 신약개발 동향 관련 보고서·요약자료 게시판 · 마지막 업데이트: <span id="res-updated">—</span></div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin:10px 0">
+      <input id="res-search" placeholder="검색: 제목·내용·출처" style="flex:1;min-width:180px;background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px;font-size:13px">
+      <select id="res-cat" style="background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px;font-size:13px"></select>
+    </div>
+    <div style="overflow:auto">
+      <table id="res-table">
+        <thead><tr><th style="width:36px">#</th><th>제목 / 내용</th><th style="width:80px">분류</th><th style="width:90px">등록일</th><th style="width:90px">다운로드</th></tr></thead>
+        <tbody id="res-tbody"></tbody>
+      </table>
+    </div>
+    <div id="res-count" style="color:var(--muted);font-size:12px;margin-top:8px"></div>
+  </div>
+</div>
+
 <!-- ══ TAB: NEWS ══════════════════════════════════════════════════════ -->
 <div id="tab-news" class="tab-panel">
   <div class="section">
@@ -757,6 +777,50 @@ function renderMasterCharts(d){
   new Chart(document.getElementById('mOrgChart'),{type:'bar',
     data:{labels:oe.map(x=>x[0]),datasets:[{data:oe.map(x=>x[1]),backgroundColor:'#6366f1',borderRadius:5}]},
     options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{stepSize:1}}}}});
+}
+
+// ── 자료실 (게시판) ──────────────────────────────────────────────────
+let _res = null;
+const R_ESC = s => String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+fetch('data/resources.json?v=1')
+  .then(r=>r.json())
+  .then(d=>{
+    _res=d;
+    document.getElementById('res-total').textContent=d.items.length;
+    document.getElementById('res-updated').textContent=d.updated||'—';
+    const catSel=document.getElementById('res-cat');
+    const cats=[...new Set(d.items.map(x=>x.category))];
+    catSel.innerHTML='<option value="">전체 분류</option>'+cats.map(c=>`<option>${c}</option>`).join('');
+    ['input','change'].forEach(ev=>{
+      document.getElementById('res-search').addEventListener(ev,renderResources);
+      catSel.addEventListener(ev,renderResources);
+    });
+    renderResources();
+  })
+  .catch(e=>console.error('resources load 실패',e));
+
+function renderResources(){
+  if(!_res) return;
+  const q=(document.getElementById('res-search').value||'').toLowerCase();
+  const fc=document.getElementById('res-cat').value;
+  const items=_res.items.filter(it=>
+    (!fc||it.category===fc)&&
+    (!q||((it.title||'')+(it.desc||'')+(it.sources||[]).map(s=>s.label).join(' ')).toLowerCase().includes(q)));
+  document.getElementById('res-tbody').innerHTML=items.map((it,i)=>{
+    const src=(it.sources||[]).map(s=>`<a href="${R_ESC(s.url)}" target="_blank" style="color:var(--accent2)">${R_ESC(s.label)}</a>`).join(' · ');
+    return `<tr>
+      <td style="color:var(--muted)">${items.length-i}</td>
+      <td>
+        <div style="font-weight:600;margin-bottom:3px">📄 ${R_ESC(it.title)}</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5">${R_ESC(it.desc)}</div>
+        ${src?`<div style="font-size:11px;margin-top:4px">🔗 ${src}</div>`:''}
+      </td>
+      <td><span style="background:rgba(34,211,238,.15);color:var(--accent2);padding:2px 8px;border-radius:10px;font-size:11px">${R_ESC(it.category)}</span></td>
+      <td style="font-size:12px;color:var(--muted)">${R_ESC(it.date)}</td>
+      <td><a href="${R_ESC(it.file)}" download style="color:var(--accent2);font-weight:600;font-size:12px">⬇ ${R_ESC(it.filetype||'파일')}</a></td>
+    </tr>`;
+  }).join('');
+  document.getElementById('res-count').textContent=`${items.length} / ${_res.items.length}건 표시`;
 }
 
 function renderKddfTable() {
