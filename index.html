@@ -807,7 +807,9 @@ function renderResources(){
     (!fc||it.category===fc)&&
     (!q||((it.title||'')+(it.desc||'')+(it.sources||[]).map(s=>s.label).join(' ')).toLowerCase().includes(q)));
   document.getElementById('res-tbody').innerHTML=items.map((it,i)=>{
-    const src=(it.sources||[]).map(s=>`<a href="${R_ESC(s.url)}" target="_blank" style="color:var(--accent2)">${R_ESC(s.label)}</a>`).join(' · ');
+    const src=(it.sources||[]).map(s=> s.url
+      ? `<a href="${R_ESC(s.url)}" target="_blank" style="color:var(--accent2)">${R_ESC(s.label)}</a>`
+      : `<span style="color:var(--muted)">${R_ESC(s.label)}</span>`).join(' · ');
     return `<tr>
       <td style="color:var(--muted)">${items.length-i}</td>
       <td>

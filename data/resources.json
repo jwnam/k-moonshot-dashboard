@@ -2,6 +2,51 @@
   "updated": "2026-06-21",
   "items": [
     {
+      "id": 4,
+      "title": "'25년 혁신신약 정책플랫폼 발제 요약 (4회·7건)",
+      "category": "정책자료",
+      "date": "2026-06-21",
+      "file": "files/정책센터_25년_신약정책플랫폼_발제요약.docx",
+      "filetype": "DOCX",
+      "desc": "2025년 혁신신약 정책플랫폼 'AI 신약개발 데이터' 주제 7개 발제 요약 — 표준희(제바협)·이규리(KAIST)·황대희(서울대)·조성진(심플렉스)·신승우(대웅)·나군호(네이버)·한남식(연세대). 데이터 정의·모달리티 전략·정밀의료·고품질 생산·기관 공유·생성형AI·거버넌스.",
+      "sources": [
+        {
+          "label": "출처: K-Moonshot 정책센터자료(국가생명공학정책연구센터)",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "국내외 AI 신약개발 기술 동향 요약 (251028, 정책연구센터)",
+      "category": "동향분석",
+      "date": "2026-06-21",
+      "file": "files/정책센터_국내외_AI신약개발_기술동향_251028_요약.docx",
+      "filetype": "DOCX",
+      "desc": "합성신약 전주기 AI 활용 + 신규 모달리티(RNA·유전자·세포)별 AI 적용, 해외(Recursion·Insilico)·국내(대웅 DAISY·한미 HM17321·JW중외 JWELRY 등) 기업 사례. 출처: 국가생명공학정책연구센터(2025.10.28).",
+      "sources": [
+        {
+          "label": "출처: K-Moonshot 정책센터자료(국가생명공학정책연구센터)",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "첨단의료사업 성과교류회 발표자료 요약 (김현수)",
+      "category": "정책자료",
+      "date": "2026-06-21",
+      "file": "files/정책센터_첨단의료사업_성과교류회_김현수_요약.docx",
+      "filetype": "DOCX",
+      "desc": "융합기반 첨단의료원천기술개발사업 성과교류회(2025.6.19) 발표 요약 — FDA 승인 모달리티 구조 변화(뉴모달리티 ~45%), 글로벌 파이프라인 모달리티 분포, 디지털바이오 전환. 발표: 국가생명공학정책연구센터 김현수 정책개발실장.",
+      "sources": [
+        {
+          "label": "출처: K-Moonshot 정책센터자료(국가생명공학정책연구센터)",
+          "url": ""
+        }
+      ]
+    },
+    {
       "id": 1,
       "title": "BCG 신약 모달리티(New Drug Modalities) 동향 — 2023·2025 리포트 요약",
       "category": "동향분석",
@@ -10,8 +55,14 @@
       "filetype": "DOCX",
       "desc": "BCG의 'New Drug Modalities' 리포트 2건을 한글로 요약. 6대 신규 모달리티(항체·단백질/펩타이드·세포·유전자·핵산·기타)별 동향, 성숙도 3단계 분류, 4대 개발 플랫폼, 딜 활동($170B), 중국의 부상, K-Moonshot 시사점.",
       "sources": [
-        {"label": "BCG 2025: Emerging New Drug Modalities", "url": "https://www.bcg.com/publications/2025/emerging-new-drug-modalities"},
-        {"label": "BCG 2023: Benefits and Risks of New Drug Modalities", "url": "https://www.bcg.com/publications/2023/benefits-and-risks-of-new-drug-modalities"}
+        {
+          "label": "BCG 2025: Emerging New Drug Modalities",
+          "url": "https://www.bcg.com/publications/2025/emerging-new-drug-modalities"
+        },
+        {
+          "label": "BCG 2023: Benefits and Risks of New Drug Modalities",
+          "url": "https://www.bcg.com/publications/2023/benefits-and-risks-of-new-drug-modalities"
+        }
       ]
     }
   ]
