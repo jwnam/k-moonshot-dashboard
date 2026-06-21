@@ -819,7 +819,10 @@ function renderResources(){
       </td>
       <td><span style="background:rgba(34,211,238,.15);color:var(--accent2);padding:2px 8px;border-radius:10px;font-size:11px">${R_ESC(it.category)}</span></td>
       <td style="font-size:12px;color:var(--muted)">${R_ESC(it.date)}</td>
-      <td><a href="${R_ESC(it.file)}" download style="color:var(--accent2);font-weight:600;font-size:12px">⬇ ${R_ESC(it.filetype||'파일')}</a></td>
+      <td>
+        <a href="${R_ESC(it.file)}" download style="color:var(--accent2);font-weight:600;font-size:12px">⬇ 요약 ${R_ESC(it.filetype||'파일')}</a>
+        ${(it.attachments||[]).map(a=>`<div style="margin-top:4px"><a href="${R_ESC(a.file)}" download style="color:var(--muted);font-size:11px">⬇ ${R_ESC(a.label||a.filetype||'원본')}</a></div>`).join('')}
+      </td>
     </tr>`;
   }).join('');
   document.getElementById('res-count').textContent=`${items.length} / ${_res.items.length}건 표시`;

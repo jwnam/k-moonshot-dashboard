@@ -100,6 +100,31 @@ def cmd_add(args):
         git_commit([JSON_PATH, dest], f"자료실 등록: {args.title}")
 
 
+def cmd_attach(args):
+    """기존 게시물(id)에 원본/추가 파일을 첨부한다."""
+    data = load()
+    item = next((it for it in data["items"] if it.get("id") == args.id), None)
+    if not item:
+        sys.exit(f"❌ id={args.id} 항목 없음")
+    src = Path(args.file).expanduser()
+    if not src.is_file():
+        sys.exit(f"❌ 파일을 찾을 수 없음: {src}")
+    FILES_DIR.mkdir(parents=True, exist_ok=True)
+    dest = FILES_DIR / src.name
+    if src.resolve() != dest.resolve():
+        if dest.exists() and not args.overwrite:
+            sys.exit(f"❌ 이미 존재: {dest.name} (덮어쓰려면 --overwrite)")
+        shutil.copy2(src, dest)
+        print(f"📁 복사: {dest.relative_to(ROOT)}")
+    ftype = EXT_TYPE.get(dest.suffix.lower(), dest.suffix.lstrip(".").upper() or "FILE")
+    att = {"label": args.label or f"원본({ftype})", "file": f"files/{dest.name}", "filetype": ftype}
+    item.setdefault("attachments", []).append(att)
+    save(data)
+    print(f"✅ 첨부 완료: [{args.id}] {item['title']} ← {att['label']}")
+    if args.commit:
+        git_commit([JSON_PATH, dest], f"자료실 첨부: {item['title']} ({att['label']})")
+
+
 def cmd_list(args):
     data = load()
     if not data["items"]:
@@ -109,6 +134,8 @@ def cmd_list(args):
     for it in data["items"]:
         print(f"  [{it['id']:>2}] {it['date']} · {it['category']:<6} · {it['title']}")
         print(f"       {it['file']}  ({it.get('filetype','')})")
+        for a in it.get("attachments", []):
+            print(f"        └ 첨부: {a['file']}  ({a.get('label','')})")
 
 
 def cmd_remove(args):
@@ -142,6 +169,14 @@ def main():
     a.add_argument("--overwrite", action="store_true", help="같은 이름 파일 덮어쓰기")
     a.add_argument("--commit", action="store_true", help="등록 후 git commit & push")
     a.set_defaults(func=cmd_add)
+
+    at = sub.add_parser("attach", help="기존 게시물에 원본/추가 파일 첨부")
+    at.add_argument("id", type=int, help="대상 게시물 id")
+    at.add_argument("file", help="첨부할 파일 경로")
+    at.add_argument("--label", help='첨부 라벨 (기본: "원본(확장자)")')
+    at.add_argument("--overwrite", action="store_true", help="같은 이름 파일 덮어쓰기")
+    at.add_argument("--commit", action="store_true", help="첨부 후 git commit & push")
+    at.set_defaults(func=cmd_attach)
 
     l = sub.add_parser("list", help="목록 보기")
     l.set_defaults(func=cmd_list)
