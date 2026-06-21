@@ -782,7 +782,7 @@ function renderMasterCharts(d){
 // ── 자료실 (게시판) ──────────────────────────────────────────────────
 let _res = null;
 const R_ESC = s => String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-fetch('data/resources.json?v=1')
+fetch('data/resources.json?t=' + Date.now(), {cache: 'no-store'})
   .then(r=>r.json())
   .then(d=>{
     _res=d;
