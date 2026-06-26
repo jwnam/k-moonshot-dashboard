@@ -938,7 +938,7 @@ function renderKddfCharts(d) {
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
 }
 
-fetch('data/dashboard.json?v=1.9')
+fetch('data/dashboard.json?v=2.0')
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-date').textContent = data.meta.updated_at;
@@ -984,20 +984,25 @@ fetch('data/news.json')
 // ── KPI Cards ─────────────────────────────────────────────────────────
 function renderForecast(fc) {
   if (!fc) return;
-  // 막대 위 기대 승인건수 + 블록버스터 라인 위 🎯 라벨
+  const accel = fc.accel || [];
+  // 라벨: AI 가속 막대 위 건수(+가속배수), 블록버스터 라인 위 🎯
   const valLabels = {
     id: 'fcLabels',
     afterDatasetsDraw(chart) {
       const { ctx } = chart;
-      const bar = chart.getDatasetMeta(0), line = chart.getDatasetMeta(1);
+      const bar = chart.getDatasetMeta(0), bb = chart.getDatasetMeta(2);
       ctx.save(); ctx.textAlign = 'center';
       if (bar && !bar.hidden) {
-        ctx.font = 'bold 11px sans-serif'; ctx.fillStyle = '#818cf8';
-        bar.data.forEach((pt, i) => ctx.fillText(fc.expected[i] + '건', pt.x, pt.y - 6));
+        bar.data.forEach((pt, i) => {
+          ctx.font = 'bold 11px sans-serif'; ctx.fillStyle = '#f59e0b';
+          ctx.fillText(fc.ai[i] + '건', pt.x, pt.y - 16);
+          if (accel[i]) { ctx.font = '9px sans-serif'; ctx.fillStyle = '#94a3b8';
+            ctx.fillText('('+accel[i]+')', pt.x, pt.y - 5); }
+        });
       }
-      if (line && !line.hidden) {
-        ctx.font = 'bold 12px sans-serif'; ctx.fillStyle = '#f59e0b';
-        line.data.forEach((pt, i) => ctx.fillText('🎯 ' + fc.blockbuster[i], pt.x, pt.y - 12));
+      if (bb && !bb.hidden) {
+        ctx.font = 'bold 11px sans-serif'; ctx.fillStyle = '#ec4899';
+        bb.data.forEach((pt, i) => ctx.fillText('🎯' + fc.blockbuster[i], pt.x, pt.y - 11));
       }
       ctx.restore();
     }
@@ -1006,20 +1011,25 @@ function renderForecast(fc) {
     data: {
       labels: fc.years.map(y => "'" + String(y).slice(2) + '년'),
       datasets: [
-        { type: 'bar', label: '누적 기대 승인건수 (파이프라인 기반)', data: fc.expected,
-          backgroundColor: '#6366f1', borderRadius: 5, yAxisID: 'y' },
+        { type: 'bar', label: 'AI 가속 + 신규 파이프라인 (누적 기대승인)', data: fc.ai,
+          backgroundColor: '#f59e0b', borderRadius: 5, yAxisID: 'y' },
+        { type: 'line', label: '현 파이프라인 기반 (가속 미적용)', data: fc.expected,
+          borderColor: '#64748b', borderDash: [5,4], backgroundColor: 'transparent',
+          tension: .3, pointRadius: 3, pointBackgroundColor: '#64748b', yAxisID: 'y' },
         { type: 'line', label: '블록버스터급 누적 (목표)', data: fc.blockbuster,
-          borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,.15)',
-          tension: .3, pointRadius: 5, pointBackgroundColor: '#f59e0b', borderWidth: 2, yAxisID: 'y1' }
+          borderColor: '#ec4899', backgroundColor: 'rgba(236,72,153,.12)',
+          tension: .3, pointRadius: 5, pointBackgroundColor: '#ec4899', borderWidth: 2, yAxisID: 'y1' }
       ]
     },
     options: {
-      layout: { padding: { top: 20 } },
+      layout: { padding: { top: 22 } },
       plugins: {
         legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } },
         tooltip: { callbacks: { afterBody: (items) => {
           const i = items[0].dataIndex;
-          return '기대 승인 ' + fc.expected[i] + '건 · 블록버스터급 ' + fc.blockbuster[i] + '건';
+          return ['AI 가속 누적: ' + fc.ai[i] + '건 (' + (accel[i]||'') + ')',
+                  '현 파이프라인: ' + fc.expected[i] + '건',
+                  '블록버스터급: ' + fc.blockbuster[i] + '건'];
         } } }
       },
       scales: {
