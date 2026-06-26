@@ -938,7 +938,7 @@ function renderKddfCharts(d) {
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
 }
 
-fetch('data/dashboard.json?v=2.2')
+fetch('data/dashboard.json?v=2.3')
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-date').textContent = data.meta.updated_at;
@@ -985,28 +985,28 @@ fetch('data/news.json')
 function renderForecast(fc) {
   if (!fc) return;
   const accel = fc.accel || [];
-  // 라벨: AI가속 라인 위 누적건수(+가속배수), 블록버스터 라인 위 🎯
+  // 라벨 분리 배치: AI가속(하늘색)=점 위, AI미사용(회색)=점 아래, 블록버스터(흰색 박스)=막대 위
   const valLabels = {
     id: 'fcLabels',
     afterDatasetsDraw(chart) {
       const { ctx } = chart;
-      const ai = chart.getDatasetMeta(0), no = chart.getDatasetMeta(1), bb = chart.getDatasetMeta(2);
+      const bb = chart.getDatasetMeta(0), ai = chart.getDatasetMeta(1), no = chart.getDatasetMeta(2);
       ctx.save(); ctx.textAlign = 'center';
-      if (ai && !ai.hidden) {
+      if (bb && !bb.hidden) {                    // 블록버스터 박스 위 (흰색)
+        ctx.font = 'bold 10px sans-serif'; ctx.fillStyle = '#e2e8f0';
+        bb.data.forEach((pt, i) => { if (fc.blockbuster[i]) ctx.fillText(fc.blockbuster[i] + '', pt.x, pt.y - 5); });
+      }
+      if (ai && !ai.hidden) {                    // AI 가속(하늘색) 점 위
         ai.data.forEach((pt, i) => {
-          ctx.font = 'bold 11px sans-serif'; ctx.fillStyle = '#f59e0b';
-          ctx.fillText(fc.ai[i] + '', pt.x, pt.y - (accel[i] ? 16 : 8));
-          if (accel[i]) { ctx.font = '9px sans-serif'; ctx.fillStyle = '#94a3b8';
-            ctx.fillText('('+accel[i]+')', pt.x, pt.y - 5); }
+          ctx.font = 'bold 12px sans-serif'; ctx.fillStyle = '#22d3ee';
+          ctx.fillText(fc.ai[i] + '', pt.x, pt.y - (accel[i] ? 18 : 9));
+          if (accel[i]) { ctx.font = '9px sans-serif'; ctx.fillStyle = '#67e8f9';
+            ctx.fillText('('+accel[i]+')', pt.x, pt.y - 6); }
         });
       }
-      if (no && !no.hidden) {
+      if (no && !no.hidden) {                    // AI 미사용(회색) 점 아래
         ctx.font = '10px sans-serif'; ctx.fillStyle = '#94a3b8';
-        no.data.forEach((pt, i) => { if (i) ctx.fillText(fc.nouse[i] + '', pt.x, pt.y + 14); });
-      }
-      if (bb && !bb.hidden) {
-        ctx.font = 'bold 11px sans-serif'; ctx.fillStyle = '#ec4899';
-        bb.data.forEach((pt, i) => { if (i) ctx.fillText('🎯' + fc.blockbuster[i], pt.x, pt.y - 11); });
+        no.data.forEach((pt, i) => { if (i) ctx.fillText(fc.nouse[i] + '', pt.x, pt.y + 15); });
       }
       ctx.restore();
     }
@@ -1015,19 +1015,19 @@ function renderForecast(fc) {
     data: {
       labels: fc.years.map(y => "'" + String(y).slice(2) + '년'),
       datasets: [
+        { type: 'bar', label: '블록버스터급 누적 (목표)', data: fc.blockbuster,
+          backgroundColor: 'rgba(255,255,255,.92)', borderColor: '#cbd5e1', borderWidth: 1,
+          borderRadius: 2, barPercentage: 0.45, categoryPercentage: 0.6, yAxisID: 'y1' },
         { type: 'line', label: 'AI 가속 (K-문샷)', data: fc.ai,
-          borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,.15)',
-          tension: .3, pointRadius: 5, pointBackgroundColor: '#f59e0b', borderWidth: 3, fill: true, yAxisID: 'y' },
+          borderColor: '#22d3ee', backgroundColor: 'rgba(34,211,238,.12)',
+          tension: .3, pointRadius: 5, pointBackgroundColor: '#22d3ee', borderWidth: 3, fill: true, yAxisID: 'y' },
         { type: 'line', label: 'AI 미사용 (현 파이프라인)', data: fc.nouse,
-          borderColor: '#64748b', borderDash: [6,4], backgroundColor: 'transparent',
-          tension: .3, pointRadius: 4, pointBackgroundColor: '#64748b', borderWidth: 2, yAxisID: 'y' },
-        { type: 'line', label: '블록버스터급 누적 (목표)', data: fc.blockbuster,
-          borderColor: '#ec4899', backgroundColor: 'transparent',
-          tension: .3, pointRadius: 4, pointBackgroundColor: '#ec4899', borderWidth: 2, yAxisID: 'y1' }
+          borderColor: '#94a3b8', borderDash: [6,4], backgroundColor: 'transparent',
+          tension: .3, pointRadius: 4, pointBackgroundColor: '#94a3b8', borderWidth: 2, yAxisID: 'y' }
       ]
     },
     options: {
-      layout: { padding: { top: 22 } },
+      layout: { padding: { top: 24 } },
       plugins: {
         legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } },
         tooltip: { callbacks: { afterBody: (items) => {
@@ -1038,8 +1038,8 @@ function renderForecast(fc) {
         } } }
       },
       scales: {
-        y:  { beginAtZero: true, position: 'left', title: { display: true, text: '누적 기대 승인건수' }, ticks: { precision: 0 } },
-        y1: { beginAtZero: true, position: 'right', max: 12, title: { display: true, text: '블록버스터급(건)' },
+        y:  { beginAtZero: true, suggestedMax: 300, position: 'left', title: { display: true, text: '누적 기대 승인건수' }, ticks: { precision: 0 } },
+        y1: { beginAtZero: true, max: 50, position: 'right', title: { display: true, text: '블록버스터급(건)' },
               grid: { drawOnChartArea: false }, ticks: { precision: 0 } }
       }
     },
