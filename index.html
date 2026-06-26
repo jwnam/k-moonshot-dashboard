@@ -240,6 +240,15 @@
     <div class="grid-6" id="kpi-cards"></div>
   </div>
 
+  <div class="section" style="padding-top:0;">
+    <div class="card">
+      <div class="section-title">국산 신약 연도별 허가 현황 (제1호~제43호)</div>
+      <div class="chart-wrap"><canvas id="chart-approved-yearly" style="max-height:300px"></canvas></div>
+      <p id="approved-yearly-note" style="font-size:11px;color:var(--muted);margin-top:8px"></p>
+      <div id="approved-recent" style="font-size:12px;color:var(--text);margin-top:4px;line-height:1.7"></div>
+    </div>
+  </div>
+
   <div class="grid-2 section" style="padding-top:0;">
     <div class="card">
       <div class="section-title">국내 파이프라인 단계별 분포</div>
@@ -924,11 +933,12 @@ function renderKddfCharts(d) {
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
 }
 
-fetch('data/dashboard.json?v=1.5')
+fetch('data/dashboard.json?v=1.6')
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-date').textContent = data.meta.updated_at;
     renderKPI(data.kpi);
+    renderApprovedYearly(data.approved_drugs_yearly);
     renderStageChart(data.pipeline_stages);
     renderAIvsChart(data.pipeline_stages);
     renderCompanyBars(data.ecosystem);
@@ -966,6 +976,38 @@ fetch('data/news.json')
   });
 
 // ── KPI Cards ─────────────────────────────────────────────────────────
+function renderApprovedYearly(ay) {
+  if (!ay || !ay.data) return;
+  const esc = s => String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  const yrs = ay.data.map(x => x.year);
+  new Chart(document.getElementById('chart-approved-yearly'), {
+    data: {
+      labels: yrs,
+      datasets: [
+        { type:'bar', label:'연도별 허가(건)', data: ay.data.map(x=>x.count),
+          backgroundColor:'#6366f1', borderRadius:4, yAxisID:'y' },
+        { type:'line', label:'누적(호)', data: ay.data.map(x=>x.cum),
+          borderColor:'#22d3ee', backgroundColor:'rgba(34,211,238,.15)',
+          tension:.3, pointRadius:2, yAxisID:'y1' }
+      ]
+    },
+    options: { plugins:{ legend:{ position:'bottom', labels:{ boxWidth:12 } } },
+      scales: {
+        y:  { beginAtZero:true, position:'left', title:{display:true,text:'연도별(건)'}, ticks:{precision:0} },
+        y1: { beginAtZero:true, position:'right', title:{display:true,text:'누적(호)'},
+              grid:{drawOnChartArea:false}, ticks:{precision:0} },
+        x:  { ticks:{ maxRotation:90, minRotation:90, font:{size:9} } }
+      } }
+  });
+  document.getElementById('approved-yearly-note').textContent = ay.note || '';
+  if (ay.recent) {
+    document.getElementById('approved-recent').innerHTML =
+      '<b>최근 허가:</b> ' + ay.recent.map(r =>
+        `<span style="white-space:nowrap">${r.no}호 ${esc(r.name)}(${esc(r.company)}·${esc(r.cat)}, ${esc(r.date)})</span>`
+      ).join(' · ');
+  }
+}
+
 function renderKPI(kpi) {
   const colors = ['accent','cyan','amber','green','purple','red'];
   const keys = Object.keys(kpi);
