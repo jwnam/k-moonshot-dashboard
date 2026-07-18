@@ -370,14 +370,16 @@
     <div class="card" style="background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(34,211,238,.05)); border-color:rgba(99,102,241,.3); margin-bottom:16px;">
       <div style="font-size:18px; font-weight:700; margin-bottom:6px;">🎯 K-문샷 신약 AI 미션</div>
       <div style="font-size:15px; color:var(--accent2);" id="rm-mission"></div>
+      <div style="font-size:13px; color:var(--accent3); margin-top:6px; font-weight:600;" id="rm-slogan"></div>
+      <div style="font-size:11px; color:var(--muted); margin-top:4px;" id="rm-version"></div>
     </div>
-    <div class="section-title">3대 마일스톤 로드맵</div>
+    <div class="section-title">3대 마일스톤 로드맵 <span style="font-size:11px;color:var(--muted);font-weight:400;">· 신약 발굴단계 가속 3X → 5X → 10X</span></div>
     <div class="roadmap" id="roadmap"></div>
   </div>
 
   <div class="section grid-2">
     <div class="card">
-      <div class="section-title">핵심 요소기술 6대 과제</div>
+      <div class="section-title">3대 임무 · 핵심 요소기술</div>
       <ul id="core-tech" style="list-style:none; font-size:13px;"></ul>
     </div>
     <div class="card">
@@ -387,9 +389,10 @@
   </div>
 
   <div class="section">
-    <div class="section-title">신약개발 가속화 지수 (V_AI) 달성 경로</div>
+    <div class="section-title">신약 발굴단계 가속 & 혁신신약후보 임상진입 달성 경로 <span style="font-size:11px;color:var(--muted);font-weight:400;">· V_AI = 단계별 성공률 × 속도향상</span></div>
     <div class="card">
       <div class="chart-wrap"><canvas id="chart-vai"></canvas></div>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px;">※ 신약 발굴단계 가속: '29년 3X → '32년 5X → '35년 10X (표적–HIT–선도–후보물질 발굴단계). 혁신신약후보(First-in-class) 임상진입: 현 연평균 3.3건 → '35년 3배 가속(≈10건/년)</div>
     </div>
   </div>
 </div>
@@ -397,8 +400,8 @@
 <!-- ══ TAB: PROJECTS ════════════════════════════════════════════════ -->
 <div id="tab-projects" class="tab-panel">
   <div class="section">
-    <div class="section-title">K-문샷 신약개발 사업 현황 ('26.6.5. 기준)</div>
-    <p style="font-size:11px;color:var(--muted);margin-bottom:14px;">출처: K-문샷 신약개발 분야 추진계획 (과기정통부, 첨단바이오기술과, 2026.6.5.) · 단위: 억원(국비)</p>
+    <div class="section-title">K-문샷 신약개발 사업 현황 ('26.6.5. 기준 · 로드맵 '26.7.17 반영)</div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:14px;">출처: K-문샷 신약개발 분야 추진계획 (과기정통부, 첨단바이오기술과, 2026.6.5.) + K-문샷 2035 로드맵('26.7.17) · 단위: 억원(국비)</p>
     <div class="proj-kpi-grid" id="proj-kpi"></div>
   </div>
 
@@ -938,7 +941,7 @@ function renderKddfCharts(d) {
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
 }
 
-fetch('data/dashboard.json?v=2.4')
+fetch('data/dashboard.json?v=2.5')
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-date').textContent = data.meta.updated_at;
@@ -1307,6 +1310,8 @@ function renderTransferTable(transfers) {
 // ── Roadmap ───────────────────────────────────────────────────────────
 function renderRoadmap(rm) {
   document.getElementById('rm-mission').textContent = rm.mission;
+  if (rm.slogan) { var sl = document.getElementById('rm-slogan'); if (sl) sl.textContent = '슬로건 「' + rm.slogan + '」'; }
+  if (rm.version) { var vr = document.getElementById('rm-version'); if (vr) vr.textContent = rm.version; }
   document.getElementById('roadmap').innerHTML = rm.milestones.map((m, i) => `
     <div class="rm-step" style="border-top:3px solid ${PALETTE[i]};">
       <div class="rm-year">${m.year}</div>
@@ -1317,19 +1322,19 @@ function renderRoadmap(rm) {
     `<li style="padding:6px 0;border-bottom:1px solid var(--border);"><span style="color:${PALETTE[i%PALETTE.length]};margin-right:8px;">⬡</span>${t}</li>`).join('');
   document.getElementById('rm-kpi').innerHTML = `
     <div class="kpi-card accent" style="flex:1;min-width:140px;">
-      <div class="kpi-label">2030 목표</div>
-      <div class="kpi-value" style="font-size:20px;">3건</div>
-      <div class="kpi-note">${rm.kpi.target_2030}</div>
+      <div class="kpi-label">2035 신약 발굴단계 가속</div>
+      <div class="kpi-value" style="font-size:20px;">10X</div>
+      <div class="kpi-note">'29년 3X → '32년 5X → '35년 10X<br><span style="color:var(--muted);">${rm.kpi.accel_label || 'V_AI = 성공률 × 속도향상'}</span></div>
     </div>
     <div class="kpi-card cyan" style="flex:1;min-width:140px;">
-      <div class="kpi-label">2040 목표</div>
-      <div class="kpi-value" style="font-size:20px;">10건</div>
-      <div class="kpi-note">${rm.kpi.target_2040}</div>
+      <div class="kpi-label">혁신신약후보 임상진입</div>
+      <div class="kpi-value" style="font-size:20px;">3X</div>
+      <div class="kpi-note">${rm.kpi.clinical_entry_target || "현 연 3.3건 → '35년 ≈10건/년"}</div>
     </div>
     <div class="kpi-card amber" style="flex:1;min-width:140px;">
-      <div class="kpi-label">개발기간 목표</div>
-      <div class="kpi-value" style="font-size:20px;">2년</div>
-      <div class="kpi-note">현재 10–15년 → 2035년 2년 이내</div>
+      <div class="kpi-label">2035 최종 목표</div>
+      <div class="kpi-value" style="font-size:20px;">자율실험실</div>
+      <div class="kpi-note">AI-네이티브 신약개발 자율실험실 구축 · 인체수준 파운데이션 모델</div>
     </div>`;
 }
 
@@ -1610,14 +1615,15 @@ function renderVAI() {
     data: {
       labels: [2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035],
       datasets: [
-        { label: 'V_AI 목표 (10배 달성 경로)', data: [0.5, 0.9, 1.5, 2.2, 3.5, 5.0, 6.5, 7.8, 9.0, 10.0], borderColor: '#6366f1', backgroundColor: 'rgba(99,102,241,0.15)', fill: true, tension: 0.4 },
-        { label: '블록버스터 마일스톤', data: [null,null,null,null,3,null,null,null,null,10], borderColor: '#f59e0b', pointBackgroundColor: '#f59e0b', pointRadius: 8, showLine: false, type: 'scatter' }
+        { label: '신약 발굴단계 가속 (V_AI = 성공률 × 속도)', data: [1, 1.5, 2, 3, 3.7, 4.3, 5, 6.5, 8, 10], borderColor: '#6366f1', backgroundColor: 'rgba(99,102,241,0.15)', fill: true, tension: 0.4 },
+        { label: '혁신신약후보 임상진입 가속', data: [1, 1.1, 1.3, 1.5, 1.8, 2.0, 2.3, 2.6, 2.8, 3.0], borderColor: '#22d3ee', backgroundColor: 'rgba(34,211,238,0.10)', fill: false, tension: 0.4 },
+        { label: '마일스톤 (발굴단계 3X·5X·10X)', data: [null,null,null,3,null,null,5,null,null,10], borderColor: '#f59e0b', pointBackgroundColor: '#f59e0b', pointRadius: 8, showLine: false, type: 'scatter' }
       ]
     },
     options: {
       responsive: true, maintainAspectRatio: false,
       scales: {
-        y: { min: 0, max: 11, grid: { color: '#2d3148' }, title: { display: true, text: 'V_AI (신약개발 가속 지수)', color: '#94a3b8' } },
+        y: { min: 0, max: 11, grid: { color: '#2d3148' }, title: { display: true, text: '가속 배수 (X)', color: '#94a3b8' } },
         x: { grid: { display: false } }
       },
       plugins: { legend: { position: 'top', labels: { font: { size: 11 } } } }

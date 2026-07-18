@@ -378,38 +378,44 @@
     }
   },
   "kmoonshot_roadmap": {
-    "mission": "AI 융합으로 신약 개발속도 10배 가속 (10–15년 → 2년 이내)",
+    "mission": "AI주도 혁신신약(First-in-class) 개발 가속 — AI·자율실험체계 구축으로 '35년 신약개발 발굴단계 10배(10X) 가속",
+    "slogan": "신약개발 혁신 플랫폼 글로벌 선도국가 도약",
+    "version": "2026-07-19 (K-문샷 2035 로드맵, 과기부 양식 0717 기준)",
     "milestones": [
       {
         "year": 2029,
         "step": "STEP 1",
-        "goal": "AI 기반 신약 제안·설계·최적화",
-        "detail": "조직 수준 파운데이션 모델, 모달리티별 후보물질 설계기술, 디지털 비임상(전임상) 기술"
+        "goal": "신약발굴 가속 3X",
+        "detail": "AI 기반 신약 발굴(스크리닝·설계·예측·최적화), AI-CoScientist·고속검증(HW) 기술 개발 · 표적–HIT–선도–후보물질 발굴단계 300%↑"
       },
       {
         "year": 2032,
         "step": "STEP 2",
-        "goal": "전단계 Lab-in-the-Loop 구현",
-        "detail": "조직-장기 수준 FM, AI 자율실험 혁신신약 개발체계, 국내 인허가용 디지털 비임상(전임상) 플랫폼"
+        "goal": "신약발굴 가속 5X",
+        "detail": "신약개발 전단계 Lab-in-the-Loop 및 뉴모달리티 AI설계·고속검증 구축 · 발굴단계 500%↑, 비임상 비용절감 50%↑"
       },
       {
         "year": 2035,
         "step": "STEP 3",
-        "goal": "신약개발 속도 10배 이상 향상",
-        "detail": "인체 Whole-body FM, AI-driven 신약개발 체계 확산, 국제 인증 디지털 비임상(전임상) 플랫폼"
+        "goal": "신약발굴 가속 10X",
+        "detail": "①AI-네이티브 신약개발 자율실험실 구축 ②대체불가 혁신신약후보 임상진입 가속 3X · 발굴단계 1000%↑"
       }
     ],
     "kpi": {
-      "target_2030": "블록버스터급 신약 3건",
-      "target_2040": "블록버스터급 신약 10건"
+      "accel_label": "신약 발굴단계 가속 (V_AI = 단계별 성공률 × 속도향상)",
+      "accel_2029": "3X",
+      "accel_2032": "5X",
+      "accel_2035": "10X",
+      "clinical_entry_label": "혁신신약후보 임상진입 가속",
+      "clinical_entry_target": "3X (현 연평균 3.3개 → '35년 ≈10개/년)"
     },
     "core_tech": [
-      "다양한 표적·질환용 파운데이션 모델",
-      "AI 기반 모달리티별 신약 설계기술",
-      "동물실험 대체 효과·독성 예측 플랫폼",
-      "임상·유전체·의료 표준 레퍼런스 데이터 (K-BDS)",
-      "Agentic AI + 로봇 자동화 융합 바이오실험",
-      "AI 바이오 혁신 연구거점 (산업현장 수요 대응)"
+      "[임무①] AI 신약 설계 혁신 플랫폼 (AI & Data)",
+      "· 인체수준 특화 파운데이션 모델 + 모달리티별 설계기술 + ADMET 예측 + AI-ready 메머드 데이터",
+      "[임무②] Lab-in-the-Loop (HW)",
+      "· Agentic AI+로봇 자율실험실 + 모달리티별 고속검증 인프라 + AI바이오 혁신 연구거점",
+      "[임무③] 혁신신약 가속 (신약)",
+      "· 뉴/노블 모달리티(Modality-X) + 노블표적 혁신신약 + AI기반 임상진입 가속"
     ]
   },
   "swot": {
@@ -441,31 +447,32 @@
   "projects": {
     "summary": {
       "core_count": 2,
-      "linked_count": 19,
+      "linked_count": 21,
       "govt_lab_count": 6,
-      "core_budget_27": 322,
-      "linked_budget_27": 1468.0,
+      "core_budget_27": 350.0,
+      "linked_budget_27": 1571.0,
       "govt_lab_budget_27": 759.0,
-      "total_budget_27": 2549.0,
-      "core_total": 1845,
-      "linked_total": 6597,
+      "total_budget_27": 2680.0,
+      "core_total": 1845.0,
+      "linked_total": 6692.0,
       "govt_lab_total": 1539,
-      "grand_total": 9981
+      "grand_total": 10076.0,
+      "basis": "'26.6.5 추진계획 + 로드맵 '26.7.17 반영"
     },
     "core": [
       {
         "name": "AI-자율실험 기반 차세대신약 연구거점 구축",
         "period": "'27~'30",
-        "budget_27": 192,
-        "budget_27_note": "한도내 100 + 한도외 92",
+        "budget_27": 200,
+        "budget_27_note": "한도내 100 + 한도외 100 (로드맵 0717)",
         "budget_total": 855,
         "note": "'27 신규사업"
       },
       {
         "name": "암면역미세환경 파운데이션 모델(TIME-FM) 구축",
         "period": "'27~'30",
-        "budget_27": 130,
-        "budget_27_note": "한도내 90 + 한도외 40",
+        "budget_27": 150,
+        "budget_27_note": "한도내 90 + 한도외 60 (로드맵 0717)",
         "budget_total": 990,
         "note": "'27 신규사업"
       }
@@ -552,7 +559,7 @@
         "name": "임상·인체유래물 연계 AI 정밀의료 연구거점 구축",
         "relevance": "*",
         "period": "'27~'30",
-        "budget_27": 192,
+        "budget_27": 200,
         "budget_total": 855
       },
       {
@@ -605,6 +612,22 @@
         "budget_27": 30.0,
         "budget_total": 150,
         "relevance": "*"
+      },
+      {
+        "name": "AI기반 합성 mRNA 구조체 설계 기술 개발 및 실증",
+        "relevance": "*",
+        "period": "'26~'30",
+        "budget_27": 20,
+        "budget_total": 20,
+        "note": "로드맵 0717 신규반영 (선정평가 진행중)"
+      },
+      {
+        "name": "AI 기반 한국인 고난도 유전변이 지도구축 및 병인제어 기술개발",
+        "relevance": "*",
+        "period": "'27~'31",
+        "budget_27": 75,
+        "budget_total": 75,
+        "note": "로드맵 0717 신규반영 ('27 신규)"
       }
     ],
     "govt_labs": [
