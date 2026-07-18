@@ -248,7 +248,7 @@
       <div id="approved-recent" style="font-size:12px;color:var(--text);margin-top:4px;line-height:1.7"></div>
     </div>
     <div class="card">
-      <div class="section-title">신약개발 기대건수 — AI 가속 효과 (누적 블록버스터급)</div>
+      <div class="section-title">혁신신약(First-in-class) 임상진입 기대건수 — AI 가속 효과</div>
       <div class="chart-wrap"><canvas id="chart-forecast" style="max-height:300px"></canvas></div>
       <p id="forecast-note" style="font-size:11px;color:var(--muted);margin-top:8px"></p>
     </div>
@@ -941,7 +941,7 @@ function renderKddfCharts(d) {
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
 }
 
-fetch('data/dashboard.json?v=2.6')
+fetch('data/dashboard.json?v=2.7')
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-date').textContent = data.meta.updated_at;
@@ -988,17 +988,13 @@ fetch('data/news.json')
 function renderForecast(fc) {
   if (!fc) return;
   const accel = fc.accel || [];
-  // 라벨 분리 배치: AI가속(하늘색)=점 위, AI미사용(회색)=점 아래, 블록버스터(흰색 박스)=막대 위
+  // 라벨 배치: AI가속(하늘색)=점 위, AI미사용(회색)=점 아래
   const valLabels = {
     id: 'fcLabels',
     afterDatasetsDraw(chart) {
       const { ctx } = chart;
-      const bb = chart.getDatasetMeta(0), ai = chart.getDatasetMeta(1), no = chart.getDatasetMeta(2);
+      const ai = chart.getDatasetMeta(0), no = chart.getDatasetMeta(1);
       ctx.save(); ctx.textAlign = 'center';
-      if (bb && !bb.hidden) {                    // 블록버스터 박스 위 (흰색)
-        ctx.font = 'bold 10px sans-serif'; ctx.fillStyle = '#e2e8f0';
-        bb.data.forEach((pt, i) => { if (fc.blockbuster[i]) ctx.fillText(fc.blockbuster[i] + '', pt.x, pt.y - 5); });
-      }
       if (ai && !ai.hidden) {                    // AI 가속(하늘색) 점 위
         ai.data.forEach((pt, i) => {
           ctx.font = 'bold 12px sans-serif'; ctx.fillStyle = '#22d3ee';
@@ -1009,7 +1005,7 @@ function renderForecast(fc) {
       }
       if (no && !no.hidden) {                    // AI 미사용(회색) 점 아래
         ctx.font = '10px sans-serif'; ctx.fillStyle = '#94a3b8';
-        no.data.forEach((pt, i) => { if (i) ctx.fillText(fc.nouse[i] + '', pt.x, pt.y + 15); });
+        no.data.forEach((pt, i) => { ctx.fillText(fc.nouse[i] + '', pt.x, pt.y + 15); });
       }
       ctx.restore();
     }
@@ -1018,13 +1014,10 @@ function renderForecast(fc) {
     data: {
       labels: fc.years.map(y => "'" + String(y).slice(2) + '년'),
       datasets: [
-        { type: 'bar', label: '블록버스터급 누적 (목표)', data: fc.blockbuster,
-          backgroundColor: 'rgba(255,255,255,.92)', borderColor: '#cbd5e1', borderWidth: 1,
-          borderRadius: 2, barPercentage: 0.45, categoryPercentage: 0.6, yAxisID: 'y1' },
         { type: 'line', label: 'AI 가속 (K-문샷)', data: fc.ai,
           borderColor: '#22d3ee', backgroundColor: 'rgba(34,211,238,.12)',
           tension: .3, pointRadius: 5, pointBackgroundColor: '#22d3ee', borderWidth: 3, fill: true, yAxisID: 'y' },
-        { type: 'line', label: 'AI 미사용 (현 파이프라인)', data: fc.nouse,
+        { type: 'line', label: 'AI 미사용 (현 추세)', data: fc.nouse,
           borderColor: '#94a3b8', borderDash: [6,4], backgroundColor: 'transparent',
           tension: .3, pointRadius: 4, pointBackgroundColor: '#94a3b8', borderWidth: 2, yAxisID: 'y' }
       ]
@@ -1035,15 +1028,12 @@ function renderForecast(fc) {
         legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } },
         tooltip: { callbacks: { afterBody: (items) => {
           const i = items[0].dataIndex;
-          return ['AI 가속(K문샷): ' + fc.ai[i] + '건' + (accel[i] ? ' ('+accel[i]+')' : ''),
-                  'AI 미사용: ' + fc.nouse[i] + '건',
-                  '블록버스터급: ' + fc.blockbuster[i] + '건'];
+          return ['AI 가속(K문샷): ' + fc.ai[i] + '건/년' + (accel[i] ? ' ('+accel[i]+')' : ''),
+                  'AI 미사용: ' + fc.nouse[i] + '건/년'];
         } } }
       },
       scales: {
-        y:  { beginAtZero: true, suggestedMax: 300, position: 'left', title: { display: true, text: '누적 기대 승인건수' }, ticks: { precision: 0 } },
-        y1: { beginAtZero: true, max: 50, position: 'right', title: { display: true, text: '블록버스터급(건)' },
-              grid: { drawOnChartArea: false }, ticks: { precision: 0 } }
+        y:  { beginAtZero: true, suggestedMax: 15, position: 'left', title: { display: true, text: '혁신신약 임상진입 건수 (건/년)' }, ticks: { precision: 0 } }
       }
     },
     plugins: [valLabels]
@@ -1316,7 +1306,7 @@ function renderRoadmap(rm) {
     <div class="rm-step" style="border-top:3px solid ${PALETTE[i]};">
       <div class="rm-year">${m.year}</div>
       <div class="rm-title">${m.step} · ${m.goal}</div>
-      <div class="rm-detail">${m.detail}</div>
+      <div class="rm-detail">${Array.isArray(m.details) ? '<ul style="margin:4px 0 0;padding-left:15px;">' + m.details.map(x => `<li style="margin-bottom:2px;">${x}</li>`).join('') + '</ul>' : (m.detail || '')}</div>
     </div>`).join('');
   document.getElementById('core-tech').innerHTML = rm.core_tech.map((t, i) =>
     `<li style="padding:6px 0;border-bottom:1px solid var(--border);"><span style="color:${PALETTE[i%PALETTE.length]};margin-right:8px;">⬡</span>${t}</li>`).join('');
