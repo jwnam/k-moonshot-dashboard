@@ -383,7 +383,7 @@
       <ul id="core-tech" style="list-style:none; font-size:13px;"></ul>
     </div>
     <div class="card">
-      <div class="section-title">KPI 목표</div>
+      <div class="section-title">핵심성과지표 (KPI) <span style="font-size:11px;color:var(--muted);font-weight:400;">· 3대 축 ('29 → '35)</span></div>
       <div style="display:flex; gap:12px; flex-wrap:wrap;" id="rm-kpi"></div>
     </div>
   </div>
@@ -941,7 +941,7 @@ function renderKddfCharts(d) {
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
 }
 
-fetch('data/dashboard.json?v=2.5')
+fetch('data/dashboard.json?v=2.6')
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-date').textContent = data.meta.updated_at;
@@ -1320,22 +1320,15 @@ function renderRoadmap(rm) {
     </div>`).join('');
   document.getElementById('core-tech').innerHTML = rm.core_tech.map((t, i) =>
     `<li style="padding:6px 0;border-bottom:1px solid var(--border);"><span style="color:${PALETTE[i%PALETTE.length]};margin-right:8px;">⬡</span>${t}</li>`).join('');
-  document.getElementById('rm-kpi').innerHTML = `
-    <div class="kpi-card accent" style="flex:1;min-width:140px;">
-      <div class="kpi-label">2035 신약 발굴단계 가속</div>
-      <div class="kpi-value" style="font-size:20px;">10X</div>
-      <div class="kpi-note">'29년 3X → '32년 5X → '35년 10X<br><span style="color:var(--muted);">${rm.kpi.accel_label || 'V_AI = 성공률 × 속도향상'}</span></div>
-    </div>
-    <div class="kpi-card cyan" style="flex:1;min-width:140px;">
-      <div class="kpi-label">혁신신약후보 임상진입</div>
-      <div class="kpi-value" style="font-size:20px;">3X</div>
-      <div class="kpi-note">${rm.kpi.clinical_entry_target || "현 연 3.3건 → '35년 ≈10건/년"}</div>
-    </div>
-    <div class="kpi-card amber" style="flex:1;min-width:140px;">
-      <div class="kpi-label">2035 최종 목표</div>
-      <div class="kpi-value" style="font-size:20px;">자율실험실</div>
-      <div class="kpi-note">AI-네이티브 신약개발 자율실험실 구축 · 인체수준 파운데이션 모델</div>
-    </div>`;
+  document.getElementById('rm-kpi').innerHTML =
+    (rm.kpi.pillars || []).map((p, i) => `
+    <div class="kpi-card ${['accent','cyan','amber'][i%3]}" style="flex:1;min-width:200px;">
+      <div class="kpi-label">${p.title}</div>
+      <div style="font-size:11px;color:var(--muted);margin:3px 0 6px;min-height:14px;">${p.desc || ''}</div>
+      <div style="font-size:12.5px;"><span style="color:var(--accent3);font-weight:700;">'29</span> ${p.y29}</div>
+      <div style="font-size:12.5px;margin-top:3px;"><span style="color:var(--accent2);font-weight:700;">'35</span> ${p.y35}</div>
+    </div>`).join('') +
+    (rm.kpi.goal_2035 ? `<div style="flex-basis:100%;font-size:12.5px;color:var(--accent2);margin-top:8px;padding-top:8px;border-top:1px solid var(--border);">🎯 <strong>${rm.kpi.goal_2035}</strong></div>` : '');
 }
 
 // ── Projects tab ──────────────────────────────────────────────────────
