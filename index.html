@@ -367,25 +367,28 @@
 <!-- ══ TAB: K-MOONSHOT ═══════════════════════════════════════════════ -->
 <div id="tab-kmoonshot" class="tab-panel">
   <div class="section">
-    <div class="card" style="background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(34,211,238,.05)); border-color:rgba(99,102,241,.3); margin-bottom:16px;">
+    <div class="card" style="background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(34,211,238,.05)); border-color:rgba(99,102,241,.3);">
       <div style="font-size:18px; font-weight:700; margin-bottom:6px;">🎯 K-문샷 신약 AI 미션</div>
       <div style="font-size:15px; color:var(--accent2);" id="rm-mission"></div>
       <div style="font-size:13px; color:var(--accent3); margin-top:6px; font-weight:600;" id="rm-slogan"></div>
       <div style="font-size:11px; color:var(--muted); margin-top:4px;" id="rm-version"></div>
     </div>
-    <div class="section-title">3대 마일스톤 로드맵 <span style="font-size:11px;color:var(--muted);font-weight:400;">· 신약 발굴단계 가속 3X → 5X → 10X</span></div>
-    <div class="roadmap" id="roadmap"></div>
   </div>
 
   <div class="section grid-2">
     <div class="card">
+      <div class="section-title">핵심난제 및 핵심성과지표 (KPI) <span style="font-size:11px;color:var(--muted);font-weight:400;">· 3대 축 ('29 → '35)</span></div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;" id="rm-kpi"></div>
+    </div>
+    <div class="card">
       <div class="section-title">3대 임무 · 핵심 요소기술</div>
       <ul id="core-tech" style="list-style:none; font-size:13px;"></ul>
     </div>
-    <div class="card">
-      <div class="section-title">핵심성과지표 (KPI) <span style="font-size:11px;color:var(--muted);font-weight:400;">· 3대 축 ('29 → '35)</span></div>
-      <div style="display:flex; gap:12px; flex-wrap:wrap;" id="rm-kpi"></div>
-    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">3대 마일스톤 로드맵 <span style="font-size:11px;color:var(--muted);font-weight:400;">· 신약 AI 액션플랜 (2026~2035)</span></div>
+    <div class="roadmap" id="roadmap"></div>
   </div>
 
   <div class="section">
@@ -941,7 +944,7 @@ function renderKddfCharts(d) {
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
 }
 
-fetch('data/dashboard.json?v=2.7')
+fetch('data/dashboard.json?v=2.8')
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-date').textContent = data.meta.updated_at;
@@ -1308,8 +1311,10 @@ function renderRoadmap(rm) {
       <div class="rm-title">${m.step} · ${m.goal}</div>
       <div class="rm-detail">${Array.isArray(m.details) ? '<ul style="margin:4px 0 0;padding-left:15px;">' + m.details.map(x => `<li style="margin-bottom:2px;">${x}</li>`).join('') + '</ul>' : (m.detail || '')}</div>
     </div>`).join('');
-  document.getElementById('core-tech').innerHTML = rm.core_tech.map((t, i) =>
-    `<li style="padding:6px 0;border-bottom:1px solid var(--border);"><span style="color:${PALETTE[i%PALETTE.length]};margin-right:8px;">⬡</span>${t}</li>`).join('');
+  document.getElementById('core-tech').innerHTML = rm.core_tech.map((t, i) => {
+    const isHeader = /^\[임무/.test(t);
+    return `<li style="padding:${isHeader ? '8px 0 3px' : '0 0 6px 12px'};${isHeader ? '' : 'border-bottom:1px solid var(--border);'}font-weight:${isHeader ? '700' : '400'};color:${isHeader ? 'var(--accent2)' : 'var(--text)'};font-size:${isHeader ? '13px' : '12px'};">${t}</li>`;
+  }).join('');
   document.getElementById('rm-kpi').innerHTML =
     (rm.kpi.pillars || []).map((p, i) => `
     <div class="kpi-card ${['accent','cyan','amber'][i%3]}" style="flex:1;min-width:200px;">
