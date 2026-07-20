@@ -223,6 +223,7 @@
     <li><a href="#" onclick="showTab('master',this)">🧬 국내기업 임상 파이프라인</a></li>
     <li><a href="#" onclick="showTab('ai-pipeline',this)">🤖 AI 파이프라인</a></li>
     <li><a href="#" onclick="showTab('transfer',this)">🤝 기술이전</a></li>
+    <li><a href="#" onclick="showTab('survey',this)">📊 신약개발 설문조사</a></li>
     <li><a href="#" onclick="showTab('kmoonshot',this)">🚀 K-문샷 로드맵</a></li>
     <li><a href="#" onclick="showTab('projects',this)">📋 사업현황</a></li>
     <li><a href="#" onclick="showTab('biodata',this)">🔬 데이터셋</a></li>
@@ -360,6 +361,26 @@
         <li>• <strong style="color:var(--text);">RNA·신규 모달리티</strong> — 바이오텍 비중 50% 돌파(2026), RNA 구조설계 AI 국내 학계 경쟁력 → 라이선스 기회</li>
         <li>• <strong style="color:var(--text);">AI 표준화 원년</strong> — 2026년 AI 신약개발 프로세스 표준화 → AI 플랫폼 기술이전 활성화 예상</li>
       </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TAB: 신약개발 설문조사 ═══════════════════════════════════════════ -->
+<div id="tab-survey" class="tab-panel">
+  <div class="section">
+    <div class="card" style="background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(34,211,238,.05)); border-color:rgba(99,102,241,.3); margin-bottom:16px;">
+      <div style="font-size:18px; font-weight:700; margin-bottom:6px;">📊 <span id="sv-title"></span></div>
+      <div style="font-size:12px; color:var(--muted);" id="sv-meta"></div>
+      <div style="font-size:12px; color:var(--muted); margin-top:4px;" id="sv-purpose"></div>
+      <div style="margin-top:10px;" id="sv-respondents"></div>
+    </div>
+    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;" id="sv-highlights"></div>
+    <div class="grid-2" id="sv-charts"></div>
+    <div class="card" style="margin-top:16px; border-left:3px solid var(--accent2);">
+      <div class="section-title">종합 결론 · 시사점</div>
+      <ul id="sv-insights" style="font-size:12.5px; margin:0 0 10px; padding-left:18px;"></ul>
+      <div style="font-size:13px; color:var(--accent2); font-weight:600;" id="sv-conclusion"></div>
+      <div style="font-size:11px; color:var(--muted); margin-top:10px;">📎 원문·발표자료: <a href="#" onclick="var t=Array.prototype.slice.call(document.querySelectorAll('nav.tabs a')).filter(function(a){return (a.getAttribute('onclick')||'').indexOf('resources')>-1;})[0]; showTab('resources', t||this); return false;" style="color:var(--accent2);">자료실 → K-문샷 AI 신약 분야 사전 의견조사 결과</a></div>
     </div>
   </div>
 </div>
@@ -944,7 +965,7 @@ function renderKddfCharts(d) {
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
 }
 
-fetch('data/dashboard.json?v=2.9')
+fetch('data/dashboard.json?v=3.0')
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-date').textContent = data.meta.updated_at;
@@ -962,6 +983,7 @@ fetch('data/dashboard.json?v=2.9')
     renderValueChain();
     renderMarketGrowth();
     renderTransferTable(data.tech_transfers);
+    renderSurvey(data.survey);
     renderRoadmap(data.kmoonshot_roadmap);
     renderVAI();
     renderProjects(data.projects);
@@ -1301,6 +1323,41 @@ function renderTransferTable(transfers) {
 }
 
 // ── Roadmap ───────────────────────────────────────────────────────────
+function renderSurvey(sv) {
+  if (!sv) return;
+  const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  document.getElementById('sv-title').textContent = sv.title;
+  document.getElementById('sv-meta').textContent = `조사기간 ${sv.period} · 유효응답 ${sv.n}건 (응답률 ${sv.response_rate}) · 국내 신약개발 산·학·연·병 대상`;
+  document.getElementById('sv-purpose').textContent = '목적: ' + (sv.purpose || '');
+  // 응답자 구성 (가로 세그먼트 바)
+  const palette = ['#6366f1','#22d3ee','#f59e0b','#10b981','#a855f7'];
+  document.getElementById('sv-respondents').innerHTML =
+    '<div style="display:flex; height:22px; border-radius:6px; overflow:hidden; font-size:10px;">' +
+    sv.respondents.map((r,i) => `<div title="${esc(r[0])} ${r[1]}명 (${r[2]}%)" style="width:${r[2]}%; background:${palette[i%palette.length]}; display:flex; align-items:center; justify-content:center; color:#0f1117; font-weight:700;">${r[2]>=8?esc(r[0]):''}</div>`).join('') + '</div>' +
+    '<div style="font-size:11px; color:var(--muted); margin-top:5px;">' +
+    sv.respondents.map((r,i) => `<span style="margin-right:10px;"><span style="color:${palette[i%palette.length]};">●</span> ${esc(r[0])} ${r[1]}명 (${r[2]}%)</span>`).join('') + '</div>';
+  // 3대 핵심
+  document.getElementById('sv-highlights').innerHTML = sv.highlights.map((h,i) => `
+    <div class="kpi-card ${['accent','cyan','amber'][i%3]}" style="flex:1; min-width:200px;">
+      <div class="kpi-label">${esc(h.label)}</div>
+      <div class="kpi-value" style="font-size:26px;">${esc(h.value)}</div>
+      <div class="kpi-note">${esc(h.sub)}</div>
+    </div>`).join('');
+  // 차트(가로 막대)
+  const bar = (items) => items.map(([label,pct]) => `
+    <div style="margin-bottom:7px;">
+      <div style="display:flex; justify-content:space-between; font-size:11.5px; margin-bottom:2px;"><span>${esc(label)}</span><span style="color:var(--accent2); font-weight:600;">${pct}%</span></div>
+      <div style="background:var(--surface2); border-radius:4px; height:9px;"><div style="width:${pct}%; height:9px; border-radius:4px; background:linear-gradient(90deg,#6366f1,#22d3ee);"></div></div>
+    </div>`).join('');
+  document.getElementById('sv-charts').innerHTML = sv.charts.map(c => `
+    <div class="card">
+      <div class="section-title" style="font-size:13px;">${esc(c.title)}</div>
+      ${bar(c.items)}
+    </div>`).join('');
+  document.getElementById('sv-insights').innerHTML = (sv.insights||[]).map(x => `<li style="margin-bottom:4px;">${esc(x)}</li>`).join('');
+  document.getElementById('sv-conclusion').textContent = '🎯 ' + sv.conclusion;
+}
+
 function renderRoadmap(rm) {
   document.getElementById('rm-mission').textContent = rm.mission;
   if (rm.slogan) { var sl = document.getElementById('rm-slogan'); if (sl) sl.textContent = '슬로건 「' + rm.slogan + '」'; }

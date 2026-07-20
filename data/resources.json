@@ -1,6 +1,28 @@
 {
-  "updated": "2026-06-21",
+  "updated": "2026-07-21",
   "items": [
+    {
+      "id": 5,
+      "title": "K-문샷 AI 신약 분야 사전 의견조사 결과 (2026.7)",
+      "category": "설문조사",
+      "date": "2026-07-20",
+      "file": "files/K문샷_AI신약개발 설문조사_F.pdf",
+      "filetype": "PDF",
+      "desc": "국내 신약개발 산·학·연·병 대상 사전 설문조사(2026.7.6~7.17, 유효응답 163건, 응답률 92.6%). 3대 핵심: ①최대 병목 53.4% 실험·검증 인프라 부족 ②AI 우선지원 구간 81.6% 표적탐색~비임상 진입 ③신규사업 수요 바이오데이터 56.4%·AI모델 53.4%·자율실험 44.8%. 현장은 데이터→모델→실험검증→환류(Lab-in-the-Loop) 전주기 통합기반 구축을 요구.",
+      "sources": [
+        {
+          "label": "K-문샷 공청회 설문조사 원본",
+          "url": ""
+        }
+      ],
+      "attachments": [
+        {
+          "label": "설문조사 발표자료(PPTX)",
+          "file": "files/K문샷_AI신약개발 설문조사_F.pptx",
+          "filetype": "PPTX"
+        }
+      ]
+    },
     {
       "id": 4,
       "title": "'25년 혁신신약 정책플랫폼 발제 요약 (4회·7건)",
@@ -10,10 +32,17 @@
       "filetype": "DOCX",
       "desc": "2025년 혁신신약 정책플랫폼 'AI 신약개발 데이터' 주제 7개 발제 요약 — 표준희(제바협)·이규리(KAIST)·황대희(서울대)·조성진(심플렉스)·신승우(대웅)·나군호(네이버)·한남식(연세대). 데이터 정의·모달리티 전략·정밀의료·고품질 생산·기관 공유·생성형AI·거버넌스.",
       "attachments": [
-        {"label": "발제 원본 7건(ZIP)", "file": "files/원본_25년_신약정책플랫폼_발제7건.zip", "filetype": "ZIP"}
+        {
+          "label": "발제 원본 7건(ZIP)",
+          "file": "files/원본_25년_신약정책플랫폼_발제7건.zip",
+          "filetype": "ZIP"
+        }
       ],
       "sources": [
-        {"label": "출처: K-Moonshot 정책센터자료(국가생명공학정책연구센터)", "url": ""}
+        {
+          "label": "출처: K-Moonshot 정책센터자료(국가생명공학정책연구센터)",
+          "url": ""
+        }
       ]
     },
     {
@@ -25,10 +54,17 @@
       "filetype": "DOCX",
       "desc": "합성신약 전주기 AI 활용 + 신규 모달리티(RNA·유전자·세포)별 AI 적용, 해외(Recursion·Insilico)·국내(대웅 DAISY·한미 HM17321·JW중외 JWELRY 등) 기업 사례. 출처: 국가생명공학정책연구센터(2025.10.28).",
       "attachments": [
-        {"label": "원본(HWPX)", "file": "files/원본_국내외_AI신약개발_기술동향_251028.hwpx", "filetype": "HWPX"}
+        {
+          "label": "원본(HWPX)",
+          "file": "files/원본_국내외_AI신약개발_기술동향_251028.hwpx",
+          "filetype": "HWPX"
+        }
       ],
       "sources": [
-        {"label": "출처: K-Moonshot 정책센터자료(국가생명공학정책연구센터)", "url": ""}
+        {
+          "label": "출처: K-Moonshot 정책센터자료(국가생명공학정책연구센터)",
+          "url": ""
+        }
       ]
     },
     {
@@ -40,10 +76,17 @@
       "filetype": "DOCX",
       "desc": "융합기반 첨단의료원천기술개발사업 성과교류회(2025.6.19) 발표 요약 — FDA 승인 모달리티 구조 변화(뉴모달리티 ~45%), 글로벌 파이프라인 모달리티 분포, 디지털바이오 전환. 발표: 국가생명공학정책연구센터 김현수 정책개발실장.",
       "attachments": [
-        {"label": "원본(PDF)", "file": "files/원본_첨단의료사업_성과교류회_김현수.pdf", "filetype": "PDF"}
+        {
+          "label": "원본(PDF)",
+          "file": "files/원본_첨단의료사업_성과교류회_김현수.pdf",
+          "filetype": "PDF"
+        }
       ],
       "sources": [
-        {"label": "출처: K-Moonshot 정책센터자료(국가생명공학정책연구센터)", "url": ""}
+        {
+          "label": "출처: K-Moonshot 정책센터자료(국가생명공학정책연구센터)",
+          "url": ""
+        }
       ]
     },
     {
@@ -55,8 +98,14 @@
       "filetype": "DOCX",
       "desc": "BCG의 'New Drug Modalities' 리포트 2건을 한글로 요약. 6대 신규 모달리티(항체·단백질/펩타이드·세포·유전자·핵산·기타)별 동향, 성숙도 3단계 분류, 4대 개발 플랫폼, 딜 활동($170B), 중국의 부상, K-Moonshot 시사점.",
       "sources": [
-        {"label": "BCG 2025: Emerging New Drug Modalities", "url": "https://www.bcg.com/publications/2025/emerging-new-drug-modalities"},
-        {"label": "BCG 2023: Benefits and Risks of New Drug Modalities", "url": "https://www.bcg.com/publications/2023/benefits-and-risks-of-new-drug-modalities"}
+        {
+          "label": "BCG 2025: Emerging New Drug Modalities",
+          "url": "https://www.bcg.com/publications/2025/emerging-new-drug-modalities"
+        },
+        {
+          "label": "BCG 2023: Benefits and Risks of New Drug Modalities",
+          "url": "https://www.bcg.com/publications/2023/benefits-and-risks-of-new-drug-modalities"
+        }
       ]
     }
   ]
