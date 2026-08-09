@@ -1,612 +1,612 @@
 {
-  "updated_at": "2026-08-02 21:28",
+  "updated_at": "2026-08-09 21:44",
   "news": {
     "domestic": [
       {
-        "title": "기술이전 기대 커진 바이오…면역항암제 관련주 카나프테라퓨틱스 앱클론 에이프릴바이오 '신바람' - 핀포인트뉴스",
-        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE80X2xnYnl5NXdLWmduQ1J2OENNT3Q2ay1PUTJBb3NrRkdDdFEwVXMwVHN4NnVYSUUzS2ZmaDZ6Uy1hN3h3Sk84YkdEclhUQzI1V2NwRU1QV2U5UEE0ZDNlZnZfOEl6QVpBMVdvbDEwUVl2SmfSAXdBVV95cUxNX2VRNWJ5OUtZNGRSbzRxaVZqYS1DMjZSWjEzeEs2MXc2aTZVWF9qQ3ZDRWkzQVRNMm1VSjJPYUltTXNNZnJ6Q0xWQ2tBSF8wUlRrNEJnTHdxZ0txWGgwdmtMekFkdmNmazVBT1FHVzhiaTl2NnNwQQ?oc=5",
-        "pub_date": "2026-08-02 17:09",
-        "source": "핀포인트뉴스",
-        "summary": "기술이전 기대 커진 바이오…면역항암제 관련주 카나프테라퓨틱스 앱클론 에이프릴바이오 '신바람'&nbsp;&nbsp;핀포인트뉴스",
-        "categories": [
-          "기술이전"
-        ]
-      },
-      {
-        "title": "K-제약·바이오, AI로 신약 설계·질병 예측 확대 - 전자신문",
-        "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFAwbVhSWnRoUDF0Tmw4WGZvUF9TcGVLODZuejljYmdKcUppbkRRRXFyX1BtMlZHSGMzeWtVQ3pUQTMzN1FtN2cyZ3lzRldkZw?oc=5",
-        "pub_date": "2026-08-02 16:00",
-        "source": "전자신문",
-        "summary": "K-제약·바이오, AI로 신약 설계·질병 예측 확대&nbsp;&nbsp;전자신문",
+        "title": "[비바100] “AI 신약 개발 시대, 승부처는 고품질 유전체 데이터” - 브릿지경제",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5tSkk4eFZIUlMxNzdRVnMxdnJpQjVVdkZyMFp3Z3h6YXBRVDIxVUhzLUNYVE45dVNSU1NDQWdqQmoxUVBnRDlTZHZ5WVh4VmtVYnUxRmd0bVFrdw?oc=5",
+        "pub_date": "2026-08-09 14:52",
+        "source": "브릿지경제",
+        "summary": "[비바100] “AI 신약 개발 시대, 승부처는 고품질 유전체 데이터”&nbsp;&nbsp;브릿지경제",
         "categories": [
           "일반"
         ]
       },
       {
-        "title": "AI 신약개발 도입 확산… 응답 기업 89%, 활용하거나 도입 추진 - m-i.kr",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9LajB3eHV2cGxFd2tsSDFtbjNFU0FreTY4RjNSNzFDalU3QXd3dHVWT1RidGtGRkEzV1gzUkVmMnZPZVFSVVFiNWFTUkVDYmpvMDVNV1FZTzQ1NzQ2ZUxXSjBDOS0?oc=5",
-        "pub_date": "2026-08-02 11:53",
-        "source": "m-i.kr",
-        "summary": "AI 신약개발 도입 확산… 응답 기업 89%, 활용하거나 도입 추진&nbsp;&nbsp;m-i.kr",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "국내 제약바이오 업계 10곳 중 9곳 \"AI 신약개발 도입했거나 검토 중\" - 팍스메디컬뉴스",
-        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1xNFdwMHJ0M1NEazZKNTMxQWVtWkdtWDZhSkt6M3VZSjVMRDBwTi1OTmRUR3hWbXQta2hJUHZfcDFOZm1uWUYxc3hlZ0piendFdVRmODV5QWtURl8xSVExd3g1UXlCaklrNTZLSFkzR1E?oc=5",
-        "pub_date": "2026-08-02 08:49",
-        "source": "팍스메디컬뉴스",
-        "summary": "국내 제약바이오 업계 10곳 중 9곳 \"AI 신약개발 도입했거나 검토 중\"&nbsp;&nbsp;팍스메디컬뉴스",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "[기획] AI가 직접 신약 만든다…국내 10곳 기술력 비교 - 서울경제TV",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9JcnNMU3J3Y1E2Q2xaMVMzOWNVZU1JWWVVTzJuRWlSN3c4cWMxQUFHZk1kQ1RtelBWZ0ZYUEpTdEpQYmV5VDkyYXV0QWpWY1pSTEtFendwYzZsNTlxbzN3aERZeWw?oc=5",
-        "pub_date": "2026-08-01 17:03",
-        "source": "서울경제TV",
-        "summary": "[기획] AI가 직접 신약 만든다…국내 10곳 기술력 비교&nbsp;&nbsp;서울경제TV",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "AI 신약개발 도입 확산… 국내 제약바이오업계 “전문인력·데이터 지원 필요” - 더글로벌기빙뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5kbXM1OFhUVUQ4SUZMUGo1RTZ1N1RZVjFTZkplc2tRWVhYQkc3YTEzNkd1TG1TOUNuSUl5dlNvR2NZdDVpSXZDQ3dmdkQtRTZJUnM1Yg?oc=5",
-        "pub_date": "2026-07-31 21:16",
-        "source": "더글로벌기빙뉴스",
-        "summary": "AI 신약개발 도입 확산… 국내 제약바이오업계 “전문인력·데이터 지원 필요”&nbsp;&nbsp;더글로벌기빙뉴스",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "AI 도입 속도 내는 K-제약…전문인력 부족 '발목' - v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5LZlkxOE1jTW1PaXAxUENSYkFTVVN5ZkswNWl5NXFaWFZLTGZsNnk0a3hmWVVQcUhabmN4UHR2czNmN2VoVnlmQXB0azBNWnM?oc=5",
-        "pub_date": "2026-07-31 16:10",
-        "source": "v.daum.net",
-        "summary": "AI 도입 속도 내는 K-제약…전문인력 부족 '발목'&nbsp;&nbsp;v.daum.net",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "AI 신약개발, 선택 아닌 필수지만 10곳 중 7곳은 전문인력 '0명'…업계 \"교육 필요\" - MEDI:GATE NEWS",
-        "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBNc0tIUnJkbTZVUVRBNUhxWHVyVjEwcWlaTFY0eXJIQllDdVFkT3h2NVhxZjlJaEJfMVUxTkYxckVnT2t3Wkd6WUlEUklJc21YZXpXa2haZw?oc=5",
-        "pub_date": "2026-07-31 14:40",
-        "source": "MEDI:GATE NEWS",
-        "summary": "AI 신약개발, 선택 아닌 필수지만 10곳 중 7곳은 전문인력 '0명'…업계 \"교육 필요\"&nbsp;&nbsp;MEDI:GATE NEWS",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "아리바이오랩, 아리바이오 대상 유증 진행…20억원 조달 - 더바이오",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAtelVMT3A5NExCNFprei01dGNNVlBiYnRwZ0ZvVHl1RDdGQ3djMUFjdkU3dWdFTkNOWUhvdGhkbWItek5SZFRCR0V2QWUydnZUNDFKR0FUT0xzaURlODQxd0diZzZocmVXbEFDeNIBcEFVX3lxTE9GN2txZ0w0NHQydGNodjc5cThFYURIM0JHb1hYc3MzWExtV1JTLVpuM3Y4aHlDWVowMFhVQ1RwMGxwcUIzdkRESjZPWXo4SExpLWdvSFJVRVl4c0FZYlV0TVRXeWlpM3RGUzIxWDE4c3E?oc=5",
-        "pub_date": "2026-07-31 14:29",
-        "source": "더바이오",
-        "summary": "아리바이오랩, 아리바이오 대상 유증 진행…20억원 조달&nbsp;&nbsp;더바이오",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "제약바이오 신약개발, AI가 ‘기본값’···업계 90% 활용·도입 - 의사신문",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBXNXlYaG1RNVRMSGJESjFUWVhoWlQ0SmZGNV92Qm85bVpQVHhNM2JmSV8yR1lDY3hHM0dKMjYzTGJNNGtraEQzVVhVT3FmV2h1R2pqZFUtalp0N1ZXVWREdkRvWmtuYlZzVExKSTZnSQ?oc=5",
-        "pub_date": "2026-07-31 14:26",
-        "source": "의사신문",
-        "summary": "제약바이오 신약개발, AI가 ‘기본값’···업계 90% 활용·도입&nbsp;&nbsp;의사신문",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "AI 신약개발 속도 내지만...한국제약바이오협회 \"전문인력 부족\" - 월요신문",
-        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9CNUE4aGkwalNFckxtbDdqelV2VkF3cldBeXlIYTNjSVR0c014VEM2Z1VJYlJrZjNTQ1U2cTFPRVBZbFBlbm9yeTJtc0tWOHNZLWx6Ql9GbkJMODItVUwwRUJlRmowdTFsR2c?oc=5",
-        "pub_date": "2026-07-31 13:44",
-        "source": "월요신문",
-        "summary": "AI 신약개발 속도 내지만...한국제약바이오협회 \"전문인력 부족\"&nbsp;&nbsp;월요신문",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "AI 뛰어든 K-제약, 전문인력은 없었다 … 10곳 중 9곳 \"도입-도입 추진\" - 뉴데일리",
-        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBwV2VoQ21fUVBOd1VUZHM5emJkTzd4ZFZIaHdQbk9zWjlEdFZrVUVsYy1oV2tveTNZaldxWWtqMlM3MG1OSEZMSkxuc3J0ZlQxZkJlUnVFc01BSDVqc294Sm16M2ZER2xPMGlBY1lhRFd1em95TlZKb05TNNIBgAFBVV95cUxPSU5qWGNNdzNqQnlBUGhGQVVBNk1oZzhDRXNOQ2ZOamNOOVNoZlVPSzZYS04yRWRtMGdaTHBFbVJkV2treV9JZ05XYmNxZzlGMU1ta3FVSkxLT1RBTUlESE1QbjF0UHhqRGZFN20wRktsVTBCVTVScXFDTnV2c09aVw?oc=5",
-        "pub_date": "2026-07-31 12:03",
-        "source": "뉴데일리",
-        "summary": "AI 뛰어든 K-제약, 전문인력은 없었다 … 10곳 중 9곳 \"도입-도입 추진\"&nbsp;&nbsp;뉴데일리",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "AI 도입 속도 내는 국내 제약업계, 현장에선 ‘전문인력’ 부족 - 더나은미래",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5kcHBuVkl4YlVnWC1TMXJNTFJJWHVpVlZUUHp3QWNMRDl3VGhKWk12dnFqWmxaRl9qYzJRSjdwZzFMd0lQUWVGb05WYnlpZk9qVGc?oc=5",
-        "pub_date": "2026-07-31 11:36",
-        "source": "더나은미래",
-        "summary": "AI 도입 속도 내는 국내 제약업계, 현장에선 ‘전문인력’ 부족&nbsp;&nbsp;더나은미래",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "AI 신약개발 확산에도 인재난…전문인력 없는 제약사 67% - mstoday.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1Qb2RXTkg2cTY2Mnh5SFlval9sRVE1anZIV1JocnRDeEdGdktxMjJKbzVUWGU2N1UtUHkxSjhzd2Rsem94UlJqQlAyMlJpaVh2cXUzZmNIVlRFRWFtZlI1ekpPcWdsXzFDdm9vcw?oc=5",
-        "pub_date": "2026-07-31 11:06",
-        "source": "mstoday.co.kr",
-        "summary": "AI 신약개발 확산에도 인재난…전문인력 없는 제약사 67%&nbsp;&nbsp;mstoday.co.kr",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "제약바이오 10곳 중 9곳 \"AI 신약개발 교육 필요\"…전문인력은 부족 - 네이트",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Zb2JPVjNpUERHaXQySmtLTVJITi1DdC02Nk9nNEx1VEhmbGZ1c1RFMldraHRlTW1VWDFrcE9PVEp6U280QTkxaTZmY1ZWUVp6amxr?oc=5",
-        "pub_date": "2026-07-31 10:59",
-        "source": "네이트",
-        "summary": "제약바이오 10곳 중 9곳 \"AI 신약개발 교육 필요\"…전문인력은 부족&nbsp;&nbsp;네이트",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "제약바이오 10곳 중 9곳 “AI 신약개발 교육 필요”…전문인력은 부족 - 이투데이",
-        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBuQkdETXQwaS1yTjNfNjVfQzRRay1wODFMQmNXVW5CVWpqbnhEOHM4TnJSY05xQk0yZEpoR1hkZnVDaUF1aE5GWl9KV1Z2eV9qZWdZRQ?oc=5",
-        "pub_date": "2026-07-31 10:58",
-        "source": "이투데이",
-        "summary": "제약바이오 10곳 중 9곳 “AI 신약개발 교육 필요”…전문인력은 부족&nbsp;&nbsp;이투데이",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "신약 개발에 인공지능 활용 비율 47%…58%는 후보물질 식별·최적화 웅덥 - 뉴스맥",
-        "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBiV1QweHhNblowNHE2SzJ6azBuSlNYcDBZVVREZXBPYjlpWUFfcUFqeVRibFhzVHlmX0RKTDloR2ZUbDBf?oc=5",
-        "pub_date": "2026-07-31 10:49",
-        "source": "뉴스맥",
-        "summary": "신약 개발에 인공지능 활용 비율 47%…58%는 후보물질 식별·최적화 웅덥&nbsp;&nbsp;뉴스맥",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "AI 신약개발 도입 열풍인데… “전문 인력은 턱없이 부족하다” - 간호사신문",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA1MmV3dVZkTmhiUHllY0lSMzRTdEMzRGVYVlJ6d3VwMkQ5elVkQ1ZMWjljZklXa3NoT2Zpd29QSzdFS3M3RjhiNmVfdlpZWV9hZzhYNWdvOFk0S000NzdXdmI3WG44ZHlrYndaWE9R?oc=5",
-        "pub_date": "2026-07-31 10:22",
-        "source": "간호사신문",
-        "summary": "AI 신약개발 도입 열풍인데… “전문 인력은 턱없이 부족하다”&nbsp;&nbsp;간호사신문",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "[AI픽] AI 신약개발 뛰어든 제약업계…발목 잡는 인력난 - v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1NaF95S3ByZ2E4SGMzTlAtekFoYXJZWVYwMUhmT1pJeFIwcnhhbzZFR1JlTnEzb2dYaEhYc29aUHVYeHlZb0FmWWJIU0Z0MkU?oc=5",
-        "pub_date": "2026-07-31 10:20",
-        "source": "v.daum.net",
-        "summary": "[AI픽] AI 신약개발 뛰어든 제약업계…발목 잡는 인력난&nbsp;&nbsp;v.daum.netAI 도입 속도 내는 K-제약바이오… 10곳 중 9곳 “전문 교육 필요”&nbsp;&nbsp;IT조선AI 신약개발 도입 의지 크지만…67%는 전문인력 '0명'&nbsp;&nbsp;아시아경제신약개발 AI 바람 타는 K-제약…“89%가 이미 쓰거나 도입 예정”&nb",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "[AI픽] AI 신약개발 뛰어든 제약업계…발목 잡는 인력난 - 연합뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1Ib2NmV19sTldNQjJLRDRxN281TDd5dlRvQzRfbmFUeTMzNnVNQU45N19VWmd6OW5sUUlhaE1UNXBxSHpobnBnbUdCNjRNbXdhYnp6OFFSOW95S1XSAWBBVV95cUxPYkRtRmt6emhMMXpDTFdMbmhwLWE2LXBPd2VvbGFGOGJZQ0ZaR1NYZi1MUUhkVmlrampMX1JidFpWbHpOVVNNZDl4R0FzVUNHQnE1Q2drbUpOdmgyckp5bkE?oc=5",
-        "pub_date": "2026-07-31 10:19",
-        "source": "연합뉴스",
-        "summary": "[AI픽] AI 신약개발 뛰어든 제약업계…발목 잡는 인력난&nbsp;&nbsp;연합뉴스",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "AI 도입 속도 내는 K-제약바이오…절반 \"신약개발에 활용\", 인력난은 과제 - 바이오타임즈",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9iakRwRWtHWEFfSnFpZFpBREVNVE9icFdPa1VqWkhTMEVBNnJhbUdiZkpwN05Id3Y2WTZIQ0Qyd1U5TTgtLXZTUG15NEdWUFFwaUpUNXM3a25Xb3pxVWFQWHlCY2s0cnZoZ1FqbQ?oc=5",
-        "pub_date": "2026-07-31 10:16",
-        "source": "바이오타임즈",
-        "summary": "AI 도입 속도 내는 K-제약바이오…절반 \"신약개발에 활용\", 인력난은 과제&nbsp;&nbsp;바이오타임즈",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "제약사, AI 도입 속도…\"활용중이거나 도입 계획\" - newsis.com",
-        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ZemN2bVJ0NThOZ2dZRDlLcnMwM29aRXo2ODl4TDhGMkNNVmRzQ2JXVi0xNThBNUZUTk02QjVlaWlIR1ZoOUJPOVljVlRRdE05Y2JIZWFIckhpeW1ZVjY5MtIBeEFVX3lxTE5fM28yQWJJRFVqZ1dpSGFzQm9ITGJQVHVQUHF2Z25xZl9ib2xjS1VDdlU2ZEVwS0lrZ3E5ZWlPR29CVTd0SzR5Z25jSmVRbkFOalQ4c3YwSTZOWWZ1cWoyRDMzV1doUW14ZS0yNlJxQU5ZeTdBY3p4Sw?oc=5",
-        "pub_date": "2026-07-31 10:16",
-        "source": "newsis.com",
-        "summary": "제약사, AI 도입 속도…\"활용중이거나 도입 계획\"&nbsp;&nbsp;newsis.com",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "제약·바이오 기업들 AI 도입 확산…\"전문인력 양성 필요\" - 뉴스1",
-        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1acTBjOG9xaUZJb251WjZjMEk1ZFFTS3JLUnUyTlJRQ0RCdzlrallOelVpYUFBWkhiOFVwbVY5bHV2NC1nWS1OM1kwbzFwcS1FdDBzUkJCVE03QlpXM0N5aA?oc=5",
-        "pub_date": "2026-07-31 10:09",
+        "title": "글로벌 헬스케어 AI 10년 뒤 1조 弗 시장…한국은 '표준화' 시급 - 뉴스1",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9BQkNfdTJOOG05N3BNcGN0dUpDWEVyNVJaMEpUc0JMRkR3cjB0NThjc2RPeEtFdkNSWUE0aW9IVVBvYXZ3bTJwUlFxallzdm5ra1pnTlZ3?oc=5",
+        "pub_date": "2026-08-09 14:40",
         "source": "뉴스1",
-        "summary": "제약·바이오 기업들 AI 도입 확산…\"전문인력 양성 필요\"&nbsp;&nbsp;뉴스1",
+        "summary": "글로벌 헬스케어 AI 10년 뒤 1조 弗 시장…한국은 '표준화' 시급&nbsp;&nbsp;뉴스1",
         "categories": [
           "일반"
         ]
       },
       {
-        "title": "국내 제약바이오업계, AI 도입 속도 높인다 - 병원신문",
-        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB0clF1YUxKWVhGT3g1eHFjMkY4WnlsRmpqc3NqRTdpbmF0U3BVZjc1VVBjTVJYOVVDQzc4Zlo3RVNCckdaOTU2V0wyZFBvbmItcHZ2b2VNZkhQOUFvcGFrbDMtQS1CS2tqemc?oc=5",
-        "pub_date": "2026-07-31 10:07",
-        "source": "병원신문",
-        "summary": "국내 제약바이오업계, AI 도입 속도 높인다&nbsp;&nbsp;병원신문",
+        "title": "고려대구로병원·디티앤씨알오, AI·오가노이드 기반 정밀의료 플랫폼 구축 - etoday.co.kr",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE83M2dzNVFXZjMzMzlWMTlZZERsbHRuUjVuZUlpakJxYUhreU1fOGFJMVoyNUFRNEhPTGFfUFZibXdpWVZoRERlRnMxMmR0UUJiZXp5Vg?oc=5",
+        "pub_date": "2026-08-09 06:00",
+        "source": "etoday.co.kr",
+        "summary": "고려대구로병원·디티앤씨알오, AI·오가노이드 기반 정밀의료 플랫폼 구축&nbsp;&nbsp;etoday.co.kr",
+        "categories": [
+          "AI플랫폼"
+        ]
+      },
+      {
+        "title": "바이오젠AI, 300억 시리즈 B 유치…AI 신약 개발 생태계 전환 신호탄 - 뉴스N연합",
+        "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE0tcE5iRS1Pc2g5VFNIWHllT3NaLXpkQWY4bmczQ21PUzZFMEctVi1UR0JYakJPbXpVOGRVc09RMWhPbV9aUUpwMWln?oc=5",
+        "pub_date": "2026-08-09 04:26",
+        "source": "뉴스N연합",
+        "summary": "바이오젠AI, 300억 시리즈 B 유치…AI 신약 개발 생태계 전환 신호탄&nbsp;&nbsp;뉴스N연합",
         "categories": [
           "일반"
         ]
       },
       {
-        "title": "K-파마 AI 도입 가속화…후보물질 발굴·최적화 등 활용 늘어 - press9.kr",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1La2dqVkRCQmF3V1pZVmJYeS1yOTBQcmo4S29ERjh4U2F2RWxlb3pwcGI4ZE9GQVFXc0Fkejd4clR4TmxiQThIYldET292ZTlzamhOTDd2V3N5UUdESXdpYkctY0w?oc=5",
-        "pub_date": "2026-07-31 10:05",
-        "source": "press9.kr",
-        "summary": "K-파마 AI 도입 가속화…후보물질 발굴·최적화 등 활용 늘어&nbsp;&nbsp;press9.kr",
+        "title": "바이오젠AI, 300억 시리즈 B 유치…AI 신약 플랫폼에 국내 VC 대규모 자본 투입 - 유스연합",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9WNWppX3FnWG5EOUM4bjhWby16S1JRVElSSjZPMHlxdUlTd1J2elZIWjZLMG9abElvaUhkVmxYX2VuMzZZSXlMUi1aNXZDQUVIVnc?oc=5",
+        "pub_date": "2026-08-09 03:54",
+        "source": "유스연합",
+        "summary": "바이오젠AI, 300억 시리즈 B 유치…AI 신약 플랫폼에 국내 VC 대규모 자본 투입&nbsp;&nbsp;유스연합",
+        "categories": [
+          "AI플랫폼",
+          "투자"
+        ]
+      },
+      {
+        "title": "전북대학교 실험실 창업기업 홉스바이오사이언스, AI 기반 신약개발 기업으로 전환 본격화 - 한국강사신문",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBibW1PcVdLd0ZNbHdHSmU0b2FWY2JuVWlYc1NpRHl4M21oSm9fclNhMk40UzJHSS0yQXVsVEMybFRGUks0VHItTFd5bHgyM0VfNGJfSURVRXY3MmtGM2tYYjhFMU5jcGp4U1lLZU9WSlk?oc=5",
+        "pub_date": "2026-08-08 11:59",
+        "source": "한국강사신문",
+        "summary": "전북대학교 실험실 창업기업 홉스바이오사이언스, AI 기반 신약개발 기업으로 전환 본격화&nbsp;&nbsp;한국강사신문",
         "categories": [
           "일반"
         ]
       },
       {
-        "title": "신약개발에 AI 활용 원하지만…\"전문인력 없어\" - 서울경제TV",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5DejQyMVNiTWhDRldQUVhwazYyV2RVNkt0Rm8wUUUtOWZqYm5OM0NuU0Z1S1dSaEJlUlQ0eHZDYlhYWUhjU1hwTk1uUl9OS3VqeGxWSkhWcjloZEtIdnhFN1ZXcTQ?oc=5",
-        "pub_date": "2026-07-31 10:03",
+        "title": "제약업계 AI 활용 넓어진다…신약개발부터 업무 혁신까지 - 네이트",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9XNl9BQUZ0cm82bWhpbTN6M0V4MENwbXZlRk16YUZSVmQya2c2NHotcmhqb3p1dDlReWEtRVE2SUlpenhoemY3emRBQmVmZ205OHY0?oc=5",
+        "pub_date": "2026-08-08 06:02",
+        "source": "네이트",
+        "summary": "제약업계 AI 활용 넓어진다…신약개발부터 업무 혁신까지&nbsp;&nbsp;네이트",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "제약업계 AI 활용 넓어진다…신약개발부터 업무 혁신까지 - 쿠키뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9saTJEX0ZlVHFqQ3ZzSnVaTkxiUXF1VjdiTDJiVjI0aTRUSW1MbjBGLXBZZmNhdFRJOTRYbWR3cEQwdWh4WVJJYS01OEwxUDhnQ3g1RjhDWHo4TDFPVG5MOXRZdw?oc=5",
+        "pub_date": "2026-08-07 23:06",
+        "source": "쿠키뉴스",
+        "summary": "제약업계 AI 활용 넓어진다…신약개발부터 업무 혁신까지&nbsp;&nbsp;쿠키뉴스",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "파로스아이바이오, AI 신약개발 국책과제 잇단 선정 - 데일리메디",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5kdDBiT1lhczBhazlVZEVRdWR3eDY2b08yemJiTGViek56R0haNE5URzBBU3R3SUsxa1JPSV9qVWFzaVVhWVl3UzRaSXd2MlhLVlZxVUgtRHc4Q0JYZ3hrdHlrVF9jNjFqMUoxcE01SzVoYV9v?oc=5",
+        "pub_date": "2026-08-07 18:09",
+        "source": "데일리메디",
+        "summary": "파로스아이바이오, AI 신약개발 국책과제 잇단 선정&nbsp;&nbsp;데일리메디",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "과기정통부, K-문샷 'AI 과학자' PD 다시 찾는다 - 디지털투데이",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBlb3ludXhSREZCMnExTGoweVlZNzh4N2JoaDhkQ181UHFHNV92SXI1YmlfQ1VVS1FQSUdjelBNenE3d3lBWGZjRWEwMTlRdlRyMlZYdWtXaW9yWnpxeWhtRTRSM1l5S0l1VWtQcHJHYzBVVDA?oc=5",
+        "pub_date": "2026-08-07 14:00",
+        "source": "디지털투데이",
+        "summary": "과기정통부, K-문샷 'AI 과학자' PD 다시 찾는다&nbsp;&nbsp;디지털투데이",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "바이오넥서스, AI 신약개발 플랫폼으로 시드 투자 유치 - AI타임스",
+        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA0Y1F1REVYeVVWdHV4b0VaN1lycUN1c19Kd25KS1JrTjJ0VFAzWHBtc1Vuc181X2VUWjlZWDRETjFVSGNGRjhZUUt5S3cya3hPTEdHelc5UlFGV3Fhc0lMREg4QXkxUmhDWXc?oc=5",
+        "pub_date": "2026-08-07 12:45",
+        "source": "AI타임스",
+        "summary": "바이오넥서스, AI 신약개발 플랫폼으로 시드 투자 유치&nbsp;&nbsp;AI타임스",
+        "categories": [
+          "AI플랫폼",
+          "투자"
+        ]
+      },
+      {
+        "title": "디티앤씨알오-고려대 구로병원, AI·오가노이드 기반 정밀의료 플랫폼 구축 - 바이오타임즈",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1KdDRQalJuWHFMbTdEb2t5S3JwbWFzS3ZXZ1NPTkJGck1Md0tDb0g5TmxPSkw2XzJKWnVQZlJxU29qRGg1OHlUMDVTVjZlc0xDWkxrUEZGZ1hPVDRiMjJhN21sRzNoYjlJYThMSQ?oc=5",
+        "pub_date": "2026-08-07 11:17",
+        "source": "바이오타임즈",
+        "summary": "디티앤씨알오-고려대 구로병원, AI·오가노이드 기반 정밀의료 플랫폼 구축&nbsp;&nbsp;바이오타임즈",
+        "categories": [
+          "AI플랫폼"
+        ]
+      },
+      {
+        "title": "디티앤씨알오-고려대구로병원, AI·오가노이드 플랫폼 구축 - 서울경제TV",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBNelI5MHJDRUZINlhNclpHQVlXTWZnM0Z0RGxPVkxfb2w2Z1RZa3g1SEVXREI0cjAxUHNlYTFQRUtGSzNmVUg1LVpGWjJiSlVCUEduMHFTa3pBNkxPc0FGMzRERUs?oc=5",
+        "pub_date": "2026-08-07 11:13",
         "source": "서울경제TV",
-        "summary": "신약개발에 AI 활용 원하지만…\"전문인력 없어\"&nbsp;&nbsp;서울경제TV",
+        "summary": "디티앤씨알오-고려대구로병원, AI·오가노이드 플랫폼 구축&nbsp;&nbsp;서울경제TV",
+        "categories": [
+          "AI플랫폼"
+        ]
+      },
+      {
+        "title": "전북대 창업기업 홉스바이오사이언스, AI 신약개발 본격화 - 교수신문",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1adE45QjZUcUxxczRnc3ExVnJOcHlRSHJOYy1SeHBEV2tTZld0RzFDQ3drMGxSX2VucEo4ZURkcmZLbThZUjQ1NkhCc2tTbUtRRFR2THdqQmZYbDYzQWtSdHBQeFlScnc?oc=5",
+        "pub_date": "2026-08-07 09:54",
+        "source": "교수신문",
+        "summary": "전북대 창업기업 홉스바이오사이언스, AI 신약개발 본격화&nbsp;&nbsp;교수신문",
         "categories": [
           "일반"
         ]
       },
       {
-        "title": "AI 신약개발 확산세…인력난은 최대 걸림돌 - 핀포인트뉴스",
-        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE42Zkh0WVNVNTZiaHFkb0JPSXRlckVxR2VmYnl3M2ZocHpsRHdHb2prVGxxMlJGU1Q3S0JzbzdEVWVEX0xfU21XaGJ4ZUFvdlZfeWlGVTlINkhVRVhOaG43YjVwcTd4Y0ZaRldaRnNqaVdRbVdSckZn0gF3QVVfeXFMTjZmSHRZU1U1NmJocWRvQk9JdGVyRXFHZWZieXczZmhwemxEd0dvamtUbHEyUkZTVDdLQnNvN0RVZURfTF9TbVdoYnhlQW92Vl95aUZVOUg2SFVFWE5objdiNXBxN3hjRlpGV1pGc2ppV1FtV1JyRmc?oc=5",
-        "pub_date": "2026-07-31 09:44",
-        "source": "핀포인트뉴스",
-        "summary": "AI 신약개발 확산세…인력난은 최대 걸림돌&nbsp;&nbsp;핀포인트뉴스",
+        "title": "[AI 산업재편⑧] '창립 100주년' 유한양행, AI 플랫폼서 '제2 렉라자' 속도전 - 뉴스저널리즘",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE01Y1VyWFRraExGallwRC16Y3ptcjdTcTRjS3B0YXBPelpRMjdUZ1VWeF9QSFRZUmhBbzFNcG5Bc0FaV1B6TExnaGtYam5KUXhOdmxEQ1dLcmJXOFRENUNvNXIwV2FnT0s2dC1z?oc=5",
+        "pub_date": "2026-08-07 06:35",
+        "source": "뉴스저널리즘",
+        "summary": "[AI 산업재편⑧] '창립 100주년' 유한양행, AI 플랫폼서 '제2 렉라자' 속도전&nbsp;&nbsp;뉴스저널리즘",
+        "categories": [
+          "AI플랫폼"
+        ]
+      },
+      {
+        "title": "[AI 산업재편⑦] 한미약품, AI 신약개발로 R&amp;D 혁신 가속 - 뉴스저널리즘",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1RMHdVaXVURkw5aXZDVHoxTTc0MktzS0p5cnFlNGZNeXRKbHFDTzdnS1JtT000aHRyTEx3OG5jTlVMSjlFai1EX0JQczVVMDhadUF0UTJLd203NWlSeG9IUXNCbGh1LUZ1czVn?oc=5",
+        "pub_date": "2026-08-07 06:30",
+        "source": "뉴스저널리즘",
+        "summary": "[AI 산업재편⑦] 한미약품, AI 신약개발로 R&D 혁신 가속&nbsp;&nbsp;뉴스저널리즘",
         "categories": [
           "일반"
         ]
       },
       {
-        "title": "K-제약바이오, AI 신약개발 도입 열기... But 전문인력 부재 '걸림돌' - 팜뉴스",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE82ckNHVDZLZHpiVDRLcWl3azh2dzlWZ3RxY0F4aE91ZjB1SUsxY1I4OWxTQVllS01oaXlaSjBMSkdjTy0wRlB0WGFIR2Q1OS02cktfVzd6b2FqQzNPNEdPbVdyZVM3cUhUd3d1VQ?oc=5",
-        "pub_date": "2026-07-31 09:32",
-        "source": "팜뉴스",
-        "summary": "K-제약바이오, AI 신약개발 도입 열기... But 전문인력 부재 '걸림돌'&nbsp;&nbsp;팜뉴스",
+        "title": "\"보건소도 대학병원급 진료\"…전국에 'AI 진료지원' 보급 - 데일리팜",
+        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBNaFBtOGlnWmZKQTFkb3pEVkdtbnI5UXBiUzlJaXlfUlZuemxyejlTdzZFSDFfTkRrM2EyMHFqUW5GRGF2NV9RaWktREJFZGZm?oc=5",
+        "pub_date": "2026-08-07 05:50",
+        "source": "데일리팜",
+        "summary": "\"보건소도 대학병원급 진료\"…전국에 'AI 진료지원' 보급&nbsp;&nbsp;데일리팜",
         "categories": [
           "일반"
         ]
       },
       {
-        "title": "AI 도입 속도 내는 K-파마…응답자 89% “활용 중이거나 도입 계획” - 마이데일리",
-        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4yMXAyUnZkcExlaEVabndkZ2xRd0tYdnphOXFCU3Jwd2MtYlhzcFowNWxycHl6QU95b1VlWjljenRTSjlzRWlsRlpJUXF1cGhFWG9HWGNjZmFFN1ZnTUlTYnZNQUM1Zw?oc=5",
-        "pub_date": "2026-07-31 09:22",
-        "source": "마이데일리",
-        "summary": "AI 도입 속도 내는 K-파마…응답자 89% “활용 중이거나 도입 계획”&nbsp;&nbsp;마이데일리",
+        "title": "제너레이트 바이오메디슨스, 노바티스와 AI 신약 개발 협력 성과…전임상 단계 진입 - 데이터투자",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBjaWxjNmN3ZnpvWTJPakYyendWU2VBOVVHck53VlpoZGltR01FcU1fZ3VBZmNIb2llRkREblZ3REo2Wi0zNTN4bHF3ellURE5KcGx3bWtWMEw2cjBaTm5HZGx4NG41ay1FdGRtRGdkaE9ISUE?oc=5",
+        "pub_date": "2026-08-06 19:11",
+        "source": "데이터투자",
+        "summary": "제너레이트 바이오메디슨스, 노바티스와 AI 신약 개발 협력 성과…전임상 단계 진입&nbsp;&nbsp;데이터투자",
+        "categories": [
+          "임상",
+          "투자"
+        ]
+      },
+      {
+        "title": "전북대 실험실 창업기업 홉스바이오사이언스, AI 신약개발 나선다 - 베타뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1XbjBmNFhPbVB2bDlUZXVCeFNwRnFOeWpNaEhWT3FEYnEtWDFhdkx1ckZpb2JEdEJoSTBpdkxweGVyTXRnZ3JXbzhaT25JZnhpRDNtNFRveXRmZ1gtRC1BTUZkQmk?oc=5",
+        "pub_date": "2026-08-06 17:43",
+        "source": "베타뉴스",
+        "summary": "전북대 실험실 창업기업 홉스바이오사이언스, AI 신약개발 나선다&nbsp;&nbsp;베타뉴스",
         "categories": [
           "일반"
         ]
       },
       {
-        "title": "'대웅에 기술이전' 이노보테라퓨틱스, 코스닥 '노크'…AI 신약 시험대 - v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0wVklvQzdPczlieTY4MXJwaVR1Q3dnTHQ0U3Z4MU1kQWtKTk9kTE04RzVzd1JnUmVfMjRPeFpSamNtZlhfdXhJZEdULWtPaG8?oc=5",
-        "pub_date": "2026-07-31 07:07",
-        "source": "v.daum.net",
-        "summary": "'대웅에 기술이전' 이노보테라퓨틱스, 코스닥 '노크'…AI 신약 시험대&nbsp;&nbsp;v.daum.net",
+        "title": "제약업계, 'AI 신약개발' 확산…전문인력 확보는 과제 - 비즈월드",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5mV2RlcFMtYWxmejBCQ3pUcmUySExneHVoUUwyLXVMUkVqTnRiZ0N3cHNrVE5RenVrbTUzZzd1X0stUFF3STRhVUk2eTdHdFZiZ2VaYWVIamdsaEtReVN0clpDeDVOTmd6Nnpj?oc=5",
+        "pub_date": "2026-08-06 17:38",
+        "source": "비즈월드",
+        "summary": "제약업계, 'AI 신약개발' 확산…전문인력 확보는 과제&nbsp;&nbsp;비즈월드",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "[전북24시]전북대 창업기업 홉스바이오사이언스, AI기반 신약개발 전환 ‘본격’ - 시사저널",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1HUldsaE1DZ1NrSE1tQWFwbUZ2Z3JwTkpFa0p2V1dXOHhRclJqQnN0WkF4cjdXVURlVnBPOUNGS2pjOGFHNXo4OWJUazgzMndCRmltZlhvZ1NyRGZiR2NZcVcyNHVVeXFIZHNxUlpYMNIBc0FVX3lxTE5Hd1o3S2gxMXNnbkdsWWJDN1JmTUU2bUN0eXdGdFBEOXphVjJldExtV0dJdFF0VFE1VndZUzMwRzN2TzZLTmZiZEItNVpsX0JRTWFsVXdOb25GdXBHQS1uRW9iZU1kbHQyeHRvZXBKXzkxazA?oc=5",
+        "pub_date": "2026-08-06 17:25",
+        "source": "시사저널",
+        "summary": "[전북24시]전북대 창업기업 홉스바이오사이언스, AI기반 신약개발 전환 ‘본격’&nbsp;&nbsp;시사저널",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "[과기원NOW] GIST, 알파폴드3 기반 신약 후보물질 예측 AI 성능 강화 外 - 동아사이언스",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBEcWFlM0RjZEZRcWptUUMzUzlUT1diYTNXY2pIOEhMV1RFeHlPV0RpaXNmTktfbjktTmdMakxZOXJUSHlCdUxfQzRQTUpkV1dOT0dxaw?oc=5",
+        "pub_date": "2026-08-06 17:08",
+        "source": "동아사이언스",
+        "summary": "[과기원NOW] GIST, 알파폴드3 기반 신약 후보물질 예측 AI 성능 강화 外&nbsp;&nbsp;동아사이언스",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "바이오넥서스, 시드 투자 유치…AI 과학자 에이전트 개발 고도화 - 바이오타임즈",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1Jc2lwSlROSS1neEhsYmdueGp0Q3JXYWVZWGRtZl9YZzZlY1h3SUdBNF9zeV9QZlNxYlUzaEdiQzNuRWQ0N3czZnVfTlZpdllhWGZPaWhaNm5nZjJ5cld5eHM0R3lGdHNVeU92NQ?oc=5",
+        "pub_date": "2026-08-06 16:30",
+        "source": "바이오타임즈",
+        "summary": "바이오넥서스, 시드 투자 유치…AI 과학자 에이전트 개발 고도화&nbsp;&nbsp;바이오타임즈",
+        "categories": [
+          "투자"
+        ]
+      },
+      {
+        "title": "21조원 잭팟 터뜨린 K바이오…“기술수출만이 살길” [K바이오 수출 30조원 시대①] - 쿠키뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9aVUpOTnlPdGR2alYydk54OVNZRjZzR1RNNUV2dkd0TkptamZ4cFNzeDBKRXdUdmtha04tWFQ0WVNUMGhZbVRDY3piQVFDcXFxaUJKX05SNzZqRER3NGFhTGF6Yw?oc=5",
+        "pub_date": "2026-08-06 16:22",
+        "source": "쿠키뉴스",
+        "summary": "21조원 잭팟 터뜨린 K바이오…“기술수출만이 살길” [K바이오 수출 30조원 시대①]&nbsp;&nbsp;쿠키뉴스",
         "categories": [
           "기술이전"
+        ]
+      },
+      {
+        "title": "AI로 지역·필수의료 공백 메운다…의료기기 시장 '대전환' 기대감 - v.daum.net",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fYTViVXlUTnN3SC1vdllRUDdaOXo2d3Z1RmxFamkzbVNaTjZkaExJQjFYYms3ZUN4ZEdtN0VfbkZZb0NraTFBOGttQWFBSTA?oc=5",
+        "pub_date": "2026-08-06 14:50",
+        "source": "v.daum.net",
+        "summary": "AI로 지역·필수의료 공백 메운다…의료기기 시장 '대전환' 기대감&nbsp;&nbsp;v.daum.net",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "전북대 창업기업 홉스바이오사이언스, AI 신약개발 전환 - newsis.com",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE94aWk1X1Zhak50dDY1RVhHNFlWaXlFalgzZUFmdmtBZXNKSzBMNnVGLUZfZVNCODM2QVZ0Uk8zdVRNUGtwMEVKRmhSSFEyNWVrcVlBRlNHQU9aTC0yc3UwLdIBeEFVX3lxTE1NWDdhekkxUVV4Q2tabEZiR2JWaTZmVFVqNjlTcnM5S2F2bk5QQmtsZUZUbkZTV2g3OUd6dWZoRk5DN0VhTFdramF4aDV6bHdoU1dNUTNWaU1tTk1UQnpHVTFEN0wyaFUwRXZzaHhOaVdScjlkM3pObw?oc=5",
+        "pub_date": "2026-08-06 14:37",
+        "source": "newsis.com",
+        "summary": "전북대 창업기업 홉스바이오사이언스, AI 신약개발 전환&nbsp;&nbsp;newsis.com",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "파로스아이바이오, 중기부 AI 신약개발 과제 선정 - MEDI:GATE NEWS",
+        "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5BTGFvckZPbFcwSC1EUk9LeTU2NWVOU2lzelhsc0VYbFotUVBkOUZZUUhEYm1RUkptVmJpSDgxY2swR2JGR3JsWnM2Vm5lZFYwZGtPOXZDbw?oc=5",
+        "pub_date": "2026-08-06 13:48",
+        "source": "MEDI:GATE NEWS",
+        "summary": "파로스아이바이오, 중기부 AI 신약개발 과제 선정&nbsp;&nbsp;MEDI:GATE NEWS",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "政 'AI 기본의료 전략' 확정… 필수의료∙신약개발 분야 혁신 본격화 - 매일일보",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5lQnUxc2pOUzhBcFFPQ1l4UVh2dmQ1X3JPa3Z6RWYtVV9nOXhCYWlJWWl4Y2pWVmZzZDlCY2M1Y2VaYjZic3JMVS1NWlNJOHZtLTFZcFkwbVMtR3hEZy11eGZBU0k?oc=5",
+        "pub_date": "2026-08-06 13:18",
+        "source": "매일일보",
+        "summary": "政 'AI 기본의료 전략' 확정… 필수의료∙신약개발 분야 혁신 본격화&nbsp;&nbsp;매일일보",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "지역·필수의료 공백 AI로 메운다…정부 ‘AI 기본의료 전략’ 추진 - 청년의사",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE8tbmx5Zk52WkFsYjJubWxVNml1WXNvQzVjblhCMVVmOTNtM29CWTE1WUtBV1AtUjQxcEhoNXdVRkVPeHFqVi12SnhTRjRiZDl2bS00NDlYRmpLN2JBenZ6dUtReWtsTjdacnlyMWREVdIBc0FVX3lxTE1kT2NvVzNLSi1hMTBzeW1kc2FfZmdocUEzR25qZExVSGZHenBNQnRiakNxaGUzNXhycURQQ2pOeW12bGNIUnBteDJvRms5NUozSlcwQUxHNWJXR1dqNVdCbEZQVGZZX2V5M2FqZGt3bUV3Z2M?oc=5",
+        "pub_date": "2026-08-06 12:33",
+        "source": "청년의사",
+        "summary": "지역·필수의료 공백 AI로 메운다…정부 ‘AI 기본의료 전략’ 추진&nbsp;&nbsp;청년의사",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "정부 \"AI 신약개발 플랫폼·백만명 바이오 빅데이터 구축\" - 약사공론",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBVaHpuNnM3ZXBKeXRMWnNWTjdqTmNUWUpqbGwtTkVnMmFTQndzODR5eUhQak5ISmt3WmMzbTJ0ZENWdVVnMjg3bmtwa2JvcnZnZXhiLVBsRGZTZUVucExXYTcwaWZEandjQldpQg?oc=5",
+        "pub_date": "2026-08-06 12:00",
+        "source": "약사공론",
+        "summary": "정부 \"AI 신약개발 플랫폼·백만명 바이오 빅데이터 구축\"&nbsp;&nbsp;약사공론",
+        "categories": [
+          "AI플랫폼"
         ]
       }
     ],
     "international": [
       {
-        "title": "Insilico Medicine launches industry's first drug discovery and development Benchmark as a Service - BioSpectrum Asia",
-        "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOdmVCNEhoZnVDSDh5UXY1eXcwZWtWU2VRNEg1bkxIRjl1ZjBrV1R3d1V2eF9WT0tZZ085YTVLVndCNkx5SmJCdy03bGV1OGd4UVc4OVZlWU9QZW1HYlM4czBSTmJGTkxuYWRQcmo5bDd5bWczMmlCcWU4YjdHX1Nfd1NiMW01QVU3WWFZNzVPRzdUeElla1NuNG8tUjZJOGhzNGNFVFlrYlZFUVRpTDNySGFxRVBEVGVRTVVOcHJQLXZyUXo1dWxyRXFNbjcteTF3MDlUTkU5Q0tqSmQ5c0xuRw?oc=5",
-        "pub_date": "2026-08-02 00:23",
-        "source": "BioSpectrum Asia",
-        "summary": "Insilico Medicine launches industry's first drug discovery and development Benchmark as a Service&nbsp;&nbsp;BioSpectrum Asia",
+        "title": "AI-powered drug repurposing: Finding new uses for existing molecules - Drug Discovery News",
+        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQYjl5RzNBcDJ6blBGMFI2bm9kM1REX0VXZjdVbllEQXkxWDhIUjVCY3k3djc4RFJybE1uUzZfNFVFR2NTYWRmUzJ6S254ZjN0TG1ha3JHRGh2SFBWVGRsZThUQkpmZE05QnVUTjBzTzFFTHpBeUhDR25MSkROdDdZLUV0bG9uMzltQVVJNFkxUWhoUEkxN0U5ejJFRWdGUnZEbXpMMGFtM3l0c00?oc=5",
+        "pub_date": "2026-08-09 12:53",
+        "source": "Drug Discovery News",
+        "summary": "AI-powered drug repurposing: Finding new uses for existing molecules&nbsp;&nbsp;Drug Discovery News",
         "categories": [
           "임상"
         ]
       },
       {
-        "title": "Insilico Medicine Launches Industry’s First Drug Discovery Benchmark-as-a-Service for Frontier AI Models - Bioengineer.org",
-        "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQMjhJRWk1UlQtX0U0WTd0UmU1QXhtZkRsQzZvU1RwYU9HSlVMa2E1VE41OG5tWFU5YXNORmRhN2NFQnpTcktWNmRjcTNSUnpmTTVnUEFfYy1xVjVhWUowXzBqV29UbzV4Zk5HMTR1UzFqR0NTNmVjdzVueDAydTFMOVZYWjJPZTZZWVVnbHhuY21LWHRVdk5IMWs1Q3VMcmdwUFk3SXQyVjktMTU4c19DWUctTE9mVzltcnBZOUUwa210c2kxQ3NJ?oc=5",
-        "pub_date": "2026-08-01 23:07",
-        "source": "Bioengineer.org",
-        "summary": "Insilico Medicine Launches Industry’s First Drug Discovery Benchmark-as-a-Service for Frontier AI Models&nbsp;&nbsp;Bioengineer.org",
-        "categories": [
-          "임상"
-        ]
-      },
-      {
-        "title": "Drug Repurposing’s Next Challenge: Turning Discoveries Into Treatments - Inside Precision Medicine",
-        "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPUmViRFA5MDJWSGdFNFZSRkZPN05PSmVoSGVHT3ZkV2hkYVd6cXNRVG1kOU5Od2QwVW1zMmx0M0NMRWs5angzT2tDZURucnhfenVtTkhXYmFXUUdXMXU0cndLckxWa0g3MV9RZW5OLTg5N1FrX0Z1c0tFMk1PVEJua19jTG9RTXlqcjNqSkkzUklWR04tREotUXVwN1A0UGZYVUxRVm10YWJtTTk4dFNHVjZOcVVtN1Z5bkllQlhONG9ZeVdyMTF4RQ?oc=5",
-        "pub_date": "2026-08-01 19:50",
-        "source": "Inside Precision Medicine",
-        "summary": "Drug Repurposing’s Next Challenge: Turning Discoveries Into Treatments&nbsp;&nbsp;Inside Precision Medicine",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Routine Health Data Is Outperforming Trial Data for AI Training. The FDA Hasn’t Caught Up. - The Clinical Trial Vanguard",
-        "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQaHpLT2RDSEdzV01fZ1dPa2pHc09ObVR3Vl82VUJFSU5wanRvR3pQYnBXQlJBcWpqOGZKVmtkWE1YSUR0MUEtOU9HTkZMWFFxbHhRNXlkYmxMTS00TjR0cGhpNC01UjdjVFoyMHo1R3ljRmdfemJOMEg3VTBaa0FFWm0zVm1GRnRKR2pNclh0OUR3RF8wdWxLVExsSGExaWdBRlpnSEtUbEpQdl9LSFJRckZIOEI0eW5DX3ZaUnZ6ZkFiUXpORlRuOEtOVTZYakpwNWJmdk1ZQWphdXoyeVdz?oc=5",
-        "pub_date": "2026-08-01 16:28",
+        "title": "AI Drug Discovery Has $8.9 Billion in Hype and Zero FDA Approvals: When Does the Bill Come Due? - The Clinical Trial Vanguard",
+        "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNeS0yblVacTg2c3ZXUlRyMWZyTldPQXVtaElOVENoejBGdk0tWkVxSzZscG9YaThGUXlMTm9Zcl83NGZOSDFSZFZycXdpZ19RVDE1TzJGU1dvbEN2d1dlYk5Tc1Ixbm9sQXBlRXBSa05oaHJ1TldaU2wwWDdXcTdXUDczQ1JuV24yR1pDXzcycUJSckZ4TjluR2xuX3o1b3ZiTlNRMTNJNk1FZ1U4b2FwdkVOVEIyQUF4OWRvQ2t3dEN2SlhjTjJpUW5SNnBfMWVnZGgzWWxn?oc=5",
+        "pub_date": "2026-08-08 16:29",
         "source": "The Clinical Trial Vanguard",
-        "summary": "Routine Health Data Is Outperforming Trial Data for AI Training. The FDA Hasn’t Caught Up.&nbsp;&nbsp;The Clinical Trial Vanguard",
-        "categories": [
-          "임상",
-          "규제/허가"
-        ]
-      },
-      {
-        "title": "AI in chemogenomics: Predicting drug-target interactions at scale - Drug Discovery News",
-        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPR21xUGZzQzBtQU5DNVgxSEdGb25nZ0p6b1oybDdwUHptRkdMSm1KOWVTLXU4QW41RDZRZDNrWUhfTG5rb0F2S0JpenhrMEd5aFI4SXd2OGxBRHRGZHpURzA3RXpXMXpKeE84bkJGVEprVFVyQkRVLW5zN2F0RUpPVktfZlc1emJ6OWJKeEc5QkJmSmJxZkYwUWIyNWlaWGNib2VkQk9ZUQ?oc=5",
-        "pub_date": "2026-08-01 09:46",
-        "source": "Drug Discovery News",
-        "summary": "AI in chemogenomics: Predicting drug-target interactions at scale&nbsp;&nbsp;Drug Discovery News",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Startup to Acquisition in 2 Years: Grove AI’s Journey to Transform Clinical Trials - MedCity News",
-        "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZEZHUWZETmVuMVNMQjNCeTJBNDRmRmRoY2lhT1M5NHRDUFh3MTdfWHZITUZWYnR2OUVMOWk3NW9XMVNaYkpDUnpnZlNkdGlRazYzMVg4ME9UQlZLSmtmVUZ5cm9TdDJzSS02akpzby1IOGIwRVBFalRBeldXUWJHTnE0dGdpUDBzcVlEMWxfT3Jad2JjRkNWOVdxS2VWOVZmdVE?oc=5",
-        "pub_date": "2026-08-01 06:02",
-        "source": "MedCity News",
-        "summary": "Startup to Acquisition in 2 Years: Grove AI’s Journey to Transform Clinical Trials&nbsp;&nbsp;MedCity News",
-        "categories": [
-          "임상"
-        ]
-      },
-      {
-        "title": "Moving faster than planned, AI drug developer Accipiter Bio quietly tops up seed round with $10.5M - GeekWire",
-        "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPejZ2TmpYT09WOHVnVFJaM1JnVE5HMkpHcWN3eXpndU9qSFhCQUpWRlQySUtxeUJWa1NwSVVRM0J0Uk1uUVZ0UDR4RFp5MU51aXFTOGhXYlVhbFV6N2xJQlE0VGhwcE5DZnQzUnJhaTlDVW9uM1k0RWpQbHYzanNZSm5uREg5VmtCVXR2U0NMcExGU2wxUW15ZjFrRzM2dmxhRkFteGc4ekdHSFRxMnN4ZnBVYzB1ZktpZW9mN21RMEZfc2RqY1E?oc=5",
-        "pub_date": "2026-08-01 01:15",
-        "source": "GeekWire",
-        "summary": "Moving faster than planned, AI drug developer Accipiter Bio quietly tops up seed round with $10.5M&nbsp;&nbsp;GeekWire",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Recursion Pharmaceuticals Stock (RXRX) Opinions on AI Drug Discovery Pipeline and Recent Financial Results - Quiver Quantitative",
-        "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPLUdheTNMWEFpdFg5TXY5X2hrM1huQlM3ZU5leVlVSjVad2lmdF9mTGprd0Zpc2gzRTAwSXEzS2drdDYxWGZQYnozQm1wOFlyUEZCRzJ0YW13cUI1TDkwNTBNNFQyTE1zVGFPVTY3OUlmVFNob1gxdktRd1BiTFVGU0ZwYUhhRWhXZjY2NWVURnV0aHlsVG9CSHM5T3pjNEtWZ0R1bjk4ZjhXN1FPWHVxRjdCeURrRWlka3EzWlh4czJONUxJWkV6cWowc0doLXd0VERLaVVNRUs4bkU?oc=5",
-        "pub_date": "2026-07-31 23:08",
-        "source": "Quiver Quantitative",
-        "summary": "Recursion Pharmaceuticals Stock (RXRX) Opinions on AI Drug Discovery Pipeline and Recent Financial Results&nbsp;&nbsp;Quiver Quantitative",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Insilico Medicine launches AI drug discovery benchmarking platform - Drug Target Review",
-        "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOc1dwdklzOXdqUGg0cTVQSC1PRWU5Y3QxcnlZek1BaF9ZSTRndVUybHpJYUNWZ1kzQTZFSUFlV1JCdEVnem5WSko1OEtUSjFTeEQ2NXpjWEtpbjZTXy1PeldoLV83NWtxVXRJVFY1NTNqc0dHS2tCZzExUTNOQTNBVXFIYnk0YmlpZWZNcFJpd1VKYWo1MnJYcWdJR2dyOW1FblZJQk8tV2pBc2RiaTY5ZGxqZnlFUQ?oc=5",
-        "pub_date": "2026-07-31 21:44",
-        "source": "Drug Target Review",
-        "summary": "Insilico Medicine launches AI drug discovery benchmarking platform&nbsp;&nbsp;Drug Target Review",
-        "categories": [
-          "AI플랫폼"
-        ]
-      },
-      {
-        "title": "Insilico unveils standardized evaluation framework to validate AI-driven drug discovery models - News-Medical",
-        "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQQjJsVDYza0NzR0RQR1JlMXltVGJLTVFLd2FIcVFVc3BsYmlJUHB1Wkp0dWdMNW53T1lsZ0o3amNlMllvR2liQ0Q2MllGczdiUlVCVEt5QzA0a1NlWWpVcmQ2LXY3WWVfWl8wSVg0TlFjeWNnRnBRTzByMkJRWjdzZHU0TmZCWTlOUUpXM1A1WVVtVVZsS1AwNTZBZzI3ZENGVjZ0T1VWT2tjdTg0UFM5Z3ZzeURmTWdtc1ktOXRFX3Myd1BhVW5IM05DUHloWDlyd1h1dHY0OU9sUQ?oc=5",
-        "pub_date": "2026-07-31 11:32",
-        "source": "News-Medical",
-        "summary": "Insilico unveils standardized evaluation framework to validate AI-driven drug discovery models&nbsp;&nbsp;News-Medical",
-        "categories": [
-          "임상"
-        ]
-      },
-      {
-        "title": "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science - Insilico Medicine",
-        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPOWVfQ0hPRzZ3eGJCYmFOaFNhdVhGYjZoU193OHdSZmluNkhnOC1JYldUaW40NFpTSUF0TnlMZ1JraFhQQ0ZuX2t5VkZjbG1FdEFTS1F2eHZjdi14cllIcWNLTHpDSFdZdE56LUxrVlkwWmpORXdEdm00RktlOEJlLXZVcw?oc=5",
-        "pub_date": "2026-07-31 11:01",
-        "source": "Insilico Medicine",
-        "summary": "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science&nbsp;&nbsp;Insilico Med",
-        "categories": [
-          "임상",
-          "AI플랫폼"
-        ]
-      },
-      {
-        "title": "Medidata Launches AI Layer to Scale Clinical Intelligence Across Global Trial Portfolios - BioPharma APAC",
-        "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRWVWVXRydW9yN2wwandZS0hyOUNwd05yV0V0enVobGlzLUpxSVZ0UklkcHNyVWcyWWloWGFDeW9GSVlwNlB0M1FieklYSTA3TEhrOHcxOUhrZXlNUlljZmVKLTVMTjRkUHJYbkhrS2xEZVRkY3c5VGhVcHUtODF5cUVPX2VzaUVqbXB2Wjg1RTFvMWhXQ2U2LV8wbDZ6M2ZoM2stUlRkVG1GamVDZ3hPcVRKa1ZfTFB4dHpXUlozN0NveEY4S3lLamtyWFE?oc=5",
-        "pub_date": "2026-07-31 09:43",
-        "source": "BioPharma APAC",
-        "summary": "Medidata Launches AI Layer to Scale Clinical Intelligence Across Global Trial Portfolios&nbsp;&nbsp;BioPharma APAC",
-        "categories": [
-          "임상"
-        ]
-      },
-      {
-        "title": "GSK, Relation Therapeutics sign up to $110 million AI drug discovery deal - Reuters",
-        "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZGFvRDBGZ3RmUkRiSlFoQlAtVXFzVm9vRHlGNjZmS3BWMVJpZHUta3ZKRHhKREtLWFJ6MkJFS0l4RFJUTWRUZzh0YTV0VGtTN0h0ZlRxZmduaFlUdXJuclJxU19tZHR6aVdmdnR0Mi1kaWVoR2Z4TzdnYUcxdVpmblVNWVFxX2I4TC1MamFyaWQzeHAwNzA1U1Y5YWhwaHNIU1pMQ01mX3o2ZjFEMF9TN3cydy1CRmVpM2VBVDhBdXFSV1kxc0UyVTdCRWQxZEdhd2Frd21rQQ?oc=5",
-        "pub_date": "2026-07-31 01:17",
-        "source": "Reuters",
-        "summary": "GSK, Relation Therapeutics sign up to $110 million AI drug discovery deal&nbsp;&nbsp;Reuters",
-        "categories": [
-          "기술이전"
-        ]
-      },
-      {
-        "title": "Researchers develop AI system to accelerate tuberculosis drug discovery - Drug Target Review",
-        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMmNnZnZQZGtGYzF2dDRmakFnVzhBeExDZG05MzJncXJxd2xGV2RuQ0lscngyY2FPUm5BeXdZc0VrUGxIcnJGcEdyeXZjWHk4MGxBS3pHQ3VRV2R2U3VzS3dIcmd0eWRaQlg4ZUpueWhLT1FhMjFBUjUzZ3pGV25EX2ppVjJDM0FpMmFGRTluOUFmeXl4RUdGdm92Z0hDalV0UllFNEJrMXVLYlZBVVRfVTZvR1NfMmtPOVlKZw?oc=5",
-        "pub_date": "2026-07-30 23:39",
-        "source": "Drug Target Review",
-        "summary": "Researchers develop AI system to accelerate tuberculosis drug discovery&nbsp;&nbsp;Drug Target Review",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Eli Lilly (LLY) Joins Illumina’s Billion Cell Atlas For AI Drug Discovery - Yahoo Finance",
-        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPc0ZHRjlJT3Y0b003UzBXZjRucHVLR1d2MnlwdThaY3dmLXpRczJmQjR4MElFVm1JSEJpWmMzZnY1NmJXSWRreVRPbWhaamhoNEwzR2dyWjF0Q0JNR3puSmxGNHdMR25Tc0Y4QUJScGFIYTFLOVJLd3hFcHUtWE41M09SWks5TFdRQmtDRmgtQmlGcjA?oc=5",
-        "pub_date": "2026-07-30 23:07",
-        "source": "Yahoo Finance",
-        "summary": "Eli Lilly (LLY) Joins Illumina’s Billion Cell Atlas For AI Drug Discovery&nbsp;&nbsp;Yahoo Finance",
-        "categories": [
-          "기술이전"
-        ]
-      },
-      {
-        "title": "GSK, AI biotech Relation pen $110M biological datasets pact - Fierce Biotech",
-        "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOQmNMUnFQUjQtWmZUeVhZcnc2OHh5TElGR1ZPTVJiemFJcDViY3RNVTFZZzhsNHJYdmd3aHROYWRfUTRWZExaRUpZWnlMZF9IeDNwNDFwMkkxRnd6Nm94ajJoSVFpbVJRYVk2dW9aLXRyeWZVd3FmaFNLSk14ZmFwUGpaV0pSWnE1akh3TlQwT0JBbk0xQTQ5ZFgwTWU?oc=5",
-        "pub_date": "2026-07-30 22:46",
-        "source": "Fierce Biotech",
-        "summary": "GSK, AI biotech Relation pen $110M biological datasets pact&nbsp;&nbsp;Fierce Biotech",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "GSK partners with Relation on AI drug discovery - BioXconomy",
-        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOaGhyU1BaY3VZR1lKRFloY1JQbzlVQWFqa2tCR05WbWdBWFBlMHVrWk9FYnp6WnhqaVYtemZTbHZzYkNKa0x1NWJ1WDEtMGZwdFg5Rm44YmFkNmtYREloN0FmWmVTcW5FRHUxMDlJX25lZURvLTVsNWo1Q184bWlMR1gwTDhEMUsySFNzT3JCeU1yVzVqTjBYb3JPTQ?oc=5",
-        "pub_date": "2026-07-30 21:56",
-        "source": "BioXconomy",
-        "summary": "GSK partners with Relation on AI drug discovery&nbsp;&nbsp;BioXconomy",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Certara Teams Up with NVIDIA to Power AI Drug Discovery Platform - The Healthcare Technology Report.",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMTdKWnQ0MlAwU2YxQVF5MVI2X1V0UmlleVVfdXZ0Q2VVNTd4NVE0S0dfLV9oMTBfbGVhWGxqalVybzhobjIwN1lqVUZ0Z1Fia2RuSzJ2OENWakJ3QUNBNUNhdEt0bFdsdm1XeEE1S0VsVXZYQ2gyNTZ4aUloZktzZjlOS19DSExNMWlSeWRDVzhsM0daaDFBS2dYd2dSWG5Nal9jaUNBSDhFRGs?oc=5",
-        "pub_date": "2026-07-30 21:02",
-        "source": "The Healthcare Technology Report.",
-        "summary": "Certara Teams Up with NVIDIA to Power AI Drug Discovery Platform&nbsp;&nbsp;The Healthcare Technology Report.",
-        "categories": [
-          "AI플랫폼"
-        ]
-      },
-      {
-        "title": "Relation promises ‘transformationally different success rates’ in expanded AI pact with GSK - Endpoints News",
-        "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNV2t3MGRvNlBMOE1EbzRxclppTTFnVXVQeHNkSWJRalBYYUZ0cDNkTmxrY01mSDdKWEtFNUEtcjZ0QU5jc0N4NXp3YlAzMXdIaWhUOUszUGFnbzdOdmRVajFnWHVvT3BYMC16RWUzdHItUWlRZGlnRTNZbDhyeDRyOUJuT0RpazF1V0N3NUlOSTVwTFpaelF4N1pMRjF2aFpXRlp6RnI5REM?oc=5",
-        "pub_date": "2026-07-30 20:12",
-        "source": "Endpoints News",
-        "summary": "Relation promises ‘transformationally different success rates’ in expanded AI pact with GSK&nbsp;&nbsp;Endpoints News",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Living, growing with AI - chinadailyhk",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE83U3VmU0pfdUw1QlJPQjU1NU40TEYtRjA1U2ZDQ2xLdmFSb1h2SzFBS0UwcEd0TVpuM2M1OHRtcUdiemd0WFphZ1pDaUx2UzFNZXFDWnVjNHd5dw?oc=5",
-        "pub_date": "2026-07-30 20:02",
-        "source": "chinadailyhk",
-        "summary": "Living, growing with AI&nbsp;&nbsp;chinadailyhk",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "FDA's action plan for AI in drug development: What scientists need to know - Drug Discovery News",
-        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPSGZrOUJZY0xma3VUdG83Uml2MW4xMFJQa0RLSnpxTzdXd3ZjRF9TOWRZTnFyQ1NKZ3FUWS1ZRnFqamdESldXdXJZMm9JcXRnaFVlY0pjWFE1d0J0U20yOXZXR0tkZzRWLTBhSXJUX1RHS1lTaGRXMTZjd2owVEwxVmpiUEFSRjFEcGtzYkVDYWhhQ0I0cGRKaWxVbnFGdlJkS3Fsd2ZSRXFxeTlYZzR0bDlLcw?oc=5",
-        "pub_date": "2026-07-30 19:29",
-        "source": "Drug Discovery News",
-        "summary": "FDA's action plan for AI in drug development: What scientists need to know&nbsp;&nbsp;Drug Discovery News",
-        "categories": [
-          "임상",
-          "규제/허가"
-        ]
-      },
-      {
-        "title": "Capitalise #22 – AI has left the chat - amadeuscapital.com",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdVpub2swdmxvNXBVaE9kS2RWbnlhV3hKVmo2bzhCa2RsLXNNSVIyNEtqTGtEa0pLaFE1bTR5OWcyUUdhZmJUTG5jN0lIS1Z1SEs1dWlwcHJmdmtsc0FVSUZkaXVrVHVNd05GQmo5WktFNkc2NXlEaUtjRzlHVVFRX3NVSG94eVhNN2YzTy1n?oc=5",
-        "pub_date": "2026-07-30 18:06",
-        "source": "amadeuscapital.com",
-        "summary": "Capitalise #22 – AI has left the chat&nbsp;&nbsp;amadeuscapital.com",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Researchers: AI Can Learn to Build Quantum Circuits For Drug Molecules, Cutting Design Time by Orders of Magnitude - The Quantum Insider",
-        "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNaThRdlBkS1A3VWdSX2hPY1VuWk5FYkJHZmNTMDVaaW9wNWY3eXJZc2tVckVZS0hTZmxWRThCSzJtU2U5bC1nTkpVQmZOZkZNVjMyU0huM3I2TDlreS1TdURXd2p5aGJzaEI0b1BLTmxRVkgtYWQzYlJtTDNOMU1DTDFWWUZPdncwYzNNc3ZCMzY1bEpONjdoS3FvMXZSZXJoOFUxMVJCbzJXM3d5QnhzMGY0Q1paT2c2cVFJV3lvYWJLWUVsRXpjZVNaWkphallKWmU1QVRhTHIyRDZ3aTBaem5qNlVxbERlZUE?oc=5",
-        "pub_date": "2026-07-30 17:51",
-        "source": "The Quantum Insider",
-        "summary": "Researchers: AI Can Learn to Build Quantum Circuits For Drug Molecules, Cutting Design Time by Orders of Magnitude&nbsp;&nbsp;The Quantum Insider",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Elix and University of Vienna Aim to Advance Drug Discovery Using AI - Genetic Engineering and Biotechnology News",
-        "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOaFhGLUg1dnRGZHEwb2pkSllZQzNpNDE0T3ZfZWNpN18zUUtaOHBjV1hTZENDNmlvSk5TTVJLSXJpMVVYLXpwcy1aWXZCXzZfaTFhT0dUQmQtZkhZZFl0WGswd1RFOUYtU0xpelh5NWFLc3dyNE1fZ1RXWEt6Um1KOGNIUjhCM0NRbW9ael9PR1daX2k0RzQ4bUNTWlpZV1hacEdMVXdBcWNSUUFWQi1mTzFaWndkZ0o2SHpCYWtRSzRCTTRrYlE?oc=5",
-        "pub_date": "2026-07-30 07:29",
-        "source": "Genetic Engineering and Biotechnology News",
-        "summary": "Elix and University of Vienna Aim to Advance Drug Discovery Using AI&nbsp;&nbsp;Genetic Engineering and Biotechnology News",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "ByteDance ignites bio-AI drug race as Korea accelerates design and validation - CHOSUNBIZ - Chosunbiz",
-        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPMDNNSm9uc2FDM3M0UDVzMVZvZ2RpSVRRZmdYLWpXWWJ6aHVSUTQ1NHVvcHpxdklFbkdEeFBrMFBCUnJQRWxpT1FwekhUd3A1T253UENNWmNxQmF0OXVxaC16TF9veWlCT3I2U1N0RV9xVXpqejd3ekl6Yi03U0NIN9IBlAFBVV95cUxQQy1JeFRqZjN4T3A5QTZQc01OMDRnbWVFVlhXbVJWNnhqRnRMQWZFZ2FraGNCUmt0cFJodndGSXlMYy0zZWtpZFhUbFhZeHp0ZU9JVzRwY1JHX1RqWF9ORnJMOWFGVGUtTkFSMFp0MmZXT1hxZklDT0lNUXZESzhFSjMxd095ZTg0ampRd1FVX1YzaHdo?oc=5",
-        "pub_date": "2026-07-30 06:01",
-        "source": "Chosunbiz",
-        "summary": "ByteDance ignites bio-AI drug race as Korea accelerates design and validation - CHOSUNBIZ&nbsp;&nbsp;Chosunbiz",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Approved work: AI models in drug discovery: How AI models used to design and develop new molecules and treatments are evaluated and regulated in the UK? - UK Parliament",
-        "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOMTVjMTlrYkFVdjNJM00tNXJEdk1fMmxJRk8wd181TTJtbjdoUHlvalZ5clRlZDE0Y3Fja1BSbVNPNTk2THNIMzItV2EzWTcweGpzclVEZ2YyVV9iTUpkOTlOVGNlSlhXUFZEUlRSaTExOWFqVUNELXdwTHQ4V2hCV29CWTRNTXNCd2FrZmpCdHVlV3VCenRRbFhiSFNqVVlhWVBLZkMyM0RyR0x3MzluVUU3ckVkYlBiSTFvZm9NLURJSHlqUlN3RlhpTEVaM0d5aHZ2YU5CTjBidWJOT2VvcFZhU3psa2FFOTdGclN1QkU1cG54aWphNm5ReE1YSWFPOElwcENEQ2Q?oc=5",
-        "pub_date": "2026-07-29 22:34",
-        "source": "UK Parliament",
-        "summary": "Approved work: AI models in drug discovery: How AI models used to design and develop new molecules and treatments are evaluated and regulated in the UK?&nbsp;&nbsp;UK Parliament",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Pharmaceutical scientists are leveraging cutting-edge tech for drug discovery - WPXI",
-        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQUFpMYU1rSFduSzhDZnlyeUV1OGRVX3hmbGFQelRIZ2dHX2xKdkF4bzhCeDVKZlZyb0traDVtM1NoOV9hWlMxU2pMQ3dPQzVCNThnMHc3Tnp6TWxpS3ZIRFk4M0RUZFdMN2cyZ19aRDVtd3V1TUxwY0ZVX0dMX1ljeNIBlAFBVV95cUxQVlRMUDltcm84VDlMTHJoeTBrVTdFcHBMWk91NVIxaVNycXdxcnQ3bGJTSjRnQkJ3akRKcGxrRW5YZTJvUE56cFktQTRqcVc1X1lWMEVxMWhpWVNYRHFoTHlRYzUxVkJrMFkya3VzdUFLVEl2bDNZUjBZZm4zc0RxcF9Ob2dFQk1xSlQycEVDRnJYcjQ5?oc=5",
-        "pub_date": "2026-07-29 21:33",
-        "source": "WPXI",
-        "summary": "Pharmaceutical scientists are leveraging cutting-edge tech for drug discovery&nbsp;&nbsp;WPXI",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Clinical chatbots are taking medicine by storm. Should doctors trust them? - STAT",
-        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNempSUjVJdW1HOVFsQVE2TC1saWQ1UEthRF8zVFYxekZkLU9XcjdDMG1JaWxxcWpkcW5UWDJqeW14QloybkhzSW5rejNnMTZMWjJjYjFLRU9QWndyaksxRG5uSHpXU0tKTWx1QzVRZEE5cTFUcVZpZWZaY0NxcGxIMl8ycWJRWF8zS1g1UWdmWkMwZWpEN3VCQU4tTzJBVFdBSndCYzBJMA?oc=5",
-        "pub_date": "2026-07-29 17:33",
-        "source": "STAT",
-        "summary": "Clinical chatbots are taking medicine by storm. Should doctors trust them?&nbsp;&nbsp;STAT",
-        "categories": [
-          "임상"
-        ]
-      },
-      {
-        "title": "Sage Inks Licensing Deal with Causaly’s AI Platform Focusing on Drug Discovery Research - Genetic Engineering and Biotechnology News",
-        "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQYWdnS3dabzVHeklGeUNpbjYwUk1HaVdKOHduQVJqakdMUXdZeFdRZ0pGSUo3ZlFMcWVuTVhwZmhjUm9ZMVNLaG5qbjB0ODJkLUl1VnJzd2dTS2xsWDZuREhtdEtlNTdKemZ0SFdBU19SSUtPcl9fU3FPclBoaHF5Q2ZVbjFka1ZpdS1vS21rR2tST09oM1VHN0RsWGktZ05qY0k4WkpudVpPd0pWRVQyTTZkM1RHZHdPc2xJbzQwUFZuRkRVS2pUUg?oc=5",
-        "pub_date": "2026-07-29 17:00",
-        "source": "Genetic Engineering and Biotechnology News",
-        "summary": "Sage Inks Licensing Deal with Causaly’s AI Platform Focusing on Drug Discovery Research&nbsp;&nbsp;Genetic Engineering and Biotechnology News",
+        "summary": "AI Drug Discovery Has $8.9 Billion in Hype and Zero FDA Approvals: When Does the Bill Come Due?&nbsp;&nbsp;The Clinical Trial Vanguard",
         "categories": [
           "기술이전",
+          "임상",
+          "규제/허가"
+        ]
+      },
+      {
+        "title": "Why pharmacovigilance is moving from workflow automation to AI-assisted decision intelligence - drugdiscoverytrends.com",
+        "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQTGFqOE1MQUw2dndySUtrcFdEMExBaFd2eVhfR3BsbGlGN2ptX0JuTzEtR3JhaTBZSW03aHd6dnYwMFJJZUR4NDdjbzBYRzczQTFxaU1CZEN3UzhpNXFjVXFUem5DVnBScVVYbEtqS1VONWF5bmlleHBpaGYyN0paSW1RbXl5bmppek5jU0FBZmJ1b2o3NTk3S2tVcURQMG5TSDlnTzJHZHVqT0hhVjRSU1JucnpzUlQ2enRfNnZLd2pnaFJYa1BGS3VB?oc=5",
+        "pub_date": "2026-08-08 12:59",
+        "source": "drugdiscoverytrends.com",
+        "summary": "Why pharmacovigilance is moving from workflow automation to AI-assisted decision intelligence&nbsp;&nbsp;drugdiscoverytrends.com",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "Stanford's AI agents designed a drug Merck later built, too - venturebeat.com",
+        "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNSU9WM3dTSzVOcDRLTkRJNmxGSTMtb2NpaXQ1aEo2clFnVU5HWE9Wa1ByU0p4cXhMT1cwMHN6MkJ6ek9VWHBzc1k4UFlCc082ZHhZUlh4QU1oa0lDOFpKakptSDFwMlFYMlhhRDNWVl9meVBQdG9FeGloXzlwdm5sUTlFbXgxd3FlVUczYVMtbno2UUdFUzRWUEstcjByRmphX2xCMWhyNG5aT3ZOX3hzbGJRazRHQWtEOXpmb2t6QkQ5VmJIb3RTdUx0Mk5WaThOOWpfNjc2czRYRXZDZjB5cFQ5R2ZEdU5NcFBDbG1ONXFkUQ?oc=5",
+        "pub_date": "2026-08-08 02:05",
+        "source": "venturebeat.com",
+        "summary": "Stanford's AI agents designed a drug Merck later built, too&nbsp;&nbsp;venturebeat.com",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "Cloud-Based Drug Discovery Platform Market Expanding at 12.6% CAGR Through 2034 - Market.us Media",
+        "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBZdkQtWEh6Y2ZUTF84c1FBd0Q1cDZCa1dORUZaNUNWNUNZeWJveVQtX2w3Y1F5dFZUcUwyYU04Vko3dGpPb0JSQjJ1NmxkRms2bXpJMVYwUG5NejIybHdob1QzbmJMVjFnMVVYUmNDZVZBbDVWSVYyM2k3dUk?oc=5",
+        "pub_date": "2026-08-08 01:56",
+        "source": "Market.us Media",
+        "summary": "Cloud-Based Drug Discovery Platform Market Expanding at 12.6% CAGR Through 2034&nbsp;&nbsp;Market.us Media",
+        "categories": [
           "AI플랫폼"
         ]
       },
       {
-        "title": "Insilico Medicine Receives FDA Fast Track Designation for ISM6331, the AI-driven Pan-TEAD Inhibitor, in Advanced Mesothelioma - Insilico Medicine",
-        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOc19XMEZhaXkxZHJCQjhZc3dBbnVueF9odDFtNE4yTjkzM2x4aTNDYU5oS2dYUjl4SFJpQ253emxuZ3VOWjJ0d0dKLTRGOUQ1SkIxNHltQkR2dDhoR24yZ1RQLXgxSVBWUEhMRzBjczliekNWZzczVU9tTDAxYkJOR2haNA?oc=5",
-        "pub_date": "2026-07-29 15:06",
-        "source": "Insilico Medicine",
-        "summary": "Insilico Medicine Receives FDA Fast Track Designation for ISM6331, the AI-driven Pan-TEAD Inhibitor, in Advanced Mesothelioma&nbsp;&nbsp;Insilico Medicine",
+        "title": "Manufacturing Intelligence: Sizing Up Pharma's Biggest AI Deals, Part Two - PharmTech.com",
+        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxORm1GLWUwR2draUhDcHdZal9PWnhyQ1N4SlViNzNjZ2YwVXJXdlhRN2hjWHJUV0xHNVI0Q2V0UFVCSEtsNlhVX1BrenF2M0E5QVJtMnZhMEI0d0F1bExRS0xlaG9GQjdkREZNb200b2l3elJfY1FuRVVPMWJfdTRSM0lMbEM3VUE3U2haUjl5OE9fSG9aUTVTM25KRkY3QVpTSkZZMw?oc=5",
+        "pub_date": "2026-08-07 23:35",
+        "source": "PharmTech.com",
+        "summary": "Manufacturing Intelligence: Sizing Up Pharma's Biggest AI Deals, Part Two&nbsp;&nbsp;PharmTech.com",
         "categories": [
-          "임상",
-          "규제/허가"
+          "기술이전"
+        ]
+      },
+      {
+        "title": "AI and genetics identify WNK2 inhibitor for osteoarthritis treatment - Drug Target Review",
+        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUU9Cbk9XR3NPb2QyX2pnb0ZqelRJSzRHOWx0aEs5V0lDTmdXUUxGLXh5WDRWUlhNLV82eHBmYkVSOHpJaDh0SXNFRG9qOS1BUHhnSzBtcGhuZ2s2XzZ1MjN2R1JDRkludVRIdTNBdzZvZzVlZGozWWtHdVJja0lJVHVVZ0NibFhYOVBSd1N4aGlYTlpMRE96VWVNdDRUSlZiaGlSRlBtRW9nQkxIQXJmTE9aNzFsUlVh?oc=5",
+        "pub_date": "2026-08-07 23:09",
+        "source": "Drug Target Review",
+        "summary": "AI and genetics identify WNK2 inhibitor for osteoarthritis treatment&nbsp;&nbsp;Drug Target Review",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "AI Drug Discovery Stocks Face Numerous Threats - Nanalyze",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMVdwekI4UDZiY2R2ZFgzM2RNMDVURUhVNnZDRGlNNGxqUEgtTng0XzBXajUzWFk5azU0RUROTnFWR3FjZTA4elNZWmR3eGF2OHF1X1RuU0ZvNTc3QVc0cFYya0dLajZuN2gwb3A0QUhZZnZBYm5jeGZlbGtYSUJwQ0tmakg2ZWM?oc=5",
+        "pub_date": "2026-08-07 22:53",
+        "source": "Nanalyze",
+        "summary": "AI Drug Discovery Stocks Face Numerous Threats&nbsp;&nbsp;Nanalyze",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "AI and patents: does AI make everything obvious? - thepharmaletter.com",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPN3gzLUtkMjR6UkVDQTVaMm1pZEZxSHVBYkppc0ZVaENGUnBxY2o3Mk5VT0hDMmRfbnBGdlVxY0V5dkUza3FrWVdrVzM1dmwzcFpEam82TlEtT0VXYTdyNkxrOUluaHJLRVdoNXZDQ1VaWm5UcTNYeHpkcmUxQUVFSnBIOVcyUDg0eHJjTFQtQmd5c2Rx?oc=5",
+        "pub_date": "2026-08-07 20:54",
+        "source": "thepharmaletter.com",
+        "summary": "AI and patents: does AI make everything obvious?&nbsp;&nbsp;thepharmaletter.com",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "An AI Drug Company Named a Candidate for Dry Macular Degeneration, and the Target Is Undisclosed - Medical Daily",
+        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNOUR4M1pXUFVBMG1UYUlKeUlZdW5FUG01cmpjVllJNUhvVUZBMzdEQVVRMDJCYlg2bERJSTRjbGpyQmxnOEpMN0RiQ2taNTBDYi1uQmVxejVtNkwwUi1hNnBOVWNMU1kxZkdtaWpJelpyVGlnczNCUExzTnlyMXQzakp0Mk1lNC1hMkE?oc=5",
+        "pub_date": "2026-08-07 20:40",
+        "source": "Medical Daily",
+        "summary": "An AI Drug Company Named a Candidate for Dry Macular Degeneration, and the Target Is Undisclosed&nbsp;&nbsp;Medical Daily",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "Google defectors set up AI-based scientific method company - pharmaphorum",
+        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVGZiNXJqRmxPbFRZTmJWb20tM1hpVXJiSkhOWmxXUmNEQzB5WWd4QkFYWWxGbUJiNHhUZE9RQmwtcmh5d3ExMlhNR3BzZ2JndU1jZVlaV3M2X19EN1RYUkRnSndqNFpKTDBHbk5oWFZnOG9FU1RkZ2NhRUpSaVJLQWI1emFhaWZGdmJnUU9B?oc=5",
+        "pub_date": "2026-08-07 19:51",
+        "source": "pharmaphorum",
+        "summary": "Google defectors set up AI-based scientific method company&nbsp;&nbsp;pharmaphorum",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward - Nature",
+        "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5PRnBXREdkUzdBRklQY3VoTXdBbm96TU5uckNwS2ZhX2ZsUmc3eFdpREpSeXREZlFwZ0twM2o3RlAtajBNaEMyNWpzeTZMN2hpalBfT05xUzNzUVJkZ0t3?oc=5",
+        "pub_date": "2026-08-07 18:50",
+        "source": "Nature",
+        "summary": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward&nbsp;&nbsp;Nature",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "AI-powered hypothesis generation for drug discovery - News-Medical",
+        "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbnJ4V1l1REhvZU5vVElsSExQbXZGaUtXbEVsd3NyV295M3JpQmJia1QybGs4dDlRZDRmX2pHU3ZLNGplbU1maUlOYjl2YjM0ZXF1U290VXJlaHM0VXZ2dVBzNVNzT2JoZXhuT0VSSE1OeHNESTctOEIyM3R6ZzhwQ0Q2RnNRekxmc0oyMTVaMGlmT3JGQTRKS0dWSzZ0a0loMDd2Ul9XdG0?oc=5",
+        "pub_date": "2026-08-07 17:57",
+        "source": "News-Medical",
+        "summary": "AI-powered hypothesis generation for drug discovery&nbsp;&nbsp;News-Medical",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "Drug development has a $2 billion problem. AI is finally solving it - calcalistech.com",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9GeE9MeGd4Sl96c2hObWtybjFldzVWZm80UkJCVDNxV1dnN3RHMkVBQmtNckphdEZ6SmFYdmRLSmVUNTYzekM2QmdWTVNzS1kwcGlKVnAzV2daaThLREN2SnUyazZZMVk?oc=5",
+        "pub_date": "2026-08-07 17:32",
+        "source": "calcalistech.com",
+        "summary": "Drug development has a $2 billion problem. AI is finally solving it&nbsp;&nbsp;calcalistech.com",
+        "categories": [
+          "기술이전"
+        ]
+      },
+      {
+        "title": "How Insilico Medicine Is Using AI To Reinvent Drug Discovery - Forbes",
+        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUmt6OXFrWnkzOV9NXzNoak1zalhJbUhGUjg1TklXYTFRejBrWkxyOXhodjRURTJPSDRWc3R4OXhUXzlVeEhhbnFCUzdPRlZpYTJQZGU3ZUVZOWtxM2VNa0p5anU5VFQ4Z0hCQ0lkcHQzYklmNGs2by1xOHRxTGc3R1hTVkJDaEhVWXI5cHYxRkJVRWs4T19PZV9CS1hNazlYSDZIMmdGZldPeDZVUEppdGhxOA?oc=5",
+        "pub_date": "2026-08-07 15:07",
+        "source": "Forbes",
+        "summary": "How Insilico Medicine Is Using AI To Reinvent Drug Discovery&nbsp;&nbsp;Forbes",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "Combining genetics and AI to discover new osteoarthritis drugs - News-Medical",
+        "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPblJNaXNiaWZTMmhHd2xBbERfZ290bHZ6bU5xU2w1M1VlS01ZQi1TU1dpRkhIUFFHa1pTd2hJSGJ0bFFFaEk0R003QkRKVFg3akgyLWlwQmg5RmhnbHVRcDB6Z2NDRmlzWmhpV0dOclJPb25pbk52VldqWnRCNEJhdU1zT0dLT2prb081M1d2MFlWSDRIa2FCN0NhWktCMzFKanFnOUsxeVdXT01MNWJr?oc=5",
+        "pub_date": "2026-08-07 10:34",
+        "source": "News-Medical",
+        "summary": "Combining genetics and AI to discover new osteoarthritis drugs&nbsp;&nbsp;News-Medical",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "Odyssey embarks on AI-driven drug discovery journey with Evotec - FirstWord PHARMA",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE8wU2tvRXR3dXlRUHVHUGlhS3pjazRBN0tIckNIb01LUkwteXlaN3RXNkdfb1VsTHU2cS1RVjg4Y3ZXNW1YdWhRcXNEQkV2WTA2TDNj?oc=5",
+        "pub_date": "2026-08-07 04:16",
+        "source": "FirstWord PHARMA",
+        "summary": "Odyssey embarks on AI-driven drug discovery journey with Evotec&nbsp;&nbsp;FirstWord PHARMA",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "Schrödinger and BMS expand partnership to deploy AI for drug discovery - pharmaceutical-technology.com",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcHNJell4cVdqakVDcElIdXpJX2pLdEFuSFJ3OURlUmc4OV9sNG4zT3BpbXptMHhROEhkZU1XRlZobVBvaXpXTWpZYzY0cUlhZm9uTV92RktXelpNMk9JNVpoVVNBZDA4dzM1STRHbmZoV3k1eDl6U0RkZkJEM1ZPdEtLSUkyb096?oc=5",
+        "pub_date": "2026-08-07 02:23",
+        "source": "pharmaceutical-technology.com",
+        "summary": "Schrödinger and BMS expand partnership to deploy AI for drug discovery&nbsp;&nbsp;pharmaceutical-technology.com",
+        "categories": [
+          "기술이전"
+        ]
+      },
+      {
+        "title": "AI Disruption Reshapes Bioinformatics: Record Investment - GlobeNewswire",
+        "link": "https://news.google.com/rss/articles/CBMiswJBVV95cUxNZXV0MVF0NTlNUTFRZ2tjc2phVGhLelV2d2QwcGRTLXRzQWxMUHNoRE9qNWs5UzNQM3k3YldKODktdnZwSVY0TU1iZjBNdDFkSDlfRXlYbjVsZkhSeG45OWg4dThOUkxvRTVYUmRFVlh6Q1lJUFEyZVlTSUZWbm96NE9rUXJqb3d5QmdOeG5fdmZubnlBWXpnNE9GNFZpWnRXWWNtSFpmTGE0b3lnNDBycms3QjFPV2xYWXlWZkpyUXI5TGNJZG1yZ3ZTd09QT3d3TGtfWGJMQTdzRGNiMUJ2NHdYeGkzXzVRMEZiQTlMQ2pEcHJvNEJZOUE2eUZKUkNuT0lJVG9kbUdRcDBrY2VwSkZDaHZNQktwMkpGdHdRckJqVUZSWEVEeHhjajRYRDVnd29r?oc=5",
+        "pub_date": "2026-08-06 23:52",
+        "source": "GlobeNewswire",
+        "summary": "AI Disruption Reshapes Bioinformatics: Record Investment&nbsp;&nbsp;GlobeNewswire",
+        "categories": [
+          "투자"
+        ]
+      },
+      {
+        "title": "What Google’s AI talent exodus could mean for future drug discovery - Drug Target Review",
+        "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZ1pOT1lNV0tCSnBmUWxoc0tkNGJkcFNadGRtUjNWNjBDeTZmdjB0ZTAycmhlRzZaU2NjSnJLZUNjWnpFUFhsdVk4TXllWjE4ejFyaEJZZkcxX0owT0Z1SjZzLTNqRGpiWVY0bnJLSmpwQnhydTZSQnhCc09rb2MzTUE3YW9tSWdHWl8welVvTVVFOVJWSWVVUkhnb2tVTkRtaWVJZjQ1Z0pnNXlSTzk4WFRxMkFVZw?oc=5",
+        "pub_date": "2026-08-06 23:16",
+        "source": "Drug Target Review",
+        "summary": "What Google’s AI talent exodus could mean for future drug discovery&nbsp;&nbsp;Drug Target Review",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "BMS deploys Schrödinger's agentic AI platform across drug discovery - allsci.com",
+        "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOeWlFUkpYVzJ5SWdkR2hWQ0JreVV1T1VMTE9mRWs0NzFrY0w4WVpQMVNveGJQcGgydTV1YkxnQ2dCdFA0WEdxUkI0dFR0WmVKZUpXeTgtc09hcDB4TmFwZnVxTzg5enUxMXZXUzNtZUEzLUItQWRTTDZMRFJ5T3pic1NiYUptT0JFYTNMSm9Gd1VsUk1ZQXIzME1ENGw2RVU?oc=5",
+        "pub_date": "2026-08-06 21:44",
+        "source": "allsci.com",
+        "summary": "BMS deploys Schrödinger's agentic AI platform across drug discovery&nbsp;&nbsp;allsci.com",
+        "categories": [
+          "AI플랫폼"
+        ]
+      },
+      {
+        "title": "Clarivate Scales Agentic AI Across Cortellis to Advance Drug Development - Yahoo Finance",
+        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSHQ5UUMyQ1hfT1g2N3h4aURzbjZiLXRGUFFuZlY3MFlVVFFBamQ2NkRYamlVY0xaVkcxOTZuNWhpcklqUzJaX1lvbEc1MUJ0ZngyZjhmcHVsS2ptTjBQc1pveEpaV0NxOHpKTUFfeGdjT0F5VE9UdW9DcGd5SHl5UFdJWE4tV191S0lnN2tEX3Z5YldwSGVjb291WQ?oc=5",
+        "pub_date": "2026-08-06 17:00",
+        "source": "Yahoo Finance",
+        "summary": "Clarivate Scales Agentic AI Across Cortellis to Advance Drug Development&nbsp;&nbsp;Yahoo Finance",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "The Medtech Rebound That Wasn’t: Strip Out AI Drug Discovery And H1 2026 Funding Hit A Six-Year Low - insights.citeline.com",
+        "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxOdVZoazNoTEI0OWQyQzNIY2xlcEtjOGRPWmxjLTl2YTV2NjVwdS12QWJ2Uzd6QnFFZVd6WDMwQzZOeGtJVnRVbjI5a3JUTlBuc29KU0xhSGxaZWhxSVQ3NEhsaE9zUDVZXzJiQ1VRQmJnZkdlVFdZUERPMjhFSm5WX1NVRXpHZWNjSnVxNjlFLWxVbG1ENXFRblBsMVBsMTZmSmpXZGRCSjd5R3ZadmIzd0FYVlNPenhaVlVtRmRPYnprOGdGeTdJdnRUaHNnQ3FhN3hNZ0stMlQ1SVZWNVMtN0dGYk5JSWVsQ2F3VlRxTDdBejNQeEJNdU94NHBtbjJSbWZiUHVmSjhQTHoxR0diZ19TNU96X0o1Tmc?oc=5",
+        "pub_date": "2026-08-06 14:58",
+        "source": "insights.citeline.com",
+        "summary": "The Medtech Rebound That Wasn’t: Strip Out AI Drug Discovery And H1 2026 Funding Hit A Six-Year Low&nbsp;&nbsp;insights.citeline.com",
+        "categories": [
+          "투자"
+        ]
+      },
+      {
+        "title": "AI-designed first-in-class small-molecule inhibitor shows preclinical promise against pancreatic cancer - Bioengineer.org",
+        "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNXVfYnBqS1JYdDFrd2c3Yzd2b3paOUZQbGdrNzRkaGNlaXhSWmtEcFFlNC1idzdQVjJFVDVUNmQ5aTlpRnY0eUxmSmtrUkJhdDktbzh4TjVHY1VPNU1oOXlhRXMtLU5EQlFoZmJBZ3lrUVJWMUZLdWl4aGd3SnhJTk50U0FER0x0QS1naFZYZ0pIWDVFa1pJMmtKVGpwQnJ6QlRNaVc4RjVRd1I2R1JCQVVwSGQ0UHpGNHd4YlpFLXNkQWw1Skhn?oc=5",
+        "pub_date": "2026-08-06 07:18",
+        "source": "Bioengineer.org",
+        "summary": "AI-designed first-in-class small-molecule inhibitor shows preclinical promise against pancreatic cancer&nbsp;&nbsp;Bioengineer.org",
+        "categories": [
+          "임상"
+        ]
+      },
+      {
+        "title": "QuantHealth lands $45M for AI clinical trial simulations - MobiHealthNews",
+        "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOdFRnaXE1VjlaQTRESTdOU25ZNENybTdaSDRjOVhaRFVQbTYweDdEbnZmeVNUWlRwRDYzTU9ZQVgzdklzTTBfa3VvY2lmX20yOU03aGxRX2gxM3NnaXpDa2VyN3RVX2RZV0FManduX3dnMFUzR1Z3Qk1CYlZVVXFCT2ljVHFaVFFnSXg2LW4zckk?oc=5",
+        "pub_date": "2026-08-06 05:50",
+        "source": "MobiHealthNews",
+        "summary": "QuantHealth lands $45M for AI clinical trial simulations&nbsp;&nbsp;MobiHealthNews",
+        "categories": [
+          "임상"
+        ]
+      },
+      {
+        "title": "GenScript and Tamarind Bio Partner to Connect AI Molecular Design with Rapid Lab Validation - Yahoo Finance",
+        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNOV9IR04xLTkzeTVBbzVBdkZSUnpiajhnUzJPSUhmWUJGUGNnSUFpSHo2Z2R6Rm5YYUk4dGtrdlJfaE42d19RUEV0VDlYZHpRckRTYkxHRGZaVDNxWVVqUVd0NGRGTVp6YTd0TDE1TW5LcFFFTkJBTGJ4QW56UTljQkZBaGZrMEFnNmtLRWY4NkJjel9GWi1jVmlCS3BVdlJr?oc=5",
+        "pub_date": "2026-08-06 01:15",
+        "source": "Yahoo Finance",
+        "summary": "GenScript and Tamarind Bio Partner to Connect AI Molecular Design with Rapid Lab Validation&nbsp;&nbsp;Yahoo Finance",
+        "categories": [
+          "임상"
+        ]
+      },
+      {
+        "title": "4 of Google’s Top AI Brains Are Leaving—and Launching Their Own AI Startup - wired.com",
+        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB3Z2N1RDJQR21MdHE5UE82NWt5akZEbE1nSWotc0V5SUtiUDRLeUVuVEdabEU3TUUzM3BhaE9tOEc3Z08tcDV6MFAxZG80NkMtN0QtNWJCSm1OVzdkWXFCLTMwR29NeWdkcFFSbzJVaHNib3pyWW00?oc=5",
+        "pub_date": "2026-08-06 01:00",
+        "source": "wired.com",
+        "summary": "4 of Google’s Top AI Brains Are Leaving—and Launching Their Own AI Startup&nbsp;&nbsp;wired.com",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "Generative Biology Is Rewriting The Rules Of Drug Discovery - Forbes",
+        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNnBIOFJXTHdTNXN4RUlfc0FpQW1qZnU5VDdaTVVNcXVfQUhpY1BkcE9PMUc1N3JMcE9ITmlGTllmd1RheEpwTE9Zand4Q241SzRTNll6WVhRbmxKYlgwVUtDZmM1dW12Q2xxSUNtUWRpNGg0QkVNRXZyODNGQ0piSzFlZkR1aEN6LXhBelNSa0ZkMkdaR0FyNUVlZF9uc2hTdlNlLWJRRFpjRWowdnFlLUt3QQ?oc=5",
+        "pub_date": "2026-08-06 00:47",
+        "source": "Forbes",
+        "summary": "Generative Biology Is Rewriting The Rules Of Drug Discovery&nbsp;&nbsp;Forbes",
+        "categories": [
+          "AI플랫폼"
+        ]
+      },
+      {
+        "title": "Haut.AI’s Clinical Studies Software assists with remote, hybrid research - Drug Store News",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxORXlaYkFUOXF4a0JRY1VqeTFWSVM5QTJ3V1FFRFlGY0kyaTBQYUV3ZzZZSjVXaUNNbTFkVW85VkwzWmE5S2ZjOWUzVS1OdU9xWWxtc2o1bjltTjlMSzlSelhCX0FWRlhrWC1NWVNoNmlyUHFsSXd4UnNHZkYySHZBU3RLWFNFQUllbkZvb2p1VEdwWE1h?oc=5",
+        "pub_date": "2026-08-05 23:26",
+        "source": "Drug Store News",
+        "summary": "Haut.AI’s Clinical Studies Software assists with remote, hybrid research&nbsp;&nbsp;Drug Store News",
+        "categories": [
+          "임상"
+        ]
+      },
+      {
+        "title": "Schrödinger Announces Strategic Collaboration and Software Agreement with Bristol Myers Squibb to Deploy AI Co-Scientist Bunsen for Agentic Drug Discovery - Business Wire",
+        "link": "https://news.google.com/rss/articles/CBMitAJBVV95cUxOeTl6aHBGRkZRU05KM0VKRGVkLW1peXBOZFg2WjF1TnJtR2dqcnpHRk5FeHNtU2d3aUJWeF9MZkdsSll3SkhUeTZ5XzJHUDlDOWtBRURjQWRHNEFTMk5Ha0p2Q1BfQkczNmFZQzBiVHh0c2lkRmN4Uy1tOTJmdW1JLThGc3VURWNqUnY1TjFSOW83cmh1RC1OSnZ5VV9mOFU4dTl5UVVuZ1NwYkI2Z0tnUXZweTZSSmlUb2xIY3VHbWdTdHFWSlE5a3ZCNGxUNlF3UGhJZ2Z2YTRsNGFXSnRQTnBKbUFtSmhiU1RCQWZiWm9wLVV1elRidlNCSnZtMW14MW5fQ1NTYXUyZ3pYeXdTekFTQTNBdFM3d3VlYkdWNG5INnFJaDhvdVFTWWF3akJSSjY3Mw?oc=5",
+        "pub_date": "2026-08-05 21:30",
+        "source": "Business Wire",
+        "summary": "Schrödinger Announces Strategic Collaboration and Software Agreement with Bristol Myers Squibb to Deploy AI Co-Scientist Bunsen for Agentic Drug Discovery&nbsp;&nbsp;Business Wire",
+        "categories": [
+          "일반"
         ]
       }
     ]
