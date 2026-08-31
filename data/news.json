@@ -1,23 +1,74 @@
 {
-  "updated_at": "2026-08-30 16:12",
+  "updated_at": "2026-08-31 09:14",
   "news": {
     "domestic": [
+      {
+        "title": "DGIST·유한양행·제이인츠바이오, 바이오산언 AX 공동연구 착수 - 전자신문",
+        "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE0yaDAxRkdJaWVMaFU5WkRqNUoyOVg0eTM3WWN6V1hZYlNhUGpMSkF1dk1idndPQ09mZkllRS1iTW9aeHFQWENiTDRvay1Kdw?oc=5",
+        "pub_date": "2026-08-31 08:54",
+        "source": "전자신문",
+        "summary": "DGIST·유한양행·제이인츠바이오, 바이오산언 AX 공동연구 착수&nbsp;&nbsp;전자신문",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "AI·슈퍼컴퓨터로 신약 발굴…유한양행·제이인츠 등 맞손 - 네이트",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBhR3RBWlQtRnJtb2NNVHpFSTZoOG9jMll1WjMxVWJKd2VRYkpYd1lWU2J3a1p4VGU2TXE0T004TnJlUk8yTEh2anRNNGZMRTZtRk4wX1ltYTlSbUE2SE5rOA?oc=5",
+        "pub_date": "2026-08-31 08:32",
+        "source": "네이트",
+        "summary": "AI·슈퍼컴퓨터로 신약 발굴…유한양행·제이인츠 등 맞손&nbsp;&nbsp;네이트",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "[GBC 2026] 닥터노아바이오텍 “AI로 찾은 신약 후보, ‘실험 결과’로 판단” - 더바이오",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE84QUZla3llMzZXYVZkX0FmWXZNRm1Pdk1FUmRfUzFGLWtGLTBjTXZTMUlUaURLQmpyVHZEeE91cnpzWTRRS2stczlaUG9xQjZTd1dwNVpWMVdVVU5DLWh5YTF2NDZJdThrd3NfRdIBcEFVX3lxTE9rd3FTMkI4M1prTWlJeVp3OFFZYTIzLW53TkFQMXZYX0swR2N3NkNpejJGcWo1RW43V0xmbWFIVTBSaEdfc01OYUZrN2RYTUlDVzhRM1g3aUhGeW5iZ3dqMEpZX0g3R0dyWW42RldGZm4?oc=5",
+        "pub_date": "2026-08-31 06:20",
+        "source": "더바이오",
+        "summary": "[GBC 2026] 닥터노아바이오텍 “AI로 찾은 신약 후보, ‘실험 결과’로 판단”&nbsp;&nbsp;더바이오",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "\"싸고 빠른 임상\"? K-바이오, 기술이전 전초기지로 中 고른 까닭 - 네이트",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE50ZTBYRnF3MHZDOWd6UXF5ZldDajRZRDFPLUQ0VS1vZndVd3pUcE1zTTV3MThNWXczNUNDNHAtdUdubkR3NlpNUEd2cTRld29DQ3pV?oc=5",
+        "pub_date": "2026-08-31 06:02",
+        "source": "네이트",
+        "summary": "\"싸고 빠른 임상\"? K-바이오, 기술이전 전초기지로 中 고른 까닭&nbsp;&nbsp;네이트",
+        "categories": [
+          "기술이전",
+          "임상"
+        ]
+      },
+      {
+        "title": "제이인츠, 유한양행-대학연구소와 AI 신약 연구 - 동아일보",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1sV3dDZkpOQURKWGl4bzRYcXU2RFlqNnNEUmd1OUJES3A5NFZ0X3pzLXdLMWoxY3BGdnRDcnFBU1hXOURLb0hTTGMxa3hCdmJhdW9jdDFSbWc4Uk04eHcweFBLQVNSaExVNzNmaUxIaHdDNGRvNVHSAWZBVV95cUxOYW44MFpfdzR5d2puekZyV01ZbEQ3QlZIdm5EeFUzZExQU1VTN2JkcmhEaGRlMUlhRkwxZFFyNTAwSEpYanZuSzdMOVNGRFJOMWd3YU5mVXBma2ItODVEY1EwTFNKNXc?oc=5",
+        "pub_date": "2026-08-31 00:30",
+        "source": "동아일보",
+        "summary": "제이인츠, 유한양행-대학연구소와 AI 신약 연구&nbsp;&nbsp;동아일보",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "“AI야, 신약 설계해줘”... KAIST, 알파폴드3 넘보는 ‘소버린 바이오 AI’ K-Fold 공개 - 특허뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFByUFltNVpUcnQ0OE13LXlCUXJVS1c3TGJzWDJQaEpaZC1xMzdWSnFhNUZPbkdBUlV5ZW1qT3ZRNDR6SGlmWHpVcQ?oc=5",
+        "pub_date": "2026-08-30 16:52",
+        "source": "특허뉴스",
+        "summary": "“AI야, 신약 설계해줘”... KAIST, 알파폴드3 넘보는 ‘소버린 바이오 AI’ K-Fold 공개&nbsp;&nbsp;특허뉴스",
+        "categories": [
+          "일반"
+        ]
+      },
       {
         "title": "\"AI 기반 신약 개발\"…국책과제 맡게 된 '이 회사' - 뉴시스",
         "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4wSV9GeXNKTTdFQ2JZdV9sNW9lSkNQejBnNnh2RDVWcngyb3ZMTXBDQTVzeUhJbDd2aUtoa1AwYVdGVU9jam1neV9JTDVLbkpPaGNJYkZvWEtlRlRnbFEtRtIBeEFVX3lxTE1GMmxnUHU2dnhZZFNJYVRtSFYtaXZpd1JhVVB0YWhjaUJPdDl2amMtaERCdmxLbk5QVHRsTjA1YW9ENnp5ZFlpby11VnFKam1KTjgzX01WZzVzR2RDdnA5czR6RVczUTZkMnNVbkY0N0k4ZE55MERYTQ?oc=5",
         "pub_date": "2026-08-30 13:01",
         "source": "뉴시스",
         "summary": "\"AI 기반 신약 개발\"…국책과제 맡게 된 '이 회사'&nbsp;&nbsp;뉴시스",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "핀셋+대웅제약연구본부 대대적 개편…신약개발 효율 극대화 방점 - Naver Blog",
-        "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOcmc5OEVYTlRCYUtCb2U5UkRGSF9nQXJTVHpyMHpGNmNaYWhmWjdYdThrdjAxZzF1akN2YkpxcndOS1dUUWFGQzdzY3o1OWVoV1V1RGUxaU5sZWRRVlV3bDFQMTZtOFZZa2k3UzEyeER0U05QalRhY1UtZzFOaXVDUE8yLXNmR1RPX3ozamhPOA?oc=5",
-        "pub_date": "2026-08-30 07:49",
-        "source": "Naver Blog",
-        "summary": "핀셋+대웅제약연구본부 대대적 개편…신약개발 효율 극대화 방점&nbsp;&nbsp;Naver Blog",
         "categories": [
           "일반"
         ]
@@ -38,6 +89,16 @@
         "pub_date": "2026-08-28 17:09",
         "source": "지디넷코리아",
         "summary": "신약개발 'K-폴드' 소스코드 깃허브에 9월 8일 공개&nbsp;&nbsp;지디넷코리아",
+        "categories": [
+          "일반"
+        ]
+      },
+      {
+        "title": "“항생제 내성균 잡는다”…세니젠, 엔도라이신 신약 개발 본격화 - 조선비즈 - Chosunbiz",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQVzdvbElFaDZTZ0d1Z2t3bVVxZ1gzbTNKamdaOU5VTXN2Zm9Ob0dDTmpOOHU5anViWFZWZ2JQYUU3VzFmZGRyeW1VajlVUGZvRk1SajBWLXhBWlA5N25UZUtCTDR0V1FwcnlFTjBaYk9Yd3Qwc2hvRlZjY0d3YjhGcmdjRERsWTDSAZsBQVVfeXFMT09rQTdJdnJjbk9BNzlZOWotZE1MTDVVSnI5STREY2VyRTVGSHFPeDE4ZWc0WC1zME9SZWZHVEcwbGNCcEpNYTAxTm9zOTVrTi1Fbkh0MF80X0FKTEstZnZLNVAyREJWWGFveDU5LVVwRXdfT3ZMSmxJNjRBNDNLWkVuOGI3eFFkWHQ4ZHktOUwtNUY4ck9CcXhZV2s?oc=5",
+        "pub_date": "2026-08-28 15:50",
+        "source": "Chosunbiz",
+        "summary": "“항생제 내성균 잡는다”…세니젠, 엔도라이신 신약 개발 본격화 - 조선비즈&nbsp;&nbsp;Chosunbiz",
         "categories": [
           "일반"
         ]
@@ -94,7 +155,7 @@
       },
       {
         "title": "[제약 레이더] 프로티나, 美 트위스트와 AI 항체 검증 협력…비보존제약, 어나프라주 中 공급 계약 - 더밸류뉴스",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAwUEVoSEMzSXFXdUowRV9Eb2pXT3phVDBxS29jMHdrSm9zeUxkQXB2ZmZkUDQ5ZV9YQXVKZF9kT2N3TXpjbmVFSWNJZXg4X21mcFU4?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9pcnVTcXlHWVhpenNzdEVJUUJzcWhYeXFUSWw3VXptYjllb0lzbmh3V09HdUZhNXROVXZoYUJmLUUxd0ZxVHVqQ3BTZ0RJLUpUMmhReA?oc=5",
         "pub_date": "2026-08-28 10:04",
         "source": "더밸류뉴스",
         "summary": "[제약 레이더] 프로티나, 美 트위스트와 AI 항체 검증 협력…비보존제약, 어나프라주 中 공급 계약&nbsp;&nbsp;더밸류뉴스",
@@ -153,16 +214,6 @@
         ]
       },
       {
-        "title": "디앤디파마텍, 중기부 AI 기반 신약개발 국책과제 선정 - 아시아경제",
-        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9QendvTTVoMGpCSDhJTzg0aExmb25lendNSTEwNDlyWnJjQWtJY0VOeVRXa3laX0ZFcmFGZzVTeXFmNkZyMHZFMW1WR3p3TnRfN0pTSUNlRTllUk1yWkJ2NjlR?oc=5",
-        "pub_date": "2026-08-28 09:26",
-        "source": "아시아경제",
-        "summary": "디앤디파마텍, 중기부 AI 기반 신약개발 국책과제 선정&nbsp;&nbsp;아시아경제",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
         "title": "“신약 설계해줘”…KAIST, 소버린 바이오 AI ‘K-Fold’ 개발 - 더테크",
         "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5BMW5UaUFuNXh5UmE2ZjlvNXVsSlduUVBqOXh1NUYzWFpqb0EwUVo2TTVURWpkR2lXb2tTWGlLSGFad0lJWUFyYThWb05jdm4yRlNoanVzMUV6dUZKMnVqSGJQNA?oc=5",
         "pub_date": "2026-08-28 08:51",
@@ -183,11 +234,11 @@
         ]
       },
       {
-        "title": "신약 개발 속도 낸다…국내 독자 기술 AI 모델 나왔다 [지금은 과학] - v.daum.net",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5VZEFnWVByMmhCR1JUWER4OTBfZlhUY3czOFZBM2RBcl9zVU80MWYwWnFsLTJSSVYtblcwbVozR2dHX0pGTjR0LUdMd3AzYU0?oc=5",
-        "pub_date": "2026-08-28 08:08",
-        "source": "v.daum.net",
-        "summary": "신약 개발 속도 낸다…국내 독자 기술 AI 모델 나왔다 [지금은 과학]&nbsp;&nbsp;v.daum.net",
+        "title": "신약 개발 속도 낸다…국내 독자 기술 AI 모델 나왔다 [지금은 과학] - 아이뉴스24",
+        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1pS01pRlc3LWpESjR2M3FvMmdBRk02ZE1vWTF5T2xadXNXU3BKUG10WUlUSTJsZy1fS0NNZ1BTaUtpbFJnTUVSV3pwVQ?oc=5",
+        "pub_date": "2026-08-28 08:06",
+        "source": "아이뉴스24",
+        "summary": "신약 개발 속도 낸다…국내 독자 기술 AI 모델 나왔다 [지금은 과학]&nbsp;&nbsp;아이뉴스24",
         "categories": [
           "일반"
         ]
@@ -198,26 +249,6 @@
         "pub_date": "2026-08-28 00:05",
         "source": "팜뉴스",
         "summary": "실험 로봇 vs 가상 컴퓨터, 한일 AI 신약 개발 대전 개막&nbsp;&nbsp;팜뉴스",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "한국신약개발연구조합 산하 마이크로니들융합연구회,2026년도 제2회 세미나 성료 - 한국의약통신",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE81dkppVk5taGVOS0lKd01NZS1Bc1R1MWdvWkkwNHJHNGMyckZRVU1ha2ZoNkhLUkpmV0U0OUFYVTE3WXEzMVdDU3Vta1RuaFU1Yk5YX0Ywcng5WjFhbHlUTXdrNUp1VDlGWkZR?oc=5",
-        "pub_date": "2026-08-27 20:02",
-        "source": "한국의약통신",
-        "summary": "한국신약개발연구조합 산하 마이크로니들융합연구회,2026년도 제2회 세미나 성료&nbsp;&nbsp;한국의약통신",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "프로티나, 美 트위스트바이오사이언스와 AI 신약개발 검증 MOU 체결 - 핀포인트뉴스",
-        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBNV045eWFzZEJEXzRCLS1MNHpoRVppNGctaUZBeEd6czRHXzV6dUdVaTRnT0p5OExneFM2LUNNZFNwTzB5Mk1hb3Vlb3o5Tm1HaVpSbTNVRjUyRHZvdkkzYkN4dWVsVmZiSGJQd0poTF9Fa1HSAXdBVV95cUxPWk1GQUVuUVZLTVpjeGZldTlWVEhhSENiV2FlWFRMUlcyd1dqZHpEX3hNbXdEcDNJalduTi1XcjhEQVdldVBHU2s4emlHOHU2dWJIUTlJQnZXYVRUaHBqZEtsWjdLa21zWHFqRy1PV1ZjS0dNbjNxYw?oc=5",
-        "pub_date": "2026-08-27 18:01",
-        "source": "핀포인트뉴스",
-        "summary": "프로티나, 美 트위스트바이오사이언스와 AI 신약개발 검증 MOU 체결&nbsp;&nbsp;핀포인트뉴스",
         "categories": [
           "일반"
         ]
@@ -253,16 +284,6 @@
         ]
       },
       {
-        "title": "프로티나, 美 트위스트와 AI 항체 검증 협력…대규모 실험 검증 사업 확대 - 디지틀조선일보",
-        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQX2Uzb2FPdGQyQ3J2dFJONE5sTkM0dGpUSE94ZzJURC16LVlJMzI3cFFGWUllOGkzX2xmX2IzVzQya2gyNTB1T3NzUUFEMFdpOFFBN1lySXd0bHlFWVVHNkdnVUJpbTQ4cDRpM3dXVldQT21CSy1ZakxidERtQ3NoczI3Y2dFaG_SAXtBVV95cUxPUXo1RzgyS3E0RENVcFZxYnpza3pqSGhDbVFLenRQSTY2WVkyd0djcEtGVVJBRXBQMEp0bTJSZDczZFBuVGN4M2NFejdJNy1jRVM1OEZBMW1RV25QNVlKemFxLTkybHBId3pjWWR1OU1TSU51QnFlRXRsc1U?oc=5",
-        "pub_date": "2026-08-27 10:28",
-        "source": "디지틀조선일보",
-        "summary": "프로티나, 美 트위스트와 AI 항체 검증 협력…대규모 실험 검증 사업 확대&nbsp;&nbsp;디지틀조선일보",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
         "title": "프로티나, 美 트위스트바이오사이언스와 AI 항체 신약개발 업무협약 체결 - 팜뉴스",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE15N2hxVnliSWNpdWNwLVJnNXN2bE4tM1BwRkpMaVg1MUl3YklJRHlPN09mMmpBcjM4eFJxWUQ3MlJNb0pNSnBIYkhzSDd1bEN1Z1lZamc0Sk8xNXAxQXNlQ242SXdRSFdRTVUxcQ?oc=5",
         "pub_date": "2026-08-27 10:20",
@@ -281,29 +302,19 @@
         "categories": [
           "일반"
         ]
-      },
-      {
-        "title": "프로티나, 美 트위스트바이오사이언스와 AI 신약 개발 검증 협력 - 네이트",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBVb21QZnZpWkIxaW42a3NQMzFzNU45TktrQ2tYelVnU2V6M1o3TDhGTzQyR1VmX3JxakJGaWNnQXJEc2ZabTlKYVBsNFpqWERzZG5R?oc=5",
-        "pub_date": "2026-08-27 09:10",
-        "source": "네이트",
-        "summary": "프로티나, 美 트위스트바이오사이언스와 AI 신약 개발 검증 협력&nbsp;&nbsp;네이트",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "프로티나, 美 트위스트와 AI 신약개발 MOU 체결 \"대규모 실험 검증 협력\" - 파이낸스스코프",
-        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5BNlhqX2ZOX0lHWWZMcmgyTUotX2t6MXpzRmtENFVmeE5xaTVnY0R3MWlubFZfSmJ1aVg1aFQ1WGFGeDFaTkc1Ql9RNEtTdWV3RWJnSkd6THVpUmhsS3RDWktQMVkyc3FOaFE?oc=5",
-        "pub_date": "2026-08-27 08:53",
-        "source": "파이낸스스코프",
-        "summary": "프로티나, 美 트위스트와 AI 신약개발 MOU 체결 \"대규모 실험 검증 협력\"&nbsp;&nbsp;파이낸스스코프",
-        "categories": [
-          "일반"
-        ]
       }
     ],
     "international": [
+      {
+        "title": "HiRO and Differentia Join Forces to Advance AI-Powered Clinical Trial Simulation and Digital Twins - BioPharma APAC",
+        "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxORzYyZWd5Q2M2d3JsTlpzNDNYOHZWdzFDQXJtWHgxOTZjb203QzNYRkdUT3pJRmh3TTZZeVRlQUcxd2Y1cDBjWURzdEw5TUNGaGF0V19CVFR5RnhnbllVUEo2empkck9MV3owbG9RbGl3WC04ZzdobHVrdHVRN0l4WTNjZnZXaFRtaXE5aXNYenJlXzlGZWYyNlpOVHNoS1NTVUdxMnJTZ3huQlduSHdxLW9IODU4LTBwbkJmNk5xYmlVM0JfUmtkaFZZTGZ5NkI4cndzM2JvYlFvZmc?oc=5",
+        "pub_date": "2026-08-31 03:33",
+        "source": "BioPharma APAC",
+        "summary": "HiRO and Differentia Join Forces to Advance AI-Powered Clinical Trial Simulation and Digital Twins&nbsp;&nbsp;BioPharma APAC",
+        "categories": [
+          "임상"
+        ]
+      },
       {
         "title": "Carterra enables Anthropic's autonomous AI Protein Design Study via its HT-SPR Binding Platforms - SelectScience",
         "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOOVJLNjBWQzVCcDJTYU9pV2xlZDJRSGhPWTh4MHByaTlCeXFpeDM4ekNxYkR0aXd5bm56OEZ3ZlRJb1ZJdGRBMTFzeFoxOTdPM2o4bXdidGU2RWxHSVl0b3AxczBPcS1RUnVaSmgtYWVnWmxKNWNWNVlhN0d5UmJ5dG5rVjZnSk42Wm13WndjeUNPSU5idkxnQktkZmZZa21VdW5hNmZ5OE1vNmFHelFLY0ZQUDVUeUgxZ2lMSmRhMnFJdWtJa2x5SktkZVVXVVE?oc=5",
@@ -337,26 +348,6 @@
         ]
       },
       {
-        "title": "UToledo’s Northwest Ohio Cancer Research Institute Aims to Speed Up Cancer Breakthroughs - UToledo News",
-        "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNUmZSRy12TVZab3ZzcGxMZUxELWxwXy1yZ1AzV1lPYXBYSExQaHB1b29NUkpadmtKVVlLN1Q4WFluMTNpNXpfZE5oUVdMZHRMVS0xd0RMY0dTeGJDdHVCeElSOXhoRWNRRmJMUnd5ZGVoZWNYVl9zNjItRDJjRG93eGlKaUk3LVZPZFREZ3BFaFVKd2Jmam9qLXNlbE1nY292ZzMxZEhiRG5WaC1LZ1BXeEtNWFFiMnZ5TTgydEh0dFV2eEFHYWstbWdCQWZaUQ?oc=5",
-        "pub_date": "2026-08-28 22:12",
-        "source": "UToledo News",
-        "summary": "UToledo’s Northwest Ohio Cancer Research Institute Aims to Speed Up Cancer Breakthroughs&nbsp;&nbsp;UToledo News",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Tigermed Announces 2026 Interim Results - TradingView",
-        "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOazFvZ3Y2NzhwS1ppVExLNUE0YUQxc1RiWVItN29vdXA5b2lxYkFCR29jcXRsNHFCOHY0WTloOTAwalJMam1RSlVPVU5fdVh4UXl3Y0FzRHRTR1NDSXppOXFPazlKYUNUc29EVTRFdlRuQWhuNmpyejhCdGY5ZHp1SkxwZkJud2JJeXl2eHVxbS1aUi1uT2h1cUFsdDRQZjhXQkE?oc=5",
-        "pub_date": "2026-08-28 19:03",
-        "source": "TradingView",
-        "summary": "Tigermed Announces 2026 Interim Results&nbsp;&nbsp;TradingView",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
         "title": "Monod Bio, SignalChem Biotech Ink Licensing Deal to Advance AI-Designed Protein Technologies - BioPharma APAC",
         "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPWllhOFVBaTRUczB0bEFLMGE1X3h4dlNHWWpVZEdqdzE5Ni1vcjZodzMtazFWRmhBX0paZnZGN0pMUjlFNnYybVlUZlJTOWpCQ1lON3RaZzd1VEczNC0wUmFXWUROUzNLZ01HZl9QTGYtdm1Dd2YyX096R2UyalpJdC15cTByeXNKSFJxMUpSaG1nWmtnTnBRZnZONUowdmdKVlZKRDhJM0pjaWE2cS0zUW9FNVlhZXZfd29ZMGhfNkVXZmpsYV9UQ0RYLVJCRTJD?oc=5",
         "pub_date": "2026-08-28 17:38",
@@ -368,22 +359,12 @@
       },
       {
         "title": "KAIST unveils homegrown AI model for predicting protein structures, drug binding - The Korea Times",
-        "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOcElUbUV0U3BjVlJwaG9oSGJZME1VVUV2M1g5R1J4STQyX3liNmdQNjRsQ0xDVl9HLUJPLUxVand5dTR4b1RkTlVNc0czWk5FWHpFUnM3MDhEbUhWTTVjZ1hvTC1FblBQel8zcnZkVzdPMU9KaGFOSnhQYnpyQUVkX3NVVTdHXzhRWXhnc01ITnZVWHltbGJDM3dOSDVublNwLXJ2WVh0aDRBNmVfZXJCdkpmM3FBSndlX0RFSUV6NFYxM0hyTDU2QzBoRmPSAcwBQVVfeXFMTnBJVG1FdFNwY1ZScGhvaEhiWTBNVVVFdjNYOUdSeEk0Ml95YjZnUDY0bENMQ1ZfRy1CTy1MVWp3eXU0eG9UZE5VTXNHM1pORVh6RVJzNzA4RG1IVk01Y2dYb0wtRW5QUHpfM3J2ZFc3TzFPSmhhTkp4UGJ6ckFFZF9zVVU3R184UVl4Z3NNSE52VVh5bWxiQzN3Tkg1bm5TcC1ydllYdGg0QTZlX2VyQnZKZjNxQUp3ZV9ERUlFejRWMTNIckw1NkMwaEZj?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQdVhITlk0Nld5WU8zempqbmxEWFhjdG9Sc2Q1dEFPQUxFNWdDZkZPcGhKTFUwWmo2UzB0NmtXakt5RVNyd3YtdnFwTzlsTWFpYzVRZExQQlFzcTc3Y0RwVUxiLVNnUEJpeTdPd2tNdE90STRwdUU3TExhU0tmS1hZR3FKMDRCdE5mX3pYR3ZvdHZ3MVpsYnJRc1JiSzJMLV8yVGt2ZWhkc2FqM2YtU1NQQmNKUG9NR3ZUc3dCMzNlSlYxMXVKUGJwaDBmR05udXBUWFhFMHpR0gHbAUFVX3lxTE5qVlNYRTRMV2pOaDFzeXkxMlA1V3NpSzVSeFVXcV8yeE5nSHdfX1VOZUhSOGsyZnEtUFdWYS1ycXNSZmU3eG5fa0tWYUVuYXJuM2VvMnBoNTlkT1Y1Y1VmakFrTDdtT1lEeFRlWHR0Q2RRMjM5NWktNnhzOVRETzdiTnJHQ1V0Mzh5S0xEMHFRZFJGOXVjMXNMNXg5TVpHUXk3OWNqOGoyazhGX1RRTk8wOEtYQ20yd2N3eGRoRk4tcGZXZ1hXSjdmUEZjQ2RQRHpEbFdLdU1heGJYRQ?oc=5",
         "pub_date": "2026-08-28 13:37",
         "source": "The Korea Times",
         "summary": "KAIST unveils homegrown AI model for predicting protein structures, drug binding&nbsp;&nbsp;The Korea Times",
         "categories": [
           "임상"
-        ]
-      },
-      {
-        "title": "KAIST Unveils K-Fold, a Bio AI Model That Outperforms Google's AlphaFold3 - finance.biggo.com",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9pOE1ydmloTS1qRmFYREtYczNlZjFKVmlXSVV1M2dHOWFYT3BqVVZqY19xdVg0dUdpdGtyb2gtZ0swU2RNaVlxdmhxdUp2ajQ1T1ExZDNDcWN0U1E2anNLcldHRFRvR3NvR1VKRzZBMW40emlwYUE?oc=5",
-        "pub_date": "2026-08-28 09:35",
-        "source": "finance.biggo.com",
-        "summary": "KAIST Unveils K-Fold, a Bio AI Model That Outperforms Google's AlphaFold3&nbsp;&nbsp;finance.biggo.com",
-        "categories": [
-          "일반"
         ]
       },
       {
@@ -397,11 +378,11 @@
         ]
       },
       {
-        "title": "Lattice CEO Sarah Franklin explains how Pando acquisition boosts its AI tools - qz.com",
-        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9kZEF0S2tFT0c4Sk0zUm51bEJ4Ylc2T1l6MXZuQm1uWXFBYjNvZ3pxTFlEWFhVMW9acS1GMjF5NGZIeEZLRElnVTdzNmlubWl1N3gtSGtkM0NNaWV2TDBzOHljQ0RTakl5SUtmb0FOeTQ3a0ZZd2R6Z3pkOA?oc=5",
-        "pub_date": "2026-08-28 06:30",
-        "source": "qz.com",
-        "summary": "Lattice CEO Sarah Franklin explains how Pando acquisition boosts its AI tools&nbsp;&nbsp;qz.com",
+        "title": "Research into protein interactions sheds new light on causes of autism - Fierce Biotech",
+        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPMWJ0LVhHSzVXdko0VURzTDhUQXd0U2ItSnV3OU5wT2hILS1mZ240M1dQYTVwVm4yVl9GUHV4MDFHVGFKbVBkZkNIdzJ1VmwwMkNJQW1xdmh1a25aRHBCR2FCUE5KQ2xlRTgycXZTSVllZDB2MzN0clZfZ1RWTGk2a1hCYl9zUGFLNjFlcVQ5WGJnVzBNTzVocFZwN203QzZYcy1MMw?oc=5",
+        "pub_date": "2026-08-28 03:00",
+        "source": "Fierce Biotech",
+        "summary": "Research into protein interactions sheds new light on causes of autism&nbsp;&nbsp;Fierce Biotech",
         "categories": [
           "일반"
         ]
@@ -437,21 +418,31 @@
         ]
       },
       {
-        "title": "Pharma's Next AI Problem Is Authority - PharmTech.com",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8xT0tzdnBTWnhqSnVTZG1HZnZncXFWdnVSOVd3dG5wY2NRX182VFJFeWJPQUw1bzBEN0s2NnRDbzJlYWRDRXd5a0NmR2JqVzVIN2dSZ3UzLXpZSGJvVHFmWjVYUmhBSTRnTU5tRlVJMVFGa1ZtYnc?oc=5",
-        "pub_date": "2026-08-27 21:36",
-        "source": "PharmTech.com",
-        "summary": "Pharma's Next AI Problem Is Authority&nbsp;&nbsp;PharmTech.com",
+        "title": "Huawei plans for more AI pharma tie-ups, says healthcare president - Reuters",
+        "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYWx0cV9fZjRkYWdtNjJBaXBXS3ZSX3pIcU1qZ3A4enZNMm1DbEltc2xBZTIxbDM3aFp5TWllZzR0ZzBqRkVqNWY2ajg2dDNEVGxSc0VmOVc2UHBIN3doX3VVTDNGRE1Sc2RWSHFRdkMtRWt3VmpNWDJHOGR4OUZRM0VoYWdLbFp1am1mZGtMNlNLaV9BVHQ4bG1QdE5aLVJiQjdEWGREWHMxOHpFWDhPX3ZBZzk?oc=5",
+        "pub_date": "2026-08-27 22:57",
+        "source": "Reuters",
+        "summary": "Huawei plans for more AI pharma tie-ups, says healthcare president&nbsp;&nbsp;Reuters",
         "categories": [
           "일반"
         ]
       },
       {
-        "title": "Novo Nordisk Selects AWS as Strategic AI Partner for Drug Discovery - The Healthcare Technology Report.",
-        "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQR0ZJVWgwWFkzUzFyYVB2ek95WGpvaERXN3lMTm8yc1ZTbkVGamRvT3lJQ2tkSjlndUVDMUNEbjJ2QmVGZkVpcmEzZTQyQ09QbG03X3E3THZjc2dKNlBnRHJjVVhXdktOUkNXc3dEVzNCamNkaXUzQk5wNmRGZC1VMmNWYVVMZHh4QXA3XzkwTC1kektBNFdjcmJ5YnhXNnozRVFQM1RTazZUQzNRRER3?oc=5",
-        "pub_date": "2026-08-27 21:02",
-        "source": "The Healthcare Technology Report.",
-        "summary": "Novo Nordisk Selects AWS as Strategic AI Partner for Drug Discovery&nbsp;&nbsp;The Healthcare Technology Report.",
+        "title": "After some ‘tough years,’ Frontier’s CEO is ramping up ambitions for precision med platform - Fierce Biotech",
+        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdEJZZXdySjE2MlpDVjN4WGVNU2s5QjNWWjlIMXhGNXAxSHVkSzY0R0pyS1V3M3lKSG9XcVpDU0dFeUhrRUgtODZaaW5jVE1kelN4R0NKV0E5OUZGS3gzaDE3dkxmZWs3Vm5pZldwQjZWcHU5ZVA4THlQSV9tUm5ub3ZoYlRHWE44ZGNJb0dlMnVsWVdHZFFEVC1IdmtHcW5jR0UzeTZScDRzdm8?oc=5",
+        "pub_date": "2026-08-27 22:50",
+        "source": "Fierce Biotech",
+        "summary": "After some ‘tough years,’ Frontier’s CEO is ramping up ambitions for precision med platform&nbsp;&nbsp;Fierce Biotech",
+        "categories": [
+          "AI플랫폼"
+        ]
+      },
+      {
+        "title": "Pharma's Next AI Problem Is Authority - PharmTech.com",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8xT0tzdnBTWnhqSnVTZG1HZnZncXFWdnVSOVd3dG5wY2NRX182VFJFeWJPQUw1bzBEN0s2NnRDbzJlYWRDRXd5a0NmR2JqVzVIN2dSZ3UzLXpZSGJvVHFmWjVYUmhBSTRnTU5tRlVJMVFGa1ZtYnc?oc=5",
+        "pub_date": "2026-08-27 21:36",
+        "source": "PharmTech.com",
+        "summary": "Pharma's Next AI Problem Is Authority&nbsp;&nbsp;PharmTech.com",
         "categories": [
           "일반"
         ]
@@ -557,18 +548,6 @@
         ]
       },
       {
-        "title": "Faro raises $37M Series B to trim clinical trial timelines with AI - Dealroom",
-        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTmFTNDVDbXVZT0FMa1BVWWxBVnRvenBvcXlfeHl2Y3JFQm5ONUp5T01TVVdWcDF6MzJWbTdacUJldG9RelgyM21fa04wNG00Q3FUOTU2cmZteDl0VTVGWlNNMzVSVV9yOUxPVURoYkFPcGdmanJ1UVhjR3JURU5BeTR4dDNIWmhaWkxRdUJiNkVRYlhiRE1CckM3bHNpYWVn?oc=5",
-        "pub_date": "2026-08-26 22:17",
-        "source": "Dealroom",
-        "summary": "Faro raises $37M Series B to trim clinical trial timelines with AI&nbsp;&nbsp;Dealroom",
-        "categories": [
-          "기술이전",
-          "임상",
-          "투자"
-        ]
-      },
-      {
         "title": "AI for early-phase clinical trials: from hype to proof of concept - ESMO Daily Reporter",
         "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUFlQUXl0R1lPZ085eTV1V2otRTR5UEdtWjhKQnhSQURpMHhoQl96azQtQ3otdjBBU3g0a2d2ZFpkdlRYMFVBbUNCU01mLW1ONG1jZnlWYnA4aTIwdk8tU01PMWdDWF8wUENQdDd4T2JRQ19VYnpFVUNpdVN6LTVPNUlwUHdsOE41eTMwQkU1OGR4OGFjNWFPcmJvcW5LSU4tbDg5RkNzN3lYZmlGXy1PU0xn?oc=5",
         "pub_date": "2026-08-26 16:00",
@@ -606,6 +585,26 @@
         "summary": "How generative AI improves hit identification in drug discovery&nbsp;&nbsp;News-Medical",
         "categories": [
           "AI플랫폼"
+        ]
+      },
+      {
+        "title": "AI Drug Discovery Leaders Gain a Competitive Edge with Telesis Bio’s Gibson SOLA® Platform, Generating Development Candidates Faster - BioSpace",
+        "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOUGVjZXBpUzlVN05FOW1ka3NkbjlfaGNjX0szVGZPc0dsRm04VXVQQmFoTHR6QTJvYWVMMHo4OWZVdTNaNEprWXJJYXg2bjZQMVZ3N3ItcERmU2NPYnV1SVFnRDEwVFVkSjBUZmktcUstOEZjbkRPU2hoWE1JZ3hhUlBSSld5VHQxT0ptdzcxTXZyU3BxR1U2VkFhNGZBbTdubzdEa0xfdWhSN2JONVU4NnlWNEpYV2YyaFdsaW9WVkplYy1FM0RTWV9rZkJ4alNyTmxqRUZadDc5ZEpuSXZBOEFQRUxwMW1KcHJsNUJvQTZ0OXE4a1hmeGt4RWtQZw?oc=5",
+        "pub_date": "2026-08-25 23:02",
+        "source": "BioSpace",
+        "summary": "AI Drug Discovery Leaders Gain a Competitive Edge with Telesis Bio’s Gibson SOLA® Platform, Generating Development Candidates Faster&nbsp;&nbsp;BioSpace",
+        "categories": [
+          "AI플랫폼"
+        ]
+      },
+      {
+        "title": "Building the Data Foundation for AI-Driven ALS Drug Discovery - Target ALS",
+        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVTFQcl9pSHhZQTNQeFhtQ1lpYlFPZHFnVFd6UGdObGt4LWl5ak0zazBDVGQzM2t1V2NIWVVHTHhSc2lqelA4UnpWNTVzSEVfRkpyV0xCRUY2NUZSQkZVX3h2aFVEZExyNzBaTktLLW1hMUdtaDI2c1kwTGNrbkFqRTFGVUdtdGZrbFhJMjFJekdXc2c?oc=5",
+        "pub_date": "2026-08-25 22:42",
+        "source": "Target ALS",
+        "summary": "Building the Data Foundation for AI-Driven ALS Drug Discovery&nbsp;&nbsp;Target ALS",
+        "categories": [
+          "임상"
         ]
       }
     ]
