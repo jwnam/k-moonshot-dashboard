@@ -228,6 +228,7 @@
     <li><a href="#" onclick="showTab('projects',this)">📋 사업현황</a></li>
     <li><a href="#" onclick="showTab('biodata',this)">🔬 데이터셋</a></li>
     <li><a href="#" onclick="showTab('resources',this)">📚 자료실</a></li>
+    <li><a href="#" onclick="showTab('global',this)">🌐 글로벌 동향</a></li>
     <li><a href="#" onclick="showTab('news',this)">📰 뉴스</a></li>
   </ul>
 </nav>
@@ -414,6 +415,16 @@
   </div>
 
   <div class="section">
+    <div class="section-title">K-문샷 전략적 측면 — 세부 추진 전략 <span style="font-size:11px;color:var(--muted);font-weight:400;">· 데이터·AI·실험 연계 AI-네이티브 플랫폼</span></div>
+    <div class="card" id="strategy-head" style="background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(99,102,241,.05));border-color:rgba(34,211,238,.3);margin-bottom:12px;"></div>
+    <div class="grid-3" id="strategy-pillars"></div>
+    <div class="grid-2 section" style="padding:12px 0 0;">
+      <div class="card"><div class="section-title" style="font-size:13px;">미션 간 협력 방안</div><ul id="strategy-coop" style="list-style:none;font-size:12px;"></ul></div>
+      <div class="card"><div class="section-title" style="font-size:13px;">향후 기획 방향</div><ul id="strategy-future" style="list-style:none;font-size:12px;"></ul></div>
+    </div>
+  </div>
+
+  <div class="section">
     <div class="section-title">3대 마일스톤 로드맵 <span style="font-size:11px;color:var(--muted);font-weight:400;">· 신약 AI 액션플랜 (2026~2035)</span></div>
     <div class="roadmap" id="roadmap"></div>
   </div>
@@ -430,54 +441,36 @@
 <!-- ══ TAB: PROJECTS ════════════════════════════════════════════════ -->
 <div id="tab-projects" class="tab-panel">
   <div class="section">
-    <div class="section-title">K-문샷 신약개발 사업 현황 ('26.6.5. 기준 · 로드맵 '26.7.17 반영)</div>
-    <p style="font-size:11px;color:var(--muted);margin-bottom:14px;">출처: K-문샷 신약개발 분야 추진계획 (과기정통부, 첨단바이오기술과, 2026.6.5.) + K-문샷 2035 로드맵('26.7.17) · 단위: 억원(국비)</p>
+    <div class="section-title">K-문샷 주요 사업 현황 <span style="font-size:11px;color:var(--muted);font-weight:400;">· 2035 로드맵(0902) 기준</span></div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:14px;" id="proj-source"></p>
     <div class="proj-kpi-grid" id="proj-kpi"></div>
   </div>
 
   <div class="section">
-    <div class="proj-section-header proj-header-core">🎯 핵심사업 — PD 직접 기획·조정·감독 ('27 신규)</div>
     <div class="card tbl-wrap">
-      <table id="proj-core-table">
-        <thead>
-          <tr><th>사업명</th><th>기간</th><th>'27 예산(억)</th><th>총사업비(억)</th></tr>
-        </thead>
+      <table id="proj-major-table">
+        <thead><tr><th>전략</th><th>구분</th><th>사업명</th><th>기간</th><th>'26 예산</th><th>'27 예산</th></tr></thead>
         <tbody></tbody>
       </table>
     </div>
+    <p style="font-size:11px;color:var(--muted);margin-top:8px;" id="proj-subtotal-note"></p>
+  </div>
 
-    <div class="proj-section-header proj-header-linked" style="margin-top:20px;">
-      🔗 연계사업 — 전문기관(PM) 중심 관리 · PD 차등 참여
-      <span style="font-size:11px;color:var(--muted);font-weight:400;margin-left:4px;">
-        <span class="relevance-badge rel-3">★★★ 밀접</span>
-        <span class="relevance-badge rel-2" style="margin-left:4px;">★★ 높음</span>
-        <span class="relevance-badge rel-1" style="margin-left:4px;">★ 일부</span>
-      </span>
-    </div>
-    <div class="card tbl-wrap">
-      <table id="proj-linked-table">
-        <thead>
-          <tr><th>관련성</th><th>사업명</th><th>기간</th><th>'27 예산(억)</th><th>총사업비(억)</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
-
-    <div class="proj-section-header proj-header-govt" style="margin-top:20px;">🏛️ 출연연 사업</div>
+  <div class="section">
+    <div class="proj-section-header proj-header-govt">🏛️ 전략연구사업(정출연) — 출연연 AI신약 사업</div>
+    <p style="font-size:11px;color:var(--muted);margin:6px 0 10px;">출연연 전략연구사업·주요사업 (생명연·화학연·독성연) · 단위: 억원(국비) · ※ 주요사업현황(전략①~③)과 일부 중복 — 기관 관점 정리</p>
     <div class="card tbl-wrap">
       <table id="proj-govt-table">
-        <thead>
-          <tr><th>기관</th><th>사업명</th><th>기간</th><th>'27 예산(억)</th><th>총사업비(억)</th></tr>
-        </thead>
+        <thead><tr><th>기관</th><th>사업명</th><th>기간</th><th>'27 예산(억)</th><th>총사업비(억)</th></tr></thead>
         <tbody></tbody>
       </table>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-title">'27년 예산 구조 — 사업 유형별</div>
+    <div class="section-title">전략별 '27년 예산 구조 <span style="font-size:11px;color:var(--muted);font-weight:400;">· 단위: 백만원(국비)</span></div>
     <div class="card">
-      <div class="chart-wrap" style="height:320px;"><canvas id="chart-proj-budget"></canvas></div>
+      <div class="chart-wrap" style="height:300px;"><canvas id="chart-proj-budget"></canvas></div>
     </div>
   </div>
 </div>
@@ -516,6 +509,18 @@
         <tbody></tbody>
       </table>
     </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title" id="gap-title">모달리티별 공백데이터 분석</div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px;" id="gap-note"></p>
+    <div class="card tbl-wrap">
+      <table id="biodata-gap-table">
+        <thead><tr><th>모달리티</th><th>병목 단계</th><th>공백 데이터</th><th>글로벌 공개규모</th><th>국내 데이터</th><th>필요 규모</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="card-sm" id="gap-strategy" style="margin-top:12px;background:rgba(99,102,241,.06);border-color:rgba(99,102,241,.2);"></div>
   </div>
 </div>
 
@@ -638,6 +643,38 @@
       </table>
     </div>
     <div id="res-count" style="color:var(--muted);font-size:12px;margin-top:8px"></div>
+  </div>
+</div>
+
+<!-- ══ TAB: GLOBAL TRENDS ═══════════════════════════════════════════ -->
+<div id="tab-global" class="tab-panel">
+  <div class="section">
+    <div class="section-title">AI 신약개발 · AI Co-Scientist 글로벌 동향</div>
+    <div class="card" style="background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(16,185,129,.05));border-color:rgba(34,211,238,.3);">
+      <div style="font-size:12.5px;line-height:1.7;" id="global-summary"></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">AI 신약개발 주요 사례 (글로벌)</div>
+    <div class="card tbl-wrap">
+      <table id="global-aidrug-table">
+        <thead><tr><th>기관</th><th>국가</th><th>대표 사례</th><th>내용</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">AI Co-Scientist 플랫폼 동향</div>
+    <div class="card tbl-wrap">
+      <table id="global-cosci-table">
+        <thead><tr><th>플랫폼</th><th>기관</th><th>시점</th><th>내용</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="grid-2 section" style="padding-top:0;">
+    <div class="card"><div class="section-title">국가별 전략</div><ul id="global-national" style="list-style:none;padding:0;margin:0;"></ul></div>
+    <div class="card"><div class="section-title">K-문샷 시사점</div><ul id="global-implications" style="list-style:none;padding:0;margin:0;"></ul></div>
   </div>
 </div>
 
@@ -971,7 +1008,7 @@ function renderKddfCharts(d) {
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
 }
 
-fetch('data/dashboard.json?v=3.0')
+fetch('data/dashboard.json?v=3.3')
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-date').textContent = data.meta.updated_at;
@@ -995,6 +1032,9 @@ fetch('data/dashboard.json?v=3.0')
     renderProjects(data.projects);
     _biodata = data.biodata;
     renderBiodataStatic(data.biodata);
+    renderStrategy(data.strategy);
+    renderGapAnalysis(data.biodata);
+    renderGlobalTrends(data.global_trends);
   })
   .catch(err => {
     console.error('dashboard.json 로드 실패:', err);
@@ -1019,55 +1059,28 @@ fetch('data/news.json')
 function renderForecast(fc) {
   if (!fc) return;
   const accel = fc.accel || [];
-  // 라벨 배치: AI가속(하늘색)=점 위, AI미사용(회색)=점 아래
-  const valLabels = {
-    id: 'fcLabels',
-    afterDatasetsDraw(chart) {
-      const { ctx } = chart;
-      const ai = chart.getDatasetMeta(0), no = chart.getDatasetMeta(1);
-      ctx.save(); ctx.textAlign = 'center';
-      if (ai && !ai.hidden) {                    // AI 가속(하늘색) 점 위
-        ai.data.forEach((pt, i) => {
-          ctx.font = 'bold 12px sans-serif'; ctx.fillStyle = '#22d3ee';
-          ctx.fillText(fc.ai[i] + '', pt.x, pt.y - (accel[i] ? 18 : 9));
-          if (accel[i]) { ctx.font = '9px sans-serif'; ctx.fillStyle = '#67e8f9';
-            ctx.fillText('('+accel[i]+')', pt.x, pt.y - 6); }
-        });
-      }
-      if (no && !no.hidden) {                    // AI 미사용(회색) 점 아래
-        ctx.font = '10px sans-serif'; ctx.fillStyle = '#94a3b8';
-        no.data.forEach((pt, i) => { ctx.fillText(fc.nouse[i] + '', pt.x, pt.y + 15); });
-      }
-      ctx.restore();
-    }
-  };
   new Chart(document.getElementById('chart-forecast'), {
     data: {
       labels: fc.years.map(y => "'" + String(y).slice(2) + '년'),
       datasets: [
-        { type: 'line', label: 'AI 가속 (K-문샷)', data: fc.ai,
-          borderColor: '#22d3ee', backgroundColor: 'rgba(34,211,238,.12)',
-          tension: .3, pointRadius: 5, pointBackgroundColor: '#22d3ee', borderWidth: 3, fill: true, yAxisID: 'y' },
-        { type: 'line', label: 'AI 미사용 (현 추세)', data: fc.nouse,
-          borderColor: '#94a3b8', borderDash: [6,4], backgroundColor: 'transparent',
-          tension: .3, pointRadius: 4, pointBackgroundColor: '#94a3b8', borderWidth: 2, yAxisID: 'y' }
+        { type:'bar', label:'임상진입 (AI가속·K문샷)', data:fc.ai, backgroundColor:'rgba(34,211,238,.75)', yAxisID:'y', order:3 },
+        { type:'bar', label:'임상진입 (AI 미사용)', data:fc.nouse, backgroundColor:'rgba(148,163,184,.5)', yAxisID:'y', order:3 },
+        { type:'line', label:'기대 신약승인 (AI가속)', data:fc.approvals_ai||[], borderColor:'#10b981', backgroundColor:'rgba(16,185,129,.15)', tension:.35, pointRadius:4, borderWidth:3, fill:true, yAxisID:'y', order:1 },
+        { type:'line', label:'임상성공률 (AI가속·2X, %)', data:fc.success_rate_ai||[], borderColor:'#f59e0b', borderDash:[5,4], tension:.35, pointRadius:3, yAxisID:'y1', order:0 },
+        { type:'line', label:'임상성공률 (현행, %)', data:fc.success_rate_base||[], borderColor:'#94a3b8', borderDash:[2,3], tension:.35, pointRadius:2, yAxisID:'y1', order:0 }
       ]
     },
     options: {
-      layout: { padding: { top: 24 } },
+      interaction:{ mode:'index', intersect:false },
       plugins: {
         legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } },
-        tooltip: { callbacks: { afterBody: (items) => {
-          const i = items[0].dataIndex;
-          return ['AI 가속(K문샷): ' + fc.ai[i] + '건/년' + (accel[i] ? ' ('+accel[i]+')' : ''),
-                  'AI 미사용: ' + fc.nouse[i] + '건/년'];
-        } } }
+        tooltip: { callbacks: { label: ctx => { const u = ctx.dataset.yAxisID==='y1' ? '%' : '건'; return ' ' + ctx.dataset.label + ': ' + ctx.raw + u; } } }
       },
       scales: {
-        y:  { beginAtZero: true, suggestedMax: 15, position: 'left', title: { display: true, text: '혁신신약 임상진입 건수 (건/년)' }, ticks: { precision: 0 } }
+        y:  { beginAtZero: true, suggestedMax: 15, position: 'left', title: { display: true, text: '건수 (건/년)' }, ticks: { precision: 0 } },
+        y1: { beginAtZero: true, max: 25, position: 'right', grid:{ display:false }, title: { display: true, text: '임상성공률 (%)', color:'#f59e0b' }, ticks: { callback: v => v + '%' } }
       }
-    },
-    plugins: [valLabels]
+    }
   });
   document.getElementById('forecast-note').textContent = fc.note || '';
 }
@@ -1392,120 +1405,100 @@ function renderRoadmap(rm) {
 
 // ── Projects tab ──────────────────────────────────────────────────────
 function renderProjects(proj) {
-  if (!proj) return;
-  const s = proj.summary;
-
-  // KPI cards
+  if (!proj || !proj.major) return;
+  const mj = proj.major;
+  var srcEl = document.getElementById('proj-source'); if(srcEl) srcEl.textContent = mj.note + ' · 단위: ' + mj.unit;
+  const nItems = mj.groups.reduce((a,g)=>a+g.items.filter(it=>it.b27!=null||it.b26!=null).length,0);
   document.getElementById('proj-kpi').innerHTML = `
-    <div class="kpi-card accent">
-      <div class="kpi-label">총 K-문샷 관련 사업</div>
-      <div class="kpi-value">${s.core_count + s.linked_count + s.govt_lab_count}<span class="kpi-unit">개</span></div>
-      <div class="kpi-note">핵심 ${s.core_count} · 연계 ${s.linked_count} · 출연연 ${s.govt_lab_count}</div>
-    </div>
-    <div class="kpi-card cyan">
-      <div class="kpi-label">'27년 총 예산</div>
-      <div class="kpi-value">${s.total_budget_27.toLocaleString()}<span class="kpi-unit">억원</span></div>
-      <div class="kpi-note">핵심 ${s.core_budget_27} + 연계 ${s.linked_budget_27} + 출연연 ${s.govt_lab_budget_27}</div>
-    </div>
-    <div class="kpi-card amber">
-      <div class="kpi-label">총사업비 합계 (추정)</div>
-      <div class="kpi-value">${(s.grand_total/10000).toFixed(2)}<span class="kpi-unit">조원</span></div>
-      <div class="kpi-note">${s.grand_total.toLocaleString()}억원 기준</div>
-    </div>
-    <div class="kpi-card green">
-      <div class="kpi-label">핵심사업 총사업비</div>
-      <div class="kpi-value">${s.core_total.toLocaleString()}<span class="kpi-unit">억원</span></div>
-      <div class="kpi-note">TIME-FM + 자율실험 연구거점</div>
-    </div>`;
-
-  // Core table
-  const maxCore = Math.max(...proj.core.map(p => p.budget_27));
-  document.querySelector('#proj-core-table tbody').innerHTML = proj.core.map(p => `
-    <tr>
-      <td><strong>${p.name}</strong><br><span style="font-size:10px;color:var(--muted);">${p.note || ''}</span></td>
-      <td style="white-space:nowrap;">${p.period}</td>
-      <td>
-        <div class="budget-bar-wrap">
-          <span style="font-weight:700;color:var(--accent);">${p.budget_27}</span>
-          <div class="budget-bar-track"><div class="budget-bar-fill" style="width:${(p.budget_27/maxCore*100).toFixed(0)}%;background:var(--accent);"></div></div>
-        </div>
-      </td>
-      <td style="color:var(--accent3);font-weight:600;">${p.budget_total.toLocaleString()}</td>
-    </tr>`).join('');
-
-  // Linked table
-  const maxLinked = Math.max(...proj.linked.map(p => p.budget_27));
-  const relClass = r => r === '***' ? 'rel-3' : r === '**' ? 'rel-2' : 'rel-1';
-  const relLabel = r => r === '***' ? '★★★ 밀접' : r === '**' ? '★★ 높음' : '★ 일부';
-  const relColor = r => r === '***' ? 'var(--green)' : r === '**' ? 'var(--accent2)' : '#64748b';
-  document.querySelector('#proj-linked-table tbody').innerHTML = proj.linked.map(p => `
-    <tr>
-      <td><span class="relevance-badge ${relClass(p.relevance)}">${relLabel(p.relevance)}</span></td>
-      <td>${p.name}${p.note ? `<span style="font-size:10px;color:var(--muted);margin-left:4px;">${p.note}</span>` : ''}</td>
-      <td style="white-space:nowrap;">${p.period}</td>
-      <td>
-        ${p.budget_27 > 0 ? `<div class="budget-bar-wrap">
-          <span style="font-weight:600;color:${relColor(p.relevance)};">${p.budget_27}</span>
-          <div class="budget-bar-track"><div class="budget-bar-fill" style="width:${(p.budget_27/maxLinked*100).toFixed(0)}%;background:${relColor(p.relevance)};"></div></div>
-        </div>` : '<span style="color:var(--muted);font-size:11px;">—</span>'}
-      </td>
-      <td style="color:var(--accent3);font-weight:600;">${p.budget_total > 0 ? p.budget_total.toLocaleString() : '<span style="color:var(--muted);font-size:11px;">미정</span>'}</td>
-    </tr>`).join('');
-
-  // Govt lab table
-  const maxGovt = Math.max(...proj.govt_labs.map(p => p.budget_27));
-  const orgClass = o => 'org-' + o;
-  document.querySelector('#proj-govt-table tbody').innerHTML = proj.govt_labs.map(p => `
-    <tr>
-      <td><span class="org-badge ${orgClass(p.org)}">${p.org}</span></td>
-      <td>${p.name}</td>
-      <td style="white-space:nowrap;">${p.period}</td>
-      <td>
-        <div class="budget-bar-wrap">
-          <span style="font-weight:600;color:var(--accent3);">${p.budget_27}</span>
-          <div class="budget-bar-track"><div class="budget-bar-fill" style="width:${(p.budget_27/maxGovt*100).toFixed(0)}%;background:var(--accent3);"></div></div>
-        </div>
-      </td>
-      <td style="color:var(--accent3);font-weight:600;">${p.budget_total > 0 ? p.budget_total : '<span style="color:var(--muted);font-size:11px;">미정</span>'}</td>
-    </tr>`).join('');
-
-  // Budget chart
-  const linkedByRel = {
-    '***': proj.linked.filter(p => p.relevance === '***').reduce((a, p) => a + p.budget_27, 0),
-    '**':  proj.linked.filter(p => p.relevance === '**').reduce((a, p) => a + p.budget_27, 0),
-    '*':   proj.linked.filter(p => p.relevance === '*').reduce((a, p) => a + p.budget_27, 0),
-  };
+    <div class="kpi-card accent"><div class="kpi-label">주요 사업 수</div><div class="kpi-value">${nItems}<span class="kpi-unit">개</span></div><div class="kpi-note">전략①~③ 편성 사업</div></div>
+    <div class="kpi-card cyan"><div class="kpi-label">'26년 투입 예산</div><div class="kpi-value">${(mj.subtotal.b26/100).toLocaleString(undefined,{maximumFractionDigits:0})}<span class="kpi-unit">억원</span></div><div class="kpi-note">${mj.subtotal.b26.toLocaleString()} 백만원</div></div>
+    <div class="kpi-card amber"><div class="kpi-label">'27년 투입 예산</div><div class="kpi-value">${(mj.subtotal.b27/100).toLocaleString(undefined,{maximumFractionDigits:0})}<span class="kpi-unit">억원</span></div><div class="kpi-note">${mj.subtotal.b27.toLocaleString()} 백만원</div></div>
+    <div class="kpi-card green"><div class="kpi-label">전략 구성</div><div class="kpi-value">3<span class="kpi-unit">대 전략</span></div><div class="kpi-note">설계 플랫폼·자율실험실·혁신신약</div></div>`;
+  const fmt = v => v==null ? '<span style="color:var(--muted);">—</span>' : v.toLocaleString();
+  const stratColors = ['#6366f1','#22d3ee','#f59e0b'];
+  let rows='';
+  mj.groups.forEach((g,gi)=>{
+    g.items.forEach((it,ii)=>{
+      rows += `<tr>`;
+      if(ii===0) rows += `<td rowspan="${g.items.length}" style="font-weight:700;border-left:3px solid ${stratColors[gi%3]};font-size:11.5px;vertical-align:top;">${g.strategy}</td>`;
+      rows += `<td style="font-size:11px;color:var(--muted);">${it.cat}</td><td style="font-size:12px;">${it.name}</td><td style="white-space:nowrap;font-size:11px;">${it.period}</td><td style="text-align:right;">${fmt(it.b26)}</td><td style="text-align:right;color:var(--accent3);font-weight:600;">${fmt(it.b27)}</td></tr>`;
+    });
+  });
+  rows += `<tr style="border-top:2px solid var(--border);font-weight:700;background:rgba(99,102,241,.06);"><td colspan="4" style="text-align:right;">소계 (주요사업 합계)</td><td style="text-align:right;">${mj.subtotal.b26.toLocaleString()}</td><td style="text-align:right;color:var(--accent3);">${mj.subtotal.b27.toLocaleString()}</td></tr>`;
+  document.querySelector('#proj-major-table tbody').innerHTML = rows;
+  const ds = mj.doc_subtotal;
+  var noteEl = document.getElementById('proj-subtotal-note');
+  if(noteEl) noteEl.textContent = `※ 소계는 편성 사업 합산(백만원). 원문 표 소계 표기: '26 ${ds.b26.toLocaleString()} / '27 ${ds.b27.toLocaleString()} (${ds.note}).`;
+  if (proj.govt_labs && document.querySelector('#proj-govt-table tbody')) {
+    const orgColor = {'생명연':'#22d3ee','화학연':'#f59e0b','독성연':'#ef4444'};
+    document.querySelector('#proj-govt-table tbody').innerHTML = proj.govt_labs.map(p=>`
+      <tr>
+        <td><span style="background:${(orgColor[p.org]||'#94a3b8')}22;color:${orgColor[p.org]||'#94a3b8'};padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap;">${p.org}</span></td>
+        <td style="font-size:12px;">${p.name}</td>
+        <td style="white-space:nowrap;font-size:11px;">${p.period}</td>
+        <td style="text-align:right;">${p.budget_27!=null?p.budget_27:'<span style=\'color:var(--muted)\'>—</span>'}</td>
+        <td style="text-align:right;color:var(--accent3);font-weight:600;">${p.budget_total?p.budget_total.toLocaleString():'<span style=\'color:var(--muted)\'>미정</span>'}</td>
+      </tr>`).join('');
+  }
+  const strat27 = mj.groups.map(g=>g.items.reduce((a,it)=>a+(it.b27||0),0));
   new Chart(document.getElementById('chart-proj-budget'), {
-    type: 'bar',
-    data: {
-      labels: ['핵심사업', '연계 ★★★', '연계 ★★', '연계 ★', '출연연(생명연)', '출연연(화학연)', '출연연(독성연)'],
-      datasets: [{
-        label: "'27년 예산 (억원)",
-        data: [
-          proj.summary.core_budget_27,
-          linkedByRel['***'],
-          linkedByRel['**'],
-          linkedByRel['*'],
-          proj.govt_labs.filter(p=>p.org==='생명연').reduce((a,p)=>a+p.budget_27,0),
-          proj.govt_labs.filter(p=>p.org==='화학연').reduce((a,p)=>a+p.budget_27,0),
-          proj.govt_labs.filter(p=>p.org==='독성연').reduce((a,p)=>a+p.budget_27,0),
-        ],
-        backgroundColor: ['rgba(99,102,241,0.8)','rgba(16,185,129,0.8)','rgba(34,211,238,0.7)','rgba(100,116,139,0.5)','rgba(34,211,238,0.6)','rgba(245,158,11,0.6)','rgba(239,68,68,0.6)'],
-      }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true, maintainAspectRatio: false,
-      scales: {
-        x: { beginAtZero: true, grid: { color: '#2d3148' }, ticks: { callback: v => v + '억' } },
-        y: { grid: { display: false } }
-      },
-      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ' ' + ctx.raw + '억원' } } }
-    }
+    type:'bar',
+    data:{ labels: mj.groups.map(g=>g.strategy), datasets:[{ label:"'27년 예산(백만원)", data:strat27, backgroundColor:['rgba(99,102,241,.8)','rgba(34,211,238,.75)','rgba(245,158,11,.7)'] }]},
+    options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false,
+      scales:{ x:{ beginAtZero:true, grid:{color:'#2d3148'}, ticks:{callback:v=>(v/100)+'억'} }, y:{ grid:{display:false} } },
+      plugins:{ legend:{display:false}, tooltip:{callbacks:{label:ctx=>' '+ctx.raw.toLocaleString()+' 백만원'}} } }
   });
 }
 
-// ── News board ────────────────────────────────────────────────────────
+// ── Strategy (전략적 측면) ──
+function renderStrategy(st){
+  if(!st) return;
+  document.getElementById('strategy-head').innerHTML =
+    `<div style="font-size:12.5px;"><span style="color:var(--accent2);font-weight:700;">전략 방향 </span>${st.direction}</div>
+     <div style="font-size:12.5px;margin-top:6px;"><span style="color:var(--accent3);font-weight:700;">핵심 목표 </span>${st.core_goal}</div>
+     ${st.scope_note?`<div style="font-size:11px;color:var(--muted);margin-top:6px;border-top:1px solid var(--border);padding-top:6px;">※ ${st.scope_note}</div>`:''}`;
+  const colors=['#6366f1','#22d3ee','#f59e0b'];
+  document.getElementById('strategy-pillars').innerHTML = st.pillars.map((p,i)=>`
+    <div class="card" style="border-top:3px solid ${colors[i%3]};">
+      <div style="font-weight:700;font-size:13px;color:${colors[i%3]};">${p.no} ${p.title}</div>
+      <div style="font-size:11px;color:var(--muted);margin:4px 0 8px;min-height:28px;">${p.summary}</div>
+      <ul style="list-style:none;font-size:11.5px;padding:0;margin:0;">${p.points.map(x=>`<li style="margin-bottom:5px;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:${colors[i%3]};">·</span>${x}</li>`).join('')}</ul>
+    </div>`).join('');
+  document.getElementById('strategy-coop').innerHTML = st.cooperation.map(x=>`<li style="margin-bottom:5px;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--accent2);">▸</span>${x}</li>`).join('');
+  document.getElementById('strategy-future').innerHTML = st.future_plans.map(x=>`<li style="margin-bottom:5px;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--accent3);">▸</span>${x}</li>`).join('');
+}
+
+// ── 데이터셋: 모달리티별 공백데이터 분석 ──
+function renderGapAnalysis(bd){
+  const ga = bd && bd.gap_analysis; if(!ga) return;
+  document.getElementById('gap-title').innerHTML = ga.title + ' <span style="font-size:11px;color:var(--muted);font-weight:400;">· '+ga.rows.length+'종 모달리티</span>';
+  document.getElementById('gap-note').textContent = '출처: '+ga.source;
+  document.querySelector('#biodata-gap-table tbody').innerHTML = ga.rows.map(r=>`
+    <tr><td style="font-weight:700;font-size:12px;white-space:nowrap;">${r.modality}</td>
+      <td style="font-size:11px;color:var(--accent3);white-space:nowrap;">${r.bottleneck}</td>
+      <td style="font-size:11px;">${r.gap}</td>
+      <td style="font-size:11px;color:var(--muted);">${r.global}</td>
+      <td style="font-size:11px;color:var(--muted);">${r.domestic}</td>
+      <td style="font-size:11px;color:var(--green);font-weight:600;">${r.needed}</td></tr>`).join('');
+  document.getElementById('gap-strategy').innerHTML =
+    '<h4 style="color:var(--accent);font-size:12px;margin-bottom:6px;">📌 NHP·임상데이터 확보 전략</h4><ul style="list-style:none;font-size:11.5px;color:var(--muted);margin:0;padding:0;">'+
+    ga.strategy.map(x=>`<li style="margin-bottom:4px;">• ${x}</li>`).join('')+'</ul>';
+}
+
+// ── 글로벌 동향 (AI 신약개발 · AI Co-Scientist) ──
+function renderGlobalTrends(gt){
+  if(!gt) return;
+  document.getElementById('global-summary').textContent = gt.summary;
+  document.querySelector('#global-aidrug-table tbody').innerHTML = gt.ai_drug.map(r=>`
+    <tr><td style="font-weight:600;white-space:nowrap;">${r.org}</td><td style="font-size:11px;color:var(--muted);white-space:nowrap;">${r.country}</td>
+      <td style="font-size:12px;color:var(--accent2);">${r.item}</td><td style="font-size:11px;">${r.note}</td></tr>`).join('');
+  document.querySelector('#global-cosci-table tbody').innerHTML = gt.co_scientist.map(r=>`
+    <tr><td style="font-weight:600;white-space:nowrap;">${r.name}</td><td style="font-size:11px;color:var(--muted);white-space:nowrap;">${r.org}</td>
+      <td style="font-size:11px;color:var(--accent3);white-space:nowrap;">${r.year}</td><td style="font-size:11px;">${r.note}</td></tr>`).join('');
+  document.getElementById('global-national').innerHTML = gt.national.map(x=>`<li style="margin-bottom:6px;padding-left:14px;position:relative;font-size:12px;"><span style="position:absolute;left:0;color:var(--accent2);">▸</span><b>${x.country}</b> — ${x.strategy}</li>`).join('');
+  document.getElementById('global-implications').innerHTML = gt.implications.map(x=>`<li style="margin-bottom:6px;padding-left:14px;position:relative;font-size:12px;"><span style="position:absolute;left:0;color:var(--accent3);">▸</span>${x}</li>`).join('');
+}
+
 function catClass(cat) {
   const map = { '기술이전': 'cat-기술이전', '임상': 'cat-임상', 'AI플랫폼': 'cat-AI플랫폼', '투자': 'cat-투자', '규제/허가': 'cat-규제허가', '일반': 'cat-일반' };
   return map[cat] || 'cat-일반';
