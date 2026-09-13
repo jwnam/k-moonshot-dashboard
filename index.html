@@ -657,7 +657,7 @@
     <div class="section-title">📚 최신 연구 동향 (주요 문헌)</div>
     <div class="card tbl-wrap">
       <table id="global-research-table">
-        <thead><tr><th>주제</th><th>제목 · 내용</th><th>출처</th></tr></thead>
+        <thead><tr><th>제목 · 내용 (주제별 분류)</th><th>출처</th></tr></thead>
         <tbody></tbody>
       </table>
     </div>
@@ -1499,14 +1499,23 @@ function renderGlobalTrends(gt){
   document.getElementById('global-summary').textContent = gt.summary;
   var rtb = document.querySelector('#global-research-table tbody');
   if(rtb && gt.latest_research){
-    rtb.innerHTML = gt.latest_research.map(function(r){
-      return '<tr>'
-        + '<td style="font-size:11px;color:var(--accent2);white-space:nowrap;">'+r.topic+'</td>'
-        + '<td><div style="font-weight:600;font-size:12px;margin-bottom:2px;">'+r.title+'</div>'
-        + '<div style="font-size:11px;color:var(--muted);line-height:1.5;">'+r.note+'</div></td>'
-        + '<td style="font-size:11px;white-space:nowrap;"><a href="'+r.url+'" target="_blank" style="color:var(--accent3);">'+r.venue+' ('+r.year+')</a></td>'
-        + '</tr>';
-    }).join('');
+    var cats = gt.research_categories || [];
+    // 정의되지 않은 카테고리도 뒤에 포함
+    gt.latest_research.forEach(function(r){ if(r.category && cats.indexOf(r.category)<0) cats.push(r.category); });
+    var rows = '';
+    cats.forEach(function(cat){
+      var items = gt.latest_research.filter(function(r){ return (r.category||'기타')===cat; });
+      if(!items.length) return;
+      rows += '<tr><td colspan="2" style="background:rgba(34,211,238,.10);color:var(--accent2);font-weight:700;font-size:12px;padding:6px 10px;">▹ '+cat+' <span style="color:var(--muted);font-weight:400;">('+items.length+')</span></td></tr>';
+      rows += items.map(function(r){
+        return '<tr>'
+          + '<td><div style="font-weight:600;font-size:12px;margin-bottom:2px;">'+r.title+'</div>'
+          + '<div style="font-size:11px;color:var(--muted);line-height:1.5;">'+r.note+'</div></td>'
+          + '<td style="font-size:11px;white-space:nowrap;vertical-align:top;"><a href="'+r.url+'" target="_blank" style="color:var(--accent3);">'+r.venue+' ('+r.year+')</a></td>'
+          + '</tr>';
+      }).join('');
+    });
+    rtb.innerHTML = rows;
   }
   document.querySelector('#global-aidrug-table tbody').innerHTML = gt.ai_drug.map(r=>`
     <tr><td style="font-weight:600;white-space:nowrap;">${r.org}</td><td style="font-size:11px;color:var(--muted);white-space:nowrap;">${r.country}</td>
