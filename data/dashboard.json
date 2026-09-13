@@ -2469,8 +2469,8 @@
         "title": "The Virtual Lab of AI agents designs new SARS-CoV-2 nanobodies",
         "venue": "Nature",
         "year": "2025",
-        "topic": "항체 설계",
-        "category": "항체 설계 자율실험실",
+        "topic": "항체 설계(자율실험실)",
+        "category": "AI 자율실험실 (Self-Driving Lab)",
         "url": "https://www.nature.com/articles/s41586-025-09442-9",
         "note": "LLM 에이전트 팀(PI+전문가)이 ESM+AlphaFold-Multimer+Rosetta 파이프라인 구축→나노바디 92종 설계·실험검증(JN.1/KP.3 개선). 산업 사례: LabGenius EVA(폐루프 로봇, 6주에 다중특이 항체 2,300종 설계)"
       },
@@ -2509,13 +2509,40 @@
         "category": "대규모 Perturbation·멀티오믹스 자동화",
         "url": "https://www.nature.com/articles/s41592-025-02909-7",
         "note": "대규모 단일세포 perturbation 실험 분석용 모듈형 프레임워크 — Perturb-seq 등 멀티오믹스 섭동 데이터 표준 분석 파이프라인"
+      },
+      {
+        "title": "One-shot design of functional protein binders with BindCraft",
+        "venue": "Nature",
+        "year": "2025",
+        "topic": "단백질 바인더 설계",
+        "category": "단백질 구조 설계·최적화",
+        "url": "https://www.nature.com/articles/s41586-025-09429-6",
+        "note": "AlphaFold2 가중치 기반 원샷 de novo 바인더 설계 파이프라인 — 실험 성공률 10~100%, 나노몰 친화도. 세포표면수용체·알레르겐·CRISPR-Cas9 등 난표적 성공(고속 스크리닝 불요)"
+      },
+      {
+        "title": "De novo design of protein structure and function with RFdiffusion",
+        "venue": "Nature",
+        "year": "2023",
+        "topic": "단백질 백본 생성",
+        "category": "단백질 구조 설계·최적화",
+        "url": "https://www.nature.com/articles/s41586-023-06415-8",
+        "note": "확산모델 기반 단백질 백본 de novo 생성(원류) — 결합부위·대칭·모티프 스캐폴딩 등 기능성 단백질 설계 범용화"
+      },
+      {
+        "title": "Robust deep learning-based protein sequence design using ProteinMPNN",
+        "venue": "Science",
+        "year": "2022",
+        "topic": "단백질 서열 설계",
+        "category": "단백질 구조 설계·최적화",
+        "url": "https://www.science.org/doi/10.1126/science.add2187",
+        "note": "주어진 백본에 대한 아미노산 서열 설계 표준 모델 — RFdiffusion 등 생성 백본과 결합해 실험 성공률·발현 대폭 향상"
       }
     ],
     "latest_research_updated": "2026-09-13",
     "research_categories": [
       "AI Co-Scientist·자율연구 에이전트",
       "AI 자율실험실 (Self-Driving Lab)",
-      "항체 설계 자율실험실",
+      "단백질 구조 설계·최적화",
       "RNA 설계·구조 최적화",
       "대규모 Perturbation·멀티오믹스 자동화",
       "AI Virtual Cell·Model Organism",

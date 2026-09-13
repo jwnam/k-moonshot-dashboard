@@ -35,10 +35,19 @@
 
   /* Nav tabs */
   .tabs { border-bottom: 1px solid var(--border); background: var(--surface); }
-  .tabs ul { display: flex; list-style: none; padding: 0 20px; max-width: 1400px; margin: 0 auto; overflow-x: auto; }
+  .tabs ul { display: flex; flex-wrap: wrap; list-style: none; padding: 0 20px; max-width: 1400px; margin: 0 auto; overflow: visible; }
   .tabs li { white-space: nowrap; }
   .tabs a { display: block; padding: 12px 18px; color: var(--muted); font-size: 13px; border-bottom: 2px solid transparent; transition: all .2s; }
   .tabs a:hover, .tabs a.active { color: var(--text); border-bottom-color: var(--accent); }
+  /* 파이프라인 드롭다운 서브메뉴 */
+  .tabs li.has-submenu { position: relative; }
+  .tabs .submenu { display: none; position: absolute; top: 100%; left: 0; z-index: 200;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 0 0 8px 8px;
+    min-width: 230px; box-shadow: 0 8px 20px rgba(0,0,0,.35); padding: 4px 0; flex-direction: column; }
+  .tabs li.has-submenu:hover .submenu { display: flex; }
+  .tabs .submenu li { display: block; }
+  .tabs .submenu a { padding: 10px 16px; border-bottom: none; border-left: 3px solid transparent; }
+  .tabs .submenu a:hover, .tabs .submenu a.active { border-bottom-color: transparent; border-left-color: var(--accent); background: rgba(34,211,238,.08); }
 
   /* Section */
   .section { padding: 24px 0; }
@@ -218,10 +227,15 @@
 <nav class="tabs">
   <ul>
     <li><a href="#" class="active" onclick="showTab('overview',this)">📊 개요</a></li>
-    <li><a href="#" onclick="showTab('pipelines',this)">💊 파이프라인</a></li>
-    <li><a href="#" onclick="showTab('kddf',this)">🏛️ KDDF지원 파이프라인</a></li>
-    <li><a href="#" onclick="showTab('master',this)">🧬 국내기업 임상 파이프라인</a></li>
-    <li><a href="#" onclick="showTab('ai-pipeline',this)">🤖 AI 파이프라인</a></li>
+    <li class="has-submenu">
+      <a href="#" onclick="showTab('pipelines',this)">💊 파이프라인 ▾</a>
+      <ul class="submenu">
+        <li><a href="#" onclick="showTab('pipelines',this)">💊 파이프라인</a></li>
+        <li><a href="#" onclick="showTab('kddf',this)">🏛️ KDDF지원 파이프라인</a></li>
+        <li><a href="#" onclick="showTab('master',this)">🧬 국내기업 임상 파이프라인</a></li>
+        <li><a href="#" onclick="showTab('ai-pipeline',this)">🤖 AI 파이프라인</a></li>
+      </ul>
+    </li>
     <li><a href="#" onclick="showTab('transfer',this)">🤝 기술이전</a></li>
     <li><a href="#" onclick="showTab('survey',this)">📊 신약개발 설문조사</a></li>
     <li><a href="#" onclick="showTab('kmoonshot',this)">🚀 K-문샷 로드맵</a></li>
@@ -731,6 +745,9 @@ function showTab(name, el) {
   document.querySelectorAll('.tabs a').forEach(a => a.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
   el.classList.add('active');
+  // 파이프라인 서브탭 활성 시 부모 메뉴도 강조
+  var parentLink = document.querySelector('.tabs li.has-submenu > a');
+  if (parentLink) parentLink.classList.toggle('active', ['pipelines','kddf','master','ai-pipeline'].indexOf(name) > -1);
   if (name === 'biodata' && _biodata && !_biodataChartsDone) {
     renderBiodataCharts(_biodata);
     _biodataChartsDone = true;
