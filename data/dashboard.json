@@ -2464,12 +2464,60 @@
         "category": "AI 자율실험실 (Self-Driving Lab)",
         "url": "https://en.xtalpi.com/lab_automation/",
         "note": "300+ 로봇 워크스테이션으로 세계 최대 AI 실험 클러스터 운영, 24/7 폐루프 DMTA(설계-합성-시험-분석). LLM+Scientific Agent+대규모 자동 로봇실험 결합(XtalPi Science). 저분자 자동합성·키랄화학(PACE) 통합. ※기업 플랫폼"
+      },
+      {
+        "title": "The Virtual Lab of AI agents designs new SARS-CoV-2 nanobodies",
+        "venue": "Nature",
+        "year": "2025",
+        "topic": "항체 설계",
+        "category": "항체 설계 자율실험실",
+        "url": "https://www.nature.com/articles/s41586-025-09442-9",
+        "note": "LLM 에이전트 팀(PI+전문가)이 ESM+AlphaFold-Multimer+Rosetta 파이프라인 구축→나노바디 92종 설계·실험검증(JN.1/KP.3 개선). 산업 사례: LabGenius EVA(폐루프 로봇, 6주에 다중특이 항체 2,300종 설계)"
+      },
+      {
+        "title": "AI-powered design accelerates the development of mRNA therapeutics (GEMORNA)",
+        "venue": "Nature Chemical Biology",
+        "year": "2025",
+        "topic": "RNA 설계",
+        "category": "RNA 설계·구조 최적화",
+        "url": "https://www.nature.com/articles/s41589-025-02074-0",
+        "note": "생성형 RNA 모델(GEMORNA)로 안정성·번역효율을 높인 mRNA 서열(코딩·UTR) 설계 — mRNA 치료제 개발 가속"
+      },
+      {
+        "title": "A multiobjective AI model for LNP engineering enhances tissue-selective mRNA delivery (MOLEA)",
+        "venue": "Nature Biotechnology",
+        "year": "2026",
+        "topic": "RNA 전달·최적화",
+        "category": "RNA 설계·구조 최적화",
+        "url": "https://www.nature.com/articles/s41587-026-03109-0",
+        "note": "고차원 지질 표현+세포유형별 형질도입 데이터+다목적 최적화로 이온화 지질 설계 — 조직 선택적 mRNA 전달(연골 K9 LNP: 형질도입 >90%, 무릎/간 선택성 13.5배)"
+      },
+      {
+        "title": "Perturb-Multimodal: pooled genetic screens with imaging and sequencing in intact mammalian tissue",
+        "venue": "Cell",
+        "year": "2025",
+        "topic": "Perturbation 멀티오믹스",
+        "category": "대규모 Perturbation·멀티오믹스 자동화",
+        "url": "https://www.cell.com/cell/fulltext/S0092-8674(25)00572-0",
+        "note": "조직 내 풀드 유전자 스크리닝을 이미징+시퀀싱으로 동시 판독 — 대규모 유전형-표현형(전사체+아형태) 멀티모달 맵 구축. 산업: Illumina Perturb-seq 솔루션(대규모 자동화)"
+      },
+      {
+        "title": "Pertpy: an end-to-end framework for perturbation analysis",
+        "venue": "Nature Methods",
+        "year": "2026",
+        "topic": "Perturbation 분석",
+        "category": "대규모 Perturbation·멀티오믹스 자동화",
+        "url": "https://www.nature.com/articles/s41592-025-02909-7",
+        "note": "대규모 단일세포 perturbation 실험 분석용 모듈형 프레임워크 — Perturb-seq 등 멀티오믹스 섭동 데이터 표준 분석 파이프라인"
       }
     ],
     "latest_research_updated": "2026-09-13",
     "research_categories": [
       "AI Co-Scientist·자율연구 에이전트",
       "AI 자율실험실 (Self-Driving Lab)",
+      "항체 설계 자율실험실",
+      "RNA 설계·구조 최적화",
+      "대규모 Perturbation·멀티오믹스 자동화",
       "AI Virtual Cell·Model Organism",
       "표적 발굴·신약설계",
       "임상시험 AI",
