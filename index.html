@@ -654,6 +654,15 @@
     </div>
   </div>
   <div class="section">
+    <div class="section-title">📚 최신 연구 동향 (주요 문헌)</div>
+    <div class="card tbl-wrap">
+      <table id="global-research-table">
+        <thead><tr><th>주제</th><th>제목 · 내용</th><th>출처</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="section">
     <div class="section-title">AI 신약개발 주요 사례 (글로벌)</div>
     <div class="card tbl-wrap">
       <table id="global-aidrug-table">
@@ -1488,6 +1497,17 @@ function renderGapAnalysis(bd){
 function renderGlobalTrends(gt){
   if(!gt) return;
   document.getElementById('global-summary').textContent = gt.summary;
+  var rtb = document.querySelector('#global-research-table tbody');
+  if(rtb && gt.latest_research){
+    rtb.innerHTML = gt.latest_research.map(function(r){
+      return '<tr>'
+        + '<td style="font-size:11px;color:var(--accent2);white-space:nowrap;">'+r.topic+'</td>'
+        + '<td><div style="font-weight:600;font-size:12px;margin-bottom:2px;">'+r.title+'</div>'
+        + '<div style="font-size:11px;color:var(--muted);line-height:1.5;">'+r.note+'</div></td>'
+        + '<td style="font-size:11px;white-space:nowrap;"><a href="'+r.url+'" target="_blank" style="color:var(--accent3);">'+r.venue+' ('+r.year+')</a></td>'
+        + '</tr>';
+    }).join('');
+  }
   document.querySelector('#global-aidrug-table tbody').innerHTML = gt.ai_drug.map(r=>`
     <tr><td style="font-weight:600;white-space:nowrap;">${r.org}</td><td style="font-size:11px;color:var(--muted);white-space:nowrap;">${r.country}</td>
       <td style="font-size:12px;color:var(--accent2);">${r.item}</td><td style="font-size:11px;">${r.note}</td></tr>`).join('');

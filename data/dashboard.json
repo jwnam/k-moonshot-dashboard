@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-09-12",
+    "updated_at": "2026-09-13",
     "source": "K-문샷 신약 AI 미션 PD실 · 보건산업진흥원 · Citeline · 한국바이오협회 (2025–2026) · KDDF",
     "version": "1.3",
     "trend_summary": "국내 신약 파이프라인은 2,162건(2025, KDDF 조사)로 미국·중국에 이은 세계 3위이나 글로벌 점유율 14.2%로 1·2위와의 격차는 오히려 확대되고, 기업당 평균 8.2개의 과잉 분산 구조가 과제로 지적된다. AI는 후보물질 발굴을 넘어 임상 설계·환자 선별·공정 관리까지 전주기로 침투하며 2026년이 'AI 신약개발 프로세스 표준화 원년'으로 평가받는다. 다만 국내외를 통틀어 AI 설계 신약의 임상 3상 완료·승인 사례는 아직 전무해 2026~2027년이 성과 검증의 분수령이다. K-문샷 신약 미션은 발굴단계 속도 10배·혁신신약(FIC) 임상진입 3배 가속을 목표로, RNA·세포·유전자 등 뉴 모달리티와 자율실험실(Lab-in-the-Loop)을 핵심 차별화 축으로 삼는다.",
@@ -2265,6 +2265,73 @@
       "학습데이터·연구로그의 내재화(데이터레이크·자율강화)가 기술주권·협상력 관건 → 해외 플랫폼 의존 탈피 필요",
       "전 세계적으로 AI 설계 신약의 임상 3상 완료·승인 사례는 아직 전무 → 2026~2027 실증 분수령, 선점 기회",
       "동물대체시험법(NAMs)·디지털 비임상의 규제 인정이 임상성공률 제고의 핵심 → 규제 R&D 병행 필요"
-    ]
+    ],
+    "latest_research": [
+      {
+        "title": "Entering the agentic era of AI in drug discovery",
+        "venue": "Nature Chemical Biology",
+        "year": "2026",
+        "topic": "Agentic AI",
+        "url": "https://www.nature.com/articles/s41589-026-02295-x",
+        "note": "에이전틱 AI가 신약개발을 재편하며, 실험실 자동화와 결합해 자율실험실(self-driving lab) 설계를 가능케 함"
+      },
+      {
+        "title": "A multi-agent system for automating scientific discovery (Robin)",
+        "venue": "Nature",
+        "year": "2026",
+        "topic": "멀티에이전트/AI Co-Scientist",
+        "url": "https://www.nature.com/articles/s41586-026-10652-y",
+        "note": "가설 생성·데이터 분석을 완전 자동화하는 멀티에이전트(Robin); 건성 황반변성 치료후보(ripasudil 등) 실제 도출"
+      },
+      {
+        "title": "Target identification and assessment in the era of AI",
+        "venue": "Nature Reviews Drug Discovery",
+        "year": "2026",
+        "topic": "표적 발굴",
+        "url": "https://www.nature.com/articles/s41573-026-01412-8",
+        "note": "AI 기반 표적 발굴·평가 리뷰; 임상 진입 후보를 낳은 AI 표적발굴 사례 정리 (K-문샷 '노블 표적' 전략과 직결)"
+      },
+      {
+        "title": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward",
+        "venue": "Nature Reviews Drug Discovery",
+        "year": "2026",
+        "topic": "총론/현황",
+        "url": "https://www.nature.com/articles/s41573-026-01496-2",
+        "note": "다양한 AI 기법이 개발·벤치마킹됐으나 임상적 영향은 아직 제한적 — 임상 중개 부족 원인 분석 및 발전 권고"
+      },
+      {
+        "title": "Towards self-driving laboratories in the biopharmaceutical industry",
+        "venue": "Nature Synthesis",
+        "year": "2026",
+        "topic": "자율실험실",
+        "url": "https://www.nature.com/articles/s44160-026-01131-3",
+        "note": "로봇+분석+AI 의사결정을 통합한 자율실험실로 바이오파마 R&D 가속; 결정화·LNP 제형·전기화학 API 합성 응용"
+      },
+      {
+        "title": "AI-based augmentation of oncology clinical trials",
+        "venue": "Nature Reviews Clinical Oncology",
+        "year": "2026",
+        "topic": "임상시험 AI",
+        "url": "https://www.nature.com/articles/s41571-026-01189-0",
+        "note": "종양 임상시험 전주기(설계·수행·사후추론)에 AI 적용 — 느린 등록·높은 실패율·낮은 일반화 개선"
+      },
+      {
+        "title": "AI-based automation of enrollment criteria and endpoint assessment in clinical trials in liver diseases (AIM-MASH)",
+        "venue": "Nature Medicine",
+        "year": "2024",
+        "topic": "간대사질환 임상·AI",
+        "url": "https://www.nature.com/articles/s41591-024-03172-7",
+        "note": "간질환(MASH) 임상시험 조직병리 스코어링 AI가 병리학자 수준 성능 — 등록기준·평가변수 자동화 (RG2 간대사질환 표적과 직결)"
+      },
+      {
+        "title": "The Agentic AI Revolution in Biopharma",
+        "venue": "Pharmaceutical Executive",
+        "year": "2026",
+        "topic": "산업/Agentic AI",
+        "url": "https://www.pharmexec.com/view/agentic-ai-revolution-biopharma",
+        "note": "에이전틱 AI가 신약발굴~상용화 전주기 자동화; McKinsey 분석상 조직 역량 25~40% 해방, 3~5년 내 매출·수익 증대 전망"
+      }
+    ],
+    "latest_research_updated": "2026-09-13"
   }
 }
