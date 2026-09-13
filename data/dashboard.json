@@ -2212,22 +2212,40 @@
     ],
     "co_scientist": [
       {
-        "name": "AI co-scientist",
-        "org": "Google (Gemini 2.0)",
-        "year": "2025",
-        "note": "멀티에이전트(생성·토론·랭킹·진화) 기반 가설 생성·연구제안, 신약 재창출·표적 발굴 실사용례 발표"
+        "name": "AI Co-Scientist",
+        "org": "Google (Gemini)",
+        "year": "2026",
+        "note": "멀티에이전트(생성·비평·랭킹·진화 토너먼트) 가설생성. 약물 재창출·노블 표적·기전규명, AML 조합요법 in vitro 검증 (Nature '26 게재)"
       },
       {
-        "name": "Claude for Science",
-        "org": "Anthropic",
-        "year": "2025~2026",
-        "note": "문헌추론·실험설계·데이터분석 지원, 생명과학 연구 워크플로우 협업 (MCP 도구연계)"
+        "name": "Biomni",
+        "org": "Stanford",
+        "year": "2026",
+        "note": "범용 바이오의학 AI 에이전트. 443문항 벤치 57%(LLM 30% 상회), 약물 재창출·인과 유전자 우선순위 (Science '26 게재)"
       },
       {
-        "name": "Robin / Kosmos",
+        "name": "Robin",
         "org": "FutureHouse",
+        "year": "2026",
+        "note": "자율 신약발굴 멀티에이전트(가설→실험설계→분석). 건성 황반변성(dAMD) 후보 ripasudil 도출 (Nature '26 게재)"
+      },
+      {
+        "name": "Kosmos",
+        "org": "FutureHouse / Edison Scientific",
         "year": "2025",
-        "note": "문헌 기반 자율 과학자 에이전트 — 가설→실험설계→분석 루프, 신규 치료가설 도출 사례"
+        "note": "최대 12시간 자율 실행 — 데이터분석·문헌검색·가설생성 반복 후 과학 보고서 합성 (arXiv)"
+      },
+      {
+        "name": "Claude Science",
+        "org": "Anthropic",
+        "year": "2026",
+        "note": "과학 계산연구 통합 워크벤치(단백질·구조·분자 native 시각화, 재현가능·코드추적) — 제품/플랫폼"
+      },
+      {
+        "name": "GPT-Rosalind",
+        "org": "OpenAI",
+        "year": "2026",
+        "note": "생명과학 특화 추론모델(화학·단백질공학·유전체) — 증거합성·가설생성·실험계획 지원, 제품/모델"
       },
       {
         "name": "Virtual Lab",
@@ -2239,7 +2257,7 @@
         "name": "Coscientist / A-Lab",
         "org": "CMU / Berkeley(LBNL)",
         "year": "2023~2024",
-        "note": "LLM+로봇 자율실험(합성·최적화), 재료·화학 자율실험실 실증 — 신약 자율실험실의 원형"
+        "note": "LLM+로봇 자율실험(합성·최적화) — 재료·화학 자율실험실 실증, 신약 자율실험실 원형"
       }
     ],
     "national": [
@@ -2370,6 +2388,46 @@
         "topic": "AI Co-Scientist(플랫폼)",
         "url": "https://openai.com/index/introducing-gpt-rosalind/",
         "note": "OpenAI — 생명과학 특화 추론모델(화학·단백질공학·유전체). 증거합성·가설생성·실험계획 지원, Amgen·Moderna 등 협력. ※저널 논문 아닌 제품/모델"
+      },
+      {
+        "title": "How to build the virtual cell with artificial intelligence: Priorities and opportunities",
+        "venue": "Cell",
+        "year": "2024",
+        "topic": "AI Virtual Cell",
+        "url": "https://www.cell.com/cell/fulltext/S0092-8674(24)01332-1",
+        "note": "AI 가상세포(AIVC) 개념 정립 원류 논문(Bunne 등, EPFL·Stanford·CZI·Genentech). 멀티모달·멀티스케일 표현으로 섭동(유전·화학·환경) 반응 예측"
+      },
+      {
+        "title": "Virtual Cell Challenge: Toward a Turing test for the virtual cell",
+        "venue": "Cell",
+        "year": "2025",
+        "topic": "AI Virtual Cell",
+        "url": "https://www.cell.com/cell/fulltext/S0092-8674(25)00675-0",
+        "note": "Arc Institute — 가상세포 벤치마크 챌린지 제안(섭동 반응 예측). State 모델(1.7억+ 세포 학습) 등 촉발"
+      },
+      {
+        "title": "Grow AI virtual cells: three data pillars and closed-loop learning",
+        "venue": "Cell Research (Nature portfolio)",
+        "year": "2025",
+        "topic": "AI Virtual Cell",
+        "url": "https://www.nature.com/articles/s41422-025-01101-y",
+        "note": "AI 가상세포 육성을 위한 3대 데이터 축과 폐루프(closed-loop) 학습 전략 제시"
+      },
+      {
+        "title": "How to build an AI-driven digital organism",
+        "venue": "Nature Medicine",
+        "year": "2026",
+        "topic": "AI Model Organism",
+        "url": "https://www.nature.com/articles/s41591-026-04595-0",
+        "note": "분자→세포→조직→개체로 이어지는 멀티스케일 파운데이션 모델 통합(AI 디지털 개체) 구축 로드맵"
+      },
+      {
+        "title": "Towards predictive virtual embryos with genomics and AI",
+        "venue": "Nature Methods",
+        "year": "2026",
+        "topic": "AI Model Organism",
+        "url": "https://www.nature.com/articles/s41592-026-03055-4",
+        "note": "단일세포·공간 유전체 데이터와 AI를 결합해 포유류 발생(embryogenesis)을 스케일 넘나들며 예측하는 가상 배아"
       }
     ],
     "latest_research_updated": "2026-09-13"
