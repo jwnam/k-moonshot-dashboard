@@ -1,6 +1,21 @@
 {
-  "updated": "2026-07-21",
+  "updated": "2026-09-20",
   "items": [
+    {
+      "id": 6,
+      "title": "신약탐색 AI Co-Scientist 다크오스(DACOS) 구축·서비스 사전기획보고서(안) V1.0",
+      "category": "신규기획",
+      "date": "2026-09-20",
+      "file": "files/DACOS_AI신약_Co-Scientist_사전기획_제안서_V1.0.hwp",
+      "filetype": "HWP",
+      "desc": "신약개발 전주기를 Agentic AI가 자율수행하는 AI 과학자 서비스 '다크오스(DACOS, Drug discovery by AI CO-Scientists)' 사전기획. K-문샷 전략 ①-➋ 'AI 과학자 혁신 플랫폼' 구현. 듀얼 LLM코어(프론티어 API+국내 오픈웨이트)+Controller Agent의 6단계 특화모델 오케스트레이션(MCP)+Biomni-K, AI-ready 데이터레이크·Model Hub(K-BDS 연계), 테넌트 격리·로그 자산화 거버넌스. 기간 26.12~35.12(3+3+3), GPU 80→280→464장(NAIS/K-BDS). 목적: 해외 AI Co-Scientist Lock-in·연구 Harness 유출 방지 및 국내 내재화.",
+      "sources": [
+        {
+          "label": "원본: K-문샷 __신규아이템 (구글드라이브)",
+          "url": ""
+        }
+      ]
+    },
     {
       "id": 5,
       "title": "K-문샷 AI 신약 분야 사전 의견조사 결과 (2026.7)",
