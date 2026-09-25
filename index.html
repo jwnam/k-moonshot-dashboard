@@ -409,9 +409,10 @@
 <div id="tab-kmoonshot" class="tab-panel">
   <div class="section">
     <div class="card" style="background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(34,211,238,.05)); border-color:rgba(99,102,241,.3);">
-      <div style="font-size:18px; font-weight:700; margin-bottom:6px;">🎯 K-문샷 신약 AI 미션</div>
-      <div style="font-size:15px; color:var(--accent2);" id="rm-mission"></div>
-      <div style="font-size:13px; color:var(--accent3); margin-top:6px; font-weight:600;" id="rm-slogan"></div>
+      <div style="font-size:14px; font-weight:700; color:var(--muted); margin-bottom:6px;">🎯 K-문샷 신약 AI 미션</div>
+      <div style="font-size:20px; font-weight:800; color:var(--accent2); line-height:1.4;" id="rm-mission"></div>
+      <ul style="list-style:none; margin:8px 0 0; padding:0;" id="rm-objectives"></ul>
+      <div style="font-size:13px; color:var(--accent3); margin-top:8px; font-weight:600;" id="rm-slogan"></div>
       <div style="font-size:11px; color:var(--muted); margin-top:4px;" id="rm-version"></div>
     </div>
   </div>
@@ -477,7 +478,7 @@
   <div class="section">
     <div class="card tbl-wrap">
       <table id="proj-major-table">
-        <thead><tr><th>전략</th><th>구분</th><th>사업명</th><th>등급</th><th>기간</th><th>'26 예산</th><th>'27 예산</th></tr></thead>
+        <thead><tr><th>전략</th><th>실행과제</th><th>사업명</th><th id="proj-grade-th" style="cursor:pointer;user-select:none;white-space:nowrap;" title="클릭 시 사업구분 기준 정렬">사업구분 <span id="proj-grade-arrow" style="font-size:10px;color:var(--muted);">⇅</span></th><th>기간</th><th>'26 예산</th><th>'27 예산</th></tr></thead>
         <tbody></tbody>
       </table>
     </div>
@@ -1419,6 +1420,8 @@ function renderSurvey(sv) {
 
 function renderRoadmap(rm) {
   document.getElementById('rm-mission').textContent = rm.mission;
+  var ob = document.getElementById('rm-objectives');
+  if (ob) ob.innerHTML = (rm.objectives || []).map(o => `<li style="font-size:13px; color:var(--accent2); opacity:.9; margin-top:4px; padding-left:2px; line-height:1.5;">${o}</li>`).join('');
   if (rm.slogan) { var sl = document.getElementById('rm-slogan'); if (sl) sl.textContent = '슬로건 「' + rm.slogan + '」'; }
   if (rm.version) { var vr = document.getElementById('rm-version'); if (vr) vr.textContent = rm.version; }
   document.getElementById('roadmap').innerHTML = rm.milestones.map((m, i) => `
@@ -1481,16 +1484,43 @@ function renderProjects(proj) {
     '일부관련*':   {bg:'rgba(148,163,184,.16)',fg:'#94a3b8'}
   };
   const badge = g => { if(!g) return ''; const s=gradeStyle[g]||{bg:'rgba(148,163,184,.16)',fg:'#94a3b8'}; return `<span class="relevance-badge" style="background:${s.bg};color:${s.fg};white-space:nowrap;">${g}</span>`; };
-  let rows='';
-  mj.groups.forEach((g,gi)=>{
-    g.items.forEach((it,ii)=>{
-      rows += `<tr>`;
-      if(ii===0) rows += `<td rowspan="${g.items.length}" style="font-weight:700;border-left:3px solid ${stratColors[gi%3]};font-size:11.5px;vertical-align:top;">${g.strategy}</td>`;
-      rows += `<td style="font-size:11px;color:var(--muted);">${it.cat}</td><td style="font-size:12px;">${it.name}</td><td style="text-align:center;">${badge(it.grade)}</td><td style="white-space:nowrap;font-size:11px;">${it.period}</td><td style="text-align:right;">${fmt(it.b26)}</td><td style="text-align:right;color:var(--accent3);font-weight:600;">${fmt(it.b27)}</td></tr>`;
+  const GRADE_ORDER = {'핵심':0,'전략':1,'밀접관련***':2,'관련**':3,'일부관련*':4,'':5};
+  const cell = it => `<td style="font-size:12px;">${it.name}</td><td style="text-align:center;">${badge(it.grade)}</td><td style="white-space:nowrap;font-size:11px;">${it.period}</td><td style="text-align:right;">${fmt(it.b26)}</td><td style="text-align:right;color:var(--accent3);font-weight:600;">${fmt(it.b27)}</td>`;
+  const subtotalRow = `<tr style="border-top:2px solid var(--border);font-weight:700;background:rgba(99,102,241,.06);"><td colspan="5" style="text-align:right;">소계 (연계사업 합계)</td><td style="text-align:right;">${mj.subtotal.b26.toLocaleString()}</td><td style="text-align:right;color:var(--accent3);">${mj.subtotal.b27.toLocaleString()}</td></tr>`;
+
+  function buildGrouped(){
+    let rows='';
+    mj.groups.forEach((g,gi)=>{
+      // 실행과제(cat)별 rowspan 계산
+      const cats=[]; g.items.forEach(it=>{ const last=cats[cats.length-1]; if(last&&last.cat===it.cat) last.items.push(it); else cats.push({cat:it.cat,items:[it]}); });
+      let first=true;
+      cats.forEach(cg=>{
+        cg.items.forEach((it,ci)=>{
+          rows+=`<tr>`;
+          if(first){ rows+=`<td rowspan="${g.items.length}" style="font-weight:700;border-left:3px solid ${stratColors[gi%3]};font-size:11.5px;vertical-align:top;">${g.strategy}</td>`; first=false; }
+          if(ci===0) rows+=`<td rowspan="${cg.items.length}" style="font-size:11px;color:var(--muted);vertical-align:top;border-left:1px dashed var(--border);">${cg.cat}</td>`;
+          rows+=cell(it)+`</tr>`;
+        });
+      });
     });
-  });
-  rows += `<tr style="border-top:2px solid var(--border);font-weight:700;background:rgba(99,102,241,.06);"><td colspan="5" style="text-align:right;">소계 (연계사업 합계)</td><td style="text-align:right;">${mj.subtotal.b26.toLocaleString()}</td><td style="text-align:right;color:var(--accent3);">${mj.subtotal.b27.toLocaleString()}</td></tr>`;
-  document.querySelector('#proj-major-table tbody').innerHTML = rows;
+    return rows+subtotalRow;
+  }
+  function buildByGrade(){
+    const flat=[]; mj.groups.forEach((g,gi)=>g.items.forEach(it=>flat.push({...it,_strat:g.strategy,_gi:gi})));
+    flat.sort((a,b)=>(GRADE_ORDER[a.grade]??9)-(GRADE_ORDER[b.grade]??9));
+    let rows='';
+    flat.forEach(it=>{
+      rows+=`<tr><td style="font-weight:600;border-left:3px solid ${stratColors[it._gi%3]};font-size:11px;">${it._strat.replace(/ .*/,'')}</td><td style="font-size:11px;color:var(--muted);">${it.cat}</td>`+cell(it)+`</tr>`;
+    });
+    return rows+subtotalRow;
+  }
+  const tbody=document.querySelector('#proj-major-table tbody');
+  const arrow=document.getElementById('proj-grade-arrow');
+  window._projSortByGrade = window._projSortByGrade || false;
+  function paint(){ tbody.innerHTML = window._projSortByGrade ? buildByGrade() : buildGrouped(); if(arrow) arrow.textContent = window._projSortByGrade ? '▼' : '⇅'; }
+  const th=document.getElementById('proj-grade-th');
+  if(th && !th._bound){ th._bound=true; th.addEventListener('click',()=>{ window._projSortByGrade=!window._projSortByGrade; paint(); }); }
+  paint();
   const ds = mj.doc_subtotal;
   var noteEl = document.getElementById('proj-subtotal-note');
   if(noteEl) noteEl.textContent = `※ 소계는 편성 사업 합산(백만원). 원문 표 소계 표기: '26 ${ds.b26.toLocaleString()} / '27 ${ds.b27.toLocaleString()} (${ds.note}).`;
