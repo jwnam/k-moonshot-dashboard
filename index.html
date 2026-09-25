@@ -1421,7 +1421,7 @@ function renderSurvey(sv) {
 function renderRoadmap(rm) {
   document.getElementById('rm-mission').textContent = rm.mission;
   var ob = document.getElementById('rm-objectives');
-  if (ob) ob.innerHTML = (rm.objectives || []).map(o => `<li style="font-size:13px; color:var(--accent2); opacity:.9; margin-top:4px; padding-left:2px; line-height:1.5;">${o}</li>`).join('');
+  if (ob) ob.innerHTML = (rm.objectives || []).map(o => `<li style="font-size:15px; color:var(--accent2); opacity:.92; margin-top:5px; padding-left:2px; line-height:1.5;">${o}</li>`).join('');
   if (rm.slogan) { var sl = document.getElementById('rm-slogan'); if (sl) sl.textContent = '슬로건 「' + rm.slogan + '」'; }
   if (rm.version) { var vr = document.getElementById('rm-version'); if (vr) vr.textContent = rm.version; }
   document.getElementById('roadmap').innerHTML = rm.milestones.map((m, i) => `
