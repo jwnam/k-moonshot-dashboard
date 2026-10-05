@@ -1,0 +1,160 @@
+{
+  "id": "digital-ai-cell",
+  "name": "디지털AI세포(정상세포)",
+  "category": "협력사업현황",
+  "folder_mark": "***",
+  "overview": {
+    "lead_org": "서울대학교",
+    "pi": "최무림",
+    "co_pi": null,
+    "period_raw": "2026.04.01 ~ 2030.12.31",
+    "period_start": "2026-04-01",
+    "period_end": "2030-12-31",
+    "budget_total_mw": 23750,
+    "budget_26_mw": 3500,
+    "budget_27_mw": 5000,
+    "objective": "목표테스트",
+    "research_content": "연구내용 추가(주관, 공동 연구내용 구별해서 작성)",
+    "mission_relevance": "[전략1-실행과제1,3] 디지털AI세포는 약물에 대한 세포 반응을 가상으로 예측하는 기반기술로, AI신약 미션의 표적 발굴·기전 검증·효능/독성 예측을 가속합니다. 이를 통해 실험 비용과 임상 실패율을 낮추는, 미션 달성의 핵심 인프라입니다.",
+    "emails": [
+      "murimchoi@snu.ac.kr"
+    ]
+  },
+  "milestones": [
+    {
+      "year": 1,
+      "year_label": "YYYY",
+      "quarter": 1,
+      "no": "1-1-1",
+      "title": "xxxx",
+      "criteria": "xxx",
+      "status": "",
+      "due": null
+    },
+    {
+      "year": 1,
+      "year_label": "YYYY",
+      "quarter": 1,
+      "no": "1-1-2",
+      "title": "xxxx",
+      "criteria": "xxx",
+      "status": "",
+      "due": null
+    },
+    {
+      "year": 1,
+      "year_label": "YYYY",
+      "quarter": 2,
+      "no": "1-2-1",
+      "title": "xxxxx",
+      "criteria": "xxx",
+      "status": "",
+      "due": null
+    },
+    {
+      "year": 1,
+      "year_label": "YYYY",
+      "quarter": 2,
+      "no": "1-2-2",
+      "title": "xxxxx",
+      "criteria": "xxx",
+      "status": "",
+      "due": null
+    },
+    {
+      "year": 1,
+      "year_label": "YYYY",
+      "quarter": 3,
+      "no": "1-3-1",
+      "title": "xxxx",
+      "criteria": "xxxx",
+      "status": "",
+      "due": null
+    },
+    {
+      "year": 1,
+      "year_label": "YYYY",
+      "quarter": 3,
+      "no": "1-3-2",
+      "title": "xxxx",
+      "criteria": "xxxx",
+      "status": "",
+      "due": null
+    },
+    {
+      "year": 1,
+      "year_label": "YYYY",
+      "quarter": 4,
+      "no": "1-4-1",
+      "title": "xxxx",
+      "criteria": "xx",
+      "status": "",
+      "due": null
+    }
+  ],
+  "outcomes": {
+    "data": [
+      {
+        "no": 1,
+        "name": "Perturbation",
+        "type": "전사체, ATAC-seq",
+        "target": "10세포주, 100개 유전자 조합",
+        "expected": "YYYY.MM",
+        "current": "실험설계"
+      }
+    ],
+    "ai_model": [
+      {
+        "no": 1,
+        "name": "AI세포",
+        "function": "약물반응",
+        "target": "1M",
+        "expected": "YYYY.MM",
+        "status": "기획"
+      }
+    ],
+    "drug": [
+      {
+        "no": 1,
+        "indication": "",
+        "target": "",
+        "modality": "",
+        "ai_use": "",
+        "stage": ""
+      }
+    ]
+  },
+  "progress_log": [
+    {
+      "date": "YYYY.MM.DD",
+      "author": "ㅇㅇㅇ",
+      "milestone": "1-1",
+      "result": "서술형 또는 개조식으로 자세히 작성",
+      "type": "결과/논문/특허/…"
+    }
+  ],
+  "needs": {
+    "difficulties": "테스트 4.1",
+    "resources": "테스트 4.2",
+    "issues": "테스트 4.4"
+  },
+  "status": {
+    "light": "미정",
+    "delay_quarters": 0,
+    "delay_verdicts": 0,
+    "reasons": [
+      "마일스톤 일정(분기말) 정보 미입력 — 판정 보류"
+    ],
+    "auto": true,
+    "override": null
+  },
+  "check_history": [],
+  "source_doc": {
+    "drive_id": "1eouUjdczu4Z-ikIoif54sb-LSjhd7h-t",
+    "url": "https://drive.google.com/file/d/1eouUjdczu4Z-ikIoif54sb-LSjhd7h-t/view",
+    "folder_url": "https://drive.google.com/drive/folders/1Ifh2rmtQ8Bl6F9-BEEznB9knZ2w2UKKt",
+    "last_synced": "2026-10-05",
+    "modified": "2026-10-05T14:24:48.253Z"
+  },
+  "rfp_url": null
+}

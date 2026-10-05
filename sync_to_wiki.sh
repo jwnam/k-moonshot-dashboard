@@ -18,6 +18,11 @@ mkdir -p "$DST/data"
 for f in dashboard.json kddf_pipeline.json pipeline_clinical_ctgov.json resources.json; do
   [ -f "$SRC/data/$f" ] && cp "$SRC/data/$f" "$DST/data/$f"
 done
+# 사업별 수행현황 데이터(사업현황 신호등·상세) 미러
+if [ -d "$SRC/data/projects" ]; then
+  mkdir -p "$DST/data/projects"
+  rsync -a --delete "$SRC/data/projects/" "$DST/data/projects/"
+fi
 if [ -d "$SRC/files" ]; then
   rsync -a --delete "$SRC/files/" "$DST/files/"
 fi
