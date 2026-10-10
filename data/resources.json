@@ -2,6 +2,21 @@
   "updated": "2026-10-10",
   "items": [
     {
+      "id": 9,
+      "title": "AIxBio Summit 개최 계획(안) — BIOINFO/GIW ISCB-Asia 2026 병행",
+      "category": "회의자료",
+      "date": "2026-10-10",
+      "file": "files/261010_AIxBio_Summit_붙임추가.hwpx",
+      "filetype": "HWPX",
+      "desc": "AI바이오 Summit 개최 계획(안)(2026.10.10, 남진우 PD). 글로벌 오피니언 리더의 AI바이오(AI버츄얼셀·바이오 파운데이션모델·신약개발 AI Co-Scientist) 성과발표·패널토론 + K-문샷 AI신약 미션 전략로드맵·국가 AI바이오 정책전략 비전 공유. [개요] 2026.11.18(수) 10:30~12:00 중 1시간 내외, 연세대(서울). 참석: 과기부총리/차관, 남진우 PD, 한국연구재단 단장(차바단·신약단), 제약바이오협회, 국내 제약사(한미약품 등), AI바이오 글로벌 전문가, 미션 성과 연구책임자. [프로그램] Opening(10)→AI바이오 Summit 성과발표(60)→패널토론(20, AI바이오 정책전략 비전+K-문샷 성공전략). [母행사] BIOINFO/GIW ISCB-Asia 2026(11.17~20, 연세대, KSBi·ISCB 공동) — KOBRA Summit, 한중일 심포지엄, DeepMind AlphaGenome 튜토리얼, 멀티모달 FM·K-BDS 특별세션, 기조연사 P.Kohli(DeepMind)·H.Li(Harvard)·J.Zou(Stanford)·J.Ma(CMU)·강재우(고려대) 등. ISMB 2029 서울 유치(아시아 최초) 연계 글로벌 협력·인재유치 플랫폼화.",
+      "sources": [
+        {
+          "label": "K-문샷 __회의록 (구글드라이브)",
+          "url": ""
+        }
+      ]
+    },
+    {
       "id": 8,
       "title": "보건복지부 「보건의료데이터 활용 가이드라인」 개정 주요내용 (가명처리 관련)",
       "category": "정책",
