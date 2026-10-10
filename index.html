@@ -2101,11 +2101,32 @@ function renderProjectDetail(p, el){
     <tr><th>추가 필요자원</th><td>${esc(nd.resources)}</td></tr>
     <tr><th>기타 이슈</th><td>${esc(nd.issues)}</td></tr></table>`;
 
+  // ⓪ RFP 핵심 요약 (사업개요 앞) — rfp 데이터가 있는 사업만 표시
+  const rfp = p.rfp || null;
+  let rfpHtml = '';
+  if (rfp) {
+    const goalBlocks = (rfp.phase_goals||[]).map(pg=>`
+      <div style="margin-bottom:8px;">
+        <div style="font-weight:700;font-size:12px;color:var(--accent3);">${esc(pg.phase)}</div>
+        <ul style="margin:4px 0 0 18px;padding:0;">${(pg.goals||[]).map(g=>`<li style="margin:2px 0;">${esc(g)}</li>`).join('')}</ul>
+      </div>`).join('');
+    const kpiItems = (rfp.kpis||[]).map(k=>`<li style="margin:3px 0;">${esc(k)}</li>`).join('');
+    const consItems = (rfp.considerations||[]).map(k=>`<li style="margin:3px 0;">${esc(k)}</li>`).join('');
+    const rfpLink = rfp.url ? `<a href="${rfp.url}" target="_blank">📎 ${esc(rfp.file_name||'RFP 원문')}</a>${rfp.url_note?` <span style="color:var(--muted);font-size:11px;">(${esc(rfp.url_note)})</span>`:''}` : '';
+    rfpHtml = `<table class="info-table">
+      <tr><th>최종 목표</th><td colspan="3">${esc(rfp.final_goal)}</td></tr>
+      <tr><th>단계별 목표</th><td colspan="3">${goalBlocks||'—'}</td></tr>
+      <tr><th>핵심성과지표<br>(KPI)</th><td colspan="3"><ul style="margin:0 0 0 18px;padding:0;">${kpiItems||'<li>—</li>'}</ul></td></tr>
+      <tr><th>중요 고려사항</th><td colspan="3"><ul style="margin:0 0 0 18px;padding:0;">${consItems||'<li>—</li>'}</ul></td></tr>
+      ${rfpLink?`<tr><th>RFP 원문</th><td colspan="3">${rfpLink}</td></tr>`:''}
+    </table>`;
+  }
+
   const srcDoc = p.source_doc||{};
   const links = [
     srcDoc.url ? `<a href="${srcDoc.url}" target="_blank">📄 원본 성과관리 양식(docx)</a>` : '',
     srcDoc.folder_url ? `<a href="${srcDoc.folder_url}" target="_blank">📁 사업 폴더</a>` : '',
-    p.rfp_url ? `<a href="${p.rfp_url}" target="_blank">📎 RFP</a>` : ''
+    (rfp&&rfp.url)||p.rfp_url ? `<a href="${(rfp&&rfp.url)||p.rfp_url}" target="_blank">📎 RFP</a>` : ''
   ].filter(Boolean).join(' &nbsp;·&nbsp; ');
 
   el.innerHTML = `
@@ -2121,6 +2142,7 @@ function renderProjectDetail(p, el){
         <div class="meta" style="margin-top:10px;">${links} ${srcDoc.last_synced?`<span style="color:var(--muted);">· 최종 동기화 ${srcDoc.last_synced}</span>`:''}</div>
       </div>
     </div>
+    ${rfp?`<div class="section"><div class="section-title">📑 과제제안요구서(RFP) 핵심 요약</div>${rfpHtml}</div>`:''}
     <div class="section"><div class="section-title">① 사업 개요</div>${overviewTbl}</div>
     <div class="section"><div class="section-title">② 연차·분기별 마일스톤</div>${msTbl}</div>
     <div class="section"><div class="section-title">③ 주요 연구성과</div>${outcomesHtml}</div>
