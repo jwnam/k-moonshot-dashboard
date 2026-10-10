@@ -6,107 +6,434 @@
   "overview": {
     "lead_org": "서울대학교",
     "pi": "최무림",
-    "co_pi": null,
-    "period_raw": "2026.04.01 ~ 2030.12.31",
+    "co_pi": "임상수(동국대), 서승용(가천대)",
+    "period_raw": "2026.04.01 ~ 2029.12.31",
     "period_start": "2026-04-01",
-    "period_end": "2030-12-31",
-    "budget_total_mw": 23750,
+    "period_end": "2029-12-31",
+    "budget_total_mw": 18750,
     "budget_26_mw": 3500,
     "budget_27_mw": 5000,
-    "objective": "목표테스트",
-    "research_content": "연구내용 추가(주관, 공동 연구내용 구별해서 작성)",
+    "objective": "(RFP) 분자-세포 수준의 생명현상을 정밀하게 시뮬레이션하는 세계 최고 수준의 확장 가능한 범용 디지털 AI 세포 플랫폼(멀티모달-멀티스케일 파운데이션모델)을 구축하여, 이를 통해 신약개발 성공률을 획기적으로 향상시킬 수 있는 핵심 원천기술 확보 및 질환 특이적 유효물질 발굴 및 실증함",
+    "research_content": "주관: 질환 모델의 정상세포 유래 대규모 멀티모달 오믹스 데이터 생성(지방간·자가면역·암 세포주 활용, 전사체·후성유전체·단백체·대사체·Perturbation 데이터 + 공공데이터 빅데이터 생성) / 공동1: 범용 바이오 AI 모델 개발(대규모 데이터 사전학습 생성형 AI 파운데이션 모델 및 질환별 섭동 예측 알고리즘) / 공동2: 질환별 실증 및 응용(지방간 대사변화·자가면역 면역반응·암세포 약물저항성 시뮬레이션 및 실험 검증, 최적 치료 타겟·신약 유효물질 도출)",
     "mission_relevance": "[전략1-실행과제1,3] 디지털AI세포는 약물에 대한 세포 반응을 가상으로 예측하는 기반기술로, AI신약 미션의 표적 발굴·기전 검증·효능/독성 예측을 가속합니다. 이를 통해 실험 비용과 임상 실패율을 낮추는, 미션 달성의 핵심 인프라입니다.",
     "emails": [
-      "murimchoi@snu.ac.kr"
+      "murimchoi@snu.ac.kr",
+      "sslim@dgu.ac.kr",
+      "syseo@gachon.ac.kr"
     ]
   },
   "milestones": [
     {
       "year": 1,
-      "year_label": "YYYY",
-      "quarter": 1,
-      "no": "1-1-1",
-      "title": "xxxx",
-      "criteria": "xxx",
-      "status": "",
-      "due": null
-    },
-    {
-      "year": 1,
-      "year_label": "YYYY",
-      "quarter": 1,
-      "no": "1-1-2",
-      "title": "xxxx",
-      "criteria": "xxx",
-      "status": "",
-      "due": null
-    },
-    {
-      "year": 1,
-      "year_label": "YYYY",
+      "year_label": "2026",
       "quarter": 2,
       "no": "1-2-1",
-      "title": "xxxxx",
-      "criteria": "xxx",
-      "status": "",
-      "due": null
+      "title": "데이터 수집, 생성 준비 #1",
+      "criteria": "세포주 10개 선택",
+      "status": "●",
+      "status_text": "달성",
+      "due": "2026-06-30"
     },
     {
       "year": 1,
-      "year_label": "YYYY",
+      "year_label": "2026",
       "quarter": 2,
-      "no": "1-2-2",
-      "title": "xxxxx",
-      "criteria": "xxx",
-      "status": "",
-      "due": null
+      "no": "1-2-1",
+      "title": "데이터 수집, 생성 준비 #1",
+      "criteria": "10개 세포주 배양, 유전자 삽입 여부",
+      "status": "○",
+      "status_text": "진행 중",
+      "due": "2026-06-30"
     },
     {
       "year": 1,
-      "year_label": "YYYY",
+      "year_label": "2026",
       "quarter": 3,
       "no": "1-3-1",
-      "title": "xxxx",
-      "criteria": "xxxx",
-      "status": "",
-      "due": null
+      "title": "gRNA library 구축 #1",
+      "criteria": "4개 세포주 Genome-wide library 구축 여부",
+      "status": "○",
+      "status_text": "진행 중",
+      "due": "2026-09-30"
     },
     {
       "year": 1,
-      "year_label": "YYYY",
+      "year_label": "2026",
       "quarter": 3,
       "no": "1-3-2",
-      "title": "xxxx",
-      "criteria": "xxxx",
-      "status": "",
-      "due": null
+      "title": "gRNA library 구축 #2",
+      "criteria": "6개 세포주 Focused library 구축 여부",
+      "status": "○",
+      "status_text": "진행 중",
+      "due": "2026-09-30"
     },
     {
       "year": 1,
-      "year_label": "YYYY",
+      "year_label": "2026",
+      "quarter": 3,
+      "no": "1-3-3",
+      "title": "공공데이터 수집",
+      "criteria": "~9M cell data 수집",
+      "status": "○",
+      "status_text": "진행 중",
+      "due": "2026-09-30"
+    },
+    {
+      "year": 1,
+      "year_label": "2026",
       "quarter": 4,
       "no": "1-4-1",
-      "title": "xxxx",
-      "criteria": "xx",
+      "title": "파운데이션모델 설계, 기준 정립",
+      "criteria": "FM 설계, 기준 정립 여부",
+      "status": "○",
+      "status_text": "진행 중",
+      "due": "2026-12-31"
+    },
+    {
+      "year": 1,
+      "year_label": "2026",
+      "quarter": 4,
+      "no": "1-4-2",
+      "title": "타 기관 검증 준비",
+      "criteria": "타 기관 검증 준비 여부",
+      "status": "○",
+      "status_text": "진행 중",
+      "due": "2026-12-31"
+    },
+    {
+      "year": 2,
+      "year_label": "2027",
+      "quarter": 1,
+      "no": "2-1-1",
+      "title": "정상세포 데이터 생성 #1",
+      "criteria": "세포주 유래 전사체, 후성유전체 데이터 생성",
       "status": "",
-      "due": null
+      "status_text": "",
+      "due": "2027-03-31"
+    },
+    {
+      "year": 2,
+      "year_label": "2027",
+      "quarter": 1,
+      "no": "2-1-2",
+      "title": "정상세포 데이터 생성 #2",
+      "criteria": "세포주 유래 단백체, 대사체 데이터 생성",
+      "status": "",
+      "status_text": "",
+      "due": "2027-03-31"
+    },
+    {
+      "year": 2,
+      "year_label": "2027",
+      "quarter": 2,
+      "no": "2-2-1",
+      "title": "Perturb-seq 데이터 생성 #1",
+      "criteria": "10X 기반 데이터 생성",
+      "status": "",
+      "status_text": "",
+      "due": "2027-06-30"
+    },
+    {
+      "year": 2,
+      "year_label": "2027",
+      "quarter": 2,
+      "no": "2-2-2",
+      "title": "Perturb-seq 데이터 생성 #2",
+      "criteria": "sci-RNA-seq3 기반 데이터 생성",
+      "status": "",
+      "status_text": "",
+      "due": "2027-06-30"
+    },
+    {
+      "year": 2,
+      "year_label": "2027",
+      "quarter": 3,
+      "no": "2-3-1",
+      "title": "정상세포 기반 FM 구축 #1",
+      "criteria": "FM 구축-고도화",
+      "status": "",
+      "status_text": "",
+      "due": "2027-09-30"
+    },
+    {
+      "year": 2,
+      "year_label": "2027",
+      "quarter": 3,
+      "no": "2-3-2",
+      "title": "정상세포 기반 FM 구축 #2",
+      "criteria": "세포주석, 지식베이스 구축",
+      "status": "",
+      "status_text": "",
+      "due": "2027-09-30"
+    },
+    {
+      "year": 2,
+      "year_label": "2027",
+      "quarter": 4,
+      "no": "2-4-1",
+      "title": "멀티오믹스 교차 무결성 검증 기술 개발 #1",
+      "criteria": "무결성 검증 기술",
+      "status": "",
+      "status_text": "",
+      "due": "2027-12-31"
+    },
+    {
+      "year": 2,
+      "year_label": "2027",
+      "quarter": 4,
+      "no": "2-4-2",
+      "title": "멀티오믹스 교차 무결성 검증 기술 개발 #2",
+      "criteria": "파일럿 테스트",
+      "status": "",
+      "status_text": "",
+      "due": "2027-12-31"
+    },
+    {
+      "year": 2,
+      "year_label": "2027",
+      "quarter": 4,
+      "no": "2-4-3",
+      "title": "멀티오믹스 교차 무결성 검증 기술 개발 #3",
+      "criteria": "피드백 리포트 발행",
+      "status": "",
+      "status_text": "",
+      "due": "2027-12-31"
+    },
+    {
+      "year": 3,
+      "year_label": "2028",
+      "quarter": 1,
+      "no": "3-1-1",
+      "title": "질환세포 기반 FM 구축 #1",
+      "criteria": "질환 특이 FM 구축",
+      "status": "",
+      "status_text": "",
+      "due": "2028-03-31"
+    },
+    {
+      "year": 3,
+      "year_label": "2028",
+      "quarter": 1,
+      "no": "3-1-2",
+      "title": "질환세포 기반 FM 구축 #2",
+      "criteria": "약물구조 생성모델 기반 유효물질 생성",
+      "status": "",
+      "status_text": "",
+      "due": "2028-03-31"
+    },
+    {
+      "year": 3,
+      "year_label": "2028",
+      "quarter": 1,
+      "no": "3-1-3",
+      "title": "질환세포 기반 FM 구축 #3",
+      "criteria": "약물 대상 디지털세포 반응 예측",
+      "status": "",
+      "status_text": "",
+      "due": "2028-03-31"
+    },
+    {
+      "year": 3,
+      "year_label": "2028",
+      "quarter": 2,
+      "no": "3-2-1",
+      "title": "디지털세포 모델 검증, 고도화 #1",
+      "criteria": "디지털세포모델 실험적 검증",
+      "status": "",
+      "status_text": "",
+      "due": "2028-06-30"
+    },
+    {
+      "year": 3,
+      "year_label": "2028",
+      "quarter": 2,
+      "no": "3-2-2",
+      "title": "디지털세포 모델 검증, 고도화 #2",
+      "criteria": "디지털세포모델 타기관 교차검증",
+      "status": "",
+      "status_text": "",
+      "due": "2028-06-30"
+    },
+    {
+      "year": 3,
+      "year_label": "2028",
+      "quarter": 3,
+      "no": "3-3-1",
+      "title": "신규질환 표적 도출, 평가 #1",
+      "criteria": "질환모델 표적 도출",
+      "status": "",
+      "status_text": "",
+      "due": "2028-09-30"
+    },
+    {
+      "year": 3,
+      "year_label": "2028",
+      "quarter": 3,
+      "no": "3-3-2",
+      "title": "신규질환 표적 도출, 평가 #2",
+      "criteria": "질환모델 표적 평가",
+      "status": "",
+      "status_text": "",
+      "due": "2028-09-30"
+    },
+    {
+      "year": 3,
+      "year_label": "2028",
+      "quarter": 3,
+      "no": "3-3-3",
+      "title": "신규질환 표적 제어 유효물질 제시",
+      "criteria": "유효물질 제시",
+      "status": "",
+      "status_text": "",
+      "due": "2028-09-30"
+    },
+    {
+      "year": 3,
+      "year_label": "2028",
+      "quarter": 4,
+      "no": "3-4-1",
+      "title": "산업계, K-AI 기반 대규모 실증 #1",
+      "criteria": "산업계 기반 질환 특이적 실증",
+      "status": "",
+      "status_text": "",
+      "due": "2028-12-31"
+    },
+    {
+      "year": 3,
+      "year_label": "2028",
+      "quarter": 4,
+      "no": "3-4-2",
+      "title": "산업계, K-AI 기반 대규모 실증 #2",
+      "criteria": "K-AI 과제 연계 실증",
+      "status": "",
+      "status_text": "",
+      "due": "2028-12-31"
+    },
+    {
+      "year": 4,
+      "year_label": "2029",
+      "quarter": 1,
+      "no": "4-1-1",
+      "title": "세포주데이터 추가생산",
+      "criteria": "세포주기반 추가모달리티데이터 생산",
+      "status": "",
+      "status_text": "",
+      "due": "2029-03-31"
+    },
+    {
+      "year": 4,
+      "year_label": "2029",
+      "quarter": 1,
+      "no": "4-1-2",
+      "title": "환자유래 데이터 생산",
+      "criteria": "환자유래 공간전사체데이터 생산",
+      "status": "",
+      "status_text": "",
+      "due": "2029-03-31"
+    },
+    {
+      "year": 4,
+      "year_label": "2029",
+      "quarter": 2,
+      "no": "4-2-1",
+      "title": "유효물질 표적 제어 여부 평가 #1",
+      "criteria": "실험적 평가",
+      "status": "",
+      "status_text": "",
+      "due": "2029-06-30"
+    },
+    {
+      "year": 4,
+      "year_label": "2029",
+      "quarter": 2,
+      "no": "4-2-2",
+      "title": "유효물질 표적 제어 여부 평가 #2",
+      "criteria": "유효물질 최적화",
+      "status": "",
+      "status_text": "",
+      "due": "2029-06-30"
+    },
+    {
+      "year": 4,
+      "year_label": "2029",
+      "quarter": 3,
+      "no": "4-3-1",
+      "title": "디지털세포 기반 응용 AI 모델 연계 #1",
+      "criteria": "디지털세포모델 고도화",
+      "status": "",
+      "status_text": "",
+      "due": "2029-09-30"
+    },
+    {
+      "year": 4,
+      "year_label": "2029",
+      "quarter": 3,
+      "no": "4-3-2",
+      "title": "디지털세포 기반 응용 AI 모델 연계 #2",
+      "criteria": "신규표적 MoA 규명",
+      "status": "",
+      "status_text": "",
+      "due": "2029-09-30"
+    },
+    {
+      "year": 4,
+      "year_label": "2029",
+      "quarter": 4,
+      "no": "4-4-1",
+      "title": "디지털세포모델, 데이터 공개",
+      "criteria": "공개, 홍보, 교육",
+      "status": "",
+      "status_text": "",
+      "due": "2029-12-31"
     }
   ],
   "outcomes": {
     "data": [
       {
         "no": 1,
-        "name": "Perturbation",
-        "type": "전사체, ATAC-seq",
-        "target": "10세포주, 100개 유전자 조합",
-        "expected": "YYYY.MM",
-        "current": "실험설계"
+        "name": "Cell treatment data",
+        "type": "scRNA-seq, scATAC-seq, proteomics, metabolomics",
+        "target": "10세포주, 세포주 당 10개씩의 처리법 조합",
+        "expected": "2027.03",
+        "current": "세포주 준비 중"
+      },
+      {
+        "no": 2,
+        "name": "Perturbation data",
+        "type": "scRNA-seq",
+        "target": "10세포주, 1k-3k 유전자 조합",
+        "expected": "2027.09",
+        "current": "세포주 준비 중"
+      },
+      {
+        "no": 3,
+        "name": "Patient spatial transcriptomics",
+        "type": "Spatial transcriptomics",
+        "target": "환자 조직 10건 이상",
+        "expected": "2028.09",
+        "current": "준비 중"
       }
     ],
     "ai_model": [
       {
         "no": 1,
-        "name": "AI세포",
+        "name": "AI세포 - 정상상태",
+        "function": "약물반응",
+        "target": "1M",
+        "expected": "YYYY.MM",
+        "status": "기획"
+      },
+      {
+        "no": 2,
+        "name": "AI세포 - 질병상태",
+        "function": "유전자교란",
+        "target": "1M",
+        "expected": "YYYY.MM",
+        "status": "기획"
+      },
+      {
+        "no": 3,
+        "name": "AI세포 - 질병상태",
         "function": "약물반응",
         "target": "1M",
         "expected": "YYYY.MM",
@@ -116,21 +443,52 @@
     "drug": [
       {
         "no": 1,
-        "indication": "",
-        "target": "",
-        "modality": "",
+        "indication": "지방간염",
+        "target": "유전자 표적 #1",
+        "modality": "Small molecule",
+        "ai_use": "과제 구축 예정인 디지털세포 AI 모델 활용 예정",
+        "stage": "표적"
+      },
+      {
+        "no": 2,
+        "indication": "지방간염",
+        "target": "유전자 표적 #2",
+        "modality": "Small molecule",
         "ai_use": "",
-        "stage": ""
+        "stage": "표적"
+      },
+      {
+        "no": 3,
+        "indication": "자가면역질환",
+        "target": "유전자 표적 #1",
+        "modality": "Small molecule",
+        "ai_use": "",
+        "stage": "표적"
+      },
+      {
+        "no": 4,
+        "indication": "자가면역질환",
+        "target": "유전자 표적 #2",
+        "modality": "Small molecule",
+        "ai_use": "",
+        "stage": "표적"
       }
     ]
   },
   "progress_log": [
     {
-      "date": "YYYY.MM.DD",
-      "author": "ㅇㅇㅇ",
-      "milestone": "1-1",
-      "result": "서술형 또는 개조식으로 자세히 작성",
-      "type": "결과/논문/특허/…"
+      "date": "2026.10.10",
+      "author": "최무림",
+      "milestone": "1-2-1",
+      "result": "상세계획회의에서 가상세포분야의 급변하는 연구지형에 맞추어 초기 제안한 10개 세포주 중 선택과 집중에 의거한 연구 수행을 제안하였으며, 이에 맞추어 6개의 주 연구 타겟 세포주를 선정함: MIHA(hepatocyte), LX-2(stellate cell), CD4 T, CD8 T, macrophage, HK-2(kidney epithelial cell). 10개 세포주 데이터는 공공데이터 수집을 통하여 최대한 맞추기로 함.",
+      "type": "결과"
+    },
+    {
+      "date": "2026.10.10",
+      "author": "최무림",
+      "milestone": "1-2-1",
+      "result": "MIHA, LX-2, HK-2: dCas9 transgenic line 구축 중 / CD4 T, CD8 T: 자원자 유래 세포 배양 및 transgene transfection 세팅 중 / Macrophage: dCas9-iPSC 분화 모델 세팅 중.",
+      "type": "현황"
     }
   ],
   "needs": {
@@ -139,11 +497,11 @@
     "issues": "테스트 4.4"
   },
   "status": {
-    "light": "미정",
-    "delay_quarters": 0,
+    "light": "yellow",
+    "delay_quarters": 1.3,
     "delay_verdicts": 0,
     "reasons": [
-      "마일스톤 일정(분기말) 정보 미입력 — 판정 보류"
+      "마일스톤 지체 4개월(2분기 이내), 지체 4건"
     ],
     "auto": true,
     "override": null
@@ -153,8 +511,9 @@
     "drive_id": "1eouUjdczu4Z-ikIoif54sb-LSjhd7h-t",
     "url": "https://drive.google.com/file/d/1eouUjdczu4Z-ikIoif54sb-LSjhd7h-t/view",
     "folder_url": "https://drive.google.com/drive/folders/1Ifh2rmtQ8Bl6F9-BEEznB9knZ2w2UKKt",
-    "last_synced": "2026-10-05",
-    "modified": "2026-10-05T14:24:48.253Z"
+    "last_synced": "2026-10-10",
+    "modified": "2026-10-10T15:32:02+09:00",
+    "source_note": "Google Drive API 토큰 만료로 로컬 동기화본(Drive for Desktop) docx에서 파싱; modified는 로컬 파일 수정시각"
   },
   "rfp_url": null
 }
