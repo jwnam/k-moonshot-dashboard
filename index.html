@@ -2033,7 +2033,7 @@ function renderProjectDetail(p, el){
   const ov = p.overview || {};
   const c = computeLight(p);
   const esc = s => (s==null||s==='') ? '<span style="color:var(--muted);">—</span>' : String(s);
-  const MS_SYM = { '●':{cls:'done',t:'달성'}, '◑':{cls:'part',t:'부분달성'}, '○':{cls:'notyet',t:'미달성'}, '':{cls:'notyet',t:'—'} };
+  const MS_SYM = { '●':{cls:'done',t:'달성'}, '◑':{cls:'part',t:'수행중'}, '○':{cls:'notyet',t:'미달성'}, '':{cls:'notyet',t:'미달성'} };
 
   // ① 개요
   let budget = ov.budget_total_mw!=null ? ov.budget_total_mw.toLocaleString()+' 백만원' : null;
@@ -2068,7 +2068,7 @@ function renderProjectDetail(p, el){
     <thead><tr><th>연차</th><th>분기</th><th>연번</th><th>주요 마일스톤</th><th>달성 기준(정량)</th><th style="text-align:center;">달성현황</th></tr></thead>
     <tbody>${msRows||'<tr><td colspan="6" style="color:var(--muted);">등록된 마일스톤이 없습니다.</td></tr>'}</tbody>
     </table></div>
-    <p style="font-size:11px;color:var(--muted);margin-top:6px;">달성현황: 미달성 ○ / 부분달성 ◑ / 달성 ● · 분기말 점검(3.31·6.30·9.30·12.31)</p>`;
+    <p style="font-size:11px;color:var(--muted);margin-top:6px;">달성현황: 달성 ● / 수행중 ◑ / 미달성 ○ · 수행중·미달성은 신호등에서 모두 '미달성'으로 반영 · 분기말 점검(3.31·6.30·9.30·12.31)</p>`;
 
   // ③ 성과 — 데이터 / AI모델 / 신약개발
   const dataRows = (p.outcomes?.data||[]).map(d=>`<tr><td>${d.no}</td><td>${esc(d.name)}</td><td>${esc(d.type)}</td><td>${esc(d.target)}</td><td>${esc(d.expected)}</td><td>${esc(d.current)}</td></tr>`).join('');
