@@ -205,6 +205,48 @@
   .news-filter button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
   .news-updated { font-size: 11px; color: var(--muted); margin-bottom: 16px; }
 
+  /* ── 사업현황 신호등 / 사업별 상세 ── */
+  .light-dot { display:inline-block; width:14px; height:14px; border-radius:50%; vertical-align:middle; box-shadow:0 0 0 2px rgba(0,0,0,.25) inset; }
+  .light-green  { background:#10b981; box-shadow:0 0 8px rgba(16,185,129,.7); }
+  .light-yellow { background:#eab308; box-shadow:0 0 8px rgba(234,179,8,.7); }
+  .light-orange { background:#f97316; box-shadow:0 0 8px rgba(249,115,22,.7); }
+  .light-red    { background:#ef4444; box-shadow:0 0 8px rgba(239,68,68,.7); }
+  .light-pending{ background:#475569; }
+  .light-badge { display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:700; padding:3px 10px; border-radius:20px; white-space:nowrap; }
+  .light-badge.green  { background:rgba(16,185,129,.15); color:#34d399; }
+  .light-badge.yellow { background:rgba(234,179,8,.15);  color:#fde047; }
+  .light-badge.orange { background:rgba(249,115,22,.15); color:#fb923c; }
+  .light-badge.red    { background:rgba(239,68,68,.15);  color:#f87171; }
+  .light-badge.pending{ background:rgba(148,163,184,.14);color:#94a3b8; }
+  .light-summary { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px; }
+  .light-sum-card { flex:1; min-width:110px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:12px 14px; }
+  .light-sum-card .n { font-size:22px; font-weight:800; }
+  .light-sum-card .l { font-size:11px; color:var(--muted); margin-top:2px; }
+  .proj-cat-head { font-size:13px; font-weight:700; color:var(--accent2); margin:18px 0 8px; padding-left:8px; border-left:3px solid var(--accent2); }
+  table.proj-status-table { width:100%; border-collapse:collapse; }
+  table.proj-status-table th, table.proj-status-table td { padding:10px 12px; border-bottom:1px solid var(--border); font-size:12.5px; text-align:left; }
+  table.proj-status-table th { color:var(--muted); font-weight:600; font-size:11px; }
+  table.proj-status-table tr.clickable { cursor:pointer; transition:background .15s; }
+  table.proj-status-table tr.clickable:hover { background:rgba(99,102,241,.08); }
+  .proj-name-link { color:var(--text); font-weight:600; }
+  table.proj-status-table tr.clickable:hover .proj-name-link { color:var(--accent2); text-decoration:underline; }
+  .proj-detail-back { display:inline-flex; align-items:center; gap:6px; font-size:12px; color:var(--accent2); cursor:pointer; margin-bottom:14px; }
+  .proj-detail-back:hover { text-decoration:underline; }
+  .detail-hero { background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(99,102,241,.05)); border:1px solid var(--border); border-radius:14px; padding:22px 24px; margin-bottom:8px; }
+  .detail-hero h2 { font-size:22px; font-weight:800; margin:0 0 6px; }
+  .detail-hero .meta { font-size:12px; color:var(--muted); }
+  .info-table { width:100%; border-collapse:collapse; }
+  .info-table th { width:150px; text-align:left; vertical-align:top; background:var(--surface2); color:var(--muted); font-weight:600; font-size:12px; padding:9px 12px; border:1px solid var(--border); }
+  .info-table td { padding:9px 12px; border:1px solid var(--border); font-size:12.5px; }
+  .ms-status { font-size:15px; font-weight:800; }
+  .ms-status.done   { color:#34d399; }
+  .ms-status.part   { color:#fde047; }
+  .ms-status.notyet { color:#94a3b8; }
+  .stage-pills { display:flex; flex-wrap:wrap; gap:4px; }
+  .stage-pill { font-size:10.5px; padding:2px 8px; border-radius:12px; background:var(--surface2); color:var(--muted); border:1px solid var(--border); }
+  .stage-pill.on { background:var(--accent); color:#fff; border-color:var(--accent); font-weight:700; }
+  .reason-chip { display:inline-block; font-size:11px; color:var(--muted); background:var(--surface2); border:1px solid var(--border); border-radius:6px; padding:2px 8px; margin:2px 4px 2px 0; }
+
   /* Footer */
   footer { border-top: 1px solid var(--border); padding: 16px 0; text-align: center; color: var(--muted); font-size: 11px; }
 </style>
@@ -238,7 +280,13 @@
     </li>
     <li><a href="#" onclick="showTab('transfer',this)">🤝 기술이전</a></li>
     <li><a href="#" onclick="showTab('kmoonshot',this)">🚀 K-문샷 로드맵</a></li>
-    <li><a href="#" onclick="showTab('projects',this)">📋 사업현황</a></li>
+    <li class="has-submenu">
+      <a href="#" onclick="showTab('projects-status',this)">📋 사업현황 ▾</a>
+      <ul class="submenu">
+        <li><a href="#" onclick="showTab('projects-status',this)">🚦 사업별 수행현황</a></li>
+        <li><a href="#" onclick="showTab('projects',this)">📊 K-문샷 주요 사업현황</a></li>
+      </ul>
+    </li>
     <li><a href="#" onclick="showTab('biodata',this)">🔬 데이터셋</a></li>
     <li><a href="#" onclick="showTab('resources',this)">📚 자료실</a></li>
     <li><a href="#" onclick="showTab('survey',this)">📊 신약개발 설문조사</a></li>
@@ -468,6 +516,24 @@
 </div>
 
 <!-- ══ TAB: PROJECTS ════════════════════════════════════════════════ -->
+<!-- ══ TAB: 사업별 수행현황 (신호등) ══════════════════════════════════ -->
+<div id="tab-projects-status" class="tab-panel">
+  <!-- 사업별 상세 페이지 (동적 렌더) -->
+  <div id="projects-detail" style="display:none;"></div>
+
+  <!-- 사업별 수행현황 개요 -->
+  <div id="projects-overview">
+    <div class="section">
+      <div class="section-title">🚦 사업별 수행현황 (신호등) <span style="font-size:11px;color:var(--muted);font-weight:400;">· 마일스톤·성과관리 양식 기반 · 사업명 클릭 시 상세</span></div>
+      <p style="font-size:11px;color:var(--muted);margin-bottom:10px;" id="proj-status-source"></p>
+      <div class="light-summary" id="proj-light-summary"></div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:14px;line-height:1.7;" id="proj-light-legend"></div>
+      <div id="proj-status-groups"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TAB: K-문샷 주요 사업현황 (예산) ══════════════════════════════ -->
 <div id="tab-projects" class="tab-panel">
   <div class="section">
     <div class="section-title">K-문샷 주요 사업 현황 <span style="font-size:11px;color:var(--muted);font-weight:400;">· 안건2 붙임3(2026-09-29 제1회 운영위) 기준</span></div>
@@ -761,9 +827,14 @@ function showTab(name, el) {
   document.querySelectorAll('.tabs a').forEach(a => a.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
   el.classList.add('active');
-  // 파이프라인 서브탭 활성 시 부모 메뉴도 강조
-  var parentLink = document.querySelector('.tabs li.has-submenu > a');
-  if (parentLink) parentLink.classList.toggle('active', ['pipelines','kddf','master','ai-pipeline'].indexOf(name) > -1);
+  // 서브탭 활성 시 부모 메뉴도 강조 (파이프라인·사업현황 등 모든 서브메뉴 처리)
+  document.querySelectorAll('.tabs li.has-submenu').forEach(function(li){
+    var active = Array.prototype.slice.call(li.querySelectorAll('.submenu a')).some(function(a){
+      return (a.getAttribute('onclick')||'').indexOf("'" + name + "'") > -1;
+    });
+    var head = li.querySelector('a');
+    if (head) head.classList.toggle('active', active);
+  });
   if (name === 'biodata' && _biodata && !_biodataChartsDone) {
     renderBiodataCharts(_biodata);
     _biodataChartsDone = true;
@@ -1790,6 +1861,291 @@ function renderVAI() {
     }
   });
 }
+
+// ══════════════════════════════════════════════════════════════════════
+//  사업현황 신호등 + 사업별 상세 페이지
+// ══════════════════════════════════════════════════════════════════════
+const LIGHT_META = {
+  green:   { ko:'Green · 정상',     cls:'green'  },
+  yellow:  { ko:'Yellow · 주의',    cls:'yellow' },
+  orange:  { ko:'Orange · 경고',    cls:'orange' },
+  red:     { ko:'Red · 위험',       cls:'red'    },
+  pending: { ko:'준비중',           cls:'pending'},
+  '미정':  { ko:'미정',             cls:'pending'}
+};
+const LIGHT_RANK = { green:0, yellow:1, orange:2, red:3 };
+function _worse(a, b){ return (LIGHT_RANK[b] > LIGHT_RANK[a]) ? b : a; }
+
+// 지체 개월수 계산 (due 경과 & 미달성 마일스톤)
+function _monthsOverdue(dueStr, now){
+  const due = new Date(dueStr);
+  if (isNaN(due) || due >= now) return 0;
+  return (now.getFullYear()-due.getFullYear())*12 + (now.getMonth()-due.getMonth());
+}
+
+// 신호등 자동 판정 (규칙: 사용자 정의)
+function computeLight(p){
+  const st = p.status || {};
+  if (st.override) {
+    return { light: st.override, reasons:['관리자 수동 지정'], delayMonths:0, verdicts:(p.check_history||[]).filter(c=>c.delayed).length };
+  }
+  const now = new Date();
+  const dated = (p.milestones||[]).filter(m => m.due);
+  const verdicts = (p.check_history||[]).filter(c => c.delayed).length;
+  if (dated.length === 0) {
+    return { light:'pending', reasons:['마일스톤 일정(분기말) 정보 미입력 — 판정 보류'], delayMonths:0, verdicts };
+  }
+  let maxOver = 0, nDelayed = 0;
+  dated.forEach(m => {
+    if (m.status === '●') return;           // 달성 완료는 제외
+    const ov = _monthsOverdue(m.due, now);
+    if (ov > 0) { nDelayed++; if (ov > maxOver) maxOver = ov; }
+  });
+  let light, reasons = [];
+  if (nDelayed === 0) { light='green'; reasons.push('마일스톤 일정대로 진행'); }
+  else if (maxOver <= 6)  { light='yellow'; reasons.push(`마일스톤 지체 ${maxOver}개월(2분기 이내), 지체 ${nDelayed}건`); }
+  else if (maxOver <= 12) { light='orange'; reasons.push(`마일스톤 지체 ${maxOver}개월(3분기~1년), 지체 ${nDelayed}건`); }
+  else { light='red'; reasons.push(`마일스톤 지체 ${maxOver}개월(1년 이상), 지체 ${nDelayed}건`); }
+  // 분기점검 지체판정 누적 횟수로 상향
+  if (verdicts >= 3) { light = _worse(light,'red');   reasons.push(`분기점검 지체판정 ${verdicts}회(3회 이상)`); }
+  else if (verdicts >= 2) { light = _worse(light,'orange'); reasons.push(`분기점검 지체판정 ${verdicts}회(2회 이상)`); }
+  else if (verdicts === 1) { reasons.push('분기점검 지체판정 1회'); }
+  return { light, reasons, delayMonths:maxOver, verdicts };
+}
+
+function lightBadge(light){
+  const m = LIGHT_META[light] || LIGHT_META.pending;
+  return `<span class="light-badge ${m.cls}"><span class="light-dot light-${m.cls}"></span>${m.ko}</span>`;
+}
+const GRADE_STYLE = {
+  '핵심':        { bg:'rgba(239,68,68,.18)',  fg:'#f87171' },
+  '전략':        { bg:'rgba(168,85,247,.18)', fg:'#c084fc' },
+  '밀접관련***': { bg:'rgba(34,211,238,.18)', fg:'#22d3ee' },
+  '관련**':      { bg:'rgba(99,102,241,.16)', fg:'#818cf8' },
+  '일부관련*':   { bg:'rgba(148,163,184,.16)',fg:'#94a3b8' }
+};
+function gradeBadge(g){
+  if (!g) return '<span style="color:var(--muted);">—</span>';
+  const s = GRADE_STYLE[g] || { bg:'rgba(148,163,184,.16)', fg:'#94a3b8' };
+  return `<span class="relevance-badge" style="background:${s.bg};color:${s.fg};white-space:nowrap;">${g}</span>`;
+}
+function fmtEok(mw){
+  if (mw == null) return '<span style="color:var(--muted);">—</span>';
+  if (mw === 0) return '<span style="color:var(--muted);">미편성</span>';
+  return (Math.round(mw / 100 * 10) / 10).toLocaleString() + '억';
+}
+
+let _projIndex = null;
+async function loadProjects(){
+  try {
+    const idx = await fetch('data/projects/index.json?t=' + Date.now(), {cache:'no-store'}).then(r=>r.json());
+    // detail 보유 사업은 상세 JSON에서 신호등 계산
+    for (const cat of idx.categories) {
+      for (const pr of cat.projects) {
+        if (pr.detail) {
+          try {
+            const d = await fetch('data/projects/' + pr.id + '.json?t=' + Date.now(), {cache:'no-store'}).then(r=>r.json());
+            pr._detail = d;
+            const c = computeLight(d);
+            pr.light = c.light; pr._reasons = c.reasons;
+          } catch(e) { pr.light = 'pending'; pr._reasons=['상세 데이터 로드 실패']; }
+        }
+      }
+    }
+    _projIndex = idx;
+    renderProjectStatus(idx);
+    routeFromHash();
+  } catch(e){ console.error('projects/index.json 로드 실패:', e); }
+}
+
+function renderProjectStatus(idx){
+  const src = document.getElementById('proj-status-source');
+  if (src) src.textContent = `출처: Google Drive /사업관리/ 사업별 「마일스톤·성과관리 양식」 · 최종 동기화 ${idx.last_synced}`;
+  // 요약 집계
+  const counts = { green:0, yellow:0, orange:0, red:0, pending:0 };
+  idx.categories.forEach(c => c.projects.forEach(p => { counts[(LIGHT_META[p.light]?LIGHT_META[p.light].cls:'pending')]++; }));
+  const sum = document.getElementById('proj-light-summary');
+  const sc = (cls,label,n) => `<div class="light-sum-card"><div class="n" style="color:${cls==='pending'?'var(--muted)':''}"><span class="light-dot light-${cls}" style="margin-right:7px;"></span>${n}</div><div class="l">${label}</div></div>`;
+  sum.innerHTML = sc('green','Green · 정상',counts.green) + sc('yellow','Yellow · 주의',counts.yellow)
+    + sc('orange','Orange · 경고',counts.orange) + sc('red','Red · 위험',counts.red) + sc('pending','준비중',counts.pending);
+  // 범례
+  const lg = idx.legend || {};
+  document.getElementById('proj-light-legend').innerHTML =
+    `🟢 <b>Green</b> ${lg.green||''} &nbsp; 🟡 <b>Yellow</b> ${lg.yellow||''} &nbsp; 🟠 <b>Orange</b> ${lg.orange||''} &nbsp; 🔴 <b>Red</b> ${lg.red||''}`;
+  // 카테고리별 표
+  const wrap = document.getElementById('proj-status-groups');
+  wrap.innerHTML = idx.categories.map(cat => {
+    const rows = cat.projects.map(p => {
+      const clickable = p.detail;
+      const name = clickable
+        ? `<span class="proj-name-link">${p.name}</span> <span style="font-size:10px;color:var(--accent3);">상세 ›</span>`
+        : `<span>${p.name}</span>`;
+      const org = [p.org, p.pi].filter(Boolean).join(' · ') || '<span style="color:var(--muted);">—</span>';
+      return `<tr class="${clickable?'clickable':''}" ${clickable?`onclick="openProjectDetail('${p.id}')"`:''}>
+        <td style="width:78px;">${lightBadge(p.light)}</td>
+        <td style="min-width:200px;">${name}</td>
+        <td style="width:120px;">${gradeBadge(p.grade)}</td>
+        <td style="width:150px;color:var(--muted);font-size:11.5px;">${org}</td>
+        <td style="width:90px;white-space:nowrap;font-size:11.5px;">${p.period || '<span style=\'color:var(--muted)\'>—</span>'}</td>
+        <td style="width:80px;text-align:right;font-size:11.5px;">${fmtEok(p.b26)}</td>
+        <td style="width:80px;text-align:right;font-size:11.5px;color:var(--accent3);font-weight:600;">${fmtEok(p.b27)}</td>
+      </tr>`;
+    }).join('');
+    const sub26 = cat.projects.reduce((a,p)=>a+(p.b26||0),0);
+    const sub27 = cat.projects.reduce((a,p)=>a+(p.b27||0),0);
+    const subtotal = `<tr style="border-top:2px solid var(--border);font-weight:700;background:rgba(99,102,241,.06);">
+        <td colspan="4" style="text-align:right;">소계 (${cat.projects.length}개 사업)</td>
+        <td style="color:var(--muted);font-size:11px;text-align:right;">'26·'27</td>
+        <td style="text-align:right;">${fmtEok(sub26)}</td>
+        <td style="text-align:right;color:var(--accent3);">${fmtEok(sub27)}</td></tr>`;
+    return `<div class="proj-cat-head">${cat.label} <span style="font-weight:400;color:var(--muted);font-size:11px;">(${cat.projects.length})</span></div>
+      <div class="card tbl-wrap" style="padding:6px 12px;">
+        <table class="proj-status-table">
+          <thead><tr><th>진행</th><th>사업명</th><th>사업구분</th><th>주관·책임자</th><th>연구기간</th><th style="text-align:right;">'26예산</th><th style="text-align:right;">'27예산</th></tr></thead>
+          <tbody>${rows}${subtotal}</tbody>
+        </table></div>`;
+  }).join('');
+  var unitNote = document.getElementById('proj-light-legend');
+  if (unitNote) unitNote.insertAdjacentHTML('beforeend', `<div style="margin-top:6px;">예산 단위: 억원(국비) · 사업구분/예산/기간 출처: 제1회 운영위(2026-09-29) 안건2 붙임3</div>`);
+}
+
+// ── 사업별 상세 ──
+function openProjectDetail(id){
+  if (location.hash !== '#project/' + id) location.hash = 'project/' + id;
+  const el = document.getElementById('projects-detail');
+  fetch('data/projects/' + id + '.json?t=' + Date.now(), {cache:'no-store'})
+    .then(r => r.json())
+    .then(p => {
+      renderProjectDetail(p, el);
+      document.getElementById('projects-overview').style.display = 'none';
+      el.style.display = 'block';
+      window.scrollTo(0, 0);
+    })
+    .catch(e => { el.innerHTML = `<div class="section"><p style="color:var(--red)">상세 데이터를 불러오지 못했습니다 (${id}).</p></div>`; el.style.display='block'; document.getElementById('projects-overview').style.display='none'; });
+}
+function closeProjectDetail(){
+  document.getElementById('projects-detail').style.display = 'none';
+  document.getElementById('projects-overview').style.display = 'block';
+  if (location.hash.indexOf('#project/') === 0) history.replaceState(null,'',location.pathname + location.search);
+}
+
+function renderProjectDetail(p, el){
+  const ov = p.overview || {};
+  const c = computeLight(p);
+  const esc = s => (s==null||s==='') ? '<span style="color:var(--muted);">—</span>' : String(s);
+  const MS_SYM = { '●':{cls:'done',t:'달성'}, '◑':{cls:'part',t:'부분달성'}, '○':{cls:'notyet',t:'미달성'}, '':{cls:'notyet',t:'—'} };
+
+  // ① 개요
+  let budget = ov.budget_total_mw!=null ? ov.budget_total_mw.toLocaleString()+' 백만원' : null;
+  if (budget && (ov.budget_26_mw!=null || ov.budget_27_mw!=null)) {
+    const bp=[]; if(ov.budget_26_mw!=null) bp.push("'26 "+ov.budget_26_mw.toLocaleString()); if(ov.budget_27_mw!=null) bp.push("'27 "+ov.budget_27_mw.toLocaleString());
+    budget += ` <span style="color:var(--muted);font-size:11px;">(${bp.join(' · ')} 백만원)</span>`;
+  }
+  const emails = (ov.emails&&ov.emails.length) ? ov.emails.map(e=>`<a href="mailto:${e}">${e}</a>`).join(', ') : '<span style="color:var(--muted);">미입력</span>';
+  const overviewTbl = `<table class="info-table">
+    <tr><th>사업명</th><td>${esc(p.name)}</td><th>구분</th><td>${esc(p.category)}</td></tr>
+    <tr><th>주관기관</th><td>${esc(ov.lead_org)}</td><th>연구책임자</th><td>${esc(ov.pi)}${ov.co_pi?' · (공동) '+ov.co_pi:''}</td></tr>
+    <tr><th>사업기간</th><td>${esc(ov.period_raw)}</td><th>총 연구비</th><td>${esc(budget)}</td></tr>
+    <tr><th>사업 목표</th><td colspan="3">${esc(ov.objective)}</td></tr>
+    <tr><th>주요 연구내용</th><td colspan="3">${esc(ov.research_content)}</td></tr>
+    <tr><th>K-문샷 관련성</th><td colspan="3">${esc(ov.mission_relevance)}</td></tr>
+    <tr><th>담당자 이메일</th><td colspan="3">${emails}</td></tr>
+  </table>`;
+
+  // ② 마일스톤 (연차·분기)
+  const msRows = (p.milestones||[]).map(m => {
+    const s = MS_SYM[m.status] || MS_SYM[''];
+    return `<tr>
+      <td style="white-space:nowrap;">${m.year}차년도(${m.year_label})</td>
+      <td style="white-space:nowrap;">${m.quarter}분기</td>
+      <td style="white-space:nowrap;color:var(--muted);">${esc(m.no)}</td>
+      <td>${esc(m.title)}</td>
+      <td style="color:var(--muted);">${esc(m.criteria)}</td>
+      <td style="text-align:center;"><span class="ms-status ${s.cls}">${m.status||'○'}</span><div style="font-size:10px;color:var(--muted);">${s.t}</div></td>
+    </tr>`;
+  }).join('');
+  const msTbl = `<div class="card tbl-wrap"><table class="proj-status-table">
+    <thead><tr><th>연차</th><th>분기</th><th>연번</th><th>주요 마일스톤</th><th>달성 기준(정량)</th><th style="text-align:center;">달성현황</th></tr></thead>
+    <tbody>${msRows||'<tr><td colspan="6" style="color:var(--muted);">등록된 마일스톤이 없습니다.</td></tr>'}</tbody>
+    </table></div>
+    <p style="font-size:11px;color:var(--muted);margin-top:6px;">달성현황: 미달성 ○ / 부분달성 ◑ / 달성 ● · 분기말 점검(3.31·6.30·9.30·12.31)</p>`;
+
+  // ③ 성과 — 데이터 / AI모델 / 신약개발
+  const dataRows = (p.outcomes?.data||[]).map(d=>`<tr><td>${d.no}</td><td>${esc(d.name)}</td><td>${esc(d.type)}</td><td>${esc(d.target)}</td><td>${esc(d.expected)}</td><td>${esc(d.current)}</td></tr>`).join('');
+  const AI_STAGES = ['기획','개발','검증','완료'];
+  const aiRows = (p.outcomes?.ai_model||[]).map(a=>{
+    const pills = AI_STAGES.map(s=>`<span class="stage-pill ${a.status===s?'on':''}">${s}</span>`).join('');
+    return `<tr><td>${a.no}</td><td>${esc(a.name)}</td><td>${esc(a.function)}</td><td>${esc(a.target)}</td><td>${esc(a.expected)}</td><td><div class="stage-pills">${pills}</div></td></tr>`;
+  }).join('');
+  const DRUG_STAGES = ['표적','유효','선도','후보','IND','임상1','임상2','임상3'];
+  const drugRows = (p.outcomes?.drug||[]).map(d=>{
+    const pills = DRUG_STAGES.map(s=>`<span class="stage-pill ${d.stage===s?'on':''}">${s}</span>`).join('');
+    return `<tr><td>${d.no}</td><td>${esc(d.indication)}</td><td>${esc(d.target)}</td><td>${esc(d.modality)}</td><td>${esc(d.ai_use)}</td><td><div class="stage-pills">${pills}</div></td></tr>`;
+  }).join('');
+  const outcomesHtml = `
+    <div style="font-size:12.5px;font-weight:700;margin:4px 0 6px;">2-1. 데이터 성과</div>
+    <div class="card tbl-wrap" style="margin-bottom:14px;"><table class="proj-status-table"><thead><tr><th>No.</th><th>데이터명</th><th>유형</th><th>목표 단위</th><th>예상 산출시점</th><th>현재상태</th></tr></thead><tbody>${dataRows||'<tr><td colspan="6" style="color:var(--muted);">—</td></tr>'}</tbody></table></div>
+    <div style="font-size:12.5px;font-weight:700;margin:4px 0 6px;">2-2. AI모델 성과</div>
+    <div class="card tbl-wrap" style="margin-bottom:14px;"><table class="proj-status-table"><thead><tr><th>No.</th><th>모델명</th><th>주요 기능</th><th>목표 단위</th><th>예상 산출시점</th><th>개발상태</th></tr></thead><tbody>${aiRows||'<tr><td colspan="6" style="color:var(--muted);">—</td></tr>'}</tbody></table></div>
+    <div style="font-size:12.5px;font-weight:700;margin:4px 0 6px;">2-3. 신약개발 성과</div>
+    <div class="card tbl-wrap"><table class="proj-status-table"><thead><tr><th>No.</th><th>적응증</th><th>표적</th><th>모달리티</th><th>AI활용</th><th>개발단계</th></tr></thead><tbody>${drugRows||'<tr><td colspan="6" style="color:var(--muted);">—</td></tr>'}</tbody></table></div>`;
+
+  // ④ 진행현황
+  const logRows = (p.progress_log||[]).map(l=>`<tr><td style="white-space:nowrap;">${esc(l.date)}</td><td style="white-space:nowrap;">${esc(l.author)}</td><td style="white-space:nowrap;color:var(--muted);">${esc(l.milestone)}</td><td>${esc(l.result)}</td><td style="white-space:nowrap;color:var(--accent3);">${esc(l.type)}</td></tr>`).join('');
+  const logHtml = `<div class="card tbl-wrap"><table class="proj-status-table"><thead><tr><th>작성일</th><th>작성자</th><th>마일스톤</th><th>연구결과</th><th>성과구분</th></tr></thead><tbody>${logRows||'<tr><td colspan="5" style="color:var(--muted);">등록된 진행현황이 없습니다.</td></tr>'}</tbody></table></div>`;
+
+  // ⑤ 필요사항
+  const nd = p.needs||{};
+  const needsHtml = `<table class="info-table">
+    <tr><th>연구수행 애로·요청</th><td>${esc(nd.difficulties)}</td></tr>
+    <tr><th>추가 필요자원</th><td>${esc(nd.resources)}</td></tr>
+    <tr><th>기타 이슈</th><td>${esc(nd.issues)}</td></tr></table>`;
+
+  const srcDoc = p.source_doc||{};
+  const links = [
+    srcDoc.url ? `<a href="${srcDoc.url}" target="_blank">📄 원본 성과관리 양식(docx)</a>` : '',
+    srcDoc.folder_url ? `<a href="${srcDoc.folder_url}" target="_blank">📁 사업 폴더</a>` : '',
+    p.rfp_url ? `<a href="${p.rfp_url}" target="_blank">📎 RFP</a>` : ''
+  ].filter(Boolean).join(' &nbsp;·&nbsp; ');
+
+  el.innerHTML = `
+    <div class="section">
+      <div class="proj-detail-back" onclick="closeProjectDetail()">← 사업현황 목록으로</div>
+      <div class="detail-hero">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          ${lightBadge(c.light)}
+          <h2 style="flex:1;">${esc(p.name)}</h2>
+        </div>
+        <div class="meta" style="margin-top:6px;">${esc(ov.lead_org)} · 연구책임자 ${esc(ov.pi)} · ${esc(p.category)}</div>
+        <div style="margin-top:10px;">${(c.reasons||[]).map(r=>`<span class="reason-chip">${r}</span>`).join('')}</div>
+        <div class="meta" style="margin-top:10px;">${links} ${srcDoc.last_synced?`<span style="color:var(--muted);">· 최종 동기화 ${srcDoc.last_synced}</span>`:''}</div>
+      </div>
+    </div>
+    <div class="section"><div class="section-title">① 사업 개요</div>${overviewTbl}</div>
+    <div class="section"><div class="section-title">② 연차·분기별 마일스톤</div>${msTbl}</div>
+    <div class="section"><div class="section-title">③ 주요 연구성과</div>${outcomesHtml}</div>
+    <div class="section"><div class="section-title">④ 연구 진행현황 (누적)</div>${logHtml}</div>
+    <div class="section"><div class="section-title">⑤ 필요사항</div>${needsHtml}</div>
+    <div class="section"><div class="proj-detail-back" onclick="closeProjectDetail()">← 사업현황 목록으로</div></div>`;
+}
+
+// ── 해시 라우팅 (딥링크 지원) ──
+function routeFromHash(){
+  const m = location.hash.match(/^#project\/(.+)$/);
+  if (m) {
+    // 사업별 수행현황 탭 활성화
+    const tab = document.getElementById('tab-projects-status');
+    if (tab && !tab.classList.contains('active')) {
+      const link = Array.prototype.slice.call(document.querySelectorAll('nav.tabs a')).filter(a => (a.getAttribute('onclick')||'').indexOf("'projects-status'")>-1)[0];
+      if (link) showTab('projects-status', link);
+    }
+    openProjectDetail(decodeURIComponent(m[1]));
+  } else {
+    closeProjectDetail();
+  }
+}
+window.addEventListener('hashchange', routeFromHash);
+loadProjects();
 </script>
 </body>
 </html>
