@@ -82,6 +82,16 @@
   td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
   tr:last-child td { border-bottom: none; }
   tr:hover td { background: rgba(99,102,241,0.05); }
+  /* 연차별 마일스톤 collapsible */
+  details.ms-year { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; background: var(--surface); }
+  details.ms-year > summary { cursor: pointer; list-style: none; padding: 11px 14px; font-size: 13px; font-weight: 700; color: var(--text); background: var(--surface2); display: flex; align-items: center; gap: 9px; user-select: none; }
+  details.ms-year > summary::-webkit-details-marker { display: none; }
+  details.ms-year > summary::before { content: '▸'; color: var(--accent2); font-size: 12px; transition: transform .15s ease; }
+  details.ms-year[open] > summary::before { transform: rotate(90deg); }
+  details.ms-year > summary:hover { background: #2b2f4d; }
+  details.ms-year .ms-year-sum { color: var(--muted); font-weight: 400; font-size: 11.5px; margin-left: auto; }
+  details.ms-year .tbl-wrap { border-top: 1px solid var(--border); }
+  details.ms-year table { font-size: 12.5px; }
 
   /* Stage badge */
   .badge-stage { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 500; }
@@ -2052,23 +2062,41 @@ function renderProjectDetail(p, el){
     <tr><th>담당자 이메일</th><td colspan="3">${emails}</td></tr>
   </table>`;
 
-  // ② 마일스톤 (연차·분기)
-  const msRows = (p.milestones||[]).map(m => {
-    const s = MS_SYM[m.status] || MS_SYM[''];
-    return `<tr>
-      <td style="white-space:nowrap;">${m.year}차년도(${m.year_label})</td>
-      <td style="white-space:nowrap;">${m.quarter}분기</td>
-      <td style="white-space:nowrap;color:var(--muted);">${esc(m.no)}</td>
-      <td>${esc(m.title)}</td>
-      <td style="color:var(--muted);">${esc(m.criteria)}</td>
-      <td style="text-align:center;"><span class="ms-status ${s.cls}">${m.status||'○'}</span><div style="font-size:10px;color:var(--muted);">${s.t}</div></td>
-    </tr>`;
-  }).join('');
-  const msTbl = `<div class="card tbl-wrap"><table class="proj-status-table">
-    <thead><tr><th>연차</th><th>분기</th><th>연번</th><th>주요 마일스톤</th><th>달성 기준(정량)</th><th style="text-align:center;">달성현황</th></tr></thead>
-    <tbody>${msRows||'<tr><td colspan="6" style="color:var(--muted);">등록된 마일스톤이 없습니다.</td></tr>'}</tbody>
-    </table></div>
-    <p style="font-size:11px;color:var(--muted);margin-top:6px;">달성현황: 달성 ● / 수행중 ◑ / 미달성 ○ · 수행중·미달성은 신호등에서 모두 '미달성'으로 반영 · 분기말 점검(3.31·6.30·9.30·12.31)</p>`;
+  // ② 마일스톤 (연차·분기) — 연차별 구분·collapse
+  const msByYear = {};
+  (p.milestones||[]).forEach(m => {
+    const k = `${m.year}|${m.year_label}`;
+    (msByYear[k] = msByYear[k] || []).push(m);
+  });
+  const curYear = new Date().getFullYear();
+  const msYearBlocks = Object.keys(msByYear)
+    .sort((a,b)=> Number(a.split('|')[0]) - Number(b.split('|')[0]))
+    .map(k => {
+      const [yr, ylabel] = k.split('|');
+      const items = msByYear[k];
+      const cnt = { done:0, prog:0, not:0 };
+      items.forEach(m => { if(m.status==='●') cnt.done++; else if(m.status==='◑') cnt.prog++; else cnt.not++; });
+      const rows = items.map(m => {
+        const s = MS_SYM[m.status] || MS_SYM[''];
+        return `<tr>
+          <td style="white-space:nowrap;">${m.quarter}분기</td>
+          <td style="white-space:nowrap;color:var(--muted);">${esc(m.no)}</td>
+          <td>${esc(m.title)}</td>
+          <td style="color:var(--muted);">${esc(m.criteria)}</td>
+          <td style="text-align:center;"><span class="ms-status ${s.cls}">${m.status||'○'}</span><div style="font-size:10px;color:var(--muted);">${s.t}</div></td>
+        </tr>`;
+      }).join('');
+      const open = (Number(ylabel) === curYear) ? 'open' : '';  // 당해년도 기본 펼침
+      return `<details class="ms-year" ${open}>
+        <summary>${yr}차년도 (${ylabel})<span class="ms-year-sum">총 ${items.length} · 달성 ${cnt.done} · 수행중 ${cnt.prog} · 미달성 ${cnt.not}</span></summary>
+        <div class="tbl-wrap"><table class="proj-status-table">
+          <thead><tr><th>분기</th><th>연번</th><th>주요 마일스톤</th><th>달성 기준(정량)</th><th style="text-align:center;">달성현황</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table></div>
+      </details>`;
+    }).join('');
+  const msTbl = `${msYearBlocks || '<div class="card" style="color:var(--muted);">등록된 마일스톤이 없습니다.</div>'}
+    <p style="font-size:11px;color:var(--muted);margin-top:6px;">달성현황: 달성 ● / 수행중 ◑ / 미달성 ○ · 수행중·미달성은 신호등에서 모두 '미달성'으로 반영 · 분기말 점검(3.31·6.30·9.30·12.31) · 연차 제목을 클릭하면 접기/펼치기</p>`;
 
   // ③ 성과 — 데이터 / AI모델 / 신약개발
   const dataRows = (p.outcomes?.data||[]).map(d=>`<tr><td>${d.no}</td><td>${esc(d.name)}</td><td>${esc(d.type)}</td><td>${esc(d.target)}</td><td>${esc(d.expected)}</td><td>${esc(d.current)}</td></tr>`).join('');
