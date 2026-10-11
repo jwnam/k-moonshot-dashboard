@@ -1,6 +1,21 @@
 {
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "items": [
+    {
+      "id": 10,
+      "title": "Unlocking the Potential of AI in Drug Discovery (Wellcome·BCG)",
+      "category": "동향분석",
+      "date": "2026-10-11",
+      "file": "files/unlocking-the-potential-of-ai-in-drug-discovery-vf.pdf",
+      "filetype": "PDF",
+      "desc": "Wellcome(웰컴 트러스트)·BCG 공동 보고서. AI/머신러닝이 신약개발 전주기(표적 발굴·검증, 후보물질 설계·최적화, 전임상·임상)에 미치는 현재와 잠재적 영향 및 가치 창출 영역을 분석하고, 데이터 접근성·품질, 인재, 검증·신뢰, 투자·협업 등 도입 장애요인과 이를 극복하기 위한 생태계 차원의 제언(enabler)을 제시한다. K-문샷 AI신약 미션의 전략·정책 기획 참고자료.",
+      "sources": [
+        {
+          "label": "원문 PDF (K-문샷 __AI신약동향자료, 구글드라이브)",
+          "url": "https://drive.google.com/file/d/1eJZJU2R_2cLI1X_KIPN6ziTSNSWle4Wu/view"
+        }
+      ]
+    },
     {
       "id": 9,
       "title": "AIxBio Summit 개최 계획(안) — BIOINFO/GIW ISCB-Asia 2026 병행",
