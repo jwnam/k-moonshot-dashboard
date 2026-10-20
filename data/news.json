@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-20 23:53",
+  "updated_at": "2026-10-21 00:25",
   "news": {
     "domestic": [
+      {
+        "title": "강원 바이오 기업 AI 신약개발 역량 강화 모색 눈길 - 강원도민일보",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9LZ3U3d29oRTl6TjgwSWtvUmc1cXRnREQ4TnAyc3VYYzR5NE93OUVLYzVvSkpyVG05TkMtcUpQZVBCMVcxV0tJYXprUGxLUFM3Vll3bTU5ZTFPSFdnTVlPcHh0aHhONjQ?oc=5",
+        "pub_date": "2026-10-21 00:02",
+        "source": "강원도민일보",
+        "summary": "강원 바이오 기업 AI 신약개발 역량 강화 모색 눈길&nbsp;&nbsp;강원도민일보",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
       {
         "title": "Vistagen, GATC Health와 AI 신약 개발 협력 - Investing.com 한국어",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE96Z084cFNHcEVfZ2NfeThtY0lCalJzUE5OYTQwVHQwRTZOUFNQazdETElGTndKbGJILWZ1NWpVTzVlTkpMM0NUZVZ5NXlneGpUZWhCaVNfUEpHY19Qczktb0pzT3labEdtN0xrRnJKUlk?oc=5",
@@ -10,7 +21,8 @@
         "summary": "Vistagen, GATC Health와 AI 신약 개발 협력&nbsp;&nbsp;Investing.com 한국어",
         "categories": [
           "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "춘천바이오산업진흥원·강원테크노파크, AI 기반 신약개발 세미나 개최 - 전자신문",
@@ -20,7 +32,26 @@
         "summary": "춘천바이오산업진흥원·강원테크노파크, AI 기반 신약개발 세미나 개최&nbsp;&nbsp;전자신문",
         "categories": [
           "일반"
+        ],
+        "source_count": 2,
+        "related": [
+          {
+            "source": "재경일보",
+            "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE93RzlNR3ZRYl9XLUc5TEViMlJ4a0I4dHNUUmtvMDY4Nm9zUERlanpYRW9qaU9EQmRxeEdtV2lFQkVlQWZsaTRCX1ZTcw?oc=5",
+            "title": "춘천바이오진흥원, AI 신약개발 세미나 개최 : 건강 - 재경일보"
+          }
         ]
+      },
+      {
+        "title": "AI 기반 신약개발 첫발, 단백질·항체 치료제 R&amp;D 혁신 : 리뷰 - 의약일보",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBvbEJ3ekNKdlRyQm5ON1ZWbXRCLWt1eDBKYnN4M2Z2dVloMG1XYV9EZVFhTHl3cGhaZUJTckpuQ0k3TVRMV195YTdvaEJQQzVvd2RtaA?oc=5",
+        "pub_date": "2026-10-20 18:32",
+        "source": "의약일보",
+        "summary": "AI 기반 신약개발 첫발, 단백질·항체 치료제 R&D 혁신 : 리뷰&nbsp;&nbsp;의약일보",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
       },
       {
         "title": "[포토뉴스]제1회 AI 기반 신약개발 세미나 - 강원일보",
@@ -30,17 +61,8 @@
         "summary": "[포토뉴스]제1회 AI 기반 신약개발 세미나&nbsp;&nbsp;강원일보",
         "categories": [
           "일반"
-        ]
-      },
-      {
-        "title": "춘천바이오진흥원, AI 신약개발 세미나 개최 : 건강 - 재경일보",
-        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE93RzlNR3ZRYl9XLUc5TEViMlJ4a0I4dHNUUmtvMDY4Nm9zUERlanpYRW9qaU9EQmRxeEdtV2lFQkVlQWZsaTRCX1ZTcw?oc=5",
-        "pub_date": "2026-10-20 16:40",
-        "source": "재경일보",
-        "summary": "춘천바이오진흥원, AI 신약개발 세미나 개최 : 건강&nbsp;&nbsp;재경일보",
-        "categories": [
-          "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "춘천바이오산업진흥원, 바이오기업 AI 신약개발 세미나 - 연합뉴스",
@@ -50,7 +72,8 @@
         "summary": "춘천바이오산업진흥원, 바이오기업 AI 신약개발 세미나&nbsp;&nbsp;연합뉴스",
         "categories": [
           "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "지놈앤컴퍼니, '릴리 튠랩' 참여해 AI 기반 신약개발 고도화 - 히트뉴스",
@@ -59,7 +82,55 @@
         "source": "히트뉴스",
         "summary": "지놈앤컴퍼니, '릴리 튠랩' 참여해 AI 기반 신약개발 고도화&nbsp;&nbsp;히트뉴스",
         "categories": [
-          "일반"
+          "AI플랫폼"
+        ],
+        "source_count": 10,
+        "related": [
+          {
+            "source": "머니투데이",
+            "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9qM202NnczYlJhNVR0a0ZsdVJOZ0tUeUx5ekdLSWNGWDZXNlB6QUR2aGZPQlFKdHh0akJka2t1dTlYRFpXTVc0Z2FUc0UzcVh4UVBFeU1PclpNYVBLLTdkNkRxSTNFRGNlT2fSAW9BVV95cUxQQzVtNHVpdTRvWFUyY1FBbGZLMjlqdFB3NDFIMmozOEdYRzB3R1JhaWt4dkk0U21ZdmE4ZWI0RXZCMVc2WnZZQUtSaVQ2MUJBODFXVWR4TGpPMGk0b21Xal9ieU50VUR0enBHUGwtRHM?oc=5",
+            "title": "\"신약 개발 비용 절감\" 지놈앤컴퍼니, 릴리 AI 플랫폼 '튠랩' 참여 - 머니투데이 - 머니투데이"
+          },
+          {
+            "source": "이투데이",
+            "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9MV05nZ3hsZ3VVX1lMaUxyRXZkZTdMZ05VQ2FaYldKV3YtMTVoYnlYUDhON1BrbUFJWkx4aWpRY2FRa012ZS1xeXhtdHVYS2xWTTQwYkVPa2VKcWVpUjBkMUprdnBtdXpfVGhsd2VMRm9SaFRH?oc=5",
+            "title": "지놈앤컴퍼니, ‘릴리 튠랩’ 참여…AI 기반 신약개발 고도화 - 이투데이"
+          },
+          {
+            "source": "서울경제TV",
+            "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9MZ3BObjVpWWJfMjF6UVRJc050eWxhdk8yZjVxWTMxN05OWUM2dWg2NGVLNlNfeTRhUE5WdW93VVhYRlVGU1VSNWhYOFBRcVBaY21fM1RrSXVyMFkxampmbERmSU0?oc=5",
+            "title": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 '튠랩' 합류 - 서울경제TV"
+          },
+          {
+            "source": "PRESS9",
+            "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE15ZGpMQkFPTWVnek84LUJmeU43T1JXU3d6dXlGdmNDaGxMY1h2VGc5WjY4QlJoN1BrM0NKeTQ0VmFNLW9wdHVjZEdnM3J5VHZHV21aY3BiWlJraGV4bkh4T2NRcHc?oc=5",
+            "title": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 '릴리 튠랩' 합류...R&amp;D 고도화 - PRESS9"
+          },
+          {
+            "source": "바이오북미디어",
+            "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBPZmxsbWRHTm1KZTZ3OGJ5dEp5T19CX3ZIaGtoOWJSa3hQVjloRWtueXNoWUNBa2RydWxMTzZMT2V2aW5sU0lraURMdHdaZlNfaE9fZA?oc=5",
+            "title": "지놈앤컴퍼니, 릴리 AI 플랫폼 합류…\"연구 성과 IP 자사 귀속\" - 바이오북미디어"
+          },
+          {
+            "source": "뉴시스",
+            "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8tazZ2QS1jcFFvSGo1X0xTV0hTSmRJVC1fcW5pN3dPS3I4TG5pVXVyZTg3Y3RKVTl2WUtoRHUyWk45Zmc3anRranc3amh2NzBwZ1BUVTRhMVR3R2piUkQ0edIBeEFVX3lxTE9sRlFJVG5IODhVcTRIU1QxbzE5bXF4anlMYW9ndlhkNDBHbFV2dWJTNkZBVEFwc2EyYjB3Qmthc01OZjRXSjF5Wm9WaEI2MThGcm03WEpiTWtQWTBrUEhqOWRncXl6NHVqaDNfdF9DeC1sR1Q1bVJHZA?oc=5",
+            "title": "\"AI 신약 개발\"…지놈앤컴퍼니, '릴리 튠랩' 참여 - 뉴시스"
+          },
+          {
+            "source": "이데일리",
+            "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNSXZ5WXdlUWR1Z0JJSUV4YlFfd1BjUll6eEltVEE3aUhVcEd2OTBBZ1c2OEk1c2d5S2Jka050bVVaYjhPS3otSHJqNFNaSmljNnJpb3pUY3lhN1lEbFNnR2Rrck03ai1MMzdCQU1UTjREVFlLOUM5OHE5bktsMU9HQQ?oc=5",
+            "title": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 참여…후보물질 최적화 속도 - 이데일리"
+          },
+          {
+            "source": "팜이데일리",
+            "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPby1MbldJVWZoS0w4QTREMUs1ZU9fdFR1Uk9EMmNCc21PWERUdzFiVnJETTd4Nk1MUXpwZWdYMGtMbnhYVzlpa1RlZTJ2cVpld3kwQWFoN1ZOQWdvQkpWQUVJbS0taFZTUmo5bmstYTJpRUI2SHAwWURManlsWlAxQVprb2w?oc=5",
+            "title": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 참여…후보물질 최적화 속도 - 팜이데일리"
+          },
+          {
+            "source": "쿠키뉴스",
+            "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE13VUJJMlpBT3l4eVNZaVQ2cGtMTnVkWkRpMmFXUUdWZThhc0pRWnJ1bm1LenMyNlg0UTBHa0gxWUZpWHNTV1Y0b01ZZ0pEYk9kaTdQUFU2U2pYSHhjTUcwR1FHbw?oc=5",
+            "title": "아리바이오, 美 릴리 AI신약 개발 플랫폼 ‘릴리 튠랩’ 참여 - 쿠키뉴스"
+          }
         ]
       },
       {
@@ -70,7 +141,8 @@
         "summary": "한미약품, '3조 비만약' 수출…숨은 공신은 AI 플랫폼&nbsp;&nbsp;데일리안",
         "categories": [
           "AI플랫폼"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "로슈, 20조 원 규모 ADC 패키지 계약…국내 바이오텍 수주전 ‘변수’ - 바이오타임즈",
@@ -80,27 +152,8 @@
         "summary": "로슈, 20조 원 규모 ADC 패키지 계약…국내 바이오텍 수주전 ‘변수’&nbsp;&nbsp;바이오타임즈",
         "categories": [
           "일반"
-        ]
-      },
-      {
-        "title": "\"신약 개발 비용 절감\" 지놈앤컴퍼니, 릴리 AI 플랫폼 '튠랩' 참여 - 머니투데이 - 머니투데이",
-        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9qM202NnczYlJhNVR0a0ZsdVJOZ0tUeUx5ekdLSWNGWDZXNlB6QUR2aGZPQlFKdHh0akJka2t1dTlYRFpXTVc0Z2FUc0UzcVh4UVBFeU1PclpNYVBLLTdkNkRxSTNFRGNlT2fSAW9BVV95cUxQQzVtNHVpdTRvWFUyY1FBbGZLMjlqdFB3NDFIMmozOEdYRzB3R1JhaWt4dkk0U21ZdmE4ZWI0RXZCMVc2WnZZQUtSaVQ2MUJBODFXVWR4TGpPMGk0b21Xal9ieU50VUR0enBHUGwtRHM?oc=5",
-        "pub_date": "2026-10-20 14:26",
-        "source": "머니투데이",
-        "summary": "\"신약 개발 비용 절감\" 지놈앤컴퍼니, 릴리 AI 플랫폼 '튠랩' 참여 - 머니투데이&nbsp;&nbsp;머니투데이",
-        "categories": [
-          "AI플랫폼"
-        ]
-      },
-      {
-        "title": "지놈앤컴퍼니, ‘릴리 튠랩’ 참여…AI 기반 신약개발 고도화 - 이투데이",
-        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9MV05nZ3hsZ3VVX1lMaUxyRXZkZTdMZ05VQ2FaYldKV3YtMTVoYnlYUDhON1BrbUFJWkx4aWpRY2FRa012ZS1xeXhtdHVYS2xWTTQwYkVPa2VKcWVpUjBkMUprdnBtdXpfVGhsd2VMRm9SaFRH?oc=5",
-        "pub_date": "2026-10-20 14:06",
-        "source": "이투데이",
-        "summary": "지놈앤컴퍼니, ‘릴리 튠랩’ 참여…AI 기반 신약개발 고도화&nbsp;&nbsp;이투데이",
-        "categories": [
-          "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "의료AI주 차익 실현 매물 부담…진단·유전체 분석주 흔들 - 핀포인트뉴스",
@@ -110,17 +163,8 @@
         "summary": "의료AI주 차익 실현 매물 부담…진단·유전체 분석주 흔들&nbsp;&nbsp;핀포인트뉴스",
         "categories": [
           "일반"
-        ]
-      },
-      {
-        "title": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 '튠랩' 합류 - 서울경제TV",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9MZ3BObjVpWWJfMjF6UVRJc050eWxhdk8yZjVxWTMxN05OWUM2dWg2NGVLNlNfeTRhUE5WdW93VVhYRlVGU1VSNWhYOFBRcVBaY21fM1RrSXVyMFkxampmbERmSU0?oc=5",
-        "pub_date": "2026-10-20 13:34",
-        "source": "서울경제TV",
-        "summary": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 '튠랩' 합류&nbsp;&nbsp;서울경제TV",
-        "categories": [
-          "AI플랫폼"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "에임드바이오, 기술이전 ADC 임상1상서 3.3㎎/㎏ 이상 종양 감소 - 더파마뉴스",
@@ -131,17 +175,8 @@
         "categories": [
           "기술이전",
           "임상"
-        ]
-      },
-      {
-        "title": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 '릴리 튠랩' 합류...R&amp;D 고도화 - PRESS9",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE15ZGpMQkFPTWVnek84LUJmeU43T1JXU3d6dXlGdmNDaGxMY1h2VGc5WjY4QlJoN1BrM0NKeTQ0VmFNLW9wdHVjZEdnM3J5VHZHV21aY3BiWlJraGV4bkh4T2NRcHc?oc=5",
-        "pub_date": "2026-10-20 13:13",
-        "source": "PRESS9",
-        "summary": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 '릴리 튠랩' 합류...R&D 고도화&nbsp;&nbsp;PRESS9",
-        "categories": [
-          "AI플랫폼"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "글로벌 제약사, AI 투자 확대…신약개발 비용·기간 절반 단축 기대 - 메디컬투데이",
@@ -151,7 +186,8 @@
         "summary": "글로벌 제약사, AI 투자 확대…신약개발 비용·기간 절반 단축 기대&nbsp;&nbsp;메디컬투데이",
         "categories": [
           "투자"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "연세대학교 K-NIBRT, AI 기반 신약 개발 실무교육 수료식 개최…전문인력 양성 본격화 - 한국강사신문",
@@ -161,47 +197,8 @@
         "summary": "연세대학교 K-NIBRT, AI 기반 신약 개발 실무교육 수료식 개최…전문인력 양성 본격화&nbsp;&nbsp;한국강사신문",
         "categories": [
           "일반"
-        ]
-      },
-      {
-        "title": "지놈앤컴퍼니, 릴리 AI 플랫폼 합류…\"연구 성과 IP 자사 귀속\" - 바이오북미디어",
-        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBPZmxsbWRHTm1KZTZ3OGJ5dEp5T19CX3ZIaGtoOWJSa3hQVjloRWtueXNoWUNBa2RydWxMTzZMT2V2aW5sU0lraURMdHdaZlNfaE9fZA?oc=5",
-        "pub_date": "2026-10-20 11:34",
-        "source": "바이오북미디어",
-        "summary": "지놈앤컴퍼니, 릴리 AI 플랫폼 합류…\"연구 성과 IP 자사 귀속\"&nbsp;&nbsp;바이오북미디어",
-        "categories": [
-          "AI플랫폼"
-        ]
-      },
-      {
-        "title": "\"AI 신약 개발\"…지놈앤컴퍼니, '릴리 튠랩' 참여 - 뉴시스",
-        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8tazZ2QS1jcFFvSGo1X0xTV0hTSmRJVC1fcW5pN3dPS3I4TG5pVXVyZTg3Y3RKVTl2WUtoRHUyWk45Zmc3anRranc3amh2NzBwZ1BUVTRhMVR3R2piUkQ0edIBeEFVX3lxTE9sRlFJVG5IODhVcTRIU1QxbzE5bXF4anlMYW9ndlhkNDBHbFV2dWJTNkZBVEFwc2EyYjB3Qmthc01OZjRXSjF5Wm9WaEI2MThGcm03WEpiTWtQWTBrUEhqOWRncXl6NHVqaDNfdF9DeC1sR1Q1bVJHZA?oc=5",
-        "pub_date": "2026-10-20 11:06",
-        "source": "뉴시스",
-        "summary": "\"AI 신약 개발\"…지놈앤컴퍼니, '릴리 튠랩' 참여&nbsp;&nbsp;뉴시스",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 참여…후보물질 최적화 속도 - 이데일리",
-        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNSXZ5WXdlUWR1Z0JJSUV4YlFfd1BjUll6eEltVEE3aUhVcEd2OTBBZ1c2OEk1c2d5S2Jka050bVVaYjhPS3otSHJqNFNaSmljNnJpb3pUY3lhN1lEbFNnR2Rrck03ai1MMzdCQU1UTjREVFlLOUM5OHE5bktsMU9HQQ?oc=5",
-        "pub_date": "2026-10-20 10:08",
-        "source": "이데일리",
-        "summary": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 참여…후보물질 최적화 속도&nbsp;&nbsp;이데일리",
-        "categories": [
-          "AI플랫폼"
-        ]
-      },
-      {
-        "title": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 참여…후보물질 최적화 속도 - 팜이데일리",
-        "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPby1MbldJVWZoS0w4QTREMUs1ZU9fdFR1Uk9EMmNCc21PWERUdzFiVnJETTd4Nk1MUXpwZWdYMGtMbnhYVzlpa1RlZTJ2cVpld3kwQWFoN1ZOQWdvQkpWQUVJbS0taFZTUmo5bmstYTJpRUI2SHAwWURManlsWlAxQVprb2w?oc=5",
-        "pub_date": "2026-10-20 10:07",
-        "source": "팜이데일리",
-        "summary": "지놈앤컴퍼니, 릴리 AI 신약개발 플랫폼 참여…후보물질 최적화 속도&nbsp;&nbsp;팜이데일리",
-        "categories": [
-          "AI플랫폼"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "日 이토추(8001 JP), AI 신약개발 기업 몰큐어에 출자…후보물질 발굴부터 임상까지 지원 강화 - 알파경제",
@@ -211,7 +208,8 @@
         "summary": "日 이토추(8001 JP), AI 신약개발 기업 몰큐어에 출자…후보물질 발굴부터 임상까지 지원 강화&nbsp;&nbsp;알파경제",
         "categories": [
           "임상"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "제약바이오 파고든 AI…신약개발부터 생산까지 ’무한 확장’ By EBN - Investing.com 한국어",
@@ -221,16 +219,14 @@
         "summary": "제약바이오 파고든 AI…신약개발부터 생산까지 ’무한 확장’ By EBN&nbsp;&nbsp;Investing.com 한국어",
         "categories": [
           "일반"
-        ]
-      },
-      {
-        "title": "제약바이오 파고든 AI…신약개발부터 생산까지 '무한 확장' - www.ebn.co.kr",
-        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBIOGRaaGtaSUJlRkNlZnM0c2lWUzl2UTV5MVhnQm9MWU5vckFENUNaNExPWDJ1ZndpY21XVnJRbFZRbnVfaFNhdUJXUFdldndPaURnZmppZ0hMcndIVzN0X0lSdzA2WTdB?oc=5",
-        "pub_date": "2026-10-20 06:00",
-        "source": "www.ebn.co.kr",
-        "summary": "제약바이오 파고든 AI…신약개발부터 생산까지 '무한 확장'&nbsp;&nbsp;www.ebn.co.kr",
-        "categories": [
-          "일반"
+        ],
+        "source_count": 2,
+        "related": [
+          {
+            "source": "www.ebn.co.kr",
+            "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBIOGRaaGtaSUJlRkNlZnM0c2lWUzl2UTV5MVhnQm9MWU5vckFENUNaNExPWDJ1ZndpY21XVnJRbFZRbnVfaFNhdUJXUFdldndPaURnZmppZ0hMcndIVzN0X0lSdzA2WTdB?oc=5",
+            "title": "제약바이오 파고든 AI…신약개발부터 생산까지 '무한 확장' - www.ebn.co.kr"
+          }
         ]
       },
       {
@@ -241,7 +237,8 @@
         "summary": "“학습 안한 약물 반응도 예측” GIST, 신약 후보 선별 AI 개발&nbsp;&nbsp;동아일보",
         "categories": [
           "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "제약·바이오 | 빅파마 기술 확보 경쟁, 수혜를 가르는 임상 데이터 - 네이버 프리미엄콘텐츠",
@@ -251,7 +248,8 @@
         "summary": "제약·바이오 | 빅파마 기술 확보 경쟁, 수혜를 가르는 임상 데이터&nbsp;&nbsp;네이버 프리미엄콘텐츠",
         "categories": [
           "임상"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "복지부, AI 의료·신약 인프라 현장점검 나섰다 - 간호사신문",
@@ -261,7 +259,8 @@
         "summary": "복지부, AI 의료·신약 인프라 현장점검 나섰다&nbsp;&nbsp;간호사신문",
         "categories": [
           "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "서울바이오허브, 내달 17일 '바이오·의료 오픈콜라보' 개최 - 전자신문",
@@ -271,6 +270,14 @@
         "summary": "서울바이오허브, 내달 17일 '바이오·의료 오픈콜라보' 개최&nbsp;&nbsp;전자신문",
         "categories": [
           "일반"
+        ],
+        "source_count": 2,
+        "related": [
+          {
+            "source": "더바이오",
+            "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1QbHpkalk5bm4tcnZrc2luLW11cXFSbUx6S0xNV19SaUx2R3lWM3FxeEJmZGc4amowcnc0b3h1NE1yNXRLSW1jSlFiM1d4WkFvTmVDRU1fM2ttVFk5Z25VRHdDMWtDTERyUGlZQdIBcEFVX3lxTFBHRWptRUZBX0NXaGhocF93akhuZnFUR01hY19mWU9HOEV2WWlObU4yZjJVZ25zZzc3QjJ2YUJ3LWk4Qm9FUDhVeUItVWdwNzFsamduckJLOXVHVzE1VFVUdnU0enZQam82UVhHbXFXcUw?oc=5",
+            "title": "서울바이오허브, ‘서울 바이오·의료 오픈콜라보’ 개최…AI 시대 성장해법 모색 - 더바이오"
+          }
         ]
       },
       {
@@ -281,17 +288,19 @@
         "summary": "GIST, 미학습 항암 후보물질 반응 예측 AI 개발…신약 선별 효율화 기대&nbsp;&nbsp;베타뉴스",
         "categories": [
           "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
-        "title": "서울바이오허브, ‘서울 바이오·의료 오픈콜라보’ 개최…AI 시대 성장해법 모색 - 더바이오",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1QbHpkalk5bm4tcnZrc2luLW11cXFSbUx6S0xNV19SaUx2R3lWM3FxeEJmZGc4amowcnc0b3h1NE1yNXRLSW1jSlFiM1d4WkFvTmVDRU1fM2ttVFk5Z25VRHdDMWtDTERyUGlZQdIBcEFVX3lxTFBHRWptRUZBX0NXaGhocF93akhuZnFUR01hY19mWU9HOEV2WWlObU4yZjJVZ25zZzc3QjJ2YUJ3LWk4Qm9FUDhVeUItVWdwNzFsamduckJLOXVHVzE1VFVUdnU0enZQam82UVhHbXFXcUw?oc=5",
-        "pub_date": "2026-10-19 09:40",
+        "title": "아이디바인 “신약 개발, 감 아닌 ‘숫자’로 판단…임상 성공 확률 AI로 수치화” - 더바이오",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5xMmZLVmZ0OW4tSDBfOHBtTFZWZzY2OTlKMlFKOVdDeElaS0JRNkdGa01Bb3ljakh0dU9Wa3JjUkl0aVB4aDlMeVcxSUp6MWFQU0o2aTlfM0ktWmRVZ3AtbHNpVXhLNlRRNXVUNTBQSHnSAXBBVV95cUxOcTJmS1ZmdDluLUgwXzhwbUxWVmc2Njk5SjJRSjlXQ3hJWktCUTZHRmtNQW95Y2pIdHVPVmtyY1JJdGlQeGg5THlXMUlKejFhUFNKNmk5XzNJLVpkVWdwLWxzaVV4SzZUUTV1VDUwUEh5?oc=5",
+        "pub_date": "2026-10-19 08:29",
         "source": "더바이오",
-        "summary": "서울바이오허브, ‘서울 바이오·의료 오픈콜라보’ 개최…AI 시대 성장해법 모색&nbsp;&nbsp;더바이오",
+        "summary": "아이디바인 “신약 개발, 감 아닌 ‘숫자’로 판단…임상 성공 확률 AI로 수치화”&nbsp;&nbsp;더바이오",
         "categories": [
-          "일반"
-        ]
+          "임상"
+        ],
+        "source_count": 1
       },
       {
         "title": "이노보테라퓨틱스, 한국거래소 코스닥 상장예비심사 통과 - 더스탁(The Stock)",
@@ -301,10 +310,125 @@
         "summary": "이노보테라퓨틱스, 한국거래소 코스닥 상장예비심사 통과&nbsp;&nbsp;더스탁(The Stock)",
         "categories": [
           "일반"
+        ],
+        "source_count": 2,
+        "related": [
+          {
+            "source": "한스경제",
+            "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE12UUZObzhZV0tHOUdQZHZQbFg0NWg2NzBzaTRhRWFoSnpwSjc5TkZTa0tHNFBkd2ctN1VpeFBLXzJoZ2Q3OVhSZ0pYWXJPRGhCUHJFVGFfeHlvcE1vMWNIZ3VoTlJvTzVHWmVITQ?oc=5",
+            "title": "‘AI 신약개발’ 이노보테라퓨틱스, 코스닥 예심 통과 - 한스경제"
+          }
         ]
+      },
+      {
+        "title": "신약개발 성공 조건을 다시 묻다…'2026 KIC'가 남긴 메시지 - 히트뉴스",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5aekV4TlJ3aVJGMFRrb2RKSVJJUE5pdjlkYmRlOUdnUWZ6T1o5RlEtTzZIblVpNXViWUhWN1Y3Q2syd09iS3NESC1KNmVEaWhuakxHOUt1NTVSQW5yRm83WFdmdzU5amlPdDg4?oc=5",
+        "pub_date": "2026-10-19 06:20",
+        "source": "히트뉴스",
+        "summary": "신약개발 성공 조건을 다시 묻다…'2026 KIC'가 남긴 메시지&nbsp;&nbsp;히트뉴스",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "\"신약개발에 약물감시까지\"…제약업계 AI 활용 어디까지 왔나 - 약사공론",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hWXBKdWhtLUNTUV9rTUVRTGoyQWpHZ0N6MFJ5QmtSYUJRYXM3NXc3WC1fajhERkJpbTRLZFV5NERoQU9aWjFWVWpBc3g5di1FdmVGaTNZb1JRZ3ozWUg1WUlsd1FNUkFvaTJycQ?oc=5",
+        "pub_date": "2026-10-19 05:51",
+        "source": "약사공론",
+        "summary": "\"신약개발에 약물감시까지\"…제약업계 AI 활용 어디까지 왔나&nbsp;&nbsp;약사공론",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "AZ, 인시트로 ‘MASH·심근병증’ AI 신약개발 15억弗 딜 - 바이오스펙테이터",
+        "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5Ld2tSS183NHRQRUZ3cFNXcHd5VGNaMk5fZTJfaFNNa3V1cWdkZGY0S2VfUW1QTjdBWWZFeGZQTDUwa1RjNzY5NEJpT0hteWhnMnNwNENHMA?oc=5",
+        "pub_date": "2026-10-19 05:44",
+        "source": "바이오스펙테이터",
+        "summary": "AZ, 인시트로 ‘MASH·심근병증’ AI 신약개발 15억弗 딜&nbsp;&nbsp;바이오스펙테이터",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "엔비디아·릴리 뭉쳤다…AI 신약 개발 열풍 속 K바이오 생존 전략은 - 뉴시스",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9PRVowa2tUVXNvSTJKRFBDSGFYaEdlV0dwc0dkbTF4RXk0d2dNSk01YTRHMDlhRTBBZG1zd1FDWnVYOG5yQVRGc0szUHFmYlZOQlI2ekswSlNDajZISk1EedIBeEFVX3lxTE04NHI0cnFJaDlacW1WM3VnUE5JdlByd2x5WUVMbVVTX0dKSjJWcXBWQzN5dXdkQ2NuX2R1S1ZiWWYtbC1TeVd3M2lHd3dOYlZLQUd2bmVRWk5HdGNBTHFZdGs5c0lBRDc0eUFCaTdueS1EejVjdWNiQw?oc=5",
+        "pub_date": "2026-10-19 00:05",
+        "source": "뉴시스",
+        "summary": "엔비디아·릴리 뭉쳤다…AI 신약 개발 열풍 속 K바이오 생존 전략은&nbsp;&nbsp;뉴시스",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "\"AI가 짠 신약 설계도, 로봇·빛이 24시간 만들어낸다\" - 이데일리",
+        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPczZwYWp2b1ljSWcybmNuZ1BoaTNWRWd1M3NZRTF4Zy1kMkZGaU9pR1o3dEdESmszUDF5TG8yV3hFMXI3bGloNklVTlVHZmdxTVUxaXh0bWk2cUIwT2RObVpnNThfNHd3THNLQ1p4QlhNWVBDNkUycVo5MmlZQjQxMg?oc=5",
+        "pub_date": "2026-10-18 12:00",
+        "source": "이데일리",
+        "summary": "\"AI가 짠 신약 설계도, 로봇·빛이 24시간 만들어낸다\"&nbsp;&nbsp;이데일리",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "KAIST, 빛·로봇 결합한 무인 합성 플랫폼 개발 … AI 신약 설계부터 제조까지 자동화 - 워크투데이",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9tY3RrcXZJOGhqNURKNGxxM1lrbHZwTlozQUpwOTdjcTZwRXJuRW5wU3ZvNXZ2c1NxVG81elZTRVY4aDEyeEQ4Rk1tMjlsOVV3bWFEaE5Qak1JbWpZZmx4b2pKSkhFYTJKMGFycQ?oc=5",
+        "pub_date": "2026-10-18 12:00",
+        "source": "워크투데이",
+        "summary": "KAIST, 빛·로봇 결합한 무인 합성 플랫폼 개발 … AI 신약 설계부터 제조까지 자동화&nbsp;&nbsp;워크투데이",
+        "categories": [
+          "AI플랫폼"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "21조원 잭팟 터뜨린 K바이오…“기술수출만이 살길” [K바이오 수출 30조원 시대①] - 쿠키뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9aVUpOTnlPdGR2alYydk54OVNZRjZzR1RNNUV2dkd0TkptamZ4cFNzeDBKRXdUdmtha04tWFQ0WVNUMGhZbVRDY3piQVFDcXFxaUJKX05SNzZqRER3NGFhTGF6Yw?oc=5",
+        "pub_date": "2026-10-18 10:27",
+        "source": "쿠키뉴스",
+        "summary": "21조원 잭팟 터뜨린 K바이오…“기술수출만이 살길” [K바이오 수출 30조원 시대①]&nbsp;&nbsp;쿠키뉴스",
+        "categories": [
+          "기술이전"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "[글로벌 바이오워치]아스트라제네카, AI 신약개발 기업 2조 베팅 - 비즈워치",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9vWjB4OHFZcWFoZlQ3SUpFWHk3anMwX21nWkVWRVR2WnZWbi1YVm42QU0zN1k4OUV6VkpwajNJSklPc3FjRzVWaGRYbUtaSEhTQTdyNXVRbmRVS3ZwUkg0dGFxQWc3TFIxZ1FZRmtIQQ?oc=5",
+        "pub_date": "2026-10-18 10:00",
+        "source": "비즈워치",
+        "summary": "[글로벌 바이오워치]아스트라제네카, AI 신약개발 기업 2조 베팅&nbsp;&nbsp;비즈워치",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
       }
     ],
     "international": [
+      {
+        "title": "Sinopia Biosciences Awarded $2.5 Million NIH Grant to Advance AI Drug Discovery - citybiz",
+        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMkxXeWl4WVVSVFVqaEcxN09ZYlZsMUs3czM4U3ZUcmZKV2pTTzNWRXc3NThNb1ZkNnB6VG9FbEFIRlVPLXRsM2JyNHZ6OUZMRGhVeWJiRXNLMDNfR3VBTmtGMF9VNGtVUW1CcDkyUXBkaHJaRFZFOFBELWJjMms1eDhvcTFKR2JLdEtSUEdnVE44RHJIUDA2NVdIWEdRQWE2NS1vV2p6VEZCYXczS1JNRjhrV3ctZ1F0?oc=5",
+        "pub_date": "2026-10-21 00:11",
+        "source": "citybiz",
+        "summary": "Sinopia Biosciences Awarded $2.5 Million NIH Grant to Advance AI Drug Discovery&nbsp;&nbsp;citybiz",
+        "categories": [
+          "임상",
+          "AI플랫폼"
+        ],
+        "source_count": 2,
+        "related": [
+          {
+            "source": "BioSpace",
+            "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOTTllbDV1WWRTR0ZJYTZ1YWpyWVJYNDNiSjFmUG5QNHlvNTFrQ2FJTnB2RWlWNTV0NkYzNVdiUE5zY01nUzNOM012UW43eHZEb1F4VFFvWldzZlV0UE9IQ1MycWVEczF0REs2TXdfYU5zTTQ1YmJxeVVXYk42WlBJaFZibnBwd3V5VC1Hai1acGFlRGdiOGVIWHBibVVWSUZscFJuTzJRVkJRQlIzQ1RxRUppdEdGcEpDUnZqWXVpeDAzaEUySnJMTlVHbFhmSkltSXBHRjV5UzI3UkhHSUxtdHhHMA?oc=5",
+            "title": "Sinopia Biosciences Secures $2.5 Million NIH Grant to Advance Metabolomics Foundation Model for Drug Discovery - BioSpace"
+          }
+        ]
+      },
       {
         "title": "AI-Driven Drug Discovery Boosts Charles River Laboratories (CRL) Prospects - GuruFocus",
         "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSVcxb3B5ZGRqeWdjSk5BcnZPOG52Y1JMU0J5dWRKYmhlbV9Bd1V3bzRvTjdZTjFmcXU3ZWNHODEtZmtrTkRHMHBmQzByV0xtVWo1ZlVGVFdRZnc2OG1nTFdMcUR3MG9mZnF0WlNoTzF3Sm9NSktDZjdSbUx1Sk1XRVQ2NFNuU3ZDaXVDQ0dtYTlvQ19NSFpHSy1EZTBXZkZiZXZieVdGTGZ4dTVZd1I0?oc=5",
@@ -313,7 +437,19 @@
         "summary": "AI-Driven Drug Discovery Boosts Charles River Laboratories (CRL) Prospects&nbsp;&nbsp;GuruFocus",
         "categories": [
           "일반"
-        ]
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "Lonza and Onava collaborate to accelerate AI-native biologics discovery with GS Ori-Go Vectors - Manufacturing Chemist",
+        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPU3lWY3NJeVpod0lVZktKSmM2VkxsWXZhWHJCT0VqNFdXMzlJdjdwRmx5bE9XQzMxQ1ExLW4xV1NxWHFyWENVSElpdlpVWWN0a29KVkJLNVoybnAxY1MzUlN6VmtKMzdtTWlDRUNLVXVjaFZ6YUxmRmRkLUt5dmNCOGxIT3RWZUgxVmpUaw?oc=5",
+        "pub_date": "2026-10-20 23:30",
+        "source": "Manufacturing Chemist",
+        "summary": "Lonza and Onava collaborate to accelerate AI-native biologics discovery with GS Ori-Go Vectors&nbsp;&nbsp;Manufacturing Chemist",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
       },
       {
         "title": "NetworkNewsBreaks – Oncotelic Therapeutics, Inc. (OTCQB: OTLC) to Present AI-Enabled Drug Discovery Keynote at 22nd Drug Discovery Strategic Summit - StreetInsider",
@@ -323,18 +459,8 @@
         "summary": "NetworkNewsBreaks – Oncotelic Therapeutics, Inc. (OTCQB: OTLC) to Present AI-Enabled Drug Discovery Keynote at 22nd Drug Discovery Strategic Summit&nbsp;&nbsp;StreetInsider",
         "categories": [
           "일반"
-        ]
-      },
-      {
-        "title": "Sinopia Biosciences Secures $2.5 Million NIH Grant to Advance Metabolomics Foundation Model for Drug Discovery - BioSpace",
-        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOTTllbDV1WWRTR0ZJYTZ1YWpyWVJYNDNiSjFmUG5QNHlvNTFrQ2FJTnB2RWlWNTV0NkYzNVdiUE5zY01nUzNOM012UW43eHZEb1F4VFFvWldzZlV0UE9IQ1MycWVEczF0REs2TXdfYU5zTTQ1YmJxeVVXYk42WlBJaFZibnBwd3V5VC1Hai1acGFlRGdiOGVIWHBibVVWSUZscFJuTzJRVkJRQlIzQ1RxRUppdEdGcEpDUnZqWXVpeDAzaEUySnJMTlVHbFhmSkltSXBHRjV5UzI3UkhHSUxtdHhHMA?oc=5",
-        "pub_date": "2026-10-20 23:19",
-        "source": "BioSpace",
-        "summary": "Sinopia Biosciences Secures $2.5 Million NIH Grant to Advance Metabolomics Foundation Model for Drug Discovery&nbsp;&nbsp;BioSpace",
-        "categories": [
-          "임상",
-          "AI플랫폼"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "Insilico Medicine and Servier Achieve First Milestone in AI-Driven R&amp;D Collaboration, Triggering An undisclosed Milestone Payment - The Manila Times",
@@ -344,16 +470,86 @@
         "summary": "Insilico Medicine and Servier Achieve First Milestone in AI-Driven R&D Collaboration, Triggering An undisclosed Milestone Payment&nbsp;&nbsp;The Manila Times",
         "categories": [
           "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
-        "title": "AstraZeneca Collaborates with Oracle on AI-Powered Clinical Trials - صحيفة مال",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5TZmFGcnRmNFZkMDZ4WFBiZXJjV3ZobHFjRjJONkowdEh0SXZHYmEyTHV4ckl6VEpqZ0s2VTI5ZUhHdFM1SGYzaHJXODM5d1R5T2ZhUWRia1hJaHhHanJsYTUyRUIxcERXZkZn?oc=5",
-        "pub_date": "2026-10-20 22:42",
-        "source": "صحيفة مال",
-        "summary": "AstraZeneca Collaborates with Oracle on AI-Powered Clinical Trials&nbsp;&nbsp;صحيفة مال",
+        "title": "AstraZeneca partners with Oracle for AI-driven clinical trials - Reuters",
+        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPWXlaZTY2Vmg3T3c4NVV4STEtUS05REdfNG5IU0tsczFpSHJpOHlWbExOU2dQQmxDSkdBOFh2aFVLMmdISEFjeVFYdXBOX0w0Z0ZRMVEyYTFkcC1ybTVUOVFwZElvT29kaS1DVlFBRVc4c21Yd0hFUEt5TlhpT1ZsTXA0OVpINmVsZ0lUZmt2bEw3ZnF0RFVYZUxKMExPNEJ3RDFodUhlXzROalNfOTAyRQ?oc=5",
+        "pub_date": "2026-10-20 16:37",
+        "source": "Reuters",
+        "summary": "AstraZeneca partners with Oracle for AI-driven clinical trials&nbsp;&nbsp;Reuters",
         "categories": [
-          "임상"
+          "임상",
+          "기술이전"
+        ],
+        "source_count": 14,
+        "related": [
+          {
+            "source": "صحيفة مال",
+            "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5TZmFGcnRmNFZkMDZ4WFBiZXJjV3ZobHFjRjJONkowdEh0SXZHYmEyTHV4ckl6VEpqZ0s2VTI5ZUhHdFM1SGYzaHJXODM5d1R5T2ZhUWRia1hJaHhHanJsYTUyRUIxcERXZkZn?oc=5",
+            "title": "AstraZeneca Collaborates with Oracle on AI-Powered Clinical Trials - صحيفة مال"
+          },
+          {
+            "source": "Seeking Alpha",
+            "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeFMyVDBQdHNyMVVEb3doMHpyT1N1WVdURFRBNUpDc2tqVEtKcFRFQTAzcVBxbDVqdWtJSVZUc1NFWWMxN2FWSzhnMEcxOVFnWHRVQW1HeEZTclc1ZEppRkJzU0xWLU5sV1lpejhRZUR2LVJGZzg1X2h6VWJVT0xrczlYZ25INkU?oc=5",
+            "title": "AstraZeneca and Oracle strike AI collaboration (AZN:NYSE) - Seeking Alpha"
+          },
+          {
+            "source": "The Next Web",
+            "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9tU1lPSEZTR0ttOE02QmlZazBLc3M0d1BxR1VEZFhKY2dIYU5NVGJrNkpKRG4weTFlaUVJdTNBdzVna01Hc1BlWTVJRlVGSWthR21qSnBMLS0zUW44MWRGN3dyS3RkTENmb1U4TElR?oc=5",
+            "title": "AstraZeneca and Oracle team up on AI to find patients for drug trials - The Next Web"
+          },
+          {
+            "source": "Yahoo Finance",
+            "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSS1Uc2l1TE8yVHQzN3dJLWdMdHBvamR1UXR6eVotREM3TUliODc5bENvMDkzTl9pYW01X2MxbDE5NW5iUXl6ODF5bWlUam9VdndDblc3X01aVUJfOUNGeGtydkZTb0pDdk5xQnNpc0lLVGZpbXUzRUJZQktWR3NucGV3OVRLVVZkdUZrWFRzWm1oX0hHcFZNRDZYR2lDMVQ3bm1j?oc=5",
+            "title": "AstraZeneca and Oracle Launch AI Partnership to Improve Clinical Trials and Patient Care - Yahoo Finance"
+          },
+          {
+            "source": "Benzinga",
+            "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNMlE4emZYcm5pS05lMktoVXFpSnc1UHk4MGg0d25SaXZNUktjS0w1VGR4ZEttY1hjYnlzbnpBU0hlSDFTcGhkVngyQ1QtUzZBQ21tNmdnZHBYY2JUTnFEcF81ZF9mOTVNZnN2QmhJWWZvMktXU3lCTnVZbmZJUDJtdDVvd1pRRXV3Vm83OHFxQVZzMHpCUVByZGlqbkFURW1iRTBZbmVIZV9saGlGb0ViQ0p0dUk0dEJEal9FMXoyMUZOc3Q2WVI0?oc=5",
+            "title": "Oracle Joins Forces With AstraZeneca to Put AI to Work in Drug Research - Benzinga"
+          },
+          {
+            "source": "The Business Standard",
+            "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNQW4wQjJSOUlsWjJNX1d3bUNOYmVXU1FOQ0l6ZDgxS0VqZktGOENmbU82T20tSDB1cVhNeWVmVlJSaDZBZ2NUUnFuSXowdTRHNmFUZkg0X2hhV09DQVc3c21RdDhhTTJtaHNhRkRIQVhtT2QwNlAzVGZsaEFQNEoxc0RSOTdZTGJ6Q0RhS0V3ZDc3dndreGc?oc=5",
+            "title": "AstraZeneca partners with Oracle for AI-driven clinical trials - The Business Standard"
+          },
+          {
+            "source": "Yahoo Finance UK",
+            "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQb0RVcDBib05wNFdhckJ6NmJxYVhLdW5XLTdIREFobUJuMXhlRVJzeDlrVmI5dnFWV1BkZjhuQTI3R2s1a3hfcUNjSk1wS09kUTVDV2g5aWo3bzNMZExPdG1PWjZuVkgxMVBubzdhTDZoeXdiU1B2SThEajhucDNiZXRubWZCRXc1WTI2QUR3?oc=5",
+            "title": "AstraZeneca Partners With Oracle to Apply AI to Clinical Research and Healthcare Processes - Yahoo Finance UK"
+          },
+          {
+            "source": "BigGo Finance",
+            "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5abm5uY3pqcndaUDk1UXkyZExWV1h4QVFJb1FBcmJDb2hvZGhNVTJWaWtiZ2hHMHZIOERCYzF5MTk1ekR2YThVZGQ0UTEwbFBST1AwVElLN3ZGT3ViRjVBVG9ZcUlPUEhhVEdfdFgtaktvWmZJQkE?oc=5",
+            "title": "Oracle Teams Up with AstraZeneca to Deploy AI, Aiming to Speed Up Patient Screening for Clinical Trials - BigGo Finance"
+          },
+          {
+            "source": "Fierce Biotech",
+            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQYzl3cmZSSFBSYzhPTlVLSnAtMDJsSlVQX1UwOHNsQ1JZenVaSWEtVV9GR241QW1qY0ZVcHdydlc4U18yQm8ydnFZclk0b0prRjl6YlgyUTI1bmNpalZXS0RWcTFfRm5kelQ3X2tZZVl6SFpDQkdFNVA1MTFBT0ZUd1JWYjV6VjZ0T3B1UmF2U0h6NURaVVk5Q1c5NkVpSnMzeWw4VA?oc=5",
+            "title": "AstraZeneca taps Oracle to help improve recruitment for clinical trials - Fierce Biotech"
+          },
+          {
+            "source": "Yahoo Finance",
+            "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOV2hiV1luXzFqRW1LSlFrQTdfUVZWSFM4ZVZVamk3Q0dqaUwta3hPNUhJTEg2Nmg0TnQ0WVMweUZnR0k1RkZUcnFVUEZySFhUbm0tR2Z2N2RybFZNMlpTY3FJb09qQy1zYTlDVHU2Nl9hRzdyMG5FZVVVUXBacXo5dFNWbTcxa0tNSWUyRmczUllkbnFvN1dKNDdMSXRPa3lOVGZoWHpnMA?oc=5",
+            "title": "AstraZeneca Partners With Oracle to Refine Clinical Research With AI - Yahoo Finance"
+          },
+          {
+            "source": "WSJ",
+            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWVJpY0VOc2tLVk9kZTE4bEZHaWJBbEFmaUFqbTBPcHhBODc3SUdwdnJBU2NuanRVVmk0NDNlZElOZWlTM1ZIOUpoekE2aVlvUmlra1N3dndiZWVTZVFGUXI2QXhnWWF4eHg2RFhlOC1hWDF4dzc5a2dIcDhvQWVGZkRSYU9nNlpkNVlRS0RYNUpDQ19lUnl4X1dYaGFGRWpoTXpFbkVHb3h0QUFzYXZF?oc=5",
+            "title": "AstraZeneca Partners With Oracle to Refine Clinical Research With AI - WSJ"
+          },
+          {
+            "source": "AstraZeneca",
+            "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxONXYycmMybF9pcFJBaHFJSHVPd0dKNjJLRGZRQVM4UHdnRFowbFFBcVVaSGQ3aHNLNldLV3ZNbTFYMExVUUVhS3J6NW9nYUJaZy1mNVpGQW5VT0FoUVM3dUhjNndEMkdSVE9sZS1DWUwtZGhfMkhOanhNR2ZCSEZiU0RyRkFFZGxHSVZuQkJaMGlhMWdtZklnaXhkSEVIeVl1d0dIOXR2eFY5ckRRek0wa0l3R3VFd0JIdVIwNFNtR1hrRlh6QmRTRE1LVkRvTnlYRE5mV1phYWN6c2p4cHViOUZaUElHaFJLM0tWTGY0N2R6VWltaDFxUjE3RTFpWkxQNlFMVUFXcjNqdHZONzkxdg?oc=5",
+            "title": "AstraZeneca and Oracle launch global AI collaboration to advance clinical trial optimisation and support better patient outcomes - AstraZeneca"
+          },
+          {
+            "source": "Quartz",
+            "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBERkxtdjNZbEthLWJFbUdhaHQ0Z3VBcHk0dUZvM292WnBFVEEwbE9WQ2NGNzRXR0h3VG1pZ2t3Y1VYbVRNUms0eUZNNDk1bmpGSm9KOGlvMkxfTWM5OUhKaTBMb0J4aUIzUFp3eURrN3BMQQ?oc=5",
+            "title": "AstraZeneca partners with AI biotech insitro on liver, heart drugs - Quartz"
+          }
         ]
       },
       {
@@ -364,7 +560,8 @@
         "summary": "Sinopia lands $2.5M NIH grant to build metabolomics model for drug discovery&nbsp;&nbsp;Dealroom",
         "categories": [
           "기술이전"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "Lilly, METiS ink AI-driven drug delivery deal worth up to $1.1B - TradingView",
@@ -374,6 +571,14 @@
         "summary": "Lilly, METiS ink AI-driven drug delivery deal worth up to $1.1B&nbsp;&nbsp;TradingView",
         "categories": [
           "기술이전"
+        ],
+        "source_count": 2,
+        "related": [
+          {
+            "source": "TNGlobal",
+            "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5McENjb3Z5VklZUXZnUE9KTVA0b0l2WElnaFhvamlwMDZKRWoxOGlsMjYzcEs4ZDRlWjJfdkpBeFZXZFl6cm9xM1RaRm11R2ZIRU5IdlhLYzhjNWVHWDhhejZDNHZuS1hRdTZFTHhKVExCenNHRS1oaWpSeEE?oc=5",
+            "title": "METiS TechBio signs $1.1B AI drug-delivery deal with Eli Lilly - TNGlobal"
+          }
         ]
       },
       {
@@ -384,7 +589,8 @@
         "summary": "AI Is Flooding Drug Discovery With Candidates. Clinical Validation Has No Flood Gates.&nbsp;&nbsp;The Clinical Trial Vanguard",
         "categories": [
           "임상"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "Citrini Therapeutics - Citrini Research | Substack",
@@ -394,7 +600,8 @@
         "summary": "Citrini Therapeutics&nbsp;&nbsp;Citrini Research | Substack",
         "categories": [
           "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "Burjeel Holdings and UK-Based Avatrial join hands to develop first-of-its-kind AI-powered cancer drug discovery ecosystem in Abu Dhabi - Zawya",
@@ -404,6 +611,14 @@
         "summary": "Burjeel Holdings and UK-Based Avatrial join hands to develop first-of-its-kind AI-powered cancer drug discovery ecosystem in Abu Dhabi&nbsp;&nbsp;Zawya",
         "categories": [
           "임상"
+        ],
+        "source_count": 2,
+        "related": [
+          {
+            "source": "Seeking Alpha",
+            "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1BSTUyaXdGaWxMSElnRVVrelN2V0l6Wk05VzJnc3BJYWJRNFNDMW1BZGJ0eG5odlBrVllGNHJzTFFRU2lITzEySVBxbGQ5UzJPN3hNLUdCNkdzbEMxZUJFMHk5Q1p4bXpjOFF0VEl0SWl3SHp2N0loYg?oc=5",
+            "title": "How To Invest In AI Drug Discovery - Seeking Alpha"
+          }
         ]
       },
       {
@@ -414,7 +629,8 @@
         "summary": "AI Competition in Life Sciences: Far More Complex Than Commonly Imagined&nbsp;&nbsp;36Kr",
         "categories": [
           "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "Anthropic, Google, ByteDance &amp; Tencent Join the Fray: Why Tech Giants Are Collectively Flocking to AI-Powered Drug Discovery - 36Kr",
@@ -424,7 +640,8 @@
         "summary": "Anthropic, Google, ByteDance & Tencent Join the Fray: Why Tech Giants Are Collectively Flocking to AI-Powered Drug Discovery&nbsp;&nbsp;36Kr",
         "categories": [
           "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "Evogene to Participate in U.S. East Coast AI Drug Discovery Roadshow Organized by the Israel Export Institute and TradeIL - PR Newswire",
@@ -434,7 +651,8 @@
         "summary": "Evogene to Participate in U.S. East Coast AI Drug Discovery Roadshow Organized by the Israel Export Institute and TradeIL&nbsp;&nbsp;PR Newswire",
         "categories": [
           "일반"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "Abiologics Appoints Per Jr. Greisen Chief AI Officer to Advance Protein Therapeutics Platform - citybiz",
@@ -444,47 +662,14 @@
         "summary": "Abiologics Appoints Per Jr. Greisen Chief AI Officer to Advance Protein Therapeutics Platform&nbsp;&nbsp;citybiz",
         "categories": [
           "AI플랫폼"
-        ]
-      },
-      {
-        "title": "AstraZeneca and Oracle strike AI collaboration (AZN:NYSE) - Seeking Alpha",
-        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeFMyVDBQdHNyMVVEb3doMHpyT1N1WVdURFRBNUpDc2tqVEtKcFRFQTAzcVBxbDVqdWtJSVZUc1NFWWMxN2FWSzhnMEcxOVFnWHRVQW1HeEZTclc1ZEppRkJzU0xWLU5sV1lpejhRZUR2LVJGZzg1X2h6VWJVT0xrczlYZ25INkU?oc=5",
-        "pub_date": "2026-10-20 20:36",
-        "source": "Seeking Alpha",
-        "summary": "AstraZeneca and Oracle strike AI collaboration (AZN:NYSE)&nbsp;&nbsp;Seeking Alpha",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Abiologics Appoints Per Jr. Greisen as Chief Artificial Intelligence Officer - The Manila Times",
-        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPQXVXaEt6TWt0NE5uWklXdjYyQnI3ejZWbDgtOXNuS0VPbzU2OGVFMUttbEV6aGllNVpMQWNHajZ3UllKb3BZY3Qtc0RsdjM3cmRQR2Y3RS1Da2RTNl9IMF9IbFk1eFdNWWU0SWZPU3N2RWZPeU82WVdObWhZNjZCYm1jeUJnWGxHTkppQXI3djV2NkNSQUdSQ3cxUVVwYnhZVDdBMTJSVUREVDloQ0RfbzU5VnIwR1laWlpYNGRCdzFxRGJtNGc4WkFfNGJFYjl5ZXJLRzBDN3d6Y2JyaVVhUUVTQdIB6AFBVV95cUxOcUI1RjExczkxNVFBaUs1VWZkV0NFeVRPVG9ndHdiMHZhTVNJUHF4cUE3VEFSMFZzOFJjY1pKcjlxb3NielpxX3o2bkZLRnRSTS04czRrR1VRTjVrd0dMUUctNFJHRFJtYWUtU20wM21Rbk56bkZVYV9ZTGZOaERvLU4xUFQ2bFN3RDlDODV5Q2FmV3owMjlSUkloOFpXWlE4amUxbkxOSVVEbE4xVG4tdmswS1lWTHFGQ1g2VlhHRWNsLWtVbVdHeWY4YkRKMXpiaVQ0WGtNUHROZ1c2T2dhWUstQWF0Z0J0?oc=5",
-        "pub_date": "2026-10-20 20:06",
-        "source": "The Manila Times",
-        "summary": "Abiologics Appoints Per Jr. Greisen as Chief Artificial Intelligence Officer&nbsp;&nbsp;The Manila Times",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "AstraZeneca and Oracle team up on AI to find patients for drug trials - The Next Web",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9tU1lPSEZTR0ttOE02QmlZazBLc3M0d1BxR1VEZFhKY2dIYU5NVGJrNkpKRG4weTFlaUVJdTNBdzVna01Hc1BlWTVJRlVGSWthR21qSnBMLS0zUW44MWRGN3dyS3RkTENmb1U4TElR?oc=5",
-        "pub_date": "2026-10-20 19:52",
-        "source": "The Next Web",
-        "summary": "AstraZeneca and Oracle team up on AI to find patients for drug trials&nbsp;&nbsp;The Next Web",
-        "categories": [
-          "임상"
-        ]
-      },
-      {
-        "title": "AstraZeneca and Oracle Launch AI Partnership to Improve Clinical Trials and Patient Care - Yahoo Finance",
-        "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSS1Uc2l1TE8yVHQzN3dJLWdMdHBvamR1UXR6eVotREM3TUliODc5bENvMDkzTl9pYW01X2MxbDE5NW5iUXl6ODF5bWlUam9VdndDblc3X01aVUJfOUNGeGtydkZTb0pDdk5xQnNpc0lLVGZpbXUzRUJZQktWR3NucGV3OVRLVVZkdUZrWFRzWm1oX0hHcFZNRDZYR2lDMVQ3bm1j?oc=5",
-        "pub_date": "2026-10-20 19:41",
-        "source": "Yahoo Finance",
-        "summary": "AstraZeneca and Oracle Launch AI Partnership to Improve Clinical Trials and Patient Care&nbsp;&nbsp;Yahoo Finance",
-        "categories": [
-          "기술이전",
-          "임상"
+        ],
+        "source_count": 2,
+        "related": [
+          {
+            "source": "The Manila Times",
+            "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPQXVXaEt6TWt0NE5uWklXdjYyQnI3ejZWbDgtOXNuS0VPbzU2OGVFMUttbEV6aGllNVpMQWNHajZ3UllKb3BZY3Qtc0RsdjM3cmRQR2Y3RS1Da2RTNl9IMF9IbFk1eFdNWWU0SWZPU3N2RWZPeU82WVdObWhZNjZCYm1jeUJnWGxHTkppQXI3djV2NkNSQUdSQ3cxUVVwYnhZVDdBMTJSVUREVDloQ0RfbzU5VnIwR1laWlpYNGRCdzFxRGJtNGc4WkFfNGJFYjl5ZXJLRzBDN3d6Y2JyaVVhUUVTQdIB6AFBVV95cUxOcUI1RjExczkxNVFBaUs1VWZkV0NFeVRPVG9ndHdiMHZhTVNJUHF4cUE3VEFSMFZzOFJjY1pKcjlxb3NielpxX3o2bkZLRnRSTS04czRrR1VRTjVrd0dMUUctNFJHRFJtYWUtU20wM21Rbk56bkZVYV9ZTGZOaERvLU4xUFQ2bFN3RDlDODV5Q2FmV3owMjlSUkloOFpXWlE4amUxbkxOSVVEbE4xVG4tdmswS1lWTHFGQ1g2VlhHRWNsLWtVbVdHeWY4YkRKMXpiaVQ0WGtNUHROZ1c2T2dhWUstQWF0Z0J0?oc=5",
+            "title": "Abiologics Appoints Per Jr. Greisen as Chief Artificial Intelligence Officer - The Manila Times"
+          }
         ]
       },
       {
@@ -495,67 +680,8 @@
         "summary": "Lilly taps METiS for tissue-targeted drug delivery&nbsp;&nbsp;The Pharma Letter",
         "categories": [
           "일반"
-        ]
-      },
-      {
-        "title": "Oracle Joins Forces With AstraZeneca to Put AI to Work in Drug Research - Benzinga",
-        "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNMlE4emZYcm5pS05lMktoVXFpSnc1UHk4MGg0d25SaXZNUktjS0w1VGR4ZEttY1hjYnlzbnpBU0hlSDFTcGhkVngyQ1QtUzZBQ21tNmdnZHBYY2JUTnFEcF81ZF9mOTVNZnN2QmhJWWZvMktXU3lCTnVZbmZJUDJtdDVvd1pRRXV3Vm83OHFxQVZzMHpCUVByZGlqbkFURW1iRTBZbmVIZV9saGlGb0ViQ0p0dUk0dEJEal9FMXoyMUZOc3Q2WVI0?oc=5",
-        "pub_date": "2026-10-20 18:29",
-        "source": "Benzinga",
-        "summary": "Oracle Joins Forces With AstraZeneca to Put AI to Work in Drug Research&nbsp;&nbsp;Benzinga",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "Lonza and Onava collaborate to accelerate AI-native biologics discovery with GS Ori-Go Vectors - Manufacturing Chemist",
-        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPU3lWY3NJeVpod0lVZktKSmM2VkxsWXZhWHJCT0VqNFdXMzlJdjdwRmx5bE9XQzMxQ1ExLW4xV1NxWHFyWENVSElpdlpVWWN0a29KVkJLNVoybnAxY1MzUlN6VmtKMzdtTWlDRUNLVXVjaFZ6YUxmRmRkLUt5dmNCOGxIT3RWZUgxVmpUaw?oc=5",
-        "pub_date": "2026-10-20 18:16",
-        "source": "Manufacturing Chemist",
-        "summary": "Lonza and Onava collaborate to accelerate AI-native biologics discovery with GS Ori-Go Vectors&nbsp;&nbsp;Manufacturing Chemist",
-        "categories": [
-          "일반"
-        ]
-      },
-      {
-        "title": "AstraZeneca partners with Oracle for AI-driven clinical trials - The Business Standard",
-        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNQW4wQjJSOUlsWjJNX1d3bUNOYmVXU1FOQ0l6ZDgxS0VqZktGOENmbU82T20tSDB1cVhNeWVmVlJSaDZBZ2NUUnFuSXowdTRHNmFUZkg0X2hhV09DQVc3c21RdDhhTTJtaHNhRkRIQVhtT2QwNlAzVGZsaEFQNEoxc0RSOTdZTGJ6Q0RhS0V3ZDc3dndreGc?oc=5",
-        "pub_date": "2026-10-20 18:00",
-        "source": "The Business Standard",
-        "summary": "AstraZeneca partners with Oracle for AI-driven clinical trials&nbsp;&nbsp;The Business Standard",
-        "categories": [
-          "임상"
-        ]
-      },
-      {
-        "title": "AstraZeneca Partners With Oracle to Apply AI to Clinical Research and Healthcare Processes - Yahoo Finance UK",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQb0RVcDBib05wNFdhckJ6NmJxYVhLdW5XLTdIREFobUJuMXhlRVJzeDlrVmI5dnFWV1BkZjhuQTI3R2s1a3hfcUNjSk1wS09kUTVDV2g5aWo3bzNMZExPdG1PWjZuVkgxMVBubzdhTDZoeXdiU1B2SThEajhucDNiZXRubWZCRXc1WTI2QUR3?oc=5",
-        "pub_date": "2026-10-20 17:59",
-        "source": "Yahoo Finance UK",
-        "summary": "AstraZeneca Partners With Oracle to Apply AI to Clinical Research and Healthcare Processes&nbsp;&nbsp;Yahoo Finance UK",
-        "categories": [
-          "임상"
-        ]
-      },
-      {
-        "title": "AstraZeneca partners with Oracle for AI-driven clinical trials - Reuters",
-        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPWXlaZTY2Vmg3T3c4NVV4STEtUS05REdfNG5IU0tsczFpSHJpOHlWbExOU2dQQmxDSkdBOFh2aFVLMmdISEFjeVFYdXBOX0w0Z0ZRMVEyYTFkcC1ybTVUOVFwZElvT29kaS1DVlFBRVc4c21Yd0hFUEt5TlhpT1ZsTXA0OVpINmVsZ0lUZmt2bEw3ZnF0RFVYZUxKMExPNEJ3RDFodUhlXzROalNfOTAyRQ?oc=5",
-        "pub_date": "2026-10-20 16:37",
-        "source": "Reuters",
-        "summary": "AstraZeneca partners with Oracle for AI-driven clinical trials&nbsp;&nbsp;Reuters",
-        "categories": [
-          "임상"
-        ]
-      },
-      {
-        "title": "Oracle Teams Up with AstraZeneca to Deploy AI, Aiming to Speed Up Patient Screening for Clinical Trials - BigGo Finance",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5abm5uY3pqcndaUDk1UXkyZExWV1h4QVFJb1FBcmJDb2hvZGhNVTJWaWtiZ2hHMHZIOERCYzF5MTk1ekR2YThVZGQ0UTEwbFBST1AwVElLN3ZGT3ViRjVBVG9ZcUlPUEhhVEdfdFgtaktvWmZJQkE?oc=5",
-        "pub_date": "2026-10-20 16:25",
-        "source": "BigGo Finance",
-        "summary": "Oracle Teams Up with AstraZeneca to Deploy AI, Aiming to Speed Up Patient Screening for Clinical Trials&nbsp;&nbsp;BigGo Finance",
-        "categories": [
-          "임상"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "Pharma's digital maturity divide that is impairing AI adoption - Manufacturing Chemist",
@@ -565,17 +691,8 @@
         "summary": "Pharma's digital maturity divide that is impairing AI adoption&nbsp;&nbsp;Manufacturing Chemist",
         "categories": [
           "일반"
-        ]
-      },
-      {
-        "title": "AstraZeneca taps Oracle to help improve recruitment for clinical trials - Fierce Biotech",
-        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQYzl3cmZSSFBSYzhPTlVLSnAtMDJsSlVQX1UwOHNsQ1JZenVaSWEtVV9GR241QW1qY0ZVcHdydlc4U18yQm8ydnFZclk0b0prRjl6YlgyUTI1bmNpalZXS0RWcTFfRm5kelQ3X2tZZVl6SFpDQkdFNVA1MTFBT0ZUd1JWYjV6VjZ0T3B1UmF2U0h6NURaVVk5Q1c5NkVpSnMzeWw4VA?oc=5",
-        "pub_date": "2026-10-20 15:36",
-        "source": "Fierce Biotech",
-        "summary": "AstraZeneca taps Oracle to help improve recruitment for clinical trials&nbsp;&nbsp;Fierce Biotech",
-        "categories": [
-          "임상"
-        ]
+        ],
+        "source_count": 1
       },
       {
         "title": "Big Tech, Big Pharma and the Billion-Dollar Battle to Control Healthcare AI - GeneOnline",
@@ -585,27 +702,148 @@
         "summary": "Big Tech, Big Pharma and the Billion-Dollar Battle to Control Healthcare AI&nbsp;&nbsp;GeneOnline",
         "categories": [
           "기술이전"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "Genome &amp; Company Joins Eli Lilly's AI Drug Discovery Platform - Seoul Economic Daily",
+        "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNSnp6ajVLZmk1Tk81TFdVRTZwc2FJeDdfa2FLOHVmZ09nZ3ZITklrcDVXNTJZaHFXTktMcDk1cGFfTDFuWVJCVGVEZ2kyVWpfcGc1U05HX3FyZ1EtRXVGUjM5QzJvbnVqNnVUSWtFMExTS1NVcWxQeUpQVDdzUW5FSHdtYWFGT2R4ZWZWTk1ENlpNMUFSZW5UQkxrZ1hhR181dEE?oc=5",
+        "pub_date": "2026-10-20 14:45",
+        "source": "Seoul Economic Daily",
+        "summary": "Genome & Company Joins Eli Lilly's AI Drug Discovery Platform&nbsp;&nbsp;Seoul Economic Daily",
+        "categories": [
+          "AI플랫폼"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "$1.1B China's First Large Generative AI-LNP Platform Overseas Export Deal Landed | Eli Lilly's Bulk Acquisition Logic Shift - 36Kr",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE93RjZiNmxsWDlOV1RNWDNPa0RMT181OUNFS0kzNnpwZXhNcElTSXo1aWx3TGVxbFBRVEt4RGhFV01Xd2Z5amlFVGtLT29UamhJbVNj?oc=5",
+        "pub_date": "2026-10-20 13:53",
+        "source": "36Kr",
+        "summary": "$1.1B China's First Large Generative AI-LNP Platform Overseas Export Deal Landed | Eli Lilly's Bulk Acquisition Logic Shift&nbsp;&nbsp;36Kr",
+        "categories": [
+          "기술이전",
+          "AI플랫폼"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "METiS Therapeutics Teams Up with Eli Lilly on AI Delivery Tech, With Upfront Payment Above $10 Million and Milestones Reaching NT$36 Billion - BigGo Finance",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5BdFhkR1IyTjRjYkhueDZtal9tUjF5T1FnemJFWGJYUk1lTExJSHNCTWc2UG1DQ0U5RDJGLXd1bE1PcmZpRkhBeEZXTy10bkFlVVNSY1otbWJfQ3lYU1VjbndENVhzVnVhU0dfOHMwYVV6ME9DYUE?oc=5",
+        "pub_date": "2026-10-20 11:55",
+        "source": "BigGo Finance",
+        "summary": "METiS Therapeutics Teams Up with Eli Lilly on AI Delivery Tech, With Upfront Payment Above $10 Million and Milestones Reaching NT$36 Billion&nbsp;&nbsp;BigGo Finance",
+        "categories": [
+          "기술이전"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "Reddit Users Are Experimenting With an Unapproved Weight-Loss Drug. AI Found Something Surprising - SciTechDaily",
+        "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQVTd3UkJrVHJqaHRYTnNaNEdzeHlIbF95VUhrNHZlelU2ZDVCcVV2TUhQdHFSVVBSWkFCVzQ5aDVBRmpsQ1RwOE9FbEZCdDNkdW9Eak4yRDVuOTJDV2l1dG9neVBpWXR5WDJXRUx2T1RHNWdOZ3Y0aFB6VkR3OWMzTXdWMFBqXzdma1FCV01falJIYjdWcnQ3OWpPMC11dUd6ZDhwZms4NF9qYWVuV2NmU2lrcDFKLXpBNS0wWWhXOA?oc=5",
+        "pub_date": "2026-10-20 07:15",
+        "source": "SciTechDaily",
+        "summary": "Reddit Users Are Experimenting With an Unapproved Weight-Loss Drug. AI Found Something Surprising&nbsp;&nbsp;SciTechDaily",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "Asia-Pacific Roundup: Japan’s PMDA shares principles for evaluating generative AI-enabled medical devices - RAPS",
+        "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNaHpwNWJWbm42c1FJMlhFSnp3WTlBNURQRjZ3RjEtZVpTMmd1c3ZWWncyT0RFVTRkNGtTLW5iY3hmS0I3OVA3U0dnUS0wa1Q1MHp6aU16YnkySFlRRENWaTBQZ1VNY09tSVBPSlN0U21uMncyXzVXZXRYbUlLSXpISEo5RWdxTm5Pa2V6OVNHWlcyR0thOXNXSkJqWEJ3YXh3T2owMWVKeDltcVRjQmZSZklfSHVTcFRuZGxweTJ6aU9ubkd5VG9aZGxGWGJWNkhmbjEyb0t3?oc=5",
+        "pub_date": "2026-10-20 05:12",
+        "source": "RAPS",
+        "summary": "Asia-Pacific Roundup: Japan’s PMDA shares principles for evaluating generative AI-enabled medical devices&nbsp;&nbsp;RAPS",
+        "categories": [
+          "AI플랫폼"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "AI-Designed Molecules Show Promise as Host-Directed Antiviral Hits Against DHPS - Bioengineer.org",
+        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOTAwUXJzdFBIY2lvZnZNWVpaa2VUajdNRVlRVF9RRUpZcFRlUHVUbzlhN29ZMmtUZ1ZMQ2RjYWw4am5VejRSa0U4TThlcHN1alJuT0pZUFo3VUdVRTg2Wlp3UmpiTVZqLUMtWWNrV2hvUXRpYXdZQ1NidElmek5vbHBpRm9BLW56WDZ5QmVMMWJMS0V0WUY3S2s2bDJJamd6LVN6UVp0dw?oc=5",
+        "pub_date": "2026-10-20 02:41",
+        "source": "Bioengineer.org",
+        "summary": "AI-Designed Molecules Show Promise as Host-Directed Antiviral Hits Against DHPS&nbsp;&nbsp;Bioengineer.org",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "Why Is Recursion Pharmaceuticals (RXRX) Drawing Attention After AI Drug And Trial Milestones? - Simply Wall Street",
+        "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNSkVQVDJURldiWkZ3U3RNMVE5c3VVNm5MN2VjOGl3Nk1YeVVSbTZadEE0NTZKbzFxTFZwWkxuMlpPWmk5SVJ4Y2RCUnVHSERZVWI4OTI5TGdkaUdSbnB2cTA0TUlSeGw5Y0tYakV5UlFSTDZvZzJKZUtXeVhLV29JbHJMazRrR3k5TjhlWG43TVNhT3Z0dWVNanppbWhyQXlLRUJSdU9HMEJSZ3Rsa3JKS01VWHRpWU9ybFBuSFNNYTAzUENlTWRlOGMydjhaODFiWDNfM2ZLcHJOZ1NKLUcyLWJPSXJhUjBORjNJdlI5LU_SAfYBQVVfeXFMTmFYTlJnREpQZVhRVGMwZlZUTUZTTHRDY0o0VUJ6WVJzMlg0cmRXbEJ2a0hibFlkZS1UZ3Jic1hFUGVZcjBJNlduMnYyU3hTbXFZZ0VpSlZxeXNIYkxKbzYtVmRMaFBfVkJ3Vm5LNl9zdklCeGktQTJjSXBvVlh4RlV1UWpvTUFrLUgtQnAzR2p5cVpyNnhmbl9XSnp4VzBlSE91Nko3MGFLQko3NTZTNXN3Y3FEdkxRbnV5SkJ6cmhrQ1J0NjJRWmxiZWxJeS0yVm1VRHBIYkt6b3plSDJUYzZFSU1VNkFZaXNfcjVIbHNHUWpwQ1J3?oc=5",
+        "pub_date": "2026-10-20 02:40",
+        "source": "Simply Wall Street",
+        "summary": "Why Is Recursion Pharmaceuticals (RXRX) Drawing Attention After AI Drug And Trial Milestones?&nbsp;&nbsp;Simply Wall Street",
+        "categories": [
+          "임상"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "Researchers use artificial intelligence to design potential antiviral compounds - Phys.org",
+        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUFljVXEtNWotXzF1SWdqbmRNdkxKd3piV1R6QzJCS0lLeGhOZlFNTW5RLXJQcDd2SWJHeXRoTXR6N2pKcC1Wc2VQd1VpSVpBc0ZrSE9SNkhvRVBrS2hYZ2FZSWo4cHJUbnE0cWpxYnJ1dGVmSWw5akpCVjNlZDFyVkcxRVdLRDdIVXFjM0lTUUtRZw?oc=5",
+        "pub_date": "2026-10-20 01:00",
+        "source": "Phys.org",
+        "summary": "Researchers use artificial intelligence to design potential antiviral compounds&nbsp;&nbsp;Phys.org",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "Lilly partners with Hong Kong's Metis in $1.1B deal to bolster AI nanoparticle discovery - Fierce Biotech",
+        "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWjJZZnZZSmZMakMwQTJ6SmptQWw3ZE5FRVhDdy1UNm80dEtBeHNzV2o5ZUI0YWl0SHQzLU5mUXV0SUNucVJJMms2NnE5Z2NKbXpYSC10RmVoQi1LTjdYMGdnM0xTYzEwTUZBSzV4VmZjV2Y1cWxRc2lJaEg2YUgtS3RJNjZZZnpCaGdNQm0waEFLVjdMeGoxeXByZFc5SVFwVENvdzFFN21lV2ZRNE5nOEFB?oc=5",
+        "pub_date": "2026-10-19 23:45",
+        "source": "Fierce Biotech",
+        "summary": "Lilly partners with Hong Kong's Metis in $1.1B deal to bolster AI nanoparticle discovery&nbsp;&nbsp;Fierce Biotech",
+        "categories": [
+          "기술이전"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "FAQ: How Is AI Being Deployed in Pharma Supply Chains? - Pharmaceutical Commerce",
+        "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSUhjUUhwVWwxTEZydDlkN1hKOFozdWZhM0pMNWZhcDYzMlNZZXVRTExXM1o5S1JOMmswTnVad2xFM1hza3ZVcjdPMWdOUTBIM2p2S01ZYmpBclBEcU43MUpMb0gxTngwUjYyVHNRTDB4LW1qLWYtRjZRLUx5Z3ZENFAtLWlnYnhkM3dpTnpEeXZqejVEenpUSU54VDU?oc=5",
+        "pub_date": "2026-10-19 23:35",
+        "source": "Pharmaceutical Commerce",
+        "summary": "FAQ: How Is AI Being Deployed in Pharma Supply Chains?&nbsp;&nbsp;Pharmaceutical Commerce",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "ACRO Innovation Day x AI Brings Industry Leaders Together to Advance AI-Driven Drug Discovery - StreetInsider",
+        "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPZmE1dThSOEVsVUN1RlRENVBqTDJrekVqSk0tNnlGN0FfOTJhY29tOF9qbkR1V2Y5R3BqQ2hoWlFVUUJWMHZJUGV1OTNHNkVtdlBFcjdQMDlqQUpSSHl3NG92NzBmdGhKQVp0MWIxd2xZTWdEMllsQTkwZ1UwNVc4aWVJeURYZnYtS2xoVmk2a2xLWEg3eXZDcnNTZVhuUW5RckVqNVIzX0tmby01VDBxYWVoOGhkaVJoMDRlczd6djdFTW9YYXBnZ2ZRZ25kSFRWemhjNVNfQkRkZGZLTkJvTzBn?oc=5",
+        "pub_date": "2026-10-19 22:59",
+        "source": "StreetInsider",
+        "summary": "ACRO Innovation Day x AI Brings Industry Leaders Together to Advance AI-Driven Drug Discovery&nbsp;&nbsp;StreetInsider",
+        "categories": [
+          "임상"
+        ],
+        "source_count": 2,
+        "related": [
+          {
+            "source": "PR Newswire",
+            "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOQW96RWUzVmtxeVFYUkYzcFRGVnVBWklEbkgxYjZsSlRBLTFmYW5meWY3QWlkYi1hWkNKdE4zci1mNkRyVVYyMktOSV9JZGhxRkxPRi05WUVTR085dzdMYzFnZ1dEcHFuZWExVXpvQldkUlUtVmdKSWY3dlZhNU02R2F6ZWhFckV4TUNNZktkcFVjWEk4R190NlZRM0tnUUhkQVhjeXpaREJ0NVNJTDZKUm1mbFVRS3NRVU91RThpQ1RYNXNxUDBkTm5PX2VjTWxxaGhTZXRfV2hxb0d0RDRGY3k1Zw?oc=5",
+            "title": "ACRO Innovation Day x AI Brings Industry Leaders Together to Advance AI-Driven Drug Discovery - PR Newswire"
+          }
         ]
       },
       {
-        "title": "AstraZeneca Partners With Oracle to Refine Clinical Research With AI - Yahoo Finance",
-        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOV2hiV1luXzFqRW1LSlFrQTdfUVZWSFM4ZVZVamk3Q0dqaUwta3hPNUhJTEg2Nmg0TnQ0WVMweUZnR0k1RkZUcnFVUEZySFhUbm0tR2Z2N2RybFZNMlpTY3FJb09qQy1zYTlDVHU2Nl9hRzdyMG5FZVVVUXBacXo5dFNWbTcxa0tNSWUyRmczUllkbnFvN1dKNDdMSXRPa3lOVGZoWHpnMA?oc=5",
-        "pub_date": "2026-10-20 15:10",
-        "source": "Yahoo Finance",
-        "summary": "AstraZeneca Partners With Oracle to Refine Clinical Research With AI&nbsp;&nbsp;Yahoo Finance",
+        "title": "﻿i.Divine: “New drug development driven by ‘numbers,’ not intuition – AI quantifies clinical success probabilities” - 더바이오",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBuMHpKbG9PcVR5U3hEQkRxVng3UUhiSzBrMklVZjVfRkx2X0h1NWpNSGpkME96Y0RvaEU2UnZ1U0tPSjJ5eWpVbnRJWW90NWpaQWRLSGZaQVljSWhsVzBGMlh4N05VU3V6NEhIRtIBcEFVX3lxTE9FZVdjQzB3SlJOaWFaTGpjX2JmaV9NZm83Umo2ZElwVlc4aGl0ZXJaYm9WSldUbG9jNmxqMDYyZHdtNVYyTkJXcFpXVlJtTS1pMTZJYVBZejJKNW5HR1VLLXdOYlZfcUJvbXJWT3d6Q24?oc=5",
+        "pub_date": "2026-10-19 18:16",
+        "source": "더바이오",
+        "summary": "﻿i.Divine: “New drug development driven by ‘numbers,’ not intuition – AI quantifies clinical success probabilities”&nbsp;&nbsp;더바이오",
         "categories": [
           "임상"
-        ]
-      },
-      {
-        "title": "AstraZeneca Partners With Oracle to Refine Clinical Research With AI - WSJ",
-        "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWVJpY0VOc2tLVk9kZTE4bEZHaWJBbEFmaUFqbTBPcHhBODc3SUdwdnJBU2NuanRVVmk0NDNlZElOZWlTM1ZIOUpoekE2aVlvUmlra1N3dndiZWVTZVFGUXI2QXhnWWF4eHg2RFhlOC1hWDF4dzc5a2dIcDhvQWVGZkRSYU9nNlpkNVlRS0RYNUpDQ19lUnl4X1dYaGFGRWpoTXpFbkVHb3h0QUFzYXZF?oc=5",
-        "pub_date": "2026-10-20 15:10",
-        "source": "WSJ",
-        "summary": "AstraZeneca Partners With Oracle to Refine Clinical Research With AI&nbsp;&nbsp;WSJ",
-        "categories": [
-          "임상"
-        ]
+        ],
+        "source_count": 1
       }
     ]
   }

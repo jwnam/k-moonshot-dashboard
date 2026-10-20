@@ -202,6 +202,16 @@
   .news-source { font-size: 11px; color: var(--accent3); font-weight: 600; }
   .news-date { font-size: 11px; color: var(--muted); }
   .news-summary { font-size: 11px; color: var(--muted); line-height: 1.5; }
+  .news-more { font-size: 10px; color: var(--accent2); font-weight: 600; background: rgba(34,211,238,.12); padding: 1px 7px; border-radius: 20px; }
+  .news-related { margin-top: 8px; }
+  .news-related > summary { cursor: pointer; font-size: 11px; color: var(--muted); list-style: none; user-select: none; }
+  .news-related > summary::-webkit-details-marker { display: none; }
+  .news-related > summary::before { content: '▸ '; color: var(--accent2); }
+  .news-related[open] > summary::before { content: '▾ '; }
+  .news-related > summary:hover { color: var(--accent2); }
+  .news-related a { display: block; font-size: 11px; color: var(--muted); line-height: 1.5; padding: 3px 0 3px 14px; border-left: 1px solid var(--border); margin-left: 3px; }
+  .news-related a:hover { color: var(--text); }
+  .news-related .rel-src { color: var(--accent3); font-weight: 600; }
   .news-cats { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
   .cat-badge { font-size: 10px; padding: 1px 7px; border-radius: 20px; font-weight: 500; }
   .cat-기술이전 { background: rgba(16,185,129,.15); color: var(--green); }
@@ -1703,16 +1713,26 @@ function catClass(cat) {
 function renderNewsItems(articles, containerId) {
   const el = document.getElementById(containerId);
   if (!articles.length) { el.innerHTML = '<p style="color:var(--muted);font-size:12px;">해당 카테고리의 뉴스가 없습니다.</p>'; return; }
-  el.innerHTML = articles.map(a => `
+  el.innerHTML = articles.map(a => {
+    const rel = a.related || [];
+    const cnt = a.source_count || (1 + rel.length);
+    const more = cnt > 1 ? `<span class="news-more">외 ${cnt - 1}개 매체</span>` : '';
+    const relBlock = rel.length ? `
+      <details class="news-related">
+        <summary>📰 관련 보도 ${rel.length}건</summary>
+        ${rel.map(r => `<a href="${r.link}" target="_blank" rel="noopener"><span class="rel-src">${r.source || '미확인'}</span> ${r.title}</a>`).join('')}
+      </details>` : '';
+    return `
     <div class="news-item" data-cats="${(a.categories||[]).join(',')}">
       <div class="news-title"><a href="${a.link}" target="_blank" rel="noopener">${a.title}</a></div>
       <div class="news-meta">
-        <span class="news-source">${a.source || '미확인'}</span>
+        <span class="news-source">${a.source || '미확인'}</span>${more}
         <span class="news-date">${a.pub_date || ''}</span>
       </div>
       ${a.summary ? `<div class="news-summary">${a.summary}</div>` : ''}
       <div class="news-cats">${(a.categories||['일반']).map(c => `<span class="cat-badge ${catClass(c)}">${c}</span>`).join('')}</div>
-    </div>`).join('');
+      ${relBlock}
+    </div>`; }).join('');
 }
 
 function renderNews(filterCat) {
