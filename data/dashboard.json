@@ -757,7 +757,7 @@
     }
   },
   "biodata": {
-    "updated": "2026-06-13",
+    "updated": "2026-10-30",
     "source": "AI신약개발_단계별_데이터셋_현황.xlsx",
     "note": "단계별 공개 데이터셋 수 및 성숙도 현황 (검증: 2026-06)",
     "stages": [
@@ -955,7 +955,10 @@
         "budget_total": 150,
         "period": "'24~'26",
         "data_type": "항체 서열·구조·물성",
-        "stages": "유효·선도(항체)"
+        "stages": "유효·선도(항체)",
+        "progress": "50만 데이터포인트 측정 진행중 ('26.12 중순 완료 예정)",
+        "progress_note": "항원-항체 상호작용·물성 507,020 datapoints(58쌍, 항원 34종·항체 55종, 8개 표적클래스); 측정항목 생산성·결합력·열안정성(65·75℃). AI 항체설계: TiDE-Ab(Bioinformatics '26.08 출판·GitHub/Colab 공개), Jin-ddG·BindMPNN·항원-항체 결합예측 AI(Nat Methods/Nat Commun '26.11~12 투고예정). K-BDS 기탁 예정. [데이터 공개정책] 협력기관 공개 24개월 유예 요청 ↔ PD 검토의견: Controlled access/공개 원칙(2년 유예 곤란), 해외공개는 유예 가능",
+        "updated": "2026-10-30"
       },
       {
         "name": "구조기반 RNA 신약개발 지원",
