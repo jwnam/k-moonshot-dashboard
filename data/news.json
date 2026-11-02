@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01 21:28",
+  "updated_at": "2026-11-01 09:00",
   "news": {
     "domestic": [
       {
@@ -10,17 +10,6 @@
         "summary": "기술이전 없어도 상장 가능?…바이오 기평 ‘합격 공식’ 바뀔까&nbsp;&nbsp;이데일리",
         "categories": [
           "기술이전"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "에이비엘·보로노이, 유럽서 항암 성과…루닛은 美 신약개발 합류 [바이오 주간 결산] - 이데일리",
-        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWXFzWDhHQVR3X0FDb1NGOG15b1lUN1VGNWtwOUpESW1vcmpOcHVNSDBEQXRfNC1WMkhDQWxSZV95dVRFdExfeHVjam1GaWluSWZTMU43ZzBiem5RMHFBVEFJb1hCbUlvaTVjaGRYcEhhVW1uV3NhVGROemF5OVRPdQ?oc=5",
-        "pub_date": "2026-11-01 08:01",
-        "source": "이데일리",
-        "summary": "에이비엘·보로노이, 유럽서 항암 성과…루닛은 美 신약개발 합류 [바이오 주간 결산]&nbsp;&nbsp;이데일리",
-        "categories": [
-          "일반"
         ],
         "source_count": 1
       },
@@ -43,11 +32,11 @@
         ]
       },
       {
-        "title": "AI가 설계한 신약, 임상 3상에 들어서다 — 인실리코 메디슨이 제시하는 플랫폼 바이오텍의 새 기준 - 대한청년일보",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0xMTlBZHh1VFJnVkdFTHNqMzUwRkxGLVJtZWRvS1ctb1J5NktDaWdnb3d5M0h1VnB3Q2JoalRlQmZtaWNQUkxvcjhoaVdPdjZLX2RyeXNn?oc=5",
+        "title": "AI가 설계한 신약, 임상 3상에 들어서다 — 인실리코 메디슨이 제시하는 플랫폼 바이오텍의 새 기준 - 얼리어답터뉴스",
+        "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1IUlhHN08xRk45bG9qR2FiNndUaVZTRDBHRHZqNFFjYXYzX2lvSjBqdWR5c3gyUTN4R3FuUi1PZ3NiY1daNUR0SHh3?oc=5",
         "pub_date": "2026-10-31 09:22",
-        "source": "대한청년일보",
-        "summary": "AI가 설계한 신약, 임상 3상에 들어서다 — 인실리코 메디슨이 제시하는 플랫폼 바이오텍의 새 기준&nbsp;&nbsp;대한청년일보",
+        "source": "얼리어답터뉴스",
+        "summary": "AI가 설계한 신약, 임상 3상에 들어서다 — 인실리코 메디슨이 제시하는 플랫폼 바이오텍의 새 기준&nbsp;&nbsp;얼리어답터뉴스",
         "categories": [
           "임상",
           "AI플랫폼"
@@ -99,11 +88,22 @@
         "source_count": 1
       },
       {
-        "title": "달라진 성장 방정식…AI시대 ‘제약바이오 경쟁력’ - 데일리메디",
+        "title": "6625억원 잠재력 품은 AI 신약…대웅제약의 오픈 이노베이션 전략 주목 - 이코노미사이언스",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9FblN5aS1sc2lWYmxjVzR3ZDU2emZYejNfVjFhOG1FcW4tSWhGWEYwVWFGWWNJZklhSnFQNEtCZndOam1USU1xXzNmOUhFaDRSeDNlTjlTQUNnWWhrZ19XekJVNVd1Y1NLVko5aWNxOA?oc=5",
+        "pub_date": "2026-10-30 16:43",
+        "source": "이코노미사이언스",
+        "summary": "6625억원 잠재력 품은 AI 신약…대웅제약의 오픈 이노베이션 전략 주목&nbsp;&nbsp;이코노미사이언스",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "달라진 성장 방정식…AI시대 제약바이오 경쟁력 - 데일리메디",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE55SDFEU2wwd3kxN0VWM3ZtYldvMWxaMXAtbXB3bVZNT2xMT0xydkdQUGZqWnhYZnlXVEJLc2tpSWE5aUZKWkNpTUdxWkRsaTVDRlN1S25CdUpJeUlTUEU1U3dvRUVFYmFx?oc=5",
         "pub_date": "2026-10-30 15:28",
         "source": "데일리메디",
-        "summary": "달라진 성장 방정식…AI시대 ‘제약바이오 경쟁력’&nbsp;&nbsp;데일리메디",
+        "summary": "달라진 성장 방정식…AI시대 제약바이오 경쟁력&nbsp;&nbsp;데일리메디",
         "categories": [
           "일반"
         ],
@@ -154,6 +154,17 @@
         "source_count": 1
       },
       {
+        "title": "바이오드, 씨티씨바이오와 HVT 벡터백신 2종 기술이전 계약 체결 - 와우테일",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE54WGNJa3MxbHY0VF93QS1QT2hsRklMdVc3ZXV5SFdWWm9OTjhJNUR5V0dISlN5VFpSQ1lKUUFVd0ZFSlUxeXhyTmM1YzRiNjQ?oc=5",
+        "pub_date": "2026-10-30 10:14",
+        "source": "와우테일",
+        "summary": "바이오드, 씨티씨바이오와 HVT 벡터백신 2종 기술이전 계약 체결&nbsp;&nbsp;와우테일",
+        "categories": [
+          "기술이전"
+        ],
+        "source_count": 1
+      },
+      {
         "title": "제약바이오협회, 캐나다와 AI 신약개발 협력 논의 - 청년의사",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9SUVY1bm14QlF3VlgwY3FGRkdtR05OczNyV1VPZ2tudlEzNWlnUE5TbnJwUjdvWkNPOHZVaW5meE53NUR4eXNzMzdSM0tJWXdzWUVKVS1tYWo2VWRqQktfZ2dHWHJmTFpRN0VVdWpaOWljMTDSAXNBVV95cUxPUlFWNW5teEJRd1ZYMGNxRkZHbUdOTnMzcldVT2drbnZRMzVpZ1BOU25ycFI3b1pDTzh2VWluZnhOdzVEeHlzczM3UjNLSVl3c1lFSlUtbWFqNlVkakJLX2dnR1hyZkxaUTdFVXVqWjlpYzEw?oc=5",
         "pub_date": "2026-10-29 19:53",
@@ -164,11 +175,6 @@
         ],
         "source_count": 18,
         "related": [
-          {
-            "source": "헬스조선",
-            "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBzQWpZZXVYVEFIMHZaSDllbEVldDAtVFdMYmpBTGxSOFlJaXNwYmVCQk40SVFQMVVxU2hMQnNLU3FxeUdmQm4ybzh0RFhsSEZFdXY0QWlVeDFrSVd1LVlERWlKcVdYaDFZV3hlVzJXbVg?oc=5",
-            "title": "제약바이오협회, 캐나다와 AI 신약개발 협력방안 논의 - 헬스조선"
-          },
           {
             "source": "병원신문",
             "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1RUFFnSUZadW1udl9ZZFctaUYteW9nR3o4WXFQTjlkMlZVRjVPa0lwSjJLNW96cldOTlZkdWdIX3ZMOThudlpxT0kyRUc0RWpWOVNRRW1PTTlqRjJpU0gtb1hCczliaG5Fd2c?oc=5",
@@ -183,6 +189,11 @@
             "source": "전자신문",
             "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE04V0FCOFpnazBqVUtFVDNZUGlZT3hPQUdnZDVIVWZHMjROUFV3N3VIRURNR3VkQTJBd2czZlB4MV9WSFBVRVpCdENtSjRtdw?oc=5",
             "title": "제약바이오협회-캐나다, AI 신약개발 협력 '맞손' - 전자신문"
+          },
+          {
+            "source": "e-의료정보",
+            "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9XeS1MYWJ3R05HMEhNUmsxcUUtZDFlUVFocWhfZmc0TlRVN2drN1E2b2RDenZaM1Bhb3JEczQ5cXJZR2VwM2V1X1IybWduMnhsOEhsYzRQVzJteHN1TXg4YXR2WFdfWXpFRFZZ0gFvQVVfeXFMTkROMzRUUnk2eGJfb3ZadUsyUGZvU3EweEQ2MGJOSjJCNVRjSmVMV3hvOFJNaW5qbjY0N192OWRjdEFLUlgtNzY4SjBnVDF3OTRJUktKTE0xSTk3TXZaS1FVRjVMZmxnVXlxYXp3NldB?oc=5",
+            "title": "제약바이오협회, 캐나다 대표단과 AI 신약개발 협력 논의 - e-의료정보"
           },
           {
             "source": "뉴스1",
@@ -252,17 +263,6 @@
         ]
       },
       {
-        "title": "바이오드, 씨티씨바이오와 HVT 벡터백신 2종 기술이전 계약 체결 - 와우테일",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE54WGNJa3MxbHY0VF93QS1QT2hsRklMdVc3ZXV5SFdWWm9OTjhJNUR5V0dISlN5VFpSQ1lKUUFVd0ZFSlUxeXhyTmM1YzRiNjQ?oc=5",
-        "pub_date": "2026-10-30 10:14",
-        "source": "와우테일",
-        "summary": "바이오드, 씨티씨바이오와 HVT 벡터백신 2종 기술이전 계약 체결&nbsp;&nbsp;와우테일",
-        "categories": [
-          "기술이전"
-        ],
-        "source_count": 1
-      },
-      {
         "title": "AI 신약개발 시대, 韓 찾는 손 더 많아졌다…중국·캐나다와 협력 확대 - 뉴스1",
         "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9mcWJhMjdBcmRZM21ZNWx1QjZveEM5RWRkTEwtaC1hY3hDMFR5ckItZkxLV1BrRXlqM0JFRDM4aEhyYUVhT1NDTV9wUEV3V2xyemZRa2xkVTZ4TmV3OEZ3Ug?oc=5",
         "pub_date": "2026-10-30 06:40",
@@ -323,6 +323,17 @@
         "pub_date": "2026-10-29 15:46",
         "source": "뉴스후플러스",
         "summary": "AI가 찾은 신약 후보, 장기칩으로 검증…바이오 기술 경쟁 본격화&nbsp;&nbsp;뉴스후플러스",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "AI 신약 개발·세포 분석 장비까지…생명과학도구주 반등 조건은? - 핀포인트뉴스",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5EYmU1ZDQ4WW1IWTM0bWhIb3NPZ2lCcGc5WkVLODJFdEUycnZ1LUtuNUVCU2l6b2FLRkZKYWFFU2s3bHRnVGt1THE5Qm5UTjNXejBJVkF2akNIYmJIa2VrNENvT210a3ByZ2dsZmRabGMtbVnSAXdBVV95cUxQQWNPM2hpZUJkSmtWLUphS2NLVFV6eFRfZk9DV2Qza2FHMHZhbEZyeGprdDRUTGw0aEZWbUh6S1pHRlFkTlRNRi1nQzZzcGQ4N1dpTUxoc1Y0RFZXSGtDcjM3Wm1WeEJad1hiNkY4Vm0yZktSa1BLTQ?oc=5",
+        "pub_date": "2026-10-29 15:42",
+        "source": "핀포인트뉴스",
+        "summary": "AI 신약 개발·세포 분석 장비까지…생명과학도구주 반등 조건은?&nbsp;&nbsp;핀포인트뉴스",
         "categories": [
           "일반"
         ],
@@ -395,17 +406,6 @@
         "source_count": 1
       },
       {
-        "title": "신약 개발 AI, 어디까지 규제하나…\"적용 범위 명확히 해야\" - 뉴스1",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE12YUFsUFVfLWdjYktwdWU0SFBkeUJibFJUYzRKZHU3ak9oaFF5WHI4bWxBa3pINUtZNnIxSEVoRF9tLTNkYjVWQUprbW00WHF1bjRYelpwQU11dEVENmpoV1FRZzY?oc=5",
-        "pub_date": "2026-10-29 06:00",
-        "source": "뉴스1",
-        "summary": "신약 개발 AI, 어디까지 규제하나…\"적용 범위 명확히 해야\"&nbsp;&nbsp;뉴스1",
-        "categories": [
-          "규제/허가"
-        ],
-        "source_count": 1
-      },
-      {
         "title": "[국민의 기업] AI·자체 실험 인프라 결합해 신약 개발 - 미주중앙일보",
         "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1EWmZGOFdnWmxWd2ZGNTRLMjIxbXRnWmx5bTR1WlFPVVQ2c2xNNWd0bEowVUxYX3phM1NXZll3N1JYM1BhaXNRUkxQdzA1elFnUTRsNTlWbVA2d0FLUTVWcmNR?oc=5",
         "pub_date": "2026-10-29 05:30",
@@ -430,72 +430,6 @@
     ],
     "international": [
       {
-        "title": "Inductive Bio's Alex Taylor on AI in Drug Discovery - AI Magazine",
-        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPS1ZMZVdDR0d5OGN3dU9JeDM0TTVJdFYtX2FHNHlwRzFpY29sLXdFbFpJNkpmamFQeVZOeGpUTHN5U3JOQ1B3Z1U1M2V4YUR6cW1GZmxGMlJJWVRsZjhRbUYwR3hla0lUQjRZLW56ZkMyYVBTeDdkWWs1bV9lVXp3bEZuazBoVVF1bVE?oc=5",
-        "pub_date": "2026-11-01 19:07",
-        "source": "AI Magazine",
-        "summary": "Inductive Bio's Alex Taylor on AI in Drug Discovery&nbsp;&nbsp;AI Magazine",
-        "categories": [
-          "임상"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Cascade: How a 100-Million-Cell AI Project Could Transform Drug Discovery - Kingy AI",
-        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE92em8za3BlVmo1OFFtckY0X3pBbWtNalF3QVBOdWxNb0QxQ21jNDN3elhUeG5jSWtuY1lWYTlhOTFjME5CWUVsVWswQlVWM1ZOcHhNdnN2QzIxamRjRjBjaGlMNE56N0U?oc=5",
-        "pub_date": "2026-11-01 14:19",
-        "source": "Kingy AI",
-        "summary": "Cascade: How a 100-Million-Cell AI Project Could Transform Drug Discovery&nbsp;&nbsp;Kingy AI",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Can AI redesign mRNA to last weeks, not days? - Drug Discovery News",
-        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPTnhaaDU2MlVQdDk3dGx5RmR0elVHSmtvS05CeEdfZm5pMjIyZ0pISTJjN0swMFN2OGRZWEg5dFNNS3g3TkZwRnJ5WW94X3p2US1VZWlPZkktLW9BNzBDb0VGZl84YVZFVTRWQk9oWFFUWGdUZXZoeFBiY3dtQ2UyTFJFeVZ3ci1TanlR?oc=5",
-        "pub_date": "2026-11-01 14:14",
-        "source": "Drug Discovery News",
-        "summary": "Can AI redesign mRNA to last weeks, not days?&nbsp;&nbsp;Drug Discovery News",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "AI Drug Discovery Brings Wet-Lab Orders as Chinese CXO Q3 Results Show Sharp Divergence - BigGo Finance",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9icEZlUjZCd0JQMTdvcG1yQWxVV3lVbjg5TkVSUm5jR185YXNKUGgyMlFhRGpSS3JiTUJJUUpsSXVzRkpUbXdvdzJDSGJPNkdSOG9DeWpFQmxfbzI1enJEYVFFUUtuRnRwQi1TZXVkRUhuZ05iYUE?oc=5",
-        "pub_date": "2026-11-01 13:35",
-        "source": "BigGo Finance",
-        "summary": "AI Drug Discovery Brings Wet-Lab Orders as Chinese CXO Q3 Results Show Sharp Divergence&nbsp;&nbsp;BigGo Finance",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Parse and Nomic Launch Cascade: AI Immune Drug Discovery Gets Its Missing Protein Signal - Tech Times",
-        "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMzZITUtJTDgtU0dSQTI2NEktUzVZQXZ4MjREa3U4V29EeWdSSE9uenpvVG9FeHJlanNOV3ZzWTZ4ZjAwT2FKbWlMeHR5U2VONG4xZnkweHE4OFhCemp3U0hCUHFuVElRZmt3VnBKQ0d6T1JTdGpCcG1rSENfR3pJNUxzSldpOFhFUW8zNXhPSlZvOWVMNjdEbEVQYzFLUm5GS1VPQWZQZVVjYUZuZ0U0WTFfY05teVg5UHpNQUF6bkpmYWxfdFBwSkVrd1Nna0hmTVZVaQ?oc=5",
-        "pub_date": "2026-11-01 10:23",
-        "source": "Tech Times",
-        "summary": "Parse and Nomic Launch Cascade: AI Immune Drug Discovery Gets Its Missing Protein Signal&nbsp;&nbsp;Tech Times",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Anthropic's next big AI business is life sciences, from biotech research to drug discovery - Business Insider",
-        "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNFJmNElsa1htSEJ3bTFzb1VTZEZoYXFsU2FuVm45cC1KQy1DQXVyekNGZ0tKUjlMd3Q5ZGxFaGpNOVU0QXpBSFQ4eTRnOFVaU2RsQW9DalBTbER3WWpCUGoya1JCVHB1MXIyOHNmQ3duTTN1VHl4U3VETElMUEFWZGNIdkhKbUp5R2NtWkhsOA?oc=5",
-        "pub_date": "2026-10-31 20:10",
-        "source": "Business Insider",
-        "summary": "Anthropic's next big AI business is life sciences, from biotech research to drug discovery&nbsp;&nbsp;Business Insider",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
         "title": "Google spinoff Isomorphic Labs is in a race to shake up the long, painful road to cancer-beating drugs - Business Insider",
         "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNS3EyLTFYM0FHdm5INkNlcHNicHdLVnVSc3g3Q1hENS1iTVpVb2Ywby1VMXV4ZHh1QW5iXzJ4S3REZlhwQjU0b283TDFWQm9WTUhuejcyN0RhV1A3MGpoS2NCZllWQ0lqNVpXRlI2ZERRSUhFZXZreUVfY3U3ZDQ5MUxlSW9ha2wzeWkwcmZEZVNIWERuaFNiYWV5VTcyX0dBV3U2djJMX3B4UGE3YXc?oc=5",
         "pub_date": "2026-10-31 20:05",
@@ -507,262 +441,46 @@
         "source_count": 1
       },
       {
-        "title": "How Manifold AI Built a Drug Discovery MVP on AWS - Amazon Web Services (AWS)",
-        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1xclBETW15NHBPWWh5ajZwemlEcmVkdC1nNUJqdHhJUmdoWXFTMzlsaWw4REFxbFNSaTlUVkRGY3RrSV8zTzVHOTgyX1h2dHFjUUMydUszNWd1WUJnUjItYzBxZ2Jhd193WUtfSWNCM1RPR3U2UVV3?oc=5",
-        "pub_date": "2026-10-31 15:06",
-        "source": "Amazon Web Services (AWS)",
-        "summary": "How Manifold AI Built a Drug Discovery MVP on AWS&nbsp;&nbsp;Amazon Web Services (AWS)",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "100 Million-Cell AI-Ready Dataset with Single-Cell and Proteomic Data Created by Parse and Nomic - Genetic Engineering and Biotechnology News",
-        "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPRXhqclpqVFUwaXFoRTFkeF8xZmdZUnJUX2xkSzZEUHBlbnI1OHAxUW05V1gxSmFxdDdxTUdQNGpicjNDYTEwTW1keHlWTW01OVdYNnJlNHZNN28zZWlkMVIyQ0R3LVdOLWNYTjdKcE84VUptYUlNVUJLaUhMV1pTRkpwOGhwYmRxZUphRVMtVGVlaFRCS3Y4WDZFNlpNU3pDdGxWclpqeGxvckYzMldvSm10NTBpM1djaFhld3RaVEhDc0FNekxmeTJudjhiVVZRZmNN?oc=5",
-        "pub_date": "2026-10-31 04:13",
-        "source": "Genetic Engineering and Biotechnology News",
-        "summary": "100 Million-Cell AI-Ready Dataset with Single-Cell and Proteomic Data Created by Parse and Nomic&nbsp;&nbsp;Genetic Engineering and Biotechnology News",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Shionogi Wins Quantum Drug-design Prize With D-Wave’s Help - Quantum Zeitgeist",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9kYzV3M3JheDFzSEdKY3VjS1NrMnN0VDFWQnk2dE5LUUdWTGZTMFhYWFIxRzBhTDlkTElhZzR6SWpaNm9ZaURPbXJhR0xRUG9YS25maU5zQlBGbmM0bEhMTS1lQkZpWUwxeEFmNUVObw?oc=5",
-        "pub_date": "2026-10-30 18:28",
-        "source": "Quantum Zeitgeist",
-        "summary": "Shionogi Wins Quantum Drug-design Prize With D-Wave’s Help&nbsp;&nbsp;Quantum Zeitgeist",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Hertz Fellow Becca Carlson Uses AI to Identify New Drug Targets on Human Cells | Newswise - Newswise",
-        "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVU11M1pqTTBMc2M4R1A2cElKOXVNbFJfMTB1S0pyY2pXMzZzWXZTYzdSUk9aZUF1MjVRemtQZERxUHVFX0dLUmI5REMxY2FXcVdfdk9aa1NrSDV2X2RWbnE0RC1RdFg1ZkNYVFFSdXM1ZHA0ZjhuaTVtUUhuekUwaGVkRm4xNUJxSHZ2OW5Ldi1GdWdpVk9nWEs5alBCbzRMLTlWZ1JvYUhhMkNxUnA2bDFR0gGyAUFVX3lxTE1VTXUzWmpNMExzYzhHUDZwSUo5dU1sUl8xMHVLSnJjalczNnNZdlNjN1JST1plQXUyNVF6a1BkRHFQdUVfR0tSYjlEQzFjYVdxV192T1prU2tINXZfZFZucTRELVF0WDVmQ1hUUVJ1czVkcDRmOG5pNW1RSG56RTBoZWRGbjE1QnFIdnY5bkt2LUZ1Z2lWT2dYSzlqUEJvNEwtOVZnUm9hSGEyQ3FScDZsMVE?oc=5",
-        "pub_date": "2026-10-30 08:20",
-        "source": "Newswise",
-        "summary": "Hertz Fellow Becca Carlson Uses AI to Identify New Drug Targets on Human Cells | Newswise&nbsp;&nbsp;Newswise",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "XtalPi Expands Singapore Ties Through New AI Materials Research Deal - Asia Business Outlook",
-        "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQN1lOYUZHR0pWQWhaM1R1dlBVdE9JZzRYaVJjOE1JdjdKa012V2dWcGhzUmdQOW45RmVweWhHTUpMTE9mY2pXdWZiZHM4WFRBTlRzdWw2VTdMZWlKZzRhdkxTaFZWTjNHZ0JtN1ppM3FmX0EzczFBaVR4TTZ2NG5GdGRoMnpNMkVDV1FUOVBrYnJuSDhzeTRIV2lQeW5BU3paSnJ2S1VjVkdzWWJVcHMwRFlFdlEyOWd5WnA3djJNdHNWd1E?oc=5",
-        "pub_date": "2026-10-30 06:58",
-        "source": "Asia Business Outlook",
-        "summary": "XtalPi Expands Singapore Ties Through New AI Materials Research Deal&nbsp;&nbsp;Asia Business Outlook",
-        "categories": [
-          "기술이전"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Indian American AI executive leaves Meta to co-found drug discovery startup - The American Bazaar",
-        "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNM3ItdnVMeXN4ODd2SXRyelJYWmV6VU14clYybEV0Vm1hNU9iamQ3QmFLZXI4S2o0WGUxQlFLcktJaTVWSWMtd1NrVEEtRkxKTUc3R0lqclZGdDZieTlLSUZXLVRxRmZINWNyT054b0JfVEdvWkpLSWlEMTNZNjR5NmhuZHJFa014WW5WRlRvUHhRZ1ZEOERacDFvNVJFTzNCRjZ6LTVUS1d6QURXdUxlVUdR?oc=5",
-        "pub_date": "2026-10-30 03:55",
-        "source": "The American Bazaar",
-        "summary": "Indian American AI executive leaves Meta to co-found drug discovery startup&nbsp;&nbsp;The American Bazaar",
-        "categories": [
-          "임상"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Three biotech platforms, one mission: Flagship Pioneering’s bet on AI drug discovery - BioXconomy",
-        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQamtfbUdHYlJ5MW14bUlxdjdnTnprM3MzVXBEemZVRkhUcDVxWnhoVHdHLXV3R0EwVGJ5aG5abnduN2FiYWF1QVFESnpLNWEzV0hPTkxWUjQwTjM0S0JoRVFQTW1xdEZRUkJuMUpfQ1RjbGF1ZlQtcFkzajgxUGFMZnhGdVE4d3VyZTRQRWIyNGduN1p4b2RQUHhxUUl4Z2Z2UGFLbGtBTW8zSkVPTjBQNWwyeFNkUEZFVTkySg?oc=5",
-        "pub_date": "2026-10-30 02:01",
-        "source": "BioXconomy",
-        "summary": "Three biotech platforms, one mission: Flagship Pioneering’s bet on AI drug discovery&nbsp;&nbsp;BioXconomy",
-        "categories": [
-          "AI플랫폼"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Flagship Pioneering merges Cellarity, Etiome and Empress into new AI drug-discovery company Etcelera - Dealroom",
-        "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOZzBZek9scVhqMkVaN2VKOWxmcDhJUWlMamdIb24wM25qUjBqWkpOaG0yT2tZSGx3cnQtRWMyVEgyUjEzTU5kQmk1andZamE0TWttcEZpakxjQTdRNERFN3VYWWI4OXY2bGc5X2IwQVA3cEdBUFpBZFh3TXo0SkwyQ3h3VlFfNWRPNGZGc1E4c3JHcXd5dXJDaTN3Qi1haDRlT29UenRUTWRzSENodEJBVlFXM3hWOU5BcnhXSXlkVnVILS05WmIwQWpzdEd5QQ?oc=5",
-        "pub_date": "2026-10-30 01:14",
-        "source": "Dealroom",
-        "summary": "Flagship Pioneering merges Cellarity, Etiome and Empress into new AI drug-discovery company Etcelera&nbsp;&nbsp;Dealroom",
-        "categories": [
-          "기술이전"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Flagship brings 3 biotech platforms together to launch AI drug discovery player Etcelera - Fierce Biotech",
-        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNekdmU282MnZTSGtzemJ1OUpDUE9SZ3FjMm8yU0pGendOcTlXVmtHejUtLWVvNEtMYXdYbzVWTkRaTDQ2bUljTUpDaXA4a292REI0MWVBcVozZDhIX2x5bmFhZEFLOUZzQ1JYdElhM2FVU3NuZlU0eFRGbnhxemJld0NzT3VQNGh1SWEzREVDb092TzVQYWF0RnVSNC12VzhQLWt6Qg?oc=5",
-        "pub_date": "2026-10-29 22:27",
-        "source": "Fierce Biotech",
-        "summary": "Flagship brings 3 biotech platforms together to launch AI drug discovery player Etcelera&nbsp;&nbsp;Fierce Biotech",
-        "categories": [
-          "AI플랫폼"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "One-person biotechs and an 'age of miracles': Anthropic reveals next leg of its biopharma vision - Endpoints News",
-        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNbmQ1dkVnWG5pRWJub1BoVUYwcF9EVDlUSHF2bjROYk1tRHJ6WkVjeDYxTElCeWdjakdUMkpid1RNUFkzaVZwckhFa2RMZWN2cUxmUFpWak5OS2txaEJZQ0trQnlqZVl3Sk9fRHlqeEZ1M1lZTjh0WHY0bDMxOFVyMEhuUnRGVEtXLWhQZDFBellJZlk?oc=5",
-        "pub_date": "2026-10-29 22:00",
-        "source": "Endpoints News",
-        "summary": "One-person biotechs and an 'age of miracles': Anthropic reveals next leg of its biopharma vision&nbsp;&nbsp;Endpoints News",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Meet Manohar Paluri: IIIT Hyderabad alumnus quits Meta after 14 years to build $215 million AI startup - Moneycontrol.com",
-        "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQQzV5aDZrM1JDT2QtSzNYLU9uUUxWdTAzdUpOejJoV2FWczRfUEFrV3RtbzRwSGRLYTN2SDlrRTVLSGh2NV94amwzclNhSHJoVnpnMTNNWmE1ZjVCXzM2TzVNTU1pQjQ4eHRMVXM5UU12cWJ4RjkydWhnOU9XMU1rZUcwOV9MZzhpUnlsTW5IMVJTRWljQkRqZzF5ekxfTDcyYTJ1NzBqUW9TVUZEQXFVUGVVZ2t3N0tsOUd2c2N3LWR0OGx6dm5INVhENGVjSnlfNkFUQVZYY1dFSU1KZmNBNEdNVk1nU1I3NmF2OHltT3VRYWfSAfgBQVVfeXFMTUNRTHI3RTFiOXlqMUpBcXBGandiaS1CMktaUk9yRWRpNVNqb1luLUVWWEZjTXh1bnlmYkpTRWZqYnpGZjZvTUl3NTR6cmJRSE1MNl9kSDFDYjVQbzRab1pTSW1ocmY2S3A1LTNUck9UeTVzRGo0cHBkVkZ5eDVZeEFoamx0M3pHS3FJcFpPUnhCVmtWakZxcHlxY3pHX0ZuRHp5ZnY1ME5FVGRlZ1ZsSWxMQXFaSXR1SVVHQlVLbmk0X2ZENmZ4ak5TTXZVSVN5aHh3Uy1YUS0wcUVWYmp4UkFwb2tUd3pzYmJPMjhEaTNLUFEzVUtoRno?oc=5",
-        "pub_date": "2026-10-29 21:32",
-        "source": "Moneycontrol.com",
-        "summary": "Meet Manohar Paluri: IIIT Hyderabad alumnus quits Meta after 14 years to build $215 million AI startup&nbsp;&nbsp;Moneycontrol.com",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 2,
-        "related": [
-          {
-            "source": "Firstpost",
-            "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQOTFzMy1KMl9iRmQ1QWtkYXFQVHg3QXBjQXRpSXFZYXlwX2pPOXptT1R6TmMyT1A2b2pvNUZRYjRuMUFfLV9pYm51OEZjeXh4a1lSR0FxQVc2bzMyZW5UOENtek0zRGtOZmRBTEs5cHJlejlaSk5zVGxtdXBBTllWMkZYeG8wdF9LWXNOVDRGdkRiSVoxX0RmWlhKVFE1MUJOV3BVcnU1dkVmWFlQVnpPdjF5cm1POU9WZFh4cDY3cHhsa3dGT1dmeGMxNW5VSmNWUW9KX205TEFlZ2M1TVFvY9IB5gFBVV95cUxNdjB0QVlnU2hVZUFXR2QxRjVncG5VTjRRYkhOdnB2X3RCVjBLMjJwejlZMVF5SVdZVmRwOUFPT0w3aFZvcklveVRueG5Gbmp3akZEMk9sTFIzSnFxZEREZXhJRW9sNmhzVUF6ZmM2SlNDOGd4X1dEX3NsTUlYazZYcGczdUV6RzBFLVJDMVV1ZDZ1YmRUUy1jZlJkTFJwdk8wSkJ4ampwQ3I4c0o5NWdvdk9tc2s4dVE0M1VnZXlycEgweDlKMXROX3hoekk0enl5amo1Mkc0N3pIYUlTY0xneEhlVHBOZw?oc=5",
-            "title": "Who is Manohar Paluri, the IIITian who quit Meta after 14 years to build a $215-million AI startup? - Firstpost"
-          }
-        ]
-      },
-      {
-        "title": "DJ Patil, Manohar Paluri co-found firm to accelerate drug discovery - The American Bazaar",
-        "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQVDF3ekRpTmpfOGt4bGJkUjVOSjdjTWx1MXFIQ3B3ZUExaXFqcDRzZURFeGdGRGZ3eWZUZWFEZG83VlZzMThfVkdNbnBWNWdOS0gwR2RodGw5a0xHbUctZ0NoamtPV0ttTWJYTXhCOXNHd2tzc0o5YTBPOTVEbmg4V2hzY2hMRW5aVHE0VHZWZFl5dGc4SVBUU1VEOG80QngyYkFwX043dnpjRE1qMmpRY0h0ckV3YUhNaUE?oc=5",
-        "pub_date": "2026-10-29 20:38",
-        "source": "The American Bazaar",
-        "summary": "DJ Patil, Manohar Paluri co-found firm to accelerate drug discovery&nbsp;&nbsp;The American Bazaar",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Flagship blends three biotech startups to form Etcelera - BioPharma Dive",
-        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNNkZCVDFkaWZxTWt3STR3bHZJRGZ4a3BfRjJCZVNPNExKeVdyX01tRTF6QkdpY2hOUmJZOV90dlppNjVWUkZReHRQVGdhbGlJTlVUTDQ2ZUdEUTB5Yzd5ZjQ3dlY3RUpXbkV5cUw4d2t3MDhSQTlRRmJreUxyaVZiS2xXMUlwV3VHazhjWVYwbkYteWZReUow?oc=5",
-        "pub_date": "2026-10-29 20:13",
-        "source": "BioPharma Dive",
-        "summary": "Flagship blends three biotech startups to form Etcelera&nbsp;&nbsp;BioPharma Dive",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "ALLOX closes $10.5M seed financing to scale drug discovery platform - Tech.eu",
-        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWUlMZ0Y4XzRRZm10WjdQc2JKZHVQcmJxYnhDZEJtY2FONmpSeWpFWExmdlZDTjIzb3JmaElnT3Y3WEdlQzhUaXhlcDZidXJTRFl4NjJvZGttLUN2OGo3RHd3ME8wNDlSd3RFWGNWZDUySFNXdkktdEJHSENSNU1NTDZYTUxiZ2JJSXRmR004VGpfbm9JajFLVA?oc=5",
-        "pub_date": "2026-10-29 20:01",
-        "source": "Tech.eu",
-        "summary": "ALLOX closes $10.5M seed financing to scale drug discovery platform&nbsp;&nbsp;Tech.eu",
-        "categories": [
-          "AI플랫폼"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Flagship Pioneering Forms Etcelera to Move Drug Discovery from Probability to Prediction - AOL.com",
-        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQRko0Q21ySlg4Qm9JTFpxVVBkR21tbEwtVnAxaDVrR0hObU9UelB5RTgyUDdZdkl0NF85cnNMckNCWTVtVEhHdmg4R2VuRDI4OVh2bUdDd3RTZEx6UndZbjIyakxEa3BJUWxxVEZJck1Ha0M0eUU4UVlqSGphbnNnc2Ric29qMjZMQXZz?oc=5",
-        "pub_date": "2026-10-29 19:32",
-        "source": "AOL.com",
-        "summary": "Flagship Pioneering Forms Etcelera to Move Drug Discovery from Probability to Prediction&nbsp;&nbsp;AOL.com",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Flagship Pioneering merges three of its companies for AI drug discovery - Endpoints News",
-        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdG1zcnVNUEpvcmxudnYxX1daa0FheU54dHRSUEp2UTZVY3lRRUI4QTlPTjBQcjF3OUUtMGNUT2RKYkRvT2ZQcUZjT2tFVlY4TnFYSF9ESzVsRnNEcUZXRGVrblBHcWhoTlozMGJwaTl3RXpvdko4bzd3cHRGSVVRcXBwLTduTk5wRE1IeXl5SlloRHA5MmZ5Z3ZiUQ?oc=5",
-        "pub_date": "2026-10-29 19:30",
-        "source": "Endpoints News",
-        "summary": "Flagship Pioneering merges three of its companies for AI drug discovery&nbsp;&nbsp;Endpoints News",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "From Meta’s AI chief to drug discovery entrepreneur: How Manohar Paluri is building a new kind of startup - Education Times",
-        "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNWVZfLW1fRlluQ2l2WEhuZkFXT2tTLTlwMnBWLWJIUlZjazhDT0lUR2h0QVliR1JEeFU4dW5VdU84eWQwSzUzdHd2QW1ybW1TZTJmdnRFdzBESEtsaloxcWlTU0tyWm52M1FzWnlKeUljeUt0UUEwNEM4bWZHX1ZUSFdXYjlINEdGOUIyNGIzVjBVYm5jaDR1Ukk5Wmx3SFRkRVNpRlRTTW02Y2prYjByR0N4RGdaMF9PMHBZUlpoa2dNVVpVNk83MHg0T1p2YWtRek5fZkJQTTc3UlNEUHZ3NWN0Mmp5WGVMTTVtMHBWWS1aekp6bGdxazQtTWlkUQ?oc=5",
-        "pub_date": "2026-10-29 19:25",
-        "source": "Education Times",
-        "summary": "From Meta’s AI chief to drug discovery entrepreneur: How Manohar Paluri is building a new kind of startup&nbsp;&nbsp;Education Times",
-        "categories": [
-          "임상"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "AI Multi-Omics Analytics Market to Reach USD 6.46 Billion by 2033 - openPR.com",
-        "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQWW1uQXplWFB4MFdzcnFYSjNjOTZvVF9pR2Z4U0xUUEdVVmw3bGtDZ3hKa1g5TUFaZkFWVFF4WTB3S2d5MEpCN3R5WGg2bEpObUVDelZvbkZlN0NtUlR0MFFOd0NfQWtRMnBXMlpCUVAyRzlUSHcza19iR1lfOVBqeUdrVFFQSUtyMVBJV0RROWtMX2V1VjJNc2h3WDdDTnU3b1NR?oc=5",
-        "pub_date": "2026-10-29 16:13",
-        "source": "openPR.com",
-        "summary": "AI Multi-Omics Analytics Market to Reach USD 6.46 Billion by 2033&nbsp;&nbsp;openPR.com",
-        "categories": [
-          "기술이전"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "BioGeometry Raises $100 Million to Scale AI Models That Design Drugs From Scratch - Ventureburn",
-        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOMG1WZXNqdVduR2hnc1hQNkJjZXRaZTVSZFlrZFZMM0lrdmhVVkY1Sl9tbEhWYkJKNGRQUlcxd0xzUU9hTC0yYjRfVVR5RzE1RjBaSlNrN083MVlBNkx1S3BfMGJkUjdfMm4waFJBbkxwTEcwc29hWHNtYmNScmdrR1UxTdIBgwFBVV95cUxOMG1WZXNqdVduR2hnc1hQNkJjZXRaZTVSZFlrZFZMM0lrdmhVVkY1Sl9tbEhWYkJKNGRQUlcxd0xzUU9hTC0yYjRfVVR5RzE1RjBaSlNrN083MVlBNkx1S3BfMGJkUjdfMm4waFJBbkxwTEcwc29hWHNtYmNScmdrR1UxTQ?oc=5",
-        "pub_date": "2026-10-29 06:45",
-        "source": "Ventureburn",
-        "summary": "BioGeometry Raises $100 Million to Scale AI Models That Design Drugs From Scratch&nbsp;&nbsp;Ventureburn",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Absci Soars 12%, Schrödinger Up 11%, Recursion Up 9% as AI Drug Discovery Stocks Rally - TIKR.com",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRW5NSnJTSUN5M0xmRmxPTVJhaXZ0b3JRd3dBNm4ycFlNTHVSX1RORHotVEhHVERSWjBIUFV0Mi1YM21kZ3YwdzVqWkFaWHdFdFRIT3pLcmFueUFzMFZXOVFzVzdHVXEydXVyVDlqNnlIV1hQZDUyYjlucGMxTG5vWDRRVGRyUWxwaW04S1oxMlE1NkdlR1YwZTVKd0I4X1dRME1JQmJFWVh1OGs?oc=5",
-        "pub_date": "2026-10-29 02:35",
-        "source": "TIKR.com",
-        "summary": "Absci Soars 12%, Schrödinger Up 11%, Recursion Up 9% as AI Drug Discovery Stocks Rally&nbsp;&nbsp;TIKR.com",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "How Waters wants AI to take the grunt work out of drug testing - Fortune",
-        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTEg2UHJ1RkJkT2ZMSWM4VThzNm1pLUowRU42SkNjUmQzX29nNmpqYUtCLXkwLXVZMXN1enBVMU5mbm5kWWtNZGtnc2ZYamF6WDV4T2RwM2Y1UjY0SWMyeGN3NVpzT3BOVVp1ZnA2TE5idTFaUTZ5NFhYTDRGazh2bm1WanBwX0JZZzFZZXdGYzZZUlJqTVBFMlNQWTN4TFR3LWRIdTVxMm9paTBLMnJzUm5Ccw?oc=5",
-        "pub_date": "2026-10-29 01:05",
-        "source": "Fortune",
-        "summary": "How Waters wants AI to take the grunt work out of drug testing&nbsp;&nbsp;Fortune",
-        "categories": [
-          "일반"
-        ],
-        "source_count": 1
-      },
-      {
-        "title": "Now 78% of scientists say AI will speed drug discovery this year: Signal Survey - Endpoints News",
-        "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWklMZ3pYTTJQYlZ5LW5vSWF2RkFWVjg0S2l1UTlTOTFqcjV3LUV3MUhZSklHS0RFd1ZvbnRkUFFJVTBBVWZ5VmRyRXlXOGxaYnJvSExOdkwwOU1LYXRiSDlUaEx1RElBa1QzODZZblJHRE8xNFFWY1NZSzJCbTMtUF9HekZsZXdGQkV2ZlZ1eV96TDZQZnlUZVlfdlJKUWhSTG84?oc=5",
+        "title": "This New $600 Million Fund Will Supercharge Stalled Drugs With AI - Forbes",
+        "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOYTc5UHg5M05vM0RjY3F3TWxibUZfdDZrUFBwTi1SZGlCNU13d3YyN3czcndiOTZGZXRRWmptems4RkZRVFB2ZGpyNGx4eHdRUTZtSFUtOXAtWkNUblJlbWMtbnVPR3JIRWt4WFkwVG4zc1pGWDJ5SHZOaDN0cXlvYUJTZ1o1RmxmYUdNMU82S056TFlrVjdrSHFnRlBCRlk0d0tFZEMxLUVSdExfVWNLWGlaR3ZPY25tMXZFVWhyVF9ibnlnanBv?oc=5",
         "pub_date": "2026-10-28 22:00",
-        "source": "Endpoints News",
-        "summary": "Now 78% of scientists say AI will speed drug discovery this year: Signal Survey&nbsp;&nbsp;Endpoints News",
+        "source": "Forbes",
+        "summary": "This New $600 Million Fund Will Supercharge Stalled Drugs With AI&nbsp;&nbsp;Forbes",
         "categories": [
           "일반"
         ],
         "source_count": 1
       },
       {
-        "title": "Anthropic IPO Drug Development: 35,000 Designs [2026] - shattered.io",
-        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQOW1UbHA3UEV2b3VGWldXSWcteGRWU3FRQk50UDlRTTVyU2Z1cmZ2RlB3LWlHZFlzdlR6T1FqVHM3ajB5MXlJQUV0ZjNBd3FGUXRLN3luRjVRR2VwSllocUJWaEhqcHBieDBPd2JzVDcyVWtKS2trQWVJMXlYV1RiQkFsQVhha1k?oc=5",
-        "pub_date": "2026-10-28 21:00",
-        "source": "shattered.io",
-        "summary": "Anthropic IPO Drug Development: 35,000 Designs [2026]&nbsp;&nbsp;shattered.io",
+        "title": "Early progress on accelerating drug development with Claude - Anthropic",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5IbmplZ01nQUt5R0hldklCR3FRMlVWZy1RcFZlc1VpRDhVNk00Vzd0Mm5QdlNXb1NncmxTX1ZFZTl4Xzl5bkpqUU56OGVxWjlZWmN6SjM4cVFLX3dkU0RUNWJVQ1JZTUswTk1iSzJ1MGwyUldn?oc=5",
+        "pub_date": "2026-10-28 05:20",
+        "source": "Anthropic",
+        "summary": "Early progress on accelerating drug development with Claude&nbsp;&nbsp;Anthropic",
+        "categories": [
+          "일반"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "New US China Investment Proposal Could Reshape AI, Biotech and Chip Funding - TechRepublic",
+        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQN0dkV1hodXpsY3phUVZGRGJnTElkbHZHdEV0Vl9Qa0xqU0oxRTZFZFFXYUFmQURRZXFMa2t0SFozWGl0UzJIODExTjIwZndLcDdIOXFnM1V5amRPclNDNE52T2d1OC1xWGExOTJrbjcxaXVzanVXc29XdEU3bHBPRVUwVFBicFNMWVdvclRKOW9yaHpiLUI3Nl9R?oc=5",
+        "pub_date": "2026-10-27 19:53",
+        "source": "TechRepublic",
+        "summary": "New US China Investment Proposal Could Reshape AI, Biotech and Chip Funding&nbsp;&nbsp;TechRepublic",
         "categories": [
           "투자"
+        ],
+        "source_count": 1
+      },
+      {
+        "title": "Treasury to Limit Chinese Biotech Deals, But Still Allow Licensing - WSJ",
+        "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOS2RFeXJhMmJBZnc0RkhCOXd6OFpTdFJxWXJoV3VfVzI3NUlWYW01amZGdjRCdm00dUV4OHl6bnB0NUkyRHA3VUhyXzFsamtDSHJBVlFDM18xUUZFLUphZlZhS1RyYmdSeDhyT2FOTDF1QzQ3eXZ6bGVBR2RHUDJfbzdaWWJlRDc3WGNJQ2pNVEdKUVN4YldBWGdONWdLb2JzdHhKTWpLWlRwSEZZUFdlenRGVVc?oc=5",
+        "pub_date": "2026-10-26 22:11",
+        "source": "WSJ",
+        "summary": "Treasury to Limit Chinese Biotech Deals, But Still Allow Licensing&nbsp;&nbsp;WSJ",
+        "categories": [
+          "기술이전"
         ],
         "source_count": 1
       }
