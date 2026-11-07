@@ -498,10 +498,10 @@
   },
   "status": {
     "light": "yellow",
-    "delay_quarters": 1.3,
+    "delay_quarters": 1.7,
     "delay_verdicts": 0,
     "reasons": [
-      "마일스톤 지체 4개월(2분기 이내), 지체 4건"
+      "마일스톤 지체 5개월(2분기 이내), 지체 4건"
     ],
     "auto": true,
     "override": null

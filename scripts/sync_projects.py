@@ -114,8 +114,15 @@ def compute_light(project: dict, now: datetime = None):
             "delay_quarters": round(max_over / 3, 1), "delay_verdicts": verdicts}
 
 
+def _cell_text(cell):
+    # Google Docs 양식은 입력값을 <w:sdt>(콘텐츠 컨트롤)로 감싸며, cell.text 는 이를 건너뛴다.
+    # 모든 <w:t> 하위 노드를 모아 sdt 안의 값까지 읽는다.
+    from docx.oxml.ns import qn
+    return ''.join(n.text or '' for n in cell._tc.iter(qn('w:t'))).strip()
+
+
 def _rows(table):
-    return [[c.text.strip() for c in r.cells] for r in table.rows]
+    return [[_cell_text(c) for c in r.cells] for r in table.rows]
 
 
 def parse_docx(path: Path, pid: str) -> dict:

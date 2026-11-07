@@ -119,8 +119,9 @@
           "b26": 2800,
           "b27": 3725,
           "light": "pending",
-          "detail": false,
-          "drive_folder_id": "12swgQ6kS_AyYiyavl5V2FGDje8S9vz5X"
+          "detail": true,
+          "drive_folder_id": "12swgQ6kS_AyYiyavl5V2FGDje8S9vz5X",
+          "last_synced": "2026-11-08"
         },
         {
           "id": "p-rna-structure",
