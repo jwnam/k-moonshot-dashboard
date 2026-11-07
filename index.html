@@ -252,6 +252,16 @@
   table.proj-status-table tr.clickable:hover .proj-name-link { color:var(--accent2); text-decoration:underline; }
   .proj-detail-back { display:inline-flex; align-items:center; gap:6px; font-size:12px; color:var(--accent2); cursor:pointer; margin-bottom:14px; }
   .proj-detail-back:hover { text-decoration:underline; }
+  .task-tabs-wrap{display:flex;flex-direction:column;gap:8px;margin-bottom:4px;}
+  .task-tabs-label{font-size:12px;color:var(--muted);font-weight:600;}
+  .task-tabs{display:flex;gap:8px;flex-wrap:wrap;}
+  .task-tab{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:8px 14px;cursor:pointer;font-size:13px;font-weight:600;transition:all .15s;font-family:inherit;text-align:left;}
+  .task-tab:hover{border-color:var(--accent2);}
+  .task-tab.active{background:rgba(99,102,241,.18);border-color:var(--accent);color:#fff;}
+  .task-tab small{font-size:10.5px;color:var(--muted);font-weight:400;}
+  .task-tab.active small{color:#c7d2fe;}
+  .proj-caret{display:inline-block;width:12px;color:var(--accent3);font-size:11px;}
+  .task-subrow:hover{background:rgba(99,102,241,.11)!important;}
   .detail-hero { background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(99,102,241,.05)); border:1px solid var(--border); border-radius:14px; padding:22px 24px; margin-bottom:8px; }
   .detail-hero h2 { font-size:22px; font-weight:800; margin:0 0 6px; }
   .detail-hero .meta { font-size:12px; color:var(--muted); }
@@ -1915,6 +1925,14 @@ function _monthsOverdue(dueStr, now){
 
 // 신호등 자동 판정 (규칙: 사용자 정의)
 function computeLight(p){
+  // 멀티과제 사업: 하위 과제들의 신호등을 집계(최저 기준)
+  if (p.tasks && p.tasks.length && !(p.milestones && p.milestones.length) && !(p.status && p.status.override)) {
+    const ord = { red:4, orange:3, yellow:2, green:1, pending:0, '미정':0 };
+    let best = null;
+    p.tasks.forEach(t => { const cc = computeLight(t); if (best===null || (ord[cc.light]||0) > (ord[best.light]||0)) best = cc; });
+    const base = best || { light:'pending', reasons:[], delayMonths:0, verdicts:0 };
+    return { light: base.light, reasons: [`${p.tasks.length}개 과제 종합 · 최저 신호등 기준`].concat(base.reasons||[]), delayMonths: base.delayMonths||0, verdicts: base.verdicts||0 };
+  }
   const st = p.status || {};
   if (st.override) {
     return { light: st.override, reasons:['관리자 수동 지정'], delayMonths:0, verdicts:(p.check_history||[]).filter(c=>c.delayed).length };
@@ -2007,10 +2025,38 @@ function renderProjectStatus(idx){
   wrap.innerHTML = idx.categories.map(cat => {
     const rows = cat.projects.map(p => {
       const clickable = p.detail;
+      const tasks = (p._detail && p._detail.tasks && p._detail.tasks.length > 1) ? p._detail.tasks : null;
+      const org = [p.org, p.pi].filter(Boolean).join(' · ') || '<span style="color:var(--muted);">—</span>';
+      if (tasks) {
+        const name = `<span class="proj-caret" id="caret-${p.id}">▸</span> <span class="proj-name-link">${p.name}</span> <span style="font-size:10px;color:var(--accent3);">${tasks.length}개 과제 ▾</span>`;
+        const main = `<tr class="clickable" onclick="toggleProjectTasks('${p.id}')">
+        <td style="width:78px;">${lightBadge(p.light)}</td>
+        <td style="min-width:200px;">${name}</td>
+        <td style="width:120px;">${gradeBadge(p.grade)}</td>
+        <td style="width:150px;color:var(--muted);font-size:11.5px;">${org}</td>
+        <td style="width:90px;white-space:nowrap;font-size:11.5px;">${p.period || '<span style=\'color:var(--muted)\'>—</span>'}</td>
+        <td style="width:80px;text-align:right;font-size:11.5px;">${fmtEok(p.b26)}</td>
+        <td style="width:80px;text-align:right;font-size:11.5px;color:var(--accent3);font-weight:600;">${fmtEok(p.b27)}</td>
+      </tr>`;
+        const subs = tasks.map((t, i) => {
+          const tl = (typeof computeLight === 'function') ? computeLight(t).light : 'pending';
+          const tov = t.overview || {};
+          const who = [tov.lead_org, tov.pi].filter(Boolean).join(' · ') || '<span style="color:var(--muted);">—</span>';
+          return `<tr class="task-subrow biz-${p.id} clickable" style="display:none;background:rgba(99,102,241,.05);" onclick="openProjectDetail('${p.id}', ${i})">
+        <td style="width:78px;">${lightBadge(tl)}</td>
+        <td style="min-width:200px;padding-left:30px;font-size:12px;">↳ ${t.task_name || ('과제 ' + (i + 1))} <span style="font-size:10px;color:var(--accent3);">상세 ›</span></td>
+        <td style="width:120px;color:var(--muted);font-size:11px;">과제</td>
+        <td style="width:150px;color:var(--muted);font-size:11.5px;">${who}</td>
+        <td style="width:90px;white-space:nowrap;font-size:11px;color:var(--muted);">${tov.period_raw || '—'}</td>
+        <td style="width:80px;"></td>
+        <td style="width:80px;"></td>
+      </tr>`;
+        }).join('');
+        return main + subs;
+      }
       const name = clickable
         ? `<span class="proj-name-link">${p.name}</span> <span style="font-size:10px;color:var(--accent3);">상세 ›</span>`
         : `<span>${p.name}</span>`;
-      const org = [p.org, p.pi].filter(Boolean).join(' · ') || '<span style="color:var(--muted);">—</span>';
       return `<tr class="${clickable?'clickable':''}" ${clickable?`onclick="openProjectDetail('${p.id}')"`:''}>
         <td style="width:78px;">${lightBadge(p.light)}</td>
         <td style="min-width:200px;">${name}</td>
@@ -2040,13 +2086,14 @@ function renderProjectStatus(idx){
 }
 
 // ── 사업별 상세 ──
-function openProjectDetail(id){
+function openProjectDetail(id, taskIdx){
   if (location.hash !== '#project/' + id) location.hash = 'project/' + id;
   const el = document.getElementById('projects-detail');
   fetch('data/projects/' + id + '.json?t=' + Date.now(), {cache:'no-store'})
     .then(r => r.json())
     .then(p => {
       renderProjectDetail(p, el);
+      if (taskIdx != null && p.tasks && p.tasks[taskIdx]) showProjectTask(taskIdx);
       document.getElementById('projects-overview').style.display = 'none';
       el.style.display = 'block';
       window.scrollTo(0, 0);
@@ -2059,9 +2106,9 @@ function closeProjectDetail(){
   if (location.hash.indexOf('#project/') === 0) history.replaceState(null,'',location.pathname + location.search);
 }
 
-function renderProjectDetail(p, el){
-  const ov = p.overview || {};
-  const c = computeLight(p);
+function projectSectionsHtml(t, ctx){
+  t = t || {}; ctx = ctx || {};
+  const ov = t.overview || {};
   const esc = s => (s==null||s==='') ? '<span style="color:var(--muted);">—</span>' : String(s);
   const MS_SYM = { '●':{cls:'done',t:'달성'}, '◑':{cls:'part',t:'수행중'}, '○':{cls:'notyet',t:'미달성'}, '':{cls:'notyet',t:'미달성'} };
 
@@ -2072,8 +2119,10 @@ function renderProjectDetail(p, el){
     budget += ` <span style="color:var(--muted);font-size:11px;">(${bp.join(' · ')} 백만원)</span>`;
   }
   const emails = (ov.emails&&ov.emails.length) ? ov.emails.map(e=>`<a href="mailto:${e}">${e}</a>`).join(', ') : '<span style="color:var(--muted);">미입력</span>';
+  const taskRow = ctx.taskName ? `<tr><th>과제명</th><td colspan="3" style="font-weight:600;color:var(--accent3);">${esc(ctx.taskName)}</td></tr>` : '';
   const overviewTbl = `<table class="info-table">
-    <tr><th>사업명</th><td>${esc(p.name)}</td><th>구분</th><td>${esc(p.category)}</td></tr>
+    <tr><th>사업명</th><td>${esc(ctx.bizName)}</td><th>구분</th><td>${esc(ctx.category)}</td></tr>
+    ${taskRow}
     <tr><th>주관기관</th><td>${esc(ov.lead_org)}</td><th>연구책임자</th><td>${esc(ov.pi)}${ov.co_pi?' · (공동) '+ov.co_pi:''}</td></tr>
     <tr><th>사업기간</th><td>${esc(ov.period_raw)}</td><th>총 연구비</th><td>${esc(budget)}</td></tr>
     <tr><th>사업 목표</th><td colspan="3">${esc(ov.objective)}</td></tr>
@@ -2082,12 +2131,9 @@ function renderProjectDetail(p, el){
     <tr><th>담당자 이메일</th><td colspan="3">${emails}</td></tr>
   </table>`;
 
-  // ② 마일스톤 (연차·분기) — 연차별 구분·collapse
+  // ② 마일스톤 (연차·분기)
   const msByYear = {};
-  (p.milestones||[]).forEach(m => {
-    const k = `${m.year}|${m.year_label}`;
-    (msByYear[k] = msByYear[k] || []).push(m);
-  });
+  (t.milestones||[]).forEach(m => { const k = `${m.year}|${m.year_label}`; (msByYear[k] = msByYear[k] || []).push(m); });
   const curYear = new Date().getFullYear();
   const msYearBlocks = Object.keys(msByYear)
     .sort((a,b)=> Number(a.split('|')[0]) - Number(b.split('|')[0]))
@@ -2106,7 +2152,7 @@ function renderProjectDetail(p, el){
           <td style="text-align:center;"><span class="ms-status ${s.cls}">${m.status||'○'}</span><div style="font-size:10px;color:var(--muted);">${s.t}</div></td>
         </tr>`;
       }).join('');
-      const open = (Number(ylabel) === curYear) ? 'open' : '';  // 당해년도 기본 펼침
+      const open = (Number(ylabel) === curYear) ? 'open' : '';
       return `<details class="ms-year" ${open}>
         <summary>${yr}차년도 (${ylabel})<span class="ms-year-sum">총 ${items.length} · 달성 ${cnt.done} · 수행중 ${cnt.prog} · 미달성 ${cnt.not}</span></summary>
         <div class="tbl-wrap"><table class="proj-status-table">
@@ -2118,15 +2164,15 @@ function renderProjectDetail(p, el){
   const msTbl = `${msYearBlocks || '<div class="card" style="color:var(--muted);">등록된 마일스톤이 없습니다.</div>'}
     <p style="font-size:11px;color:var(--muted);margin-top:6px;">달성현황: 달성 ● / 수행중 ◑ / 미달성 ○ · 수행중·미달성은 신호등에서 모두 '미달성'으로 반영 · 분기말 점검(3.31·6.30·9.30·12.31) · 연차 제목을 클릭하면 접기/펼치기</p>`;
 
-  // ③ 성과 — 데이터 / AI모델 / 신약개발
-  const dataRows = (p.outcomes?.data||[]).map(d=>`<tr><td>${d.no}</td><td>${esc(d.name)}</td><td>${esc(d.type)}</td><td>${esc(d.target)}</td><td>${esc(d.expected)}</td><td>${esc(d.current)}</td></tr>`).join('');
+  // ③ 성과
+  const dataRows = (t.outcomes?.data||[]).map(d=>`<tr><td>${d.no}</td><td>${esc(d.name)}</td><td>${esc(d.type)}</td><td>${esc(d.target)}</td><td>${esc(d.expected)}</td><td>${esc(d.current)}</td></tr>`).join('');
   const AI_STAGES = ['기획','개발','검증','완료'];
-  const aiRows = (p.outcomes?.ai_model||[]).map(a=>{
+  const aiRows = (t.outcomes?.ai_model||[]).map(a=>{
     const pills = AI_STAGES.map(s=>`<span class="stage-pill ${a.status===s?'on':''}">${s}</span>`).join('');
     return `<tr><td>${a.no}</td><td>${esc(a.name)}</td><td>${esc(a.function)}</td><td>${esc(a.target)}</td><td>${esc(a.expected)}</td><td><div class="stage-pills">${pills}</div></td></tr>`;
   }).join('');
   const DRUG_STAGES = ['표적','유효','선도','후보','IND','임상1','임상2','임상3'];
-  const drugRows = (p.outcomes?.drug||[]).map(d=>{
+  const drugRows = (t.outcomes?.drug||[]).map(d=>{
     const pills = DRUG_STAGES.map(s=>`<span class="stage-pill ${d.stage===s?'on':''}">${s}</span>`).join('');
     return `<tr><td>${d.no}</td><td>${esc(d.indication)}</td><td>${esc(d.target)}</td><td>${esc(d.modality)}</td><td>${esc(d.ai_use)}</td><td><div class="stage-pills">${pills}</div></td></tr>`;
   }).join('');
@@ -2139,18 +2185,18 @@ function renderProjectDetail(p, el){
     <div class="card tbl-wrap"><table class="proj-status-table"><thead><tr><th>No.</th><th>적응증</th><th>표적</th><th>모달리티</th><th>AI활용</th><th>개발단계</th></tr></thead><tbody>${drugRows||'<tr><td colspan="6" style="color:var(--muted);">—</td></tr>'}</tbody></table></div>`;
 
   // ④ 진행현황
-  const logRows = (p.progress_log||[]).map(l=>`<tr><td style="white-space:nowrap;">${esc(l.date)}</td><td style="white-space:nowrap;">${esc(l.author)}</td><td style="white-space:nowrap;color:var(--muted);">${esc(l.milestone)}</td><td>${esc(l.result)}</td><td style="white-space:nowrap;color:var(--accent3);">${esc(l.type)}</td></tr>`).join('');
+  const logRows = (t.progress_log||[]).map(l=>`<tr><td style="white-space:nowrap;">${esc(l.date)}</td><td style="white-space:nowrap;">${esc(l.author)}</td><td style="white-space:nowrap;color:var(--muted);">${esc(l.milestone)}</td><td>${esc(l.result)}</td><td style="white-space:nowrap;color:var(--accent3);">${esc(l.type)}</td></tr>`).join('');
   const logHtml = `<div class="card tbl-wrap"><table class="proj-status-table"><thead><tr><th>작성일</th><th>작성자</th><th>마일스톤</th><th>연구결과</th><th>성과구분</th></tr></thead><tbody>${logRows||'<tr><td colspan="5" style="color:var(--muted);">등록된 진행현황이 없습니다.</td></tr>'}</tbody></table></div>`;
 
   // ⑤ 필요사항
-  const nd = p.needs||{};
+  const nd = t.needs||{};
   const needsHtml = `<table class="info-table">
     <tr><th>연구수행 애로·요청</th><td>${esc(nd.difficulties)}</td></tr>
     <tr><th>추가 필요자원</th><td>${esc(nd.resources)}</td></tr>
     <tr><th>기타 이슈</th><td>${esc(nd.issues)}</td></tr></table>`;
 
-  // ⓪ RFP 핵심 요약 (사업개요 앞) — rfp 데이터가 있는 사업만 표시
-  const rfp = p.rfp || null;
+  // ⓪ RFP 핵심 요약
+  const rfp = t.rfp || null;
   let rfpHtml = '';
   if (rfp) {
     const goalBlocks = (rfp.phase_goals||[]).map(pg=>`
@@ -2162,7 +2208,9 @@ function renderProjectDetail(p, el){
     const consItems = (rfp.considerations||[]).map(k=>`<li style="margin:3px 0;">${esc(k)}</li>`).join('');
     const rfpLink = rfp.url ? `<a href="${rfp.url}" target="_blank">📎 ${esc(rfp.file_name||'RFP 원문')}</a>${rfp.url_note?` <span style="color:var(--muted);font-size:11px;">(${esc(rfp.url_note)})</span>`:''}` : '';
     rfpHtml = `<table class="info-table">
+      ${rfp.rfp_name?`<tr><th>RFP 과제명</th><td colspan="3">${esc(rfp.rfp_name)}${rfp.mgmt_no?` <span style="color:var(--muted);font-size:11px;">(${esc(rfp.mgmt_no)})</span>`:''}</td></tr>`:''}
       <tr><th>최종 목표</th><td colspan="3">${esc(rfp.final_goal)}</td></tr>
+      ${rfp.trl?`<tr><th>TRL</th><td colspan="3">${esc(rfp.trl)}</td></tr>`:''}
       <tr><th>단계별 목표</th><td colspan="3">${goalBlocks||'—'}</td></tr>
       <tr><th>핵심성과지표<br>(KPI)</th><td colspan="3"><ul style="margin:0 0 0 18px;padding:0;">${kpiItems||'<li>—</li>'}</ul></td></tr>
       <tr><th>중요 고려사항</th><td colspan="3"><ul style="margin:0 0 0 18px;padding:0;">${consItems||'<li>—</li>'}</ul></td></tr>
@@ -2170,12 +2218,46 @@ function renderProjectDetail(p, el){
     </table>`;
   }
 
-  const srcDoc = p.source_doc||{};
+  const sd = t.source_doc||{};
+  const taskMeta = (ctx.taskName || sd.url) ? `<div class="meta" style="margin:-4px 0 10px;">${ov.lead_org?`주관 <b>${esc(ov.lead_org)}</b>`:''}${ov.pi?` · 연구책임자 ${esc(ov.pi)}`:''}${sd.url?` · <a href="${sd.url}" target="_blank">📄 성과관리 양식</a>`:''}${sd.last_synced?` <span style="color:var(--muted);">· 동기화 ${sd.last_synced}</span>`:''}</div>` : '';
+
+  return `${taskMeta}
+    ${rfp?`<div class="section"><div class="section-title">📑 과제제안요구서(RFP) 핵심 요약</div>${rfpHtml}</div>`:''}
+    <div class="section"><div class="section-title">① 사업 개요</div>${overviewTbl}</div>
+    <div class="section"><div class="section-title">② 연차·분기별 마일스톤</div>${msTbl}</div>
+    <div class="section"><div class="section-title">③ 주요 연구성과</div>${outcomesHtml}</div>
+    <div class="section"><div class="section-title">④ 연구 진행현황 (누적)</div>${logHtml}</div>
+    <div class="section"><div class="section-title">⑤ 필요사항</div>${needsHtml}</div>`;
+}
+
+function renderProjectDetail(p, el){
+  const esc = s => (s==null||s==='') ? '<span style="color:var(--muted);">—</span>' : String(s);
+  const c = computeLight(p);
+  const hasTasks = !!(p.tasks && p.tasks.length);
+  const srcDoc = p.source_doc || (hasTasks ? (p.tasks[0].source_doc||{}) : {});
+  const ov0 = p.overview || {};
+  const heroOrg = hasTasks ? `${p.tasks.length}개 과제 (과제별 주관연구개발기관)` : `${esc(ov0.lead_org)} · 연구책임자 ${esc(ov0.pi)}`;
   const links = [
     srcDoc.url ? `<a href="${srcDoc.url}" target="_blank">📄 원본 성과관리 양식(docx)</a>` : '',
     srcDoc.folder_url ? `<a href="${srcDoc.folder_url}" target="_blank">📁 사업 폴더</a>` : '',
-    (rfp&&rfp.url)||p.rfp_url ? `<a href="${(rfp&&rfp.url)||p.rfp_url}" target="_blank">📎 RFP</a>` : ''
+    (p.rfp&&p.rfp.url)||p.rfp_url ? `<a href="${(p.rfp&&p.rfp.url)||p.rfp_url}" target="_blank">📎 RFP</a>` : ''
   ].filter(Boolean).join(' &nbsp;·&nbsp; ');
+
+  let body;
+  if (hasTasks) {
+    window.__projTasks = p.tasks; window.__projCtx = { bizName:p.name, category:p.category };
+    const tabs = p.tasks.map((t,i)=>{
+      const tl = computeLight(t).light;
+      const m = (typeof LIGHT_META!=='undefined' && LIGHT_META[tl]) ? LIGHT_META[tl] : null;
+      const dot = m ? `<span class="light-dot light-${m.cls}" style="margin-right:6px;"></span>` : '';
+      const org = (t.overview&&t.overview.lead_org) ? `<small>${esc(t.overview.lead_org)}</small>` : '';
+      return `<button class="task-tab${i===0?' active':''}" onclick="showProjectTask(${i})"><span class="task-tab-name">${dot}${esc(t.task_name||('과제 '+(i+1)))}</span>${org}</button>`;
+    }).join('');
+    body = `<div class="section"><div class="task-tabs-wrap"><div class="task-tabs-label">📂 과제 선택 <span style="font-weight:400;color:var(--muted);">— 클릭 시 아래 RFP 요약부터 해당 과제 내용으로 전환</span></div><div class="task-tabs">${tabs}</div></div></div>
+      <div id="task-sections">${projectSectionsHtml(p.tasks[0], { bizName:p.name, category:p.category, taskName:p.tasks[0].task_name })}</div>`;
+  } else {
+    body = projectSectionsHtml(p, { bizName:p.name, category:p.category, taskName:null });
+  }
 
   el.innerHTML = `
     <div class="section">
@@ -2185,18 +2267,28 @@ function renderProjectDetail(p, el){
           ${lightBadge(c.light)}
           <h2 style="flex:1;">${esc(p.name)}</h2>
         </div>
-        <div class="meta" style="margin-top:6px;">${esc(ov.lead_org)} · 연구책임자 ${esc(ov.pi)} · ${esc(p.category)}</div>
+        <div class="meta" style="margin-top:6px;">${heroOrg} · ${esc(p.category)}</div>
         <div style="margin-top:10px;">${(c.reasons||[]).map(r=>`<span class="reason-chip">${r}</span>`).join('')}</div>
         <div class="meta" style="margin-top:10px;">${links} ${srcDoc.last_synced?`<span style="color:var(--muted);">· 최종 동기화 ${srcDoc.last_synced}</span>`:''}</div>
       </div>
     </div>
-    ${rfp?`<div class="section"><div class="section-title">📑 과제제안요구서(RFP) 핵심 요약</div>${rfpHtml}</div>`:''}
-    <div class="section"><div class="section-title">① 사업 개요</div>${overviewTbl}</div>
-    <div class="section"><div class="section-title">② 연차·분기별 마일스톤</div>${msTbl}</div>
-    <div class="section"><div class="section-title">③ 주요 연구성과</div>${outcomesHtml}</div>
-    <div class="section"><div class="section-title">④ 연구 진행현황 (누적)</div>${logHtml}</div>
-    <div class="section"><div class="section-title">⑤ 필요사항</div>${needsHtml}</div>
+    ${body}
     <div class="section"><div class="proj-detail-back" onclick="closeProjectDetail()">← 사업현황 목록으로</div></div>`;
+}
+
+function showProjectTask(i){
+  const t = window.__projTasks[i]; const ctx = window.__projCtx || {};
+  const host = document.getElementById('task-sections');
+  if (host) host.innerHTML = projectSectionsHtml(t, { bizName:ctx.bizName, category:ctx.category, taskName:t.task_name });
+  document.querySelectorAll('.task-tab').forEach((el,j)=>el.classList.toggle('active', j===i));
+}
+
+function toggleProjectTasks(id){
+  const rows = document.querySelectorAll('tr.biz-' + id);
+  const caret = document.getElementById('caret-' + id);
+  let nowShown = false;
+  rows.forEach(r => { const hidden = (r.style.display === 'none' || !r.style.display); r.style.display = hidden ? 'table-row' : 'none'; nowShown = hidden; });
+  if (caret) caret.textContent = nowShown ? '▾' : '▸';
 }
 
 // ── 해시 라우팅 (딥링크 지원) ──
