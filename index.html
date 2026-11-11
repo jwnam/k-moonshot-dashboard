@@ -306,7 +306,6 @@
         <li><a href="#" onclick="showTab('kddf',this)">🏛️ KDDF지원 파이프라인</a></li>
         <li><a href="#" onclick="showTab('master',this)">🧬 국내기업 임상 파이프라인</a></li>
         <li><a href="#" onclick="showTab('ai-pipeline',this)">🤖 AI 파이프라인</a></li>
-        <li><a href="#" onclick="showTab('overseas-pipeline',this)">🌏 해외 파이프라인</a></li>
       </ul>
     </li>
     <li><a href="#" onclick="showTab('transfer',this)">🤝 기술이전</a></li>
@@ -406,24 +405,6 @@
   </div>
 </div>
 
-<!-- ══ TAB: OVERSEAS PIPELINES ═══════════════════════════════════════ -->
-<div id="tab-overseas-pipeline" class="tab-panel">
-  <div class="section">
-    <div class="section-title">해외 AI 신약 대표 파이프라인 현황 (글로벌)</div>
-    <p style="font-size:11px;color:var(--muted);margin-bottom:12px;">※ 해외 AI-설계/AI-활용 신약 주요 사례. 국내 파이프라인(🤖 AI 파이프라인)과 비교용. 출처: 공개 발표·언론·공시 종합 — 월간 검토(피드백) 반영.</p>
-    <div class="card tbl-wrap">
-      <table id="overseas-pipeline-table">
-        <thead>
-          <tr>
-            <th>기업</th><th>국가</th><th>약물</th><th>적응증</th><th>임상 단계</th><th>AI 플랫폼</th><th>모달리티</th><th>주요 내용</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
 <!-- ══ TAB: AI PIPELINES ═════════════════════════════════════════════ -->
 <div id="tab-ai-pipeline" class="tab-panel">
   <div class="section">
@@ -440,6 +421,23 @@
       </table>
     </div>
   </div>
+  <div class="section">
+    <div class="card" style="border-left:3px solid var(--accent2);">
+      <div class="section-title">🌏 해외 AI 설계 신약 대표 파이프라인 <span style="font-size:11px;color:var(--muted);font-weight:normal;">(최근 2년 · AI 설계로 시작 · 현재 임상중)</span></div>
+      <p style="font-size:11px;color:var(--muted);margin-bottom:10px;">※ AI(생성형·구조/물리기반)로 후보를 설계해 현재 임상 진행 중인 글로벌 대표 사례만 선별. 출처: 공개 공시·IR·언론 — 월간 검토(피드백)로 갱신.</p>
+      <div class="tbl-wrap">
+        <table id="overseas-pipeline-table">
+          <thead>
+            <tr>
+              <th>기업</th><th>국가</th><th>약물</th><th>적응증</th><th>임상 단계</th><th>AI 플랫폼</th><th>모달리티</th><th>주요 내용</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <div class="section">
     <div class="grid-2">
       <div class="card">

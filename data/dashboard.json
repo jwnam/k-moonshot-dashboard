@@ -2575,59 +2575,59 @@
       "drug": "Rentosertib (ISM001-055)",
       "indication": "특발성 폐섬유증(IPF)",
       "stage": "임상 2상",
-      "ai_tech": "PandaOmics + Chemistry42 (생성형)",
+      "ai_tech": "PandaOmics(표적)+Chemistry42(생성형 설계)",
       "modality": "소분자",
-      "highlight": "AI 표적발굴→후보도출 전주기, 표적~임상 약 10년→4년(60%↓). AI-설계 신약 임상2상 진입 대표사례"
+      "highlight": "AI가 표적·분자 모두 설계한 최초의 임상단계 신약 — Phase 2a 긍정적 결과('25)"
     },
     {
-      "company": "Moderna / Merck",
+      "company": "Relay Therapeutics",
       "country": "미국",
-      "drug": "mRNA-4157 / V940",
-      "indication": "흑색종(개인맞춤 암백신, 키트루다 병용)",
-      "stage": "임상 3상",
-      "ai_tech": "네오항원 예측 AI",
-      "modality": "mRNA 백신",
-      "highlight": "AI 네오항원 예측 기반 개인맞춤 mRNA 암백신, 글로벌 임상3상"
+      "drug": "Lirafugratinib (RLY-4008)",
+      "indication": "FGFR2 변이 담관암 등",
+      "stage": "임상 1/2상",
+      "ai_tech": "단백질 모션(동역학) 기반 구조설계",
+      "modality": "소분자",
+      "highlight": "선택적 FGFR2 저해제 — 단백질 운동성 시뮬레이션 기반 설계"
     },
     {
-      "company": "Isomorphic Labs",
-      "country": "영국",
-      "drug": "AlphaFold3 기반 파이프라인(다수 적응증)",
-      "indication": "종양·면역 등",
-      "stage": "발굴·전임상",
-      "ai_tech": "AlphaFold3 (DeepMind 스핀아웃)",
+      "company": "Schrödinger",
+      "country": "미국",
+      "drug": "SGR-1505 (MALT1)",
+      "indication": "B세포 악성종양",
+      "stage": "임상 1상",
+      "ai_tech": "물리기반 계산(FEP+) 설계",
       "modality": "소분자",
-      "highlight": "Novartis·Lilly 파트너십, AI 구조예측 전주기 신약설계 상용화 추진"
+      "highlight": "물리기반 대규모 가상 스크리닝으로 후보 설계"
+    },
+    {
+      "company": "Nimbus → Takeda",
+      "country": "미국/일본",
+      "drug": "Zasocitinib (TAK-279)",
+      "indication": "건선·건선관절염",
+      "stage": "임상 3상",
+      "ai_tech": "계산기반(FEP) 알로스테릭 설계",
+      "modality": "소분자",
+      "highlight": "알로스테릭 TYK2 저해제 — 계산설계 기원, 임상3상 진입"
     },
     {
       "company": "Recursion + Exscientia",
       "country": "미국/영국",
-      "drug": "통합 플랫폼 파이프라인(다수)",
-      "indication": "종양·희귀질환 등",
-      "stage": "임상 1·2상",
-      "ai_tech": "표현형 스크리닝 + 생성형 설계 (Recursion OS)",
+      "drug": "REC-617 (CDK7) 등",
+      "indication": "고형암",
+      "stage": "임상 1/2상",
+      "ai_tech": "표현형 스크리닝 + 생성형 설계",
       "modality": "소분자",
-      "highlight": "양사 합병, 자동화 실험+생성형 설계 대규모 통합"
+      "highlight": "양사 합병, AI 설계 종양 후보 다수 임상 진행"
     },
     {
-      "company": "Xaira Therapeutics",
+      "company": "Moderna / Merck",
       "country": "미국",
-      "drug": "생성형 단백질 설계 신약",
-      "indication": "미정(초기)",
-      "stage": "발굴·전임상",
-      "ai_tech": "RFdiffusion (David Baker)",
-      "modality": "단백질·바이오로직스",
-      "highlight": "10억 달러+ 초기 펀딩으로 AI-네이티브 신약사 출범"
-    },
-    {
-      "company": "Xaira / Chai / Latent Labs 등",
-      "country": "미국/영국",
-      "drug": "구조·결합예측 FM 기반 설계(플랫폼)",
-      "indication": "플랫폼",
-      "stage": "플랫폼·도구",
-      "ai_tech": "Chai-1, AlphaFold3급 공개 모델",
-      "modality": "-",
-      "highlight": "결합·복합체 구조예측 접근성 확대(오픈 모델 확산)"
+      "drug": "Intismeran autogene (mRNA-4157/V940)",
+      "indication": "흑색종(개인맞춤 암백신)",
+      "stage": "임상 3상",
+      "ai_tech": "AI 네오항원 예측·설계",
+      "modality": "mRNA 백신",
+      "highlight": "AI 네오항원 설계 개인맞춤 백신 — 키트루다 병용 임상3상"
     }
   ]
 }
