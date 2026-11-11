@@ -2584,10 +2584,10 @@
       "country": "미국",
       "drug": "Lirafugratinib (RLY-4008)",
       "indication": "FGFR2 변이 담관암 등",
-      "stage": "임상 1/2상",
+      "stage": "FDA 허가 ('26.9)",
       "ai_tech": "단백질 모션(동역학) 기반 구조설계",
       "modality": "소분자",
-      "highlight": "선택적 FGFR2 저해제 — 단백질 운동성 시뮬레이션 기반 설계"
+      "highlight": "선택적 FGFR2 저해제(단백질 모션 기반 설계) — FGFR2 융합 담관암 FDA 승인('26.9.23). AI 구조설계 기반 신약 허가 사례(치료경험자 ORR 82%). Elevar 글로벌 라이선스"
     },
     {
       "company": "Schrödinger",
@@ -2597,17 +2597,17 @@
       "stage": "임상 1상",
       "ai_tech": "물리기반 계산(FEP+) 설계",
       "modality": "소분자",
-      "highlight": "물리기반 대규모 가상 스크리닝으로 후보 설계"
+      "highlight": "물리기반(FEP+) 설계 MALT1 저해제 — 재발/불응 B세포 악성종양 Phase 1 진행, 발덴스트롬 FDA Fast Track. Phase 1 완료·권고2상용량 FDA 논의 예정"
     },
     {
       "company": "Nimbus → Takeda",
       "country": "미국/일본",
       "drug": "Zasocitinib (TAK-279)",
       "indication": "건선·건선관절염",
-      "stage": "임상 3상",
+      "stage": "임상 3상 (성공)",
       "ai_tech": "계산기반(FEP) 알로스테릭 설계",
       "modality": "소분자",
-      "highlight": "알로스테릭 TYK2 저해제 — 계산설계 기원, 임상3상 진입"
+      "highlight": "알로스테릭 TYK2 저해제(계산설계 기원) — Phase 3 성공('26.6): deucravacitinib 대비 우월(PASI100 35%+), NDA 제출 예정(FY2026)"
     },
     {
       "company": "Recursion + Exscientia",
@@ -2617,7 +2617,7 @@
       "stage": "임상 1/2상",
       "ai_tech": "표현형 스크리닝 + 생성형 설계",
       "modality": "소분자",
-      "highlight": "양사 합병, AI 설계 종양 후보 다수 임상 진행"
+      "highlight": "AI 정밀설계 CDK7 저해제(REC-617) — ELUCIDATE Phase 1/2(MTD 10mg 1일1회), 초기 항종양활성(PR 1·SD 5), 난소암 병용 진행. 병용 데이터 '27 상반기 예정"
     },
     {
       "company": "Moderna / Merck",
