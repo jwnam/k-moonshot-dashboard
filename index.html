@@ -429,12 +429,13 @@
         <table id="overseas-pipeline-table">
           <thead>
             <tr>
-              <th>기업</th><th>국가</th><th>약물</th><th>적응증</th><th>임상 단계</th><th>AI 플랫폼</th><th>모달리티</th><th>주요 내용</th>
+              <th>기업</th><th>국가</th><th>약물</th><th>적응증</th><th>임상 단계</th><th>AI-native</th><th>AI 플랫폼</th><th>모달리티</th><th>주요 내용</th>
             </tr>
           </thead>
           <tbody></tbody>
         </table>
       </div>
+      <p style="font-size:10px;color:var(--muted);margin-top:8px;"><span style="background:#064e3b;color:#6ee7b7;padding:1px 6px;border-radius:8px;">✅ AI-native</span> = AI(생성형/AI-first)가 표적·분자 설계를 주도 · <span style="color:var(--muted);">AI/계산 활용</span> = 물리·구조기반 계산 또는 AI 보조(네오항원 예측 등)</p>
     </div>
   </div>
 
@@ -1461,6 +1462,9 @@ function renderOverseasPipelineTable(pipelines) {
       <td>${p.drug}</td>
       <td>${p.indication}</td>
       <td><span class="badge-stage ${stageClass(p.stage)}">${p.stage}</span></td>
+      <td>${p.ai_native
+        ? '<span style="background:#064e3b;color:#6ee7b7;padding:1px 6px;border-radius:8px;font-size:10px;white-space:nowrap;">✅ AI-native</span>'
+        : '<span style="font-size:10px;color:var(--muted);white-space:nowrap;">AI/계산 활용</span>'}</td>
       <td style="color:var(--accent2);">${p.ai_tech || ''}</td>
       <td><span style="font-size:11px;color:var(--muted);">${p.modality || ''}</span></td>
       <td class="highlight">${p.highlight || ''}</td>

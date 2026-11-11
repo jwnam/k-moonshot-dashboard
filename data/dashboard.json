@@ -2577,7 +2577,8 @@
       "stage": "임상 3상",
       "ai_tech": "PandaOmics(표적)+Chemistry42(생성형 설계) — 경구 TNIK 저해제",
       "modality": "소분자",
-      "highlight": "AI가 표적·분자 모두 설계한 신약 최초로 Phase 3 진입 — GENESIS-IPF-3 첫 환자 투여('26.9, 중국 47개소·320명). Phase 2a 긍정결과(Nature Medicine '25)"
+      "highlight": "AI가 표적·분자 모두 설계한 신약 최초로 Phase 3 진입 — GENESIS-IPF-3 첫 환자 투여('26.9, 중국 47개소·320명). Phase 2a 긍정결과(Nature Medicine '25)",
+      "ai_native": true
     },
     {
       "company": "Relay Therapeutics",
@@ -2587,7 +2588,8 @@
       "stage": "FDA 허가 ('26.9)",
       "ai_tech": "단백질 모션(동역학) 기반 구조설계",
       "modality": "소분자",
-      "highlight": "선택적 FGFR2 저해제(단백질 모션 기반 설계) — FGFR2 융합 담관암 FDA 승인('26.9.23). AI 구조설계 기반 신약 허가 사례(치료경험자 ORR 82%). Elevar 글로벌 라이선스"
+      "highlight": "선택적 FGFR2 저해제(단백질 모션 기반 설계) — FGFR2 융합 담관암 FDA 승인('26.9.23). AI 구조설계 기반 신약 허가 사례(치료경험자 ORR 82%). Elevar 글로벌 라이선스",
+      "ai_native": false
     },
     {
       "company": "Schrödinger",
@@ -2597,7 +2599,8 @@
       "stage": "임상 1상",
       "ai_tech": "물리기반 계산(FEP+) 설계",
       "modality": "소분자",
-      "highlight": "물리기반(FEP+) 설계 MALT1 저해제 — 재발/불응 B세포 악성종양 Phase 1 진행, 발덴스트롬 FDA Fast Track. Phase 1 완료·권고2상용량 FDA 논의 예정"
+      "highlight": "물리기반(FEP+) 설계 MALT1 저해제 — 재발/불응 B세포 악성종양 Phase 1 진행, 발덴스트롬 FDA Fast Track. Phase 1 완료·권고2상용량 FDA 논의 예정",
+      "ai_native": false
     },
     {
       "company": "Nimbus → Takeda",
@@ -2607,7 +2610,8 @@
       "stage": "임상 3상 (성공)",
       "ai_tech": "계산기반(FEP) 알로스테릭 설계",
       "modality": "소분자",
-      "highlight": "알로스테릭 TYK2 저해제(계산설계 기원) — Phase 3 성공('26.6): deucravacitinib 대비 우월(PASI100 35%+), NDA 제출 예정(FY2026)"
+      "highlight": "알로스테릭 TYK2 저해제(계산설계 기원) — Phase 3 성공('26.6): deucravacitinib 대비 우월(PASI100 35%+), NDA 제출 예정(FY2026)",
+      "ai_native": false
     },
     {
       "company": "Recursion + Exscientia",
@@ -2617,7 +2621,8 @@
       "stage": "임상 1/2상",
       "ai_tech": "표현형 스크리닝 + 생성형 설계",
       "modality": "소분자",
-      "highlight": "AI 정밀설계 CDK7 저해제(REC-617) — ELUCIDATE Phase 1/2(MTD 10mg 1일1회), 초기 항종양활성(PR 1·SD 5), 난소암 병용 진행. 병용 데이터 '27 상반기 예정"
+      "highlight": "AI 정밀설계 CDK7 저해제(REC-617) — ELUCIDATE Phase 1/2(MTD 10mg 1일1회), 초기 항종양활성(PR 1·SD 5), 난소암 병용 진행. 병용 데이터 '27 상반기 예정",
+      "ai_native": true
     },
     {
       "company": "Moderna / Merck",
@@ -2627,7 +2632,8 @@
       "stage": "임상 3상 (성공)",
       "ai_tech": "AI 네오항원 예측·설계",
       "modality": "mRNA 백신",
-      "highlight": "INTerpath-001 Phase 3 성공('26.8) — 키트루다 병용, 완전절제 흑색종 재발·사망 42%↓(HR 0.58)·원격전이 38%↓(HR 0.62). 개인맞춤 네오항원·mRNA 암치료 최초 Phase 3 성공, 허가신청 추진"
+      "highlight": "INTerpath-001 Phase 3 성공('26.8) — 키트루다 병용, 완전절제 흑색종 재발·사망 42%↓(HR 0.58)·원격전이 38%↓(HR 0.62). 개인맞춤 네오항원·mRNA 암치료 최초 Phase 3 성공, 허가신청 추진",
+      "ai_native": false
     }
   ]
 }
