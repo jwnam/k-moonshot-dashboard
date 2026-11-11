@@ -2567,5 +2567,67 @@
       "임상시험 AI",
       "AI 신약개발 총론·산업"
     ]
-  }
+  },
+  "overseas_pipelines": [
+    {
+      "company": "Insilico Medicine",
+      "country": "홍콩/미국",
+      "drug": "Rentosertib (ISM001-055)",
+      "indication": "특발성 폐섬유증(IPF)",
+      "stage": "임상 2상",
+      "ai_tech": "PandaOmics + Chemistry42 (생성형)",
+      "modality": "소분자",
+      "highlight": "AI 표적발굴→후보도출 전주기, 표적~임상 약 10년→4년(60%↓). AI-설계 신약 임상2상 진입 대표사례"
+    },
+    {
+      "company": "Moderna / Merck",
+      "country": "미국",
+      "drug": "mRNA-4157 / V940",
+      "indication": "흑색종(개인맞춤 암백신, 키트루다 병용)",
+      "stage": "임상 3상",
+      "ai_tech": "네오항원 예측 AI",
+      "modality": "mRNA 백신",
+      "highlight": "AI 네오항원 예측 기반 개인맞춤 mRNA 암백신, 글로벌 임상3상"
+    },
+    {
+      "company": "Isomorphic Labs",
+      "country": "영국",
+      "drug": "AlphaFold3 기반 파이프라인(다수 적응증)",
+      "indication": "종양·면역 등",
+      "stage": "발굴·전임상",
+      "ai_tech": "AlphaFold3 (DeepMind 스핀아웃)",
+      "modality": "소분자",
+      "highlight": "Novartis·Lilly 파트너십, AI 구조예측 전주기 신약설계 상용화 추진"
+    },
+    {
+      "company": "Recursion + Exscientia",
+      "country": "미국/영국",
+      "drug": "통합 플랫폼 파이프라인(다수)",
+      "indication": "종양·희귀질환 등",
+      "stage": "임상 1·2상",
+      "ai_tech": "표현형 스크리닝 + 생성형 설계 (Recursion OS)",
+      "modality": "소분자",
+      "highlight": "양사 합병, 자동화 실험+생성형 설계 대규모 통합"
+    },
+    {
+      "company": "Xaira Therapeutics",
+      "country": "미국",
+      "drug": "생성형 단백질 설계 신약",
+      "indication": "미정(초기)",
+      "stage": "발굴·전임상",
+      "ai_tech": "RFdiffusion (David Baker)",
+      "modality": "단백질·바이오로직스",
+      "highlight": "10억 달러+ 초기 펀딩으로 AI-네이티브 신약사 출범"
+    },
+    {
+      "company": "Xaira / Chai / Latent Labs 등",
+      "country": "미국/영국",
+      "drug": "구조·결합예측 FM 기반 설계(플랫폼)",
+      "indication": "플랫폼",
+      "stage": "플랫폼·도구",
+      "ai_tech": "Chai-1, AlphaFold3급 공개 모델",
+      "modality": "-",
+      "highlight": "결합·복합체 구조예측 접근성 확대(오픈 모델 확산)"
+    }
+  ]
 }

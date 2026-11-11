@@ -306,6 +306,7 @@
         <li><a href="#" onclick="showTab('kddf',this)">🏛️ KDDF지원 파이프라인</a></li>
         <li><a href="#" onclick="showTab('master',this)">🧬 국내기업 임상 파이프라인</a></li>
         <li><a href="#" onclick="showTab('ai-pipeline',this)">🤖 AI 파이프라인</a></li>
+        <li><a href="#" onclick="showTab('overseas-pipeline',this)">🌏 해외 파이프라인</a></li>
       </ul>
     </li>
     <li><a href="#" onclick="showTab('transfer',this)">🤝 기술이전</a></li>
@@ -402,6 +403,24 @@
   <div class="section card" style="padding:20px;">
     <div class="section-title">국내 vs 글로벌 파이프라인 비교</div>
     <div class="chart-wrap"><canvas id="chart-global-compare"></canvas></div>
+  </div>
+</div>
+
+<!-- ══ TAB: OVERSEAS PIPELINES ═══════════════════════════════════════ -->
+<div id="tab-overseas-pipeline" class="tab-panel">
+  <div class="section">
+    <div class="section-title">해외 AI 신약 대표 파이프라인 현황 (글로벌)</div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px;">※ 해외 AI-설계/AI-활용 신약 주요 사례. 국내 파이프라인(🤖 AI 파이프라인)과 비교용. 출처: 공개 발표·언론·공시 종합 — 월간 검토(피드백) 반영.</p>
+    <div class="card tbl-wrap">
+      <table id="overseas-pipeline-table">
+        <thead>
+          <tr>
+            <th>기업</th><th>국가</th><th>약물</th><th>적응증</th><th>임상 단계</th><th>AI 플랫폼</th><th>모달리티</th><th>주요 내용</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
   </div>
 </div>
 
@@ -1165,6 +1184,7 @@ fetch('data/dashboard.json?v=3.4')
     renderStageCards(data.pipeline_stages);
     renderGlobalCompare(data.pipeline_stages);
     renderAIPipelineTable(data.ai_pipelines);
+    renderOverseasPipelineTable(data.overseas_pipelines || []);
     renderValueChain();
     renderMarketGrowth();
     renderTransferTable(data.tech_transfers);
@@ -1421,6 +1441,31 @@ function renderAIPipelineTable(pipelines) {
       <td style="color:var(--accent2);">${p.ai_tech}</td>
       <td><span style="font-size:11px;color:var(--muted);">${p.modality}</span></td>
       <td class="highlight">${p.highlight}</td>
+    </tr>`).join('');
+}
+
+// ── Overseas (global) AI pipelines table ──────────────────────────────
+function renderOverseasPipelineTable(pipelines) {
+  const el = document.querySelector('#overseas-pipeline-table tbody');
+  if (!el) return;
+  const stageClass = s => {
+    s = s || '';
+    if (s.includes('비임상') || s.includes('전임상') || s.includes('발굴') || s.includes('플랫폼')) return 's-pre';
+    if (s.includes('1상')) return 's-1';
+    if (s.includes('2상')) return 's-2';
+    if (s.includes('3상')) return 's-3';
+    return 's-approved';
+  };
+  el.innerHTML = (pipelines || []).map(p => `
+    <tr>
+      <td><strong>${p.company}</strong></td>
+      <td><span style="font-size:11px;color:var(--muted);">${p.country || ''}</span></td>
+      <td>${p.drug}</td>
+      <td>${p.indication}</td>
+      <td><span class="badge-stage ${stageClass(p.stage)}">${p.stage}</span></td>
+      <td style="color:var(--accent2);">${p.ai_tech || ''}</td>
+      <td><span style="font-size:11px;color:var(--muted);">${p.modality || ''}</span></td>
+      <td class="highlight">${p.highlight || ''}</td>
     </tr>`).join('');
 }
 
