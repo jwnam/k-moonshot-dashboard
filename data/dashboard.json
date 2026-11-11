@@ -2193,8 +2193,8 @@
       {
         "org": "Insilico Medicine",
         "country": "홍콩/미국",
-        "item": "ISM001 (특발성 폐섬유증)",
-        "note": "생성형 AI 표적 발굴→후보 도출→임상2상. 표적발굴~임상 약 10년→4년(60%↓), 임상2상 진입"
+        "item": "Rentosertib/ISM001-055 (특발성 폐섬유증, TNIK 저해제)",
+        "note": "생성형 AI 표적발굴→후보도출→임상3상 진입('26.9 GENESIS-IPF-3 첫 환자). AI 표적+AI 분자 설계 신약 최초 Phase 3. 표적발굴~임상 약 10년→4년(60%↓)"
       },
       {
         "org": "Moderna / Merck",
@@ -2574,10 +2574,10 @@
       "country": "홍콩/미국",
       "drug": "Rentosertib (ISM001-055)",
       "indication": "특발성 폐섬유증(IPF)",
-      "stage": "임상 2상",
-      "ai_tech": "PandaOmics(표적)+Chemistry42(생성형 설계)",
+      "stage": "임상 3상",
+      "ai_tech": "PandaOmics(표적)+Chemistry42(생성형 설계) — 경구 TNIK 저해제",
       "modality": "소분자",
-      "highlight": "AI가 표적·분자 모두 설계한 최초의 임상단계 신약 — Phase 2a 긍정적 결과('25)"
+      "highlight": "AI가 표적·분자 모두 설계한 신약 최초로 Phase 3 진입 — GENESIS-IPF-3 첫 환자 투여('26.9, 중국 47개소·320명). Phase 2a 긍정결과(Nature Medicine '25)"
     },
     {
       "company": "Relay Therapeutics",
