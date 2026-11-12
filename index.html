@@ -279,9 +279,139 @@
 
   /* Footer */
   footer { border-top: 1px solid var(--border); padding: 16px 0; text-align: center; color: var(--muted); font-size: 11px; }
+
+  /* ── Visitor Gate (방문자 소속·이메일·동의) ── */
+  .vgate { position: fixed; inset: 0; z-index: 9999; background: rgba(10,12,20,.97); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .vgate-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; max-width: 450px; width: 100%; padding: 28px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+  .vgate-logo { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+  .vgate-sub { color: var(--muted); font-size: 12.5px; margin-bottom: 16px; line-height: 1.55; }
+  .vgate-card label { display: block; font-size: 12px; color: var(--muted); margin: 12px 0 5px; }
+  .vgate-card input[type=text], .vgate-card input[type=email] { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; color: var(--text); font-size: 14px; }
+  .vgate-card input[type=text]:focus, .vgate-card input[type=email]:focus { outline: none; border-color: var(--accent); }
+  .vgate-check { display: flex !important; align-items: flex-start; gap: 8px; margin-top: 16px !important; font-size: 12.5px; color: var(--text); line-height: 1.55; cursor: pointer; }
+  .vgate-check input { margin-top: 2px; flex-shrink: 0; }
+  .vgate-check a { color: var(--accent2); text-decoration: underline; font-weight: 600; }
+  .vgate-err { color: var(--red); font-size: 12px; min-height: 16px; margin-top: 8px; }
+  #gate-submit { width: 100%; margin-top: 14px; background: var(--accent); color: #fff; border: none; border-radius: 8px; padding: 12px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background .2s; }
+  #gate-submit:hover { background: #4f46e5; }
+  #gate-submit:disabled { opacity: .6; cursor: default; }
+  .vgate-foot { margin-top: 16px; font-size: 10.5px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--border); padding-top: 12px; }
+  .vmodal { position: fixed; inset: 0; z-index: 10000; background: rgba(0,0,0,.65); display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .vmodal-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; max-width: 540px; width: 100%; max-height: 82vh; overflow: auto; padding: 24px; }
+  .vmodal-card h3 { font-size: 16px; margin-bottom: 12px; }
+  .vmodal-body { font-size: 12.5px; color: var(--text); line-height: 1.75; }
+  .vmodal-body h4 { font-size: 13px; margin: 14px 0 4px; color: var(--accent2); }
+  .vmodal-body ul { margin: 4px 0 4px 18px; }
+  .vmodal-card .vmodal-close { margin-top: 18px; background: var(--surface2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 9px 18px; cursor: pointer; }
 </style>
 </head>
 <body>
+
+<!-- ══ 방문자 게이트 (소속·이메일·개인정보 동의) ═══════════════════════ -->
+<div id="visitor-gate" class="vgate">
+  <div class="vgate-card">
+    <div class="vgate-logo">🧬 K-Moonshot AI신약 미션 대시보드</div>
+    <p class="vgate-sub">본 대시보드는 K-문샷 AI신약 미션 관계자 열람용입니다.<br>열람을 위해 소속과 이메일을 남겨주세요.</p>
+    <form onsubmit="submitGate(event)" autocomplete="on">
+      <label for="gate-aff">소속 (기관·부서)</label>
+      <input id="gate-aff" type="text" placeholder="예) 과학기술정보통신부 / ○○대학교 ○○학과" autocomplete="organization" required>
+      <label for="gate-email">이메일</label>
+      <input id="gate-email" type="email" placeholder="예) name@domain.com" autocomplete="email" required>
+      <label class="vgate-check">
+        <input id="gate-consent" type="checkbox">
+        <span><a href="#" onclick="showConsent(event)">[개인정보 수집·이용 동의]</a> 내용을 확인하였으며 이에 동의합니다. <b>(필수)</b></span>
+      </label>
+      <div id="gate-err" class="vgate-err"></div>
+      <button id="gate-submit" type="submit">동의하고 입장</button>
+    </form>
+    <div class="vgate-foot">수집 항목: 소속, 이메일, 접속 IP·지역정보 · 이용 목적: 열람 현황 관리 · 보유 기간: 미션 종료 시까지</div>
+  </div>
+</div>
+
+<!-- 개인정보 수집·이용 동의 내역 모달 -->
+<div id="consent-modal" class="vmodal" style="display:none;">
+  <div class="vmodal-card">
+    <h3>개인정보 수집·이용 동의 내역</h3>
+    <div class="vmodal-body">
+      <p>K-문샷 AI신약 미션 대시보드(이하 '대시보드')는 「개인정보 보호법」에 따라 아래와 같이 개인정보를 수집·이용합니다. 내용을 충분히 확인하신 후 동의 여부를 결정해 주시기 바랍니다.</p>
+      <h4>1. 수집 항목</h4>
+      <ul>
+        <li>필수: 소속(기관·부서), 이메일 주소</li>
+        <li>자동 수집: 접속 IP 주소 및 이를 기반으로 추정된 지역정보(국가·시·도·도시), 접속 기기·브라우저 정보(User-Agent), 접속 일시</li>
+      </ul>
+      <h4>2. 수집·이용 목적</h4>
+      <ul>
+        <li>대시보드 열람 현황 관리 및 열람 통계 산출</li>
+        <li>비인가 접근 방지 등 보안 관리</li>
+      </ul>
+      <h4>3. 보유·이용 기간</h4>
+      <ul>
+        <li>K-문샷 AI신약 미션 종료 시 또는 수집·이용 목적 달성 시까지 보유하며, 이후 지체 없이 파기합니다.</li>
+      </ul>
+      <h4>4. 제3자 제공 및 처리위탁</h4>
+      <ul>
+        <li>수집한 개인정보는 제3자에게 제공하지 않습니다.</li>
+        <li>다만 지역정보 산출을 위해 외부 IP 조회 서비스를 이용하며, 저장·관리는 K-문샷 미션 PD실의 Google Workspace 환경에서 이루어집니다.</li>
+      </ul>
+      <h4>5. 동의 거부 권리 및 불이익</h4>
+      <ul>
+        <li>귀하는 개인정보 수집·이용에 동의하지 않을 권리가 있습니다. 다만 필수 항목에 동의하지 않으실 경우 대시보드 열람이 제한됩니다.</li>
+      </ul>
+    </div>
+    <button class="vmodal-close" onclick="hideConsent()">닫기</button>
+  </div>
+</div>
+
+<script>
+// ══ 방문자 로그 설정 ══════════════════════════════════════════════════
+// 아래 URL에 Apps Script 웹앱 배포 URL을 붙여넣으세요 (scripts/visitor_logger.gs 참고).
+// 미설정 상태에서는 게이트는 동작하되 방문 기록은 저장되지 않습니다(열람은 가능).
+const VISITOR_ENDPOINT = 'PASTE_APPS_SCRIPT_WEB_APP_URL_HERE';
+
+document.body.style.overflow = 'hidden'; // 게이트 열려있는 동안 배경 스크롤 잠금
+
+function showConsent(ev){ if(ev) ev.preventDefault(); document.getElementById('consent-modal').style.display = 'flex'; }
+function hideConsent(){ document.getElementById('consent-modal').style.display = 'none'; }
+
+async function lookupGeo(){
+  const apis = [
+    { u:'https://ipapi.co/json/', m:d=>({ip:d.ip, country:d.country_name, region:d.region, city:d.city, org:d.org}) },
+    { u:'https://ipwho.is/',      m:d=>({ip:d.ip, country:d.country, region:d.region, city:d.city, org:(d.connection&&d.connection.org)||''}) }
+  ];
+  for (const a of apis){
+    try { const r = await fetch(a.u); if(r.ok){ const d = await r.json(); const g = a.m(d); if(g.ip) return g; } }
+    catch(e){ /* 다음 API 시도 */ }
+  }
+  return { ip:'', country:'', region:'', city:'', org:'' };
+}
+
+async function submitGate(ev){
+  ev.preventDefault();
+  const aff   = document.getElementById('gate-aff').value.trim();
+  const email = document.getElementById('gate-email').value.trim();
+  const consent = document.getElementById('gate-consent').checked;
+  const err = document.getElementById('gate-err');
+  if(!aff){ err.textContent = '소속을 입력해주세요.'; return; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ err.textContent = '올바른 이메일 주소를 입력해주세요.'; return; }
+  if(!consent){ err.textContent = '개인정보 수집·이용에 동의해주세요. (필수)'; return; }
+  err.textContent = '';
+  const btn = document.getElementById('gate-submit');
+  btn.disabled = true; btn.textContent = '확인 중…';
+  const geo = await lookupGeo();
+  const payload = Object.assign({
+    affiliation: aff, email: email, consent: true,
+    userAgent: navigator.userAgent, referrer: document.referrer, page: location.href
+  }, geo);
+  try {
+    if (VISITOR_ENDPOINT && VISITOR_ENDPOINT.indexOf('PASTE') !== 0){
+      // text/plain(기본)으로 전송 → CORS preflight 회피
+      await fetch(VISITOR_ENDPOINT, { method:'POST', body: JSON.stringify(payload) });
+    }
+  } catch(e){ /* 기록 실패해도 열람은 허용(fail-open) */ }
+  document.getElementById('visitor-gate').style.display = 'none';
+  document.body.style.overflow = '';
+}
+</script>
 
 <header>
   <div class="container header-inner">
