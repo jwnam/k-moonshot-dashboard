@@ -5,7 +5,11 @@ K-문샷 대시보드는 GitHub Pages(정적 호스팅)라 방문 기록을 저�
 
 ## 1) 구글 시트 + Apps Script 만들기
 
-1. [sheets.new](https://sheets.new) 로 새 구글 시트를 만들고 이름을 `K-문샷 대시보드 방문자 로그` 로 지정
+> ✅ 전용 시트는 이미 생성되어 있습니다 (coya75@gmail.com 소유):
+> **K-문샷 대시보드 방문자 로그** — <https://docs.google.com/spreadsheets/d/1ILdtesdmD8p_nllcBcmM8wdIHb9z5YCMM6Y_IH3CgF4/edit>
+> `visits` 탭과 헤더 행이 세팅되어 있어, 아래 2번부터 진행하면 됩니다.
+
+1. 위 시트를 엽니다. (새로 만들 필요 없음)
 2. 시트 상단 메뉴 **확장 프로그램 → Apps Script** 클릭
 3. 열린 편집기의 코드를 모두 지우고 **`scripts/visitor_logger.gs`** 내용을 붙여넣기
 4. 맨 위 `ADMIN_PW` 값을 **원하는 관리자 비밀번호**로 변경 → 저장(💾)
