@@ -1,1 +1,7 @@
 .sync.log
+
+# 편집기 임시/스왑 파일
+*.swp
+*.swo
+*~
+.DS_Store
