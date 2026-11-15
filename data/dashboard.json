@@ -228,7 +228,7 @@
       "indication": "비만/대사질환",
       "stage": "임상 1상 (IND 승인)",
       "ai_tech": "자체 AI + 아이젠사이언스",
-      "highlight": "개발기간 절반 단축, FDA IND 승인",
+      "highlight": "개발기간 절반 단축, FDA IND 승인 AI 활용 후보물질 발굴~IND까지 30개월(기존 대비 67% 단축) → Genentech(로슈) 최대 23억 달러($2.3B) 기술수출 계약 성사('26.8.24). 임상 1상 진행 중 (ClinicalTrials.gov NCT07219589). 기술이전 후 임상 2상부터 Genentech 주도.",
       "modality": "소분자"
     },
     {
@@ -264,7 +264,7 @@
       "indication": "GPCR·이온채널 등 난공불락 타깃",
       "stage": "비임상(전임상)",
       "ai_tech": "GalaxDesign (de novo 단백질 설계)",
-      "highlight": "시리즈B 420억 (누적 680억), 이수앱지스 협력",
+      "highlight": "시리즈B 420억 (누적 680억), 이수앱지스 협력 동아에스티와 AI 항체 설계 기반 ADC 신약 공동연구 협약 체결('26.10.1) — GalaxDesign AI 드노보 항체 후보 설계 + 동아에스티 ADC 링커·페이로드 개발 역량 결합, 신규 표적 ADC 후보물질 발굴 목표.",
       "modality": "바이오로직스"
     },
     {
@@ -2607,10 +2607,10 @@
       "country": "미국/일본",
       "drug": "Zasocitinib (TAK-279)",
       "indication": "건선·건선관절염",
-      "stage": "임상 3상 (성공)",
+      "stage": "NDA 제출 · FDA 우선심사 접수 (PDUFA 1Q 2027)",
       "ai_tech": "계산기반(FEP) 알로스테릭 설계",
       "modality": "소분자",
-      "highlight": "알로스테릭 TYK2 저해제(계산설계 기원) — Phase 3 성공('26.6): deucravacitinib 대비 우월(PASI100 35%+), NDA 제출 예정(FY2026)",
+      "highlight": "알로스테릭 TYK2 저해제(계산설계 기원) — Phase 3 성공('26.6, LATITUDE PsO 3001/3002: deucravacitinib 대비 우월, PASI100 35%+) → NDA 제출·FDA Priority Review 접수('26.9.14), PDUFA 1Q 2027. EMA MAA도 접수 완료.",
       "ai_native": false
     },
     {
@@ -2634,6 +2634,26 @@
       "modality": "mRNA 백신",
       "highlight": "INTerpath-001 Phase 3 성공('26.8) — 키트루다 병용, 완전절제 흑색종 재발·사망 42%↓(HR 0.58)·원격전이 38%↓(HR 0.62). 개인맞춤 네오항원·mRNA 암치료 최초 Phase 3 성공, 허가신청 추진",
       "ai_native": false
+    },
+    {
+      "company": "Insilico Medicine",
+      "country": "홍콩/미국",
+      "drug": "ISM6331",
+      "indication": "악성 중피종·고형암",
+      "stage": "임상 1상",
+      "ai_tech": "PandaOmics(표적발굴) + Chemistry42(생성형 설계) — 경구 비공유 Pan-TEAD 저해제",
+      "modality": "소분자",
+      "highlight": "생성형 AI 설계 소분자. 글로벌 Phase 1(ESMO 2026 발표 10.25): 고용량(130mg) ORR 40%(2/5명), DCR 68.2%. FDA 희귀의약품 지정('24.6)·Fast Track 지정('26.7). Rentosertib에 이은 Insilico 두 번째 임상 AI 신약."
+    },
+    {
+      "company": "Recursion",
+      "country": "미국",
+      "drug": "REC-4881",
+      "indication": "가족성 대장 용종증(FAP)",
+      "stage": "임상 2상 (긍정 데이터)",
+      "ai_tech": "AI 표현형 스크리닝(Recursion OS) — 비공유 경구 MEK1/2 알로스테릭 저해제",
+      "modality": "소분자",
+      "highlight": "TUPELO Phase 1b/2(성인 코호트): ORR 87%(13/15명), 중앙 용종 감소 47%, 치료 중단 12주 후 85% 기저치 미만 유지(2026.11.2 CGA-IGC 발표). 2027년 하반기 등록 임상 추진(FDA 협의 중). Takeda 2020년 라이선스 기반 개발."
     }
   ]
 }
