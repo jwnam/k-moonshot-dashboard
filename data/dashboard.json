@@ -2553,9 +2553,126 @@
         "category": "단백질 구조 설계·최적화",
         "url": "https://www.science.org/doi/10.1126/science.add2187",
         "note": "주어진 백본에 대한 아미노산 서열 설계 표준 모델 — RFdiffusion 등 생성 백본과 결합해 실험 성공률·발현 대폭 향상"
+      },
+      {
+        "title": "Toward autonomous science with agentic artificial intelligence",
+        "venue": "Cell",
+        "year": "2026",
+        "topic": "AI Co-Scientist·자율연구 에이전트",
+        "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9",
+        "note": "Co-Scientist·Robin·Biomni 세 시스템을 종합 검토하며 완전 자율 과학 발견의 로드맵과 필요 조건을 제시한 Cell Leading Edge 관점 논문. K-문샷 AI Co-Scientist 미션의 국제적 위치 설정에 직결.",
+        "category": "AI Co-Scientist·자율연구 에이전트"
+      },
+      {
+        "title": "An AI-native experimental laboratory for autonomous biomolecular operations (AutoDNA)",
+        "venue": "Nature",
+        "year": "2026",
+        "topic": "AI 자율실험실",
+        "url": "https://www.nature.com/articles/s41586-026-11228-6",
+        "note": "AI 에이전트 6개가 20종 이상 실험장비를 조율하여 11,000단계 이상 생물실험을 완전 자율 수행 — DNA 데이터저장 사이클 첫 자동화. K-문샷 Lab-in-the-Loop 목표(A2→A4)의 글로벌 선행 사례.",
+        "category": "AI 자율실험실 (Self-Driving Lab)"
+      },
+      {
+        "title": "De novo protein design from natural language descriptions (Pinal)",
+        "venue": "Nature",
+        "year": "2026",
+        "topic": "단백질 구조 설계",
+        "url": "https://www.nature.com/articles/s41586-026-11205-z",
+        "note": "자연어 설명을 아미노산 서열로 변환하는 세계 최초 언어-단백질 설계 시스템(웨스트레이크대). E. coli 발현 수율 1.7배 향상 실험 검증.",
+        "category": "단백질 구조 설계·최적화"
+      },
+      {
+        "title": "AI-designed therapeutic metalloproteases cleave disease proteins (RFdiffusion2 기반)",
+        "venue": "Nature",
+        "year": "2026",
+        "topic": "단백질 구조 설계",
+        "url": "https://www.nature.com/articles/s41586-026-11167-2",
+        "note": "Baker Lab이 RFdiffusion2+ProteinMPNN으로 TDP-43·아밀로이드-β 등 질환 단백질을 절단하는 zinc metalloprotease를 de novo 설계한 치료용 효소 설계 획기적 성과.",
+        "category": "단백질 구조 설계·최적화"
+      },
+      {
+        "title": "AI-designed cysteine proteases target disease-associated proteins",
+        "venue": "Nature",
+        "year": "2026",
+        "topic": "단백질 구조 설계",
+        "url": "https://www.nature.com/articles/s41586-026-11143-w",
+        "note": "Baker Lab 쌍둥이 논문 — de novo cysteine protease 설계, 세포 내 질환 연관 단백질 절단을 실험으로 검증. 단백질 기반 치료제의 새 패러다임.",
+        "category": "단백질 구조 설계·최적화"
+      },
+      {
+        "title": "Programmable design of functional RNAs through multimodal generative learning (RNAverse)",
+        "venue": "bioRxiv",
+        "year": "2026",
+        "topic": "RNA 설계",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.10.14.759035v1",
+        "note": "RNA 서열·SHAPE 프로파일·기능 주석 통합 멀티모달 생성 모델(RNAverse) — Zolgensma·BNT162b2 mRNA 발현 향상 달성. K-문샷 RNA 모달리티 설계 기술과 직결.",
+        "category": "RNA 설계·구조 최적화"
+      },
+      {
+        "title": "An operational perturbation proteomics-based virtual cell model (ProteinTalks)",
+        "venue": "Nature",
+        "year": "2026",
+        "topic": "AI 가상세포",
+        "url": "https://www.nature.com/articles/s41586-026-11001-9",
+        "note": "유방암 세포주에서 3,800만 건+ 시계열 단백질체 측정 데이터로 가상세포(ProteinTalks) 구축 — 단백질체 기반 in silico 신약 발굴 첫 실증. 디지털세포AI 사업 직결.",
+        "category": "AI Virtual Cell·Model Organism"
+      },
+      {
+        "title": "A world model of the virtual cell (Cell Leading Edge)",
+        "venue": "Cell",
+        "year": "2026",
+        "topic": "AI 가상세포",
+        "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01015-9",
+        "note": "Eric Xing·Le Song이 제안한 세계 모델(world model) 프레임워크를 가상세포에 적용 — 유전·화학·환경 개입이 세포 상태에 전파되는 과정을 시뮬레이션하는 통합 개념 로드맵.",
+        "category": "AI Virtual Cell·Model Organism"
+      },
+      {
+        "title": "Building virtual cell dynamics that evolve with biological measurements (CellCompass)",
+        "venue": "bioRxiv",
+        "year": "2026",
+        "topic": "AI 가상세포",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.10.23.761350v1",
+        "note": "에이전트형 AI가 새로운 생물학적 측정값에 따라 동역학 공식을 자동 개발 — 고정 모델을 넘어 측정 주도로 진화하는 가상세포 시스템.",
+        "category": "AI Virtual Cell·Model Organism"
+      },
+      {
+        "title": "Virtual dynamics of spatiotemporal single-cell interactions (CytoBridge)",
+        "venue": "bioRxiv",
+        "year": "2026",
+        "topic": "AI 가상세포",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.11.04.764438v1",
+        "note": "불균형 평균장 슈뢰딩거 브릿지 공식으로 세포-세포 상호작용을 가상세포 동역학에 통합 — 공간전사체 기반 연속적 세포 상태 재구성.",
+        "category": "AI Virtual Cell·Model Organism"
+      },
+      {
+        "title": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry",
+        "venue": "npj Drug Discovery",
+        "year": "2026",
+        "topic": "AI 신약개발 총론",
+        "url": "https://www.nature.com/articles/s44386-026-00078-x",
+        "note": "다중모달 분자 표현·생성 화학·자동화 실험을 연결하는 'TechBio 3.0' 패러다임 정의 — 폐루프(closed-loop) 신약발굴 인프라로의 산업 전환 체계적 조망.",
+        "category": "AI 신약개발 총론·산업 동향"
+      },
+      {
+        "title": "The rise of agentic AI in drug discovery: from static tools to autonomous virtual scientists",
+        "venue": "npj Drug Discovery",
+        "year": "2026",
+        "topic": "Agentic AI",
+        "url": "https://www.nature.com/articles/s44386-026-00075-0",
+        "note": "LLM 기반 AI 에이전트가 과제 특화 도구에서 자율 가상 과학자로 진화하는 흐름 조망 — 연구자 역할이 직접 실행에서 의사결정 감독으로 전환되는 미래상 제시.",
+        "category": "AI 신약개발 총론·산업 동향"
+      },
+      {
+        "title": "From Generative Molecular Design to Agentic Artificial Intelligence in Drug Discovery",
+        "venue": "ChemMedChem",
+        "year": "2026",
+        "topic": "AI 신약개발 총론",
+        "url": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cmdc.70564",
+        "note": "생성형 분자 디자인에서 에이전트형 AI로의 패러다임 전환을 역사적 흐름에서 추적 — 구조 기반 신약 설계에서 자율 AI로 가는 로드맵 정리.",
+        "category": "AI 신약개발 총론·산업 동향"
       }
     ],
-    "latest_research_updated": "2026-09-13",
+    "latest_research_updated": "2026-11-16",
     "research_categories": [
       "AI Co-Scientist·자율연구 에이전트",
       "AI 자율실험실 (Self-Driving Lab)",
